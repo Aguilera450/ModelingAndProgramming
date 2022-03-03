@@ -1,0 +1,8 @@
+*.md~
+*.aux
+*.log
+*.bcf
+*.tex~
+*.java~
+*.class
+*.run.xml
