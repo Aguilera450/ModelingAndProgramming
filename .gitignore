@@ -7,3 +7,4 @@
 *.class
 *.run.xml
 *.gitignore~
+**/.DS_Store
