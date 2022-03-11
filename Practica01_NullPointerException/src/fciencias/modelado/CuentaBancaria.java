@@ -38,7 +38,7 @@ public class CuentaBancaria {
      * @throws ExcepcionNoSePuedeCobrar.
      */
     public float cobrar(float cobro, String referencia) throws ExcepcionNoSePuedeCobrar {
-        if(this.dinero_disponible() < cobro)
+        if(this.saldo_disponible() < cobro)
             throw new ExcepcionNoSePuedeCobrar("El saldo del usuario no es "
                             + "suficiente para realizar este cobro.");
         dinero_disponible -= cobro;
