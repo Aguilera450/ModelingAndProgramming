@@ -1,11 +1,13 @@
+package src.fciencias.modelado;
+
 /**
  * Clase que simula a una cuenta bancaria y sus estados en saldo
- * para la realización del cobros a quienes implementen una instancia
- * de esta clase.
- * @author Adrian Aguilera, Marco Rivera, Diego Rosas.
- * @date 10/03/2021
+ * para la realización de cobros.
+ * @author Adrian Aguilera Moreno     - Aguiler450
+ * @author Rosas Franco Diego Angel   - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version 1.0 - 11/03/2022
  */
-
 public class CuentaBancaria {
     /* Atributos de clase. */
     private Usuario propietario;
@@ -15,7 +17,7 @@ public class CuentaBancaria {
      * Método que indica el propiedario de la <code>CuentaBancaria</code>.
      * @return <code>Usuario</code> -- devuelve el propietario de la cuenta.
      */
-    public Ususario propietario() {
+    public Usuario propietario() {
 	return propietario;
     }
     

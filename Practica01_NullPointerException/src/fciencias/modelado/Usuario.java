@@ -1,14 +1,17 @@
-/**
- * Clase que simula un usuario que puede estar suscrito
- * a varios servicios y que además pude tener una cuenta
- * bancaria de la clase <code>CuentaBancaria</code>.
- * @author Adrian Aguilera, Marco Rivera, Diego Rosas.
- * @date 11/03/2021
- */
+package src.fciencias.modelado;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Clase que simula un usuario que puede estar suscrito
+ * a varios servicios y que además pude tener una cuenta
+ * bancaria de la clase <code>CuentaBancaria</code>.
+ * @author Adrian Aguilera Moreno     - Aguiler450
+ * @author Rosas Franco Diego Angel   - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version 1.0 - 11/03/2022
+ */
 public class Usuario {
     
     /* Atributos de clase. */
