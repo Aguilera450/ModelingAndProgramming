@@ -18,7 +18,7 @@ public class CuentaBancaria {
      * @return <code>Usuario</code> -- devuelve el propietario de la cuenta.
      */
     public Usuario propietario() {
-	return propietario;
+	    return propietario;
     }
     
     /**
@@ -26,7 +26,7 @@ public class CuentaBancaria {
      * @return <code>float</code> -- devuelve el saldo disponible. 
      */
     public float saldo_disponible() {
-	return dinero_disponible;
+	    return dinero_disponible;
     }
     
     /**
@@ -37,11 +37,14 @@ public class CuentaBancaria {
      *                               después de realizar el cobro.
      * @throws ExcepcionNoSePuedeCobrar.
      */
-    public float cobrar(float cobro) throws ExcepcionNoSePuedeCobrar {
-	if(this.dinero_disponible() < cobro)
-	    throw new ExcepcionNoSePuedeCobrar("El saldo del usuario no es "
-					       + "suficiente para realizar este cobro.");
-	dinero_disponible -= cobro;
-	return saldo_disponible();
+    public float cobrar(float cobro, String referencia) throws ExcepcionNoSePuedeCobrar {
+        if(this.dinero_disponible() < cobro)
+            throw new ExcepcionNoSePuedeCobrar("El saldo del usuario no es "
+                            + "suficiente para realizar este cobro.");
+        dinero_disponible -= cobro;
+        
+        System.out.printlf("%.2f",propietario.name() + "se realizó un cobro de $" + cobro +" por: " + referencia);
+        
+        return saldo_disponible();
     }
 }
