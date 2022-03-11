@@ -4,6 +4,7 @@
  * invocar a esta excepción.
  * @author Adrian Aguilera, Marco Rivera, Diego Rosas.
  * @date 10/03/2021
+ * @see Exception
  */
 
 public class ExcepcionNoSePuedeCobrar extends Exception {
