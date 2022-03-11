@@ -5,8 +5,14 @@ package src.fciencias.modelado;
  * Esta clase forma parte del patrón Strategy en la clase Momazon.
  */
 public class MomazonNormal implements CobradorMomazon{
+    /** Precio asignado al servicio Momazon Normal */
     private final float precio = 110;
 
+    /**
+     * Realiza el cobro del servicio Momazon Normal a la suscripción recibida.
+     * @param suscripcion - suscripción a la que se le hará el cobro.
+     * @return True si el cliente tiene fondos para pagar la suscripción, False si no pudo pagarla.
+     */
     @Override
     public boolean realizar_cobro(Suscripcion suscripcion){
         if(suscripcion.metodo_pago().saldo_disponible() >= precio){
