@@ -18,7 +18,7 @@ import java.util.Stack;
 public abstract class Servicio implements Sujeto{
     /* Atributos de la clase */
     /** Nombre del servicio */
-    public String nombre;
+    private String nombre;
     /** Lista de suscripciones registradas al servicio */
     protected HashMap<String, Suscripcion> lista_suscripciones;
     /** Lista de recomendaciones para las suscripciones registradas en lista_suscripciones */
@@ -33,6 +33,14 @@ public abstract class Servicio implements Sujeto{
 
     /* Metodos Getter */
 
+    /**
+     * Método que regresa el nombre del servicio.
+     * @return nombre del servicio.
+     */
+    public String nombre(){
+        return nombre;
+    }
+    
     /**
      * Metodo que regresa la lista de suscripciones del servicio.
      * @return la lista de suscripciones del servicio.
@@ -71,6 +79,19 @@ public abstract class Servicio implements Sujeto{
      */
     public String regreso(){
         return mensaje_regreso;
+    }
+
+
+
+    // Métodos Setter
+    /**
+     * Método para asignar un nombre al servicio.
+     * @param nombre nombre del servicio.
+     * @return nombre asignado.
+     */
+    protected String dar_nombre(String nombre){
+        this.nombre = nombre;
+        return this.nombre;
     }
 
     /**
@@ -142,6 +163,12 @@ public abstract class Servicio implements Sujeto{
         return recomendaciones.pop();
     }
 
+    /**
+     * Metodo abstracto para cobrar una suscripcion.
+     * @param suscripcion suscripción a la cual se le hará el cobro.
+     */
+    public abstract void cobrar_suscripcion(Suscripcion suscripcion);
+    
      /**
      * Método que se encarga de notificar a las suscripciones los mensajes establecidos para la relación Sujeto-Observador del patrón Observer.
      */
@@ -165,8 +192,16 @@ public abstract class Servicio implements Sujeto{
         // Primero validamos que la suscripcion pertenezca al servicio actual.
         // Para eso vemos que el nombre del servicio al que pertenece sea el mismo que el actual.
         if(suscripcion.servicio().nombre.equals(this.nombre)){
-            // Registramos la suscripcion en la lista.
-            lista_suscripciones.put(suscripcion.correo_asociado(), suscripcion);
+
+            // Validamos si ya existía esta suscripción para darle su mensaje de regreso.
+            if(lista_suscripciones.containsKey(suscripcion.correo_asociado())){
+                System.out.println(suscripcion.propietario() + " " + regreso());
+            } else {
+                // Si no existía, registramos la suscripcion en la lista.
+                lista_suscripciones.put(suscripcion.correo_asociado(), suscripcion);
+                System.out.println(suscripcion.propietario() + " " + bienvenida());
+            }
+
         }
     }
 
@@ -177,7 +212,10 @@ public abstract class Servicio implements Sujeto{
 	 */
     @Override
     public void remover(Suscripcion suscripcion){
-        lista_suscripciones.remove(suscripcion.correo_asociado());
+        Suscripcion elimna_suscripcion = lista_suscripciones.get(suscripcion.correo_asociado());
+        if(elimna_suscripcion != null){
+            elimna_suscripcion.cancelar_suscripcion();
+        }
     }
 
     /**
@@ -187,11 +225,5 @@ public abstract class Servicio implements Sujeto{
     public void notificar(){
         notificar_suscripciones();
     }
-
-    /**
-     * Metodo abstracto para cobrar una suscripcion.
-     * @param suscripcion suscripción a la cual se le hará el cobro.
-     */
-    public abstract void cobrar_suscripcion(Suscripcion suscripcion);
 
 }
