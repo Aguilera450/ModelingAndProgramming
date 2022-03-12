@@ -15,9 +15,9 @@ public class Spootify extends Servicio {
 
     /**
      * Constructor del servicio Spootify.
-     * @param mensaje_general
-     * @param mensaje_bienvenida
-     * @param mensaje_regreso
+     * @param mensaje_general - mensaje general del servicio Spootify.
+     * @param mensaje_bienvenida - mensaje de bienvenida para las suscripciones nuevas de Spootify.
+     * @param mensaje_regreso - mensaje de regreso paras las suscripciones ya registradas en Spootify que vuelven a pagar el servicio.
      */
     public Spootify( String mensaje_general, String mensaje_bienvenida, String mensaje_regreso){
         dar_nombre("Spootify");
@@ -28,10 +28,18 @@ public class Spootify extends Servicio {
         this.mensaje_regreso = mensaje_regreso;
     }
 
+    /**
+     * Método para obtener al cobrador actual.
+     * @return cobrador actual.
+     */
     public CobradorSpootify cobrador(){
         return cobrador;
     }
 
+    /**
+     * Método para cambiar el tipo de cobro, es decir, el cobrador.
+     * @param cobro cobrador que se usará ahora.
+     */
     private void cambiar_cobrador(CobradorSpootify cobro){
         cobrador = cobro;
     }
