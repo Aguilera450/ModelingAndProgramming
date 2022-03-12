@@ -9,5 +9,8 @@ package src.fciencias.modelado;
  * @version  1.0 - 11/03/2022
  */
 public interface Observador{
+	/**
+	 * Método que se encarga de actualizar al objeto Observador acorde al mensaje del Sujeto.
+	 */
 	public void actualizar();
 }
