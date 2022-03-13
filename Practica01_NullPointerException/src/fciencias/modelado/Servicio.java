@@ -1,5 +1,6 @@
 package src.fciencias.modelado;
 
+import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.Stack;
@@ -53,7 +54,7 @@ public abstract class Servicio implements Sujeto{
      * @return una pila con las recomendaciones del servicio.
      */
     public Stack<String> recomendaciones(){
-        Satck<String> copia_recomendaciones = this.recomendaciones;
+        Stack<String> copia_recomendaciones = this.recomendaciones;
         return copia_recomendaciones;
     }
 
