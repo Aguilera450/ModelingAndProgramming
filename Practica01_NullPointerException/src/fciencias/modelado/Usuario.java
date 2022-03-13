@@ -43,6 +43,16 @@ public class Usuario {
         return nombre;
     }
 
+    public Suscripcion buscar_suscripcion(String correo, String tipo_suscripcion){
+        for(int i = 0; i < lista_suscripciones.size(); i++){
+            Suscripcion suscripcion_actual = lista_suscripciones.get(i);
+            if(suscripcion_actual.correo_asociado().equals(correo) && suscripcion_actual.tipo().equals(tipo_suscripcion)){
+                return suscripcion_actual;
+            }
+        }
+        return null;
+    }
+
     /**
      * Metodo que ayuda al usuario a contratar un servicio.
      * @param tipo_suscripcion Versión del servicio a contratar.
