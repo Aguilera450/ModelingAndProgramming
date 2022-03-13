@@ -48,10 +48,9 @@ public class Thisney extends Servicio {
         cobrador = cobro;
     }
 
-    // Métodos abstractos de Servicio
     /**
-     * Metodo abstracto para cobrar la suscripcion de un usuario
-     * @param suscripcion Suscripcion
+     * Metodo para cobrar una suscripción.
+     * @param suscripcion Suscripción a cobrar.
      */
     public void cobrar_suscripcion(Suscripcion suscripcion){
         // Se define que tipo de cobro se usará acorde al tipo de suscripción
@@ -59,11 +58,12 @@ public class Thisney extends Servicio {
         if(tipo.equals("Thisney Normal")){
             cambiar_cobrador(new ThisneyNormal());
         } else {
-            System.out.println(nombre() + " no maneja este tipo de suscripción,");
+            System.out.println(nombre() + " no maneja este tipo de suscripción.");
             return;
         } 
 
         if(!cobrador.realizar_cobro(suscripcion)){
+            // El cobro fue rechazado por falta de fondos
             suscripcion.cancelar_suscripcion();
             System.out.println(suscripcion.propietario()+ ", su suscripción de " + tipo + " fue cancelada.");
         }

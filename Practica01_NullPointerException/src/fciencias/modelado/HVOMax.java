@@ -48,7 +48,6 @@ public class HVOMax extends Servicio {
         cobrador = cobro;
     }
 
-    // Métodos abstractos de Servicio
     /**
      * Metodo abstracto para cobrar la suscripcion de un usuario
      * @param suscripcion Suscripcion
@@ -59,11 +58,12 @@ public class HVOMax extends Servicio {
         if(tipo.equals("HVOMax Normal")){
             cambiar_cobrador(new HVOMaxNormal());
         } else {
-            System.out.println(nombre() + " no maneja este tipo de suscripción,");
+            System.out.println(nombre() + " no maneja este tipo de suscripción.");
             return;
         } 
 
         if(!cobrador.realizar_cobro(suscripcion)){
+            // El cobro fue rechazado por falta de fondos
             suscripcion.cancelar_suscripcion();
             System.out.println(suscripcion.propietario()+ ", su suscripción de " + tipo + " fue cancelada.");
         }

@@ -15,9 +15,9 @@ public class Spootify extends Servicio {
 
     /**
      * Constructor del servicio Spootify.
-     * @param mensaje_general - mensaje general del servicio Spootify.
-     * @param mensaje_bienvenida - mensaje de bienvenida para las suscripciones nuevas de Spootify.
-     * @param mensaje_regreso - mensaje de regreso paras las suscripciones ya registradas en Spootify que vuelven a pagar el servicio.
+     * @param mensaje_general mensaje general del servicio Spootify.
+     * @param mensaje_bienvenida mensaje de bienvenida para las suscripciones nuevas de Spootify.
+     * @param mensaje_regreso mensaje de regreso paras las suscripciones ya registradas en Spootify que vuelven a pagar el servicio.
      */
     public Spootify( String mensaje_general, String mensaje_bienvenida, String mensaje_regreso){
         dar_nombre("Spootify");
@@ -44,10 +44,9 @@ public class Spootify extends Servicio {
         cobrador = cobro;
     }
 
-    // Métodos abstractos de Servicio
     /**
-     * Metodo abstracto para cobrar la suscripcion de un usuario
-     * @param suscripcion Suscripcion
+     * Metodo para cobrar una suscripción.
+     * @param suscripcion Suscripción a cobrar.
      */
     public void cobrar_suscripcion(Suscripcion suscripcion){
         // Se define que tipo de cobro se usará acorde al tipo de suscripción
@@ -57,11 +56,12 @@ public class Spootify extends Servicio {
         } else if(tipo.equals("Spootify Premium")){
             cambiar_cobrador(new SpootifyPremium());
         } else {
-            System.out.println(nombre() + " no maneja este tipo de suscripción,");
+            System.out.println(nombre() + " no maneja este tipo de suscripción.");
             return;
         } 
 
         if(!cobrador.realizar_cobro(suscripcion)){
+            // El cobro fue rechazado por falta de fondos
             suscripcion.cancelar_suscripcion();
             System.out.println(suscripcion.propietario()+ ", su suscripción de " + tipo + " fue cancelada.");
         }

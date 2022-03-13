@@ -18,9 +18,9 @@ public class Memeflix extends Servicio {
 
     /**
      * Constructor del servicio Memeflix.
-     * @param mensaje_general - mensaje general del servicio Memeflix.
-     * @param mensaje_bienvenida - mensaje de bienvenida para las suscripciones nuevas de Memeflix.
-     * @param mensaje_regreso - mensaje de regreso paras las suscripciones ya registradas en Memeflix que vuelven a pagar el servicio.
+     * @param mensaje_general mensaje general del servicio Memeflix.
+     * @param mensaje_bienvenida mensaje de bienvenida para las suscripciones nuevas de Memeflix.
+     * @param mensaje_regreso mensaje de regreso paras las suscripciones ya registradas en Memeflix que vuelven a pagar el servicio.
      */
     public Memeflix( String mensaje_general, String mensaje_bienvenida, String mensaje_regreso){
         dar_nombre("Memeflix");
@@ -47,26 +47,26 @@ public class Memeflix extends Servicio {
         cobrador = cobro;
     }
 
-    // Métodos abstractos de Servicio
     /**
-     * Metodo abstracto para cobrar la suscripcion de un usuario
-     * @param suscripcion Suscripcion
+     * Metodo para cobrar una suscripción.
+     * @param suscripcion Suscripción a cobrar.
      */
     public void cobrar_suscripcion(Suscripcion suscripcion){
         // Se define que tipo de cobro se usará acorde al tipo de suscripción
         String tipo = suscripcion.tipo();
-        if(tipo.equals("1 Dispositivo")){
+        if(tipo.equals("Memeflix Un Dispositivo")){
             cambiar_cobrador(new MemeflixUnDispositivo());
-        } else if(tipo.equals("2 Dispositivos")){
+        } else if(tipo.equals("Memeflix Dos Dispositivos")){
             cambiar_cobrador(new MemeflixDosDispositivos());
-        } else if(tipo.equals("4 Dispositivos")){
+        } else if(tipo.equals("Memeflix Cuatro Dispositivos")){
             cambiar_cobrador(new MemeflixCuatroDispositivos());
         } else {
-            System.out.println(nombre() + " no maneja este tipo de suscripción,");
+            System.out.println(nombre() + " no maneja este tipo de suscripción.");
             return;
         } 
 
         if(!cobrador.realizar_cobro(suscripcion)){
+            // El cobro fue rechazado por falta de fondos
             suscripcion.cancelar_suscripcion();
             System.out.println(suscripcion.propietario()+ ", su suscripción de " + tipo + " fue cancelada.");
         }

@@ -11,10 +11,8 @@ import java.util.Stack;
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
- * @version  1.0 - 12/03/2022
+ * @version 1.0 - 12/03/2022
  */
-
-
 public abstract class Servicio implements Sujeto{
     /* Atributos de la clase */
     /** Nombre del servicio */
@@ -25,13 +23,13 @@ public abstract class Servicio implements Sujeto{
     protected Stack<String> recomendaciones;
     /** Mensaje que se les estará enviando a todas las suscripciones por igual */
     protected String mensaje_general;
-    /** Mensaje de bienvenida para las suscripciones que se incorporan por primera vez */
+    /** Mensaje de bienvenida para las suscripciones que se incorporan por primera vez al servicio*/
     protected String mensaje_bienvenida;
     /** Mensaje que se envía a las suscripciones que fueron canceladas y regresaron */
     protected String mensaje_regreso;
 
 
-    /* Metodos Getter */
+    /* Métodos Getter */
 
     /**
      * Método que regresa el nombre del servicio.
@@ -42,31 +40,34 @@ public abstract class Servicio implements Sujeto{
     }
     
     /**
-     * Metodo que regresa la lista de suscripciones del servicio.
+     * Método que regresa la lista de suscripciones del servicio.
      * @return la lista de suscripciones del servicio.
      */    
     public HashMap<String, Suscripcion> suscripciones(){
-        return lista_suscripciones;
+        HashMap<String, Suscripcion> copia_lista_suscripciones = this.lista_suscripciones;
+        return copia_lista_suscripciones;
     }
     
     /**
-     * Metodo que regresa las recomendaciones del servicio.
+     * Método que regresa las recomendaciones del servicio.
      * @return una pila con las recomendaciones del servicio.
      */
     public Stack<String> recomendaciones(){
-        return recomendaciones;
+        Satck<String> copia_recomendaciones = this.recomendaciones;
+        return copia_recomendaciones;
     }
 
     /**
-     * Metodo que regresa el mensaje general.
+     * Método que regresa el mensaje general.
      * @return el mensaje general.
      */
     public String mensaje(){
+        mensaje_general = obtener_recomendacion();
         return mensaje_general;
     }
 
     /**
-     * Metodo que regresa el mensaje de bienvenida.
+     * Método que regresa el mensaje de bienvenida.
      * @return el mensaje de bienvenida.
      */
     public String bienvenida(){
@@ -74,7 +75,7 @@ public abstract class Servicio implements Sujeto{
     }
 
     /**
-     * Metodo que regresa el mensaje de regreso
+     * Método que regresa el mensaje de regreso.
      * @return el mensaje de regreso.
      */
     public String regreso(){
@@ -95,57 +96,57 @@ public abstract class Servicio implements Sujeto{
     }
 
     /**
-     * Metodo para establecer una nueva lista de suscripciones.
+     * Método para establecer una nueva lista de suscripciones.
      * @param suscripciones HasMap de suscripciones.
      * @return la lista de suscripciones.
      */
-    public HashMap<String, Suscripcion> dar_suscripciones(HashMap<String, Suscripcion> lista_suscripciones){
-        this.lista_suscripciones = lista_suscripciones;
+    protected HashMap<String, Suscripcion> dar_suscripciones(HashMap<String, Suscripcion> suscripciones){
+        this.lista_suscripciones = suscripciones;
         return this.lista_suscripciones;
     }
 
     /**
-     * Metodo para establecer una nueva pila de recomendaciones.
+     * Método para establecer una nueva pila de recomendaciones.
      * @param recomendaciones una pila con las recomendaciones del servicio.
      * @return la pila de recomendaciones
      */
-    public Stack<String> dar_recomendaciones(Stack<String> recomendaciones){
+    protected Stack<String> dar_recomendaciones(Stack<String> recomendaciones){
         this.recomendaciones = recomendaciones;
         return this.recomendaciones;
     }
 
     /**
-     * Metodo para establecer un nuevo mensaje general.
-     * @param mensaje_general mensaje general a establecer.
+     * Método para establecer un nuevo mensaje general.
+     * @param mensaje mensaje general a establecer.
      * @return el mensaje general.
      */
-    public String dar_mensaje(String mensaje_general){
-        this.mensaje_general = mensaje_general;
+    protected String dar_mensaje(String mensaje){
+        this.mensaje_general = mensaje;
         return this.mensaje_general;
     }
 
     /**
-     * Metodo para establecer un nuevo mensaje de bienvenida.
-     * @param mensaje_bienvenida nuevo mensaje de bienvenida.
+     * Método para establecer un nuevo mensaje de bienvenida.
+     * @param bienvenida nuevo mensaje de bienvenida.
      * @return el mensaje de bienvenida.
      */
-    public String dar_bienvenida(String mensaje_bienvenida){
-        this.mensaje_bienvenida = mensaje_bienvenida;
+    protected String dar_bienvenida(String bienvenida){
+        this.mensaje_bienvenida = bienvenida;
         return this.mensaje_bienvenida;
     }
 
     /**
-     * Metodo para establecer un nuevo mensaje de regreso.
+     * Método para establecer un nuevo mensaje de regreso.
      * @param mensaje_regreso nuevo mensaje de regreso.
      * @return el mensaje de regreso.
      */
-    public String dar_regreso(String mensaje_regreso ){
-        this.mensaje_regreso = mensaje_regreso;
+    protected String dar_regreso(String regreso ){
+        this.mensaje_regreso = regreso;
         return this.mensaje_regreso;
     }
 
     /**
-     * Metodo que agrega una recomendación a la pila de recomendaciones.
+     * Método que agrega una recomendación a la pila de recomendaciones.
      * @param recomendacion recomendación a agregar a la pila de recomendaciones. 
      * @return la recomendación agregada.
      */
@@ -155,16 +156,21 @@ public abstract class Servicio implements Sujeto{
     }
 
     /**
-     * Metodo para obtener una recomendacion de la pila de recomendaciones.
+     * Método para obtener una recomendacion de la pila de recomendaciones.
      * @return una recomendación.
      */
-    public String obtener_recomendacion(){
-        // TODO - Validar cuando se queda vacía la pila y regresar un String vacio. Y documentar este cambio en el javadoc
-        return recomendaciones.pop();
+    protected String obtener_recomendacion(){
+        String recomendacion_mensual;
+        try {
+            recomendacion_mensual = recomendaciones.pop();
+        } catch (EmptyStackException e) {
+            recomendacion_mensual = "En este momento estamos trabajando en recomendaciones más acertadas para usted, disculpe los inconvenientes que pudimos causar.";
+        }
+        return recomendacion_mensual;
     }
 
     /**
-     * Metodo abstracto para cobrar una suscripcion.
+     * Método abstracto para cobrar una suscripcion.
      * @param suscripcion suscripción a la cual se le hará el cobro.
      */
     public abstract void cobrar_suscripcion(Suscripcion suscripcion);
@@ -173,35 +179,36 @@ public abstract class Servicio implements Sujeto{
      * Método que se encarga de notificar a las suscripciones los mensajes establecidos para la relación Sujeto-Observador del patrón Observer.
      */
     public void notificar_suscripciones(){
-        // TODO - Validaciones
+        // Suscripcion que cambiara de acuerdo a la suscripcion que se le este notificando.
         Suscripcion suscripcion;
+        // Recorremos nuestras suscripciones y les enviamos la notificación.
         Set<String> keys = lista_suscripciones.keySet();
         for(String key:keys){
             suscripcion = lista_suscripciones.get(key);
-            // Los mensajes establecidos se encuentran en actualizar de Suscripcion.
+            // Los mensajes establecidos de la notificación se encuentran en actualizar de Suscripcion.
             suscripcion.actualizar();
         }
     }
 
     /**
-     * Metodo para registrar una suscripción.
+     * Método para registrar una suscripción.
      * @param suscripcion suscripción a registrar.
      */
     @Override
     public void registrar(Suscripcion suscripcion){
         // Primero validamos que la suscripcion pertenezca al servicio actual.
         // Para eso vemos que el nombre del servicio al que pertenece sea el mismo que el actual.
-        if(suscripcion.servicio().nombre.equals(this.nombre)){
+        if(suscripcion.servicio().nombre().equals(this.nombre)){
 
             // Validamos si ya existía esta suscripción para darle su mensaje de regreso.
             if(lista_suscripciones.containsKey(suscripcion.correo_asociado())){
+                suscripcion.suscribir_de_nuevo();
                 System.out.println(suscripcion.propietario() + " " + regreso());
             } else {
                 // Si no existía, registramos la suscripcion en la lista.
                 lista_suscripciones.put(suscripcion.correo_asociado(), suscripcion);
                 System.out.println(suscripcion.propietario() + " " + bienvenida());
             }
-
         }
     }
 
@@ -215,6 +222,7 @@ public abstract class Servicio implements Sujeto{
         Suscripcion elimna_suscripcion = lista_suscripciones.get(suscripcion.correo_asociado());
         if(elimna_suscripcion != null){
             elimna_suscripcion.cancelar_suscripcion();
+            System.out.println(suscripcion.propietario().nombre() + ", lamentamos que dejes el servicio.");
         }
     }
 

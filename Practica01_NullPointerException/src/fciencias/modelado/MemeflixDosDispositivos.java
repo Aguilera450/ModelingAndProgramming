@@ -21,6 +21,7 @@ public class MemeflixDosDispositivos implements CobradorMemeflix{
     public boolean realizar_cobro(Suscripcion suscripcion){
         if(suscripcion.metodo_pago().saldo_disponible() >= precio){
             suscripcion.metodo_pago().cobrar(precio, "Servicio Memeflix para dos dispositivos");
+            suscripcion.otro_mes_suscrito();
             return true;
         } else {
             return false;

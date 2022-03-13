@@ -21,6 +21,7 @@ public class SpootifyPremium implements CobradorSpootify{
     public boolean realizar_cobro(Suscripcion suscripcion){
         if(suscripcion.metodo_pago().saldo_disponible() >= precio){
             suscripcion.metodo_pago().cobrar(precio, "Servicio Spootify Premium");
+            suscripcion.otro_mes_suscrito();
             return true;
         } else {
             return false;

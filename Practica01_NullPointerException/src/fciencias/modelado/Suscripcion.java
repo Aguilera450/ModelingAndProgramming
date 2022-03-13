@@ -28,14 +28,14 @@ public class Suscripcion implements Observador{
 
     /**
      * Constructor de una Suscripción.
-     * @param tipoSuscripcion - tipo del que será la suscripción.
-     * @param servicio - Servicio al cual pertenecerá la suscripción.
-     * @param usuario - usuario propietario de la suscripción.
-     * @param correo - correo que se asociará a la suscripción.
-     * @param pago - método de pago de la suscripción.
+     * @param tipo_suscripcion tipo del que será la suscripción.
+     * @param servicio Servicio al cual pertenecerá la suscripción.
+     * @param usuario usuario propietario de la suscripción.
+     * @param correo correo que se asociará a la suscripción.
+     * @param pago método de pago de la suscripción.
      */
-    public Suscripcion(String tipoSuscripcion, Servicio servicio, Usuario usuario, String correo, CuentaBancaria pago){
-        tipo_suscripcion = tipoSuscripcion;
+    public Suscripcion(String tipo_suscripcion, Servicio servicio, Usuario usuario, String correo, CuentaBancaria pago){
+        this.tipo_suscripcion = tipo_suscripcion;
         this.servicio = servicio;
         this.usuario = usuario;
         correo_asociado = correo;
@@ -113,6 +113,19 @@ public class Suscripcion implements Observador{
 
 
     // Setters
+
+    /** Método para activar nuevamente la suscripción */
+    public void suscribir_de_nuevo(){
+        activa = true;
+    }
+    
+    /**
+     * Suma otro mes de actividad a la suscripción.
+     */
+    public void otro_mes_suscrito(){
+        meses_actividad++;
+    }
+
     /**
      * Método para asignar un usuario a la suscripción.
      * @param usuario usuario a asignar a la suscripción.
@@ -184,7 +197,9 @@ public class Suscripcion implements Observador{
         // Una vez pagada la suscripción, si esta no fue cancelada por falta de fondos,
         // se enviará la recomendación mensual.
         if(activa()){
-            aviso = servicio.getMensaje();
+            // Se le muestra al usuario cuantos meses lleva usando el servicio.
+            System.out.println(propietario() + " llevas usando "+meses_actividad()+ " meses usando "+servicio().nombre());
+            aviso = servicio.mensaje();
             System.out.println(mostrar_aviso());
         }
     }

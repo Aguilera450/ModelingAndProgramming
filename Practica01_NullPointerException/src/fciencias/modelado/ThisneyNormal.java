@@ -19,7 +19,7 @@ public class ThisneyNormal implements CobradorThisney{
 
     /**
      * Realiza el cobro del servicio Thisney Normal a la suscripción recibida.
-     * @param suscripcion - suscripción a la que se le hará el cobro.
+     * @param suscripcion suscripción a la que se le hará el cobro.
      * @return True si el cliente tiene fondos para pagar la suscripción, False si no pudo pagarla.
      */
     @Override
@@ -29,7 +29,8 @@ public class ThisneyNormal implements CobradorThisney{
             if(suscripcion.meses_actividad() > meses_promocion) // Ya expiró su periodo de promoción
                 suscripcion.metodo_pago().cobrar(precio, "Servicio Thisney+ Normal");
             else
-                suscripcion.metodo_pago.cobrar(precio_promocion, "Servicio Thisney+ Normal");
+                suscripcion.metodo_pago().cobrar(precio_promocion, "Servicio Thisney+ Normal");
+            suscripcion.otro_mes_suscrito();
             return true;
         } else {
             return false;

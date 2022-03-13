@@ -10,41 +10,40 @@ package src.fciencias.modelado;
  */
 public class CuentaBancaria {
     /* Atributos de clase. */
+    /** Usuario propietario de la cuenta bancaria */
     private Usuario propietario;
+    /** Dinero que hay en la cuenta */
     private float dinero_disponible;
     
     /**
-     * Método que indica el propiedario de la <code>CuentaBancaria</code>.
-     * @return <code>Usuario</code> -- devuelve el propietario de la cuenta.
+     * Método que indica el propietario de la Cuenta Bancaria.
+     * @return el propietario de la cuenta.
      */
     public Usuario propietario() {
 	    return propietario;
     }
     
     /**
-     * Método que indica cuanto dinero tiene una cuenta asociada.
-     * @return <code>float</code> -- devuelve el saldo disponible. 
+     * Método que indica cuanto dinero tiene la cuenta bancaria.
+     * @return dinero en la cuenta bancaria.
      */
     public float saldo_disponible() {
 	    return dinero_disponible;
     }
     
     /**
-     * Método que realiza los cobros que se le soliciten a la <code>CuentaBancaria</code>.
-     * @param <code>cobro</code>  -- dinero a cobrar, lo que se debe descontar del saldo
-     *                               disponible en la <code>CuentaBancaria</code>. 
-     * @return <code>float</code> -- devuelve el saldo que queda en la <code>CuentaBancaria</code>
-     *                               después de realizar el cobro.
-     * @throws ExcepcionNoSePuedeCobrar.
+     * Método que realiza los cobros que se le soliciten a la cuenta bancaria.
+     * @param cobro dinero a cobrar, lo que se debe descontar del saldo disponible en la cuenta. 
+     * @return el saldo que queda en la cuenta después de realizar el cobro.
      */
-    public float cobrar(float cobro, String referencia) throws ExcepcionNoSePuedeCobrar {
-        if(this.saldo_disponible() < cobro)
-            throw new ExcepcionNoSePuedeCobrar("El saldo del usuario no es "
-                            + "suficiente para realizar este cobro.");
-        dinero_disponible -= cobro;
-        
-        System.out.printlf("%.2f",propietario.name() + "se realizó un cobro de $" + cobro +" por: " + referencia);
-        
-        return saldo_disponible();
+    public float cobrar(float cobro, String referencia)  {
+        if(this.saldo_disponible() >= cobro){
+            dinero_disponible -= cobro;
+            System.out.printf("%.2f",propietario.nombre() + ", se realizó un cobro de $" + cobro +" por: " + referencia);
+            return saldo_disponible();
+        } else {
+            return -1;
+        }
+            
     }
 }

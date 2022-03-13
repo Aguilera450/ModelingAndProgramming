@@ -14,13 +14,14 @@ public class MomazonNormal implements CobradorMomazon{
 
     /**
      * Realiza el cobro del servicio Momazon Normal a la suscripción recibida.
-     * @param suscripcion - suscripción a la que se le hará el cobro.
+     * @param suscripcion suscripción a la que se le hará el cobro.
      * @return True si el cliente tiene fondos para pagar la suscripción, False si no pudo pagarla.
      */
     @Override
     public boolean realizar_cobro(Suscripcion suscripcion){
         if(suscripcion.metodo_pago().saldo_disponible() >= precio){
             suscripcion.metodo_pago().cobrar(precio, "Servicio Momazon Normal");
+            suscripcion.otro_mes_suscrito();
             return true;
         } else {
             return false;

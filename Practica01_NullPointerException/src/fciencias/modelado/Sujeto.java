@@ -18,7 +18,7 @@ public interface Sujeto{
 	/**
 	 * Método para eliminar una suscripción.
 	 * Ninguna suscripción se eliminará si no coincide con la recibida.
-	 * @param suscripción a eliminar.
+	 * @param suscripción suscripción a eliminar.
 	 */
 	public void remover(Suscripcion suscripcion);
 
