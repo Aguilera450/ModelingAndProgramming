@@ -10,7 +10,7 @@
  */
 public class MomazonPremium implements CobradorMomazon {
     /** Precio asignado al servicio Momazon Premium */
-    private final float precio = 150;
+    private final float precio = 150f;
 
     /**
      * Realiza el cobro del servicio Momazon Premium a la suscripción recibida.

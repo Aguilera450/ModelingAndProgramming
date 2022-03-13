@@ -10,11 +10,11 @@
  */
 public class HVOMaxNormal implements CobradorHVOMax{
     /** Precio de promoción para los primeros n meses, donde  n =  meses_promocion*/
-    private final float precio_promocion = 0;
+    private final float precio_promocion = 0f;
     /** Meses que dura el precio promoción del servicio */
     private final int meses_promocion = 3;
     /** Precio asignado al servicio HVOMax Normal */
-    private final float precio = 140;
+    private final float precio = 140f;
 
     /**
      * Realiza el cobro del servicio HVOMax Normal a la suscripción recibida.

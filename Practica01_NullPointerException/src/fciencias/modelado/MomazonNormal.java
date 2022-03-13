@@ -10,7 +10,7 @@
  */
 public class MomazonNormal implements CobradorMomazon{
     /** Precio asignado al servicio Momazon Normal */
-    private final float precio = 110;
+    private final float precio = 110f;
 
     /**
      * Realiza el cobro del servicio Momazon Normal a la suscripción recibida.

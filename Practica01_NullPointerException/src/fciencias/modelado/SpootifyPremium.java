@@ -10,7 +10,7 @@
  */
 public class SpootifyPremium implements CobradorSpootify{
     /** Precio asignado al servicio Spootify Premium */
-    private final float precio = 80;
+    private final float precio = 80f;
 
     /**
      * Realiza el cobro del servicio Spootify Premium a la suscripción recibida.

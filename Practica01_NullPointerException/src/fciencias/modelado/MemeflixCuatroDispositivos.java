@@ -10,7 +10,7 @@
  */
 public class MemeflixCuatroDispositivos implements CobradorMemeflix{
     /** Precio asignado al servicio Memeflix para cuatro dispositivos */
-    private final float precio = 200;
+    private final float precio = 200f;
 
     /**
      * Realiza el cobro del servicio Memeflix para cuatro dispositivos a la suscripción recibida.

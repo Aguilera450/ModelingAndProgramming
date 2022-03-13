@@ -1,3 +1,6 @@
+import javax.management.StringValueExp;
+import javax.swing.plaf.synth.SynthStyle;
+
 //package src.fciencias.modelado;
 
 /**
@@ -49,8 +52,8 @@ public class CuentaBancaria {
     public float cobrar(float cobro, String referencia)  {
         if(this.saldo_disponible() >= cobro){
             dinero_disponible -= cobro;
-            System.out.printf("%.2f",propietario.nombre() + ", se realizó un cobro de $" + cobro +" por: " + referencia);
-            return saldo_disponible();
+            System.out.println(propietario.nombre() + ", se realizó un cobro de $" + cobro +" por: " + referencia);
+            return this.saldo_disponible();
         } else {
             return -1;
         }

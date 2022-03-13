@@ -11,11 +11,11 @@
 public class ThisneyNormal implements CobradorThisney{
 
     /** Precio de promoción para los primeros n meses, donde  n =  meses_promocion*/
-    private final float precio_promocion = 130;
+    private final float precio_promocion = 130f;
     /** Meses que dura el precio promoción del servicio */
     private final int meses_promocion = 3;
     /** Precio asignado al servicio Momazon Normal */
-    private final float precio = 160;
+    private final float precio = 160f;
 
     /**
      * Realiza el cobro del servicio Thisney Normal a la suscripción recibida.
