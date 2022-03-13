@@ -66,15 +66,15 @@
 \item[2.] Los Sujetos tienen una forma de agregar y remover Observadores en cualquier punto de la ejecución.
 \item[3.] Los Sujetos tienen una forma de notificar por igual a todos sus Observadores el mismo mensaje.
 \item[4.] Los Observadores tienen una forma de agregarse o eliminarse por su cuenta.
+\item[5.] La comunicación debe hacerse de uno a muchos (Sujeto-Observador), pero esto no es una limitante para tener más de un Sujeto por Observador.
 \end{itemize}
 
 \textbf{Menciona una desventaja de cada patrón:}
 
 \textbf{Desventajas en el patrón Observer:}
 \begin{itemize}
-\item[1.] La comunicación debe hacerse de uno a muchos (Sujeto-Observador), pero esto no es una limitante para tener más de un Sujeto por Observador.
-\item[2.] El almacenamiento podría llegar ha ser la gran desventaja en el patrón Observer, pues cuando se anexan nuevos observadores estos se tienen que declarar de explícita, esto no supone un verdadero problema cuando los observadores son pocos, pero en cuanto el número de observadores crece, los recursos computacionales se ven reducidos (no necesariamente de manera drástica).
-\item[3.] Al tener una comunicación de uno a muchos debemos elegir correctamente qué problemas se pueden abordar con este patrón, pues una mala decisión nos imposibilita el poder realizar una comunicación particular (en caso de ser necesaria).
+\item[1.] El almacenamiento podría llegar ha ser la gran desventaja en el patrón Observer, pues cuando se anexan nuevos observadores estos se tienen que declarar de explícita, esto no supone un verdadero problema cuando los observadores son pocos, pero en cuanto el número de observadores crece, los recursos computacionales se ven reducidos (no necesariamente de manera drástica).
+\item[2.] Al tener una comunicación de uno a muchos debemos elegir correctamente qué problemas se pueden abordar con este patrón, pues una mala decisión nos imposibilita el poder realizar una comunicación particular (en caso de ser necesaria).
 \end{itemize}
 
 \textbf{Desventajas en el patrón Strategy:}
