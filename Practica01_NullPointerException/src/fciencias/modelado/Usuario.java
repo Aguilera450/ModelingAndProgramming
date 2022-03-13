@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 import java.util.ArrayList;
 
@@ -21,9 +21,16 @@ public class Usuario {
     /** Lista de suscripciones activas y canceladas del usuario */
     private ArrayList<Suscripcion> lista_suscripciones;
     
-    public Usuario(String nombre, CuentaBancaria cuenta_bancaria){
+    /**
+     * Constructor de la clase Usuario.
+     * A cada usuario se le creara una cuenta bancaria con los fondos ingresados
+     * por parametro.
+     * @param nombre nombre del usuario.
+     * @param dinero dinero que tendra en su cuenta bancaria.
+     */
+    public Usuario(String nombre, float dinero){
         this.nombre = nombre;
-        this.cuenta_bancaria = cuenta_bancaria;
+        this.cuenta_bancaria = new CuentaBancaria(this, dinero);
         lista_suscripciones = new ArrayList<>();
     }
 
@@ -37,7 +44,7 @@ public class Usuario {
     }
 
     /**
-     * Método que ayuda al usuario a contratar un servicio.
+     * Metodo que ayuda al usuario a contratar un servicio.
      * @param tipo_suscripcion Versión del servicio a contratar.
      * @param correo Correo del usuario, es único.
      * @param servicio El servicio que contrata.
@@ -54,14 +61,14 @@ public class Usuario {
     }
     
     /**
-     * Método que cancela la suscripción del usuario.
+     * Metodo que cancela la suscripción del usuario.
      * @param suscripcion suscripción a cancelar.
      * @return Suscripción cancelada.
      */
     public Suscripcion cancelar_suscripcion(Suscripcion suscripcion) {
         if(suscripcion.activa()){
             // Si la suscripción a cancelar si esta activa...
-            if(!lista_suscripciones.contains(suscripcion)){
+            if(lista_suscripciones.contains(suscripcion)){
                 // Y existe en nuestro listado...
                 // El servicio se encargara de desactivar la suscripción del usuario.
                 suscripcion.servicio().remover(suscripcion);
@@ -69,5 +76,21 @@ public class Usuario {
             }
         }
         return null;
+    }
+
+    /**
+     * Metodo para cambiar el tipo de una suscripcion.
+     * @param suscripcion Suscripcion a la cual se le cambiara el tipo.
+     * @param nuevo_tipo Nuevo tipo que tendra la suscripcion.
+     * @return Suscripcion actualizada. Si la suscripcion es de otro usuario regresara null.
+     */
+    public Suscripcion cambiar_suscripcion(Suscripcion suscripcion, String nuevo_tipo){
+        if(lista_suscripciones.contains(suscripcion)){
+            // Esta suscripcion si le pertenece al usuario.
+            suscripcion.cambiar_tipo(nuevo_tipo);
+            return suscripcion;
+        } else {
+            return null;
+        }
     }
 }

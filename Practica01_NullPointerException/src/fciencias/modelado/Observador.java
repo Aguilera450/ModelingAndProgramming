@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Interfaz Observador para el patrón Observer.

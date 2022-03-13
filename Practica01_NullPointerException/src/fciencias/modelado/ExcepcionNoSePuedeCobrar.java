@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Clase para excepciones de cobro, cuando se intenta

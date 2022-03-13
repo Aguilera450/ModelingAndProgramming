@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Interfaz para el patrón Strategy en el servicio HVOMax.

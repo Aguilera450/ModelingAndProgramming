@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Clase que simula una suscripción de un servicio.

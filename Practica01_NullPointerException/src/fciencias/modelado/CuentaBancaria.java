@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Clase que simula a una cuenta bancaria y sus estados en saldo
@@ -14,6 +14,16 @@ public class CuentaBancaria {
     private Usuario propietario;
     /** Dinero que hay en la cuenta */
     private float dinero_disponible;
+
+    /**
+     * Constructor de la clase CuentaBancaria.
+     * @param propietario Usuario propietario de la cuenta.
+     * @param dinero Fondos de la cuenta.
+     */
+    public CuentaBancaria(Usuario propietario, float dinero){
+        this.propietario = propietario;
+        this.dinero_disponible = dinero;
+    }
     
     /**
      * Método que indica el propietario de la Cuenta Bancaria.

@@ -1,4 +1,4 @@
-package src.fciencias.modelado;
+//package src.fciencias.modelado;
 
 /**
  * Tipo de cobro para las suscripciones que contrataron el servicio de Memeflix para dos dispositivos.
