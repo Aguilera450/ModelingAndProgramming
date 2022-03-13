@@ -1,8 +1,6 @@
 package src.fciencias.modelado;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Clase que simula un usuario que puede estar suscrito
