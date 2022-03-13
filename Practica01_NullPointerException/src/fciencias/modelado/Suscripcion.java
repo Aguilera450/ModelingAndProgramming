@@ -198,9 +198,8 @@ public class Suscripcion implements Observador{
         // se enviará la recomendación mensual.
         if(activa()){
             // Se le muestra al usuario cuantos meses lleva usando el servicio.
-            System.out.println(propietario() + " llevas usando "+meses_actividad()+ " meses usando "+servicio().nombre());
-            aviso = servicio.mensaje();
-            System.out.println(mostrar_aviso());
+            System.out.println(propietario().nombre() + " llevas usando "+meses_actividad()+ " meses usando "+servicio().nombre());
+            System.out.println(servicio.mensaje());
         }
     }
 }

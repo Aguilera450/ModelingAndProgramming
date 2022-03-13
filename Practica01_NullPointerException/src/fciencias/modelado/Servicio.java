@@ -204,11 +204,11 @@ public abstract class Servicio implements Sujeto{
             // Validamos si ya existía esta suscripción para darle su mensaje de regreso.
             if(lista_suscripciones.containsKey(suscripcion.correo_asociado())){
                 suscripcion.suscribir_de_nuevo();
-                System.out.println(suscripcion.propietario() + " " + regreso());
+                System.out.println(suscripcion.propietario().nombre() + " " + regreso());
             } else {
                 // Si no existía, registramos la suscripcion en la lista.
                 lista_suscripciones.put(suscripcion.correo_asociado(), suscripcion);
-                System.out.println(suscripcion.propietario() + " " + bienvenida());
+                System.out.println(suscripcion.propietario().nombre() + " " + bienvenida());
             }
         }
     }
