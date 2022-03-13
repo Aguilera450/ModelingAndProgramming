@@ -105,6 +105,27 @@
 
 \section*{Sobre el proyecto:}
 
+\textbf{Strategy:}
+
+El patrón Strategy se implementó de la siguiente manera en el proyecto:
+
+Cada Servicio tendría un Cobrador propio, por ejemplo: CobradorMemeflix, CobradorMomazon, etc. Y estos Cobradores podrán cambiar su estrategia de cobro en tiempo de ejecución según la suscripción que se vaya a cobrar, y justo estas estrategia son los tipos de cobro para cada tipo de suscripción que tiene el servicio.
+
+Por lo que el patrón esta presente 5 veces en el proyecto, uno por cada servicio.
+
+\textbf{Observer:}
+
+El patrón Observer se implementó con las clases Servicio y Suscripcion, donde Servicio es el Sujeto y Suscripción los Observadores.
+
+Cada Servicio tiene una lista de Suscripciones, es decir, una lista de Observadores.
+
+Los mensajes que el Servicio estará comunicando a sus Suscripciones serán dos: uno podríamos describirlo como “paga lo que me debes” y el otro es una recomendación. Estos mensajes se estarán dando mensualmente acorde al contexto del proyecto.
+
+\textbf{Clase Suscripcion y CuentaBancaria:}
+
+Consideramos que sería útil manejar a los usuarios de los servicios mediante suscripciones, de esta forma un usuario puede estar suscrito a varios servicios, y además puede suscribirse dos veces al mismo, esto mediante un correo, porque en la vida real sucede que una persona puede tener más de una cuenta en un servicio con distintos correos.
+
+En cambio, la parte de CuentaBancaria, solo será una para cada usuario, y esta clase nos permitirá pagar cosas y delegarle a esta clase esta responsabilidad y no a algún método de Usuario.
 \end{document}
 
 
