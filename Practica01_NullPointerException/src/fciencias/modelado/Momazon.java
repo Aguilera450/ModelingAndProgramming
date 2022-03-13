@@ -63,7 +63,7 @@ public class Momazon extends Servicio {
         if(!cobrador.realizar_cobro(suscripcion)){
             // El cobro fue rechazado por falta de fondos
             suscripcion.cancelar_suscripcion();
-            System.out.println(suscripcion.propietario()+ ", su suscripción de " + tipo + " fue cancelada.");
+            System.out.println(suscripcion.propietario().nombre()+ ", su suscripción de " + tipo + " fue cancelada.");
         }
     }
 }
