@@ -4,11 +4,11 @@ public class Practica01{
     
     public static void main(String[] args) {
         // ========================================== CREACION DE SERVICIOS ==========================================
-        Memeflix memeflix = new Memeflix("Pronto tendremos recomendaciones para ti","Bienvenido","Bienvenido de vuelta");
-        Thisney thisney = new Thisney("Pronto tendremos recomendaciones para ti","Bienvenido","Bienvenido de vuelta");
-        Momazon momazon = new Momazon("Pronto tendremos recomendaciones para ti","Bienvenido","Bienvenido de vuelta");
-        Spootify spootify = new Spootify("Pronto tendremos recomendaciones para ti","Bienvenido","Bienvenido de vuelta");
-        HVOMax hvomax = new HVOMax("Pronto tendremos recomendaciones para ti","Bienvenido","Bienvenido de vuelta");
+        Memeflix memeflix = new Memeflix("Pronto tendremos recomendaciones para ti","Bienvenido a Memeflix","Bienvenido de vuelta a Memeflix");
+        Thisney thisney = new Thisney("Pronto tendremos recomendaciones para ti","Bienvenido a Thisney","Bienvenido de vuelta a Thisney");
+        Momazon momazon = new Momazon("Pronto tendremos recomendaciones para ti","Bienvenido a Momazon","Bienvenido de vuelta a Momazon");
+        Spootify spootify = new Spootify("Pronto tendremos recomendaciones para ti","Bienvenido a Spootify","Bienvenido de vuelta a Spootify");
+        HVOMax hvomax = new HVOMax("Pronto tendremos recomendaciones para ti","Bienvenido a HVOMax","Bienvenido de vuelta a HVOMax");
 
         // ========================================== CREACION DE USUARIOS ===========================================
         Usuario alicia = new Usuario("Alicia", 15000f);
@@ -55,7 +55,7 @@ public class Practica01{
          * HVOMax.
          */
         erika.contratar_servicio("Memeflix Cuatro Dispositivos", memeflix, "erika@ciencias.unam.mx");
-        erika.contratar_servicio("Spotify Normal", spootify, "erika@ciencias.unam.mx");
+        erika.contratar_servicio("Spootify Normal", spootify, "erika@ciencias.unam.mx");
         erika.contratar_servicio("HVOMax Normal", hvomax, "erika@ciencias.unam.mx");
 
         /**
@@ -119,8 +119,8 @@ public class Practica01{
          * Bob en el 4to mes da de baja Memeflix y Momazon
          */
 
-        bob.cancelar_suscripcion(bob.buscar_suscripcion("bob@ciencias.unam.mx", "Memeflix Un Dispositivo"));
-        bob.cancelar_suscripcion(bob.buscar_suscripcion("bob@ciencias.unam.mx", "Momazon Normal"));
+        bob.cancelar_suscripcion(bob.buscar_suscripcion("bob@ciencias.unam.mx", "Memeflix Cuatro Dispositivos"));
+        bob.cancelar_suscripcion(bob.buscar_suscripcion("bob@ciencias.unam.mx", "Momazon Premium"));
         
         memeflix.notificar();
         spootify.notificar();
@@ -156,9 +156,9 @@ public class Practica01{
         fausto.cancelar_suscripcion(fausto.buscar_suscripcion("fausto@ciencias.unam.mx", "HVOMax Normal"));
         fausto.cancelar_suscripcion(fausto.buscar_suscripcion("fausto@ciencias.unam.mx", "Memeflix Un Dispositivo"));
 
-        erika.cancelar_suscripcion(fausto.buscar_suscripcion("erika@ciencias.unam.mx", "Thisney Normal"));
-        erika.cancelar_suscripcion(fausto.buscar_suscripcion("erika@ciencias.unam.mx", "Memeflix Cuatro Dispositivos"));
-        erika.cancelar_suscripcion(fausto.buscar_suscripcion("erika@ciencias.unam.mx", "Spootify Normal"));
+        erika.cancelar_suscripcion(erika.buscar_suscripcion("erika@ciencias.unam.mx", "Thisney Normal"));
+        erika.cancelar_suscripcion(erika.buscar_suscripcion("erika@ciencias.unam.mx", "Memeflix Cuatro Dispositivos"));
+        erika.cancelar_suscripcion(erika.buscar_suscripcion("erika@ciencias.unam.mx", "Spootify Normal"));
 
         diego.contratar_servicio("Thisney Normal", thisney, "diego@ciencias.unam.mx");
 
@@ -175,7 +175,70 @@ public class Practica01{
          */
 
         cesar.contratar_servicio("Spootify Premium", spootify, "cesar@ciencias.unam.mx");
-        cesar.contratar_servicio("Memeflix Un Dispositivo", memeflix, "diego@ciencias.unam.mx");
+        diego.contratar_servicio("Memeflix Un Dispositivo", memeflix, "diego@ciencias.unam.mx");
+        diego.cambiar_suscripcion(diego.buscar_suscripcion("diego@ciencias.unam.mx", "Spootify Normal"), "Spootify Premium");
 
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
+
+        /**
+         * OCTAVO MES
+         * Sin cambios
+         */
+
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
+
+        /**
+         * NOVENO MES
+         * SIN CAMBIOS
+         */
+
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
+
+        /**
+         * DECIMO MES
+         */
+        erika.contratar_servicio("Thisney Normal", thisney, "erika@ciencias.unam.mx");
+        erika.contratar_servicio("HVOMax Normal", hvomax, "erika@ciencias.unam.mx");
+        erika.contratar_servicio("Momazon Premium", momazon, "erika@ciencias.unam.mx");
+
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
+
+        /**
+         * DECIMO PRIMER MES
+         * Sin cambios
+         */
+
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
+
+        /**
+         * DECIMO SEGUNDO MES
+         * Sin cambios.
+         */
+
+        memeflix.notificar();
+        spootify.notificar();
+        thisney.notificar();
+        hvomax.notificar();
+        momazon.notificar();
     }
 }
