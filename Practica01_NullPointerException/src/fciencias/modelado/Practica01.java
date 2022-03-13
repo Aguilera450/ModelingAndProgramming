@@ -1,5 +1,12 @@
-//package src.fciencias.modelado;
 
+/**
+ * Clase principal del proyecto.
+ * Esta clase realizara las suscripciones y cobros durante los 12 meses que se requiere.
+ * @author Adrian Aguilera Moreno     - Aguiler450
+ * @author Rosas Franco Diego Angel   - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version  1.0 - 12/03/2022
+ */
 public class Practica01{
     
     public static void main(String[] args) {
