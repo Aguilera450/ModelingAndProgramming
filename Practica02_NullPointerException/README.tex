@@ -1,0 +1,125 @@
+\documentclass{article}
+
+% Symbols
+\usepackage{amsfonts, amsthm}
+\usepackage{upgreek}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{amssymb, latexsym, amsmath}
+\usepackage{import}
+
+%Algorithms
+\usepackage[ruled,lined,linesnumbered,commentsnumbered]{algorithm2e}
+
+%% Identación
+\setlength{\parindent}{0cm}
+
+% Código
+\newcommand{\code}[1]{\textcolor{white!25!black}{\texttt{#1}}}
+\usepackage{listings}
+
+%AMS
+\usepackage{amsthm}
+\newtheorem{algo-thm}{Algoritmo}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{pgf}
+
+% Margins
+\addtolength{\voffset}{-1.5cm}
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{3cm}
+
+%Header-Footer
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{1pt}
+
+\newcommand{\set}[1]{
+  \left\{ #1 \right\}
+}
+
+\footskip = 50pt
+\renewcommand{\headrulewidth}{1pt}
+
+\pagestyle{fancyplain}
+
+\begin{document}
+	\input{../Portada/Portada}
+	\section*{\LARGE{Práctica 2}}
+
+Menciona los principios de diseño esenciales del patrón State, Template e Iterator:
+
+\subsection*{Template}
+Principios de diseño esenciales:
+\newcommand{\localtextbulletone}{\textcolor{black}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+\begin{itemize}
+\item \textbf{Template define los pasos de un algoritmo en un método (un esqueleto):}
+  
+  En Java, dentro de este método tenemos otros métodos que estarían representando los
+  pasos del algoritmo.
+\item \textbf{Template define algunos pasos de este algoritmo y otros los deja a
+  criterio de las subclases que implementan este algoritmo:}
+  
+  En Java, podemos ver a estos pasos como métodos ya definidos y que las subclases no
+  necesitarán volver a definir, y métodos abstractos, que son aquellos pasos que deben
+  definir las subclases según les corresponda.
+
+\item \textbf{Algunos de estos pasos (métodos) ya definidos pueden ser hooks:}
+  
+  Es decir, las subclases deben decidir si la implementación que tienen coincide
+  con su fin o deben redefinirla.
+  
+\item Evita que subclases reescriban código (pasos) de un determinado algoritmo.
+\item Permite a las subclases adaptar el algoritmo sin modificar la estructura del mismo.
+\end{itemize}
+
+Desventajas:
+\begin{itemize}
+\item \textbf{Si se usa mal el patrón perderíamos flexibilidad en el código.}
+  
+  Ya que al tener una estructura definida, y querer un cambio radical en el algoritmo,
+  tendríamos que implementar uno nuevo.  
+\end{itemize}
+
+\subsection*{State}
+Principios de diseño esenciales:
+\begin{itemize}
+\item Permite a un objeto cambiar su comportamiento (indistintamente) de manera instantánea
+  en tiempo de ejecución, y el objeto cambia cuando su estado interno se ve modificado de
+  alguna manera.
+\item El patrón de diseño “state” se usa cuando una clase (una entidad) tiene distintas fases
+  (estados) y en cada una de estas su comportamiento es distinto.
+\item Se encapsulan las acciones a realizar dando como resultado un estado.
+\end{itemize}
+
+Desventajas:
+\begin{itemize}
+\item Si se tienen demasiados estados y hay varias conexiones entre ellos, puede
+  resultar difícil el entendimiento del código.
+\item El impacto en espacio, ya que por cada estado tendríamos una clase y si son
+  demasiados estados, sería mucho espacio.
+\end{itemize}
+
+\subsection*{Iterator}
+Principios de diseño esenciales:
+\begin{itemize}
+\item Nos permite acceder a los elementos de un objeto que los contiene de manera
+  secuencial sin exponer su representación interna.
+\item Ayuda a generalizar la tarea de recorrer los elementos de una estructura.
+\end{itemize}
+
+Desventajas:
+\begin{itemize}
+\item \textbf{El iterador afecta el dinamismo de la estructura:}
+  
+  Por ejemplo, podría surgir un cambio en la estructura, ya sea la inserción
+  o eliminación de un elemento, causando que el Iterador tenga que actualizarse
+  y posicionarse donde se había quedado o en una determinada posición.
+\end{itemize}
+
+\section*{Diagrama UML:}
+
+\end{document}
