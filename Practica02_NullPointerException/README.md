@@ -10,8 +10,7 @@ Menciona una desventaja de cada patrón.
 
 * El restaurante McBurguesas te ha pedido programar un robot que servirá como
 mesero y cocinero. Si el prototipo cumple con los requerimientos y las pruebas, los
-producirán en masa para toda su franquicia.
-	   
+producirán en masa para toda su franquicia.	   
 	   - El robot debe estar encendido todo el tiempo esperando a que un cliente lo active, pero si no está trabajando puede estar suspendido.
 	   - Al activarse, el robot empieza a caminar hasta llegar a la mesa del cliente.
 	   - Una vez que se encuentra frente al cliente debe leerle todo el menú del restaurante.
