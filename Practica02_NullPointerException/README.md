@@ -43,4 +43,19 @@ No todas las hamburguesas llevan queso y no todas las hamburguesas preparan la c
 
 Agrega una clase principal con un main para probar el programa. En él deben crear un objeto de la clase Robot y un menú para el usuario. El menú debe permitir interacción con el robot. Si alguna acción no puede realizarse, se debe imprimir un mensaje para indicarle al usuario (por ejemplo, si el robot está suspendido y se le pide cocinar, la pantalla debe mostrar un mensaje que diga “no puedo cocinar mientras esté suspendido”). El programa debe saludar al usuario, mostrarle el estado actual del robot y las acciones disponibles del mismo. Si el usuario ingresa una opción, la pantalla debe imprimir la respuesta del robot (por ejemplo, el robot inicia suspendido, el usuario elige la opción de “encender” y se debe mostrar en pantalla “robot activado”). Cuando el robot lea el menú, el usuario puede elegir un solo platillo ingresando su id. Después se debe mostrar en pantalla el proceso de cocción. Al terminar se debe indicar que el platillo se entrega y se regresa al menú inicial donde el robot está suspendido.
 
+### Nota:
+Este menú servirá para probar la funcionalidad de su sistema. Es posible que el flujo sea automático (es decir, que sólo haya una secuencia de pasos para que el robot pruebe todas sus funcionalidades sin detenerse), y el menú servirá para ver este flujo con pausas en cada cambio de estado. Entonces, con cada acción deberá imprimir el menú nuevamente, el estado del robot y todas las acciones disponibles.
+
+Para esta práctica no hace falta simular que pasan los días. Tampoco es necesario que cambien los menús en ejecución. La forma en que se describe cada menú es una excusa para usar las estructuras de datos señaladas.
+
+Realiza los diagramas de clase y de estados, y agregalos como imagen en la carpeta de entrega.
+
+Sigan los lineamientos para la entrega de prácticas. El documento estará en el classroom.
+
+## Evaluación:
+
+- 20% Implementación de cada patrón (en total 60%).
+- 10% Parte teórica.
+- 10% Funcionamiento correcto.
+- 20% Diagramas (se califica que concuerden con la implementación y sean correctos).
 </div>
