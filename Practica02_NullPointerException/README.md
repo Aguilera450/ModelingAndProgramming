@@ -27,3 +27,16 @@ producirán en masa para toda su franquicia.
     - El robot podrá acceder a todos los elementos de los menús de manera general. El robot debe tomar los menús en alguna estructura de datos ajena.
 
 - El robot muestra en pantalla el proceso de cocción para que el comensal no se impaciente esperando. Para este prototipo se asume que todas las hamburguesas tienen una preparación análoga:
+    - poner pan.
+    - poner mayonesa.
+    - poner mostaza.
+    - preparar carne.
+    - poner carne.
+    - poner queso.
+    - poner vegetales.
+    - poner catsup.
+    - poner pan.
+
+No todas las hamburguesas llevan queso y no todas las hamburguesas preparan la carne igual ya que algunas son vegetarianas.
+
+Agrega una clase principal con un main para probar el programa. En él deben crear un objeto de la clase Robot y un menú para el usuario. El menú debe permitir interacción con el robot. Si alguna acción no puede realizarse, se debe imprimir un mensaje para indicarle al usuario (por ejemplo, si el robot está suspendido y se le pide cocinar, la pantalla debe mostrar un mensaje que diga “no puedo cocinar mientras esté suspendido”). El programa debe saludar al usuario, mostrarle el estado actual del robot y las acciones disponibles del mismo. Si el usuario ingresa una opción, la pantalla debe imprimir la respuesta del robot (por ejemplo, el robot inicia suspendido, el usuario elige la opción de “encender” y se debe mostrar en pantalla “robot activado”). Cuando el robot lea el menú, el usuario puede elegir un solo platillo ingresando su id. Después se debe mostrar en pantalla el proceso de cocción. Al terminar se debe indicar que el platillo se entrega y se regresa al menú inicial donde el robot está suspendido.
