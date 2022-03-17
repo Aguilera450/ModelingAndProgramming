@@ -72,10 +72,10 @@ Sigan los lineamientos para la entrega de prácticas. El documento estará en el
 
 ### Evaluación:
 
-	* 20% Implementación de cada patrón (en total 40%).
-	* 10% Parte teórica.
-	* 10% Funcionamiento correcto.
-	* 40% Diagramas (se califica que concuerden con la implementación y sean correctos).
+- 20% Implementación de cada patrón (en total 40%).
+- 10% Parte teórica.
+- 10% Funcionamiento correcto.
+- 40% Diagramas (se califica que concuerden con la implementación y sean correctos).
 
 ### NOTA:
 Si el código no está comentado en formato Javadoc, como se indica en los lineamientos,
