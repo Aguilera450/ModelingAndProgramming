@@ -7,7 +7,7 @@
  * @author Marco Antonio Rivera Silva - DONMARCORS
  */
 
-public class Platillo {
+public abstract class Platillo {
     /* Atributos de clase.*/
     protected int id;
     protected String nombre;
@@ -15,4 +15,73 @@ public class Platillo {
     protected float precio;
     protected boolean llevaQueso;
     protected boolean esVegetariano;
+    
+    /** */
+    public Int getId() {
+	return id;
+    }
+    
+    /** */
+    public String getNombre() {
+	return nombre;
+    }
+    
+    /** */
+    public String getDescripcion() {
+	return descripcion;
+    }
+    
+    /** */
+    public float getPrecio() {
+	return precio;
+    }
+    
+    /** */
+    public String toString() {
+	return "------------------------------------"
+	    + "-------------------------------------"
+	    + "\n Id: " + getId()
+	    + "\n Nombre: " + getNombre()
+	    + "\n Precio: " + getPrecio()
+	    + "\n Descripcion:" + getDescripcion()
+	    + "\n------------------------------------"
+	    + "-------------------------------------";
+    }
+    
+    /** */
+    abstract String cocinar();
+    
+    /** */
+    abstract String ponerBasePan();
+    
+    /** */
+    abstract String ponerMayonesa();
+    
+    /** */
+    abstract String ponerMostaza();
+    
+    /**
+     *
+     */
+    abstract String prepararCarne();
+    
+    /** */
+    public String ponerCarne() {
+	if(!esVegetariano)
+	    return "Se coloca la carne.";
+	else
+	    return "Se coloca la carne de Soja.";
+    }
+    
+    /** */
+    abstract String ponerQueso();
+
+    /** */
+    abstract String ponerVegetales();
+    
+    /** */
+    abstract String ponerCatsup();
+    
+    /** */
+    abstract Strin ponerTapaPan();
 }
