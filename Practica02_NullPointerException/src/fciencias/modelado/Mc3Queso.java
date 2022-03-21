@@ -87,15 +87,19 @@ public class Mc3Queso {
      */
     @Override
     public String ponerVegetales() {
-	return "";
-    }
+	return "Se coloca lechuga romana, "
+	    + "aros de cebolla empanizados, "
+	    + "rodajas de jitomate y espinacas "
+	    + "para ponerse como popeye.";
+    }    
     
     /**
      *
      */
     @Override
     public String ponerCatsup() {
-	return "";
+	return "Se colaca salsa Catsup canadiense, "
+	    + "por su dulcura.";
     }
     
     /**
@@ -103,6 +107,7 @@ public class Mc3Queso {
      */
     @Override
     public String tapaPan() {
-	return "";
+	return "Finalmente se coloca la tapa de "
+	    + "pan de la hamburguesa.";
     }
 }
