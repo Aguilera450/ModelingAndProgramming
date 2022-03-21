@@ -24,11 +24,23 @@ public class Mc3Queso {
     }
     
     /**
-     * 
+     * Método que devuelve la preparación de la hamburguesa.
+     * @return <code>String</code> -- los pasos de cocinar una <code>Mc3Queso</code>.
      */
     @Override
     public String cocinar() {
-	return "No implementado.";
+	return "********** "
+	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
+	    + "\n 1. " + ponerBasePan()
+	    + "\n 2. " + ponerMayonesa()
+	    + "\n 3. " + ponerMostaza()
+	    + "\n 4. " + prepararCarne()
+	    + "\n 5. " + ponerCarne()
+	    + "\n 6. " + ponerQueso()
+	    + "\n 7. " + ponerVegetales()
+	    + "\n 8. " + ponerCatsup()
+	    + "\n 9. " + ponerTapaPan()
+	    + "\n ¡Gracias por la espera!";
     }
     
     /**
@@ -46,7 +58,8 @@ public class Mc3Queso {
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de la mayonesa.
+     * @return <code>String</code> -- descripción de la mayonesa.
      */
     @Override
     public String ponerMayonesa() {
@@ -56,7 +69,8 @@ public class Mc3Queso {
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de la mostaza.
+     * @return <code>String</code> -- descripcion de la mostaza.
      */
     @Override
     public String ponerMostaza() {
@@ -65,7 +79,9 @@ public class Mc3Queso {
     }
     
     /**
-     *
+     * Método que prepara la carne.
+     * @return <code>String</code> -- descripción de la 
+     *                                preparación de la carne.
      */
     @Override
     public String prepararCarne() {
@@ -74,7 +90,9 @@ public class Mc3Queso {
     }
     
     /**
-     * 
+     * Método que devuelve la aplicación de los quesos.
+     * @return <code>String</code> -- descripción del queso y su
+     *                                preparación en la hamburguesa.
      */
     @Override
     public String ponerQueso() {
@@ -83,7 +101,9 @@ public class Mc3Queso {
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de los vegetales.
+     * @return <code>String</code> -- descripción de los vegetales
+     *                                en la hamburguesa.
      */
     @Override
     public String ponerVegetales() {
@@ -94,7 +114,9 @@ public class Mc3Queso {
     }    
     
     /**
-     *
+     * Método que devuelve la aplicación de la Castsup.
+     * @return <code>String</code> -- breve descripción de la Catsup
+     *                                y de su origen.
      */
     @Override
     public String ponerCatsup() {
@@ -103,7 +125,11 @@ public class Mc3Queso {
     }
     
     /**
-     *
+     * Método que devuelve el estado del pan en la
+     * tapa de la hamburguesa.
+     * @return <code>String</code> -- mensaje que le
+     * dice al usuario como va el avance del pan en
+     * la tapa de la hamburguesa.
      */
     @Override
     public String tapaPan() {
