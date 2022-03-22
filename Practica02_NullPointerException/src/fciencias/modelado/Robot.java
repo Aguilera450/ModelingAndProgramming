@@ -14,9 +14,6 @@ public class Robot{
     /** Boolean que nos dice si se esta atendiendo una mesa. */
     private boolean atencionMesaCliente;
 
-    /** Boolean que nos dice si el robot esta frente al cliente. */
-    private boolean frenteAlCliente;
-
     /** Boolean que nos dice si ya se tomo la orden. */
     private boolean ordenTomada;
 
@@ -119,14 +116,6 @@ public class Robot{
      */
     public boolean getAtencionMesaCliente(){
         return atencionMesaCliente;
-    }
-
-    /**
-     * Metodo que devuelve si el robot esta frente al cliente.
-     * @return True si esta frente, False en caso contrario.
-     */
-    public boolean getFrenteACliente(){
-        return frenteAlCliente;
     }
 
     /**
