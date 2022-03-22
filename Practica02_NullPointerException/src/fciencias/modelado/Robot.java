@@ -51,6 +51,8 @@ public class Robot{
      */
     public Robot(Menu menu){
         menuOfrecido = menu;
+        iteradorMenu = menuOfrecido.crearIterador();
+        asignarNuevoEstado(new ModoSuspendido(this));
     }
 
     /**
@@ -66,7 +68,24 @@ public class Robot{
      * @return Menu en tipo String.
      */
     public String mostrarMenu(){
-        
+        String menuString = "";
+        Platillo platilloActual;
+        // Nos permitirá enumerar los platillos en el menú y así poder identificarlos acorde al iterador.
+        int contadorPlatillos = 1;
+        // Se usa el iterador actual para mostrar el menú.
+        menuString += "********" + menuOfrecido.nombre().toUpperCase() + "********\n";
+        while (iterador.hasNext()) {
+            platilloActual = (Platillo) iterador.next();
+            menuString +=   "\n\n----------- Platillo " + contadorPlatillos +" -----------\n"
+                            + platilloActual.toString();
+            contadorPlatillos++;
+        }
+
+        /* Una vez generado el menú en formato String,
+        Se asigna nuevamente el iterador para volver a usarlo en el futuro*/
+        iteradorMenu = menuOfrecido.crearIterador();
+
+        return menuString;
     }
 
     /**
@@ -83,6 +102,7 @@ public class Robot{
      */
     public void asignarMesaAAtender(MesaCliente mesa){
         mesaAtendida = mesa;
+        atencionMesaCliente = true;
     }
 
     /**
@@ -203,7 +223,7 @@ public class Robot{
      * al cliente que platillo quiere.
      */
     public void preguntarPlatillo(){
-
+        
     }
 
     /**

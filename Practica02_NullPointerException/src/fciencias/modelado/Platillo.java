@@ -57,14 +57,13 @@ public abstract class Platillo {
      *                                y descipciones.
      */
     public String toString() {
-	return "------------------------------------"
-	    + "-------------------------------------"
-	    + "\n Id: " + getId()
-	    + "\n Nombre: " + getNombre()
-	    + "\n Precio: " + getPrecio()
-	    + "\n Descripcion:" + getDescripcion()
-	    + "\n------------------------------------"
-	    + "-------------------------------------";
+        return "------------------------------------"
+            + "-------------------------------------"
+            + "\n Nombre: " + getNombre()
+            + "\n Precio: " + getPrecio()
+            + "\n Descripcion:" + getDescripcion()
+            + "\n------------------------------------"
+            + "-------------------------------------";
     }
     
     /** Método que indica como se cocina una hamburguesa. */
