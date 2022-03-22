@@ -52,62 +52,80 @@ public class McVegetales {
      */
     @Override
     public String ponerBasePan() {
-	return " ";
+	return "Iniciamos colocando pan francés recién calentado a la plancha "
+	    + "como base de nuestra hamburguesa.";
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de la mayonesa.
+     * @return <code>String</code> -- descripción de la mayonesa.
      */
     @Override
     public String ponerMayonesa() {
-	return " ";
+	return "Se unta un poco de mayonesa sobre el pan. ";
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de la mostaza.
+     * @return <code>String</code> -- descripcion de la mostaza.
      */
     @Override
     public String ponerMostaza() {
-	return " ";
+	return "Se mezcla la mayonesa con la mostaza para generar un sabor unico. ";
     }
     
     /**
-     *
+     * Método que prepara la carne.
+     * @return <code>String</code> -- descripción de la 
+     *                                preparación de la carne.
      */
     @Override
     public String prepararCarne() {
-	return " ";
+	return "Se frien algunos Nopales con algo de Soja "
+	    + "triturada, esto fungira de nuestra carne sintetica.";
     }
     
     /**
-     * 
+     * Método que devuelve la aplicación del queso.
+     * @return <code>String</code> -- descripción del queso y su
+     *                                preparación en la hamburguesa.
      */
     @Override
     public String ponerQueso() {
-	return " ";
+	return "Se emplea queso oaxaca gratinado para aumentar la textura "
+	    + "en su hamburguesa.";
     }
     
     /**
-     *
+     * Método que devuelve la aplicación de los vegetales.
+     * @return <code>String</code> -- descripción de los vegetales
+     *                                en la hamburguesa. 
      */
     @Override
     public String ponerVegetales() {
-	return " ";
+	return "Se colocan algunos pepinillos, rebanadas de jitomate "
+	    "y algunos aros de cebolla morada.";
     }    
     
     /**
-     *
+     * Método que devuelve la aplicación de la Castsup.
+     * @return <code>String</code> -- breve descripción de la Catsup.
      */
     @Override
     public String ponerCatsup() {
-	return " ";
+	return "Se verte un poco de McCatsup sobre las verduras.";
     }
     
     /**
-     *
+     * Método que devuelve el estado del pan en la
+     * tapa de la hamburguesa.
+     * @return <code>String</code> -- mensaje que le
+     * dice al usuario como va el avance del pan en
+     * la tapa de la hamburguesa.
      */
     @Override
     public String ponerTapaPan() {
-	return " ";
+	return "Por último, colocamos pan francés recién calentado a la plancha "
+	    + "como base de nuestra hamburguesa. ";
     }
 }
