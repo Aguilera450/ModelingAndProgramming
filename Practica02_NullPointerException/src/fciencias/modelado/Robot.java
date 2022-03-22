@@ -79,7 +79,7 @@ public class Robot{
 
     /**
      * Metodo que asigna una nueva mesa a atender.
-     * @param mesa Nueva mesa a asignar.
+     * @param mesa Nueva mesa a atender.
      */
     public void asignarMesaAAtender(MesaCliente mesa){
         mesaAtendida = mesa;
@@ -94,7 +94,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve si se esta atendiendo la mesa del cliente.
+     * Metodo que devuelve si se esta atendiendo una mesa.
      * @return True si es atendia, False en caso contrario.
      */
     public boolean getAtencionMesaCliente(){
@@ -135,27 +135,27 @@ public class Robot{
 
     /** Metodo que suspende al robot. */
     public void suspenderse(){
-
+        estadoActual.suspenderse();
     }
 
     /** Metodo que pone en modo movimiento al robot. */
     public void caminar(){
-
+        estadoActual.caminar();
     }
 
     /** Metodo que pone en modo comanda al robot. */
     public void atender(){
-
+        estadoActual.atender();
     }
 
     /** Metodo que pone en modo cocinero al robot. */
     public void cocinar(){
-
+        estadoActual.cocinar();
     }
 
     /** Metodo que pone en modo Entrega al robot. */
     public void entregar(){
-
+        estadoActual.entregar();
     }
 
     /**
@@ -211,6 +211,6 @@ public class Robot{
      * que ordeno el cliente.
      */
     public void cocinarPlatillo(){
-
+        System.out.println(platilloACocinar.cocinar());
     }
 }
