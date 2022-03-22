@@ -97,7 +97,7 @@ public class Mc3Queso extends Platillo  {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se gratinan los quesos a la parrilla "
 	    + "con un poco de aceite de nuez.";
     }

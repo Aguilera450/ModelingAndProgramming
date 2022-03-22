@@ -93,7 +93,7 @@ public class McPolloQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se aplican 4 laminas de queso americano sobre la carne "
 	    + "recien calentada.";
     }

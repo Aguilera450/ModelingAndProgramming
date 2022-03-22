@@ -91,7 +91,7 @@ public class McVegetales {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se emplea queso oaxaca gratinado para aumentar la textura "
 	    + "en su hamburguesa.";
     }

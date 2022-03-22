@@ -91,7 +91,7 @@ public class McLechugaYQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se coloca queso manchego y parmesano sobre la carne "
 	    + "sintética.";
     }

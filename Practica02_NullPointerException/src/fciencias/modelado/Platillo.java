@@ -82,6 +82,21 @@ public abstract class Platillo {
     abstract String prepararCarne();
     
     /**
+     * Método que devuelve la aplicación del queso.
+     * Este método implementa un método <code>hook</code>.
+     * @return <code>String</code> -- descripción del queso y su
+     *                                preparación en la hamburguesa.
+     * @throws InvalidOperationException.
+     */
+    public String ponerQueso() {
+	if(!llevaQueso)
+	    throw new InvalidOperationException("Lo siento, "
+						+ "aquí no hacemos eso hermano.");
+	else
+	    hook();
+    }
+    
+    /**
      * Método que nos anuncia que se le ha colocado carne a nuestra hamburguesa.
      * @return <code>String</code> -- se le pone carne a nuestra hamburguesa y
      *                                dependiendo el gusto del cliente esta es

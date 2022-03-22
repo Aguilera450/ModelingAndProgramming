@@ -86,18 +86,7 @@ public class McChill extends Platillo {
 	return "Luego, se asa la carne a la parrilla y ahuma con un poco "
 	    + "de leño de Hickory y se enchila con salsa chili.";
     }
-    
-    /**
-     * Este método no debe ser implementado en esta clase por la
-     * definición de la hamburguesa.
-     * @throws InvalidOperationException.
-     */
-    @Override
-    public String ponerQueso() throws InvalidOperationException {
-	throw new InvalidOperationException("Lo siento, "
-					    + "aquí no hacemos eso hermano.");
-    }
-    
+        
     /**
      * Método que devuelve la aplicación de los vegetales.
      * @return <code>String</code> -- descripción de los vegetales
