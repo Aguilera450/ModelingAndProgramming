@@ -19,7 +19,7 @@ public class McChill extends Platillo {
 	super.descripcion = "McChill hamburguesa es la sensacion en "
 	    + "algun pais, con un sabor casero y picante.";
 	super.precio = 87.50f;
-	super.llevaQueso = true;
+	super.llevaQueso = false;
 	super.esVegetariano = false;
     }
     
@@ -36,10 +36,9 @@ public class McChill extends Platillo {
 	    + "\n 3. " + ponerMostaza()
 	    + "\n 4. " + prepararCarne()
 	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
+	    + "\n 6. " + ponerVegetales()
+	    + "\n 7. " + ponerCatsup()
+	    + "\n 8. " + ponerTapaPan()
 	    + "\n ¡Gracias por la espera!";;
     }
     
@@ -89,14 +88,14 @@ public class McChill extends Platillo {
     }
     
     /**
-     * Método que devuelve la aplicación del queso.
-     * @return <code>String</code> -- descripción del queso y su
-     *                                preparación en la hamburguesa.
+     * Este método no debe ser implementado en esta clase por la
+     * definición de la hamburguesa.
+     * @throws InvalidOperationException.
      */
     @Override
-    public String ponerQueso() {
-	return "Se aplica queso manchego y amarillo, ambos quesos van "
-	    + "derretidos a la braza.";
+    public String ponerQueso() throws InvalidOperationException {
+	throw new InvalidOperationException("Lo siento, "
+					    + "aquí no hacemos eso hermano.");
     }
     
     /**

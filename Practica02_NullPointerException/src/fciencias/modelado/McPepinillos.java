@@ -56,11 +56,14 @@ public class McPepinillos {
     }
     
     /**
-     * 
+     * Método que devuelve la aplicación del queso.
+     * @return <code>String</code> -- descripción del queso y su
+     *                                preparación en la hamburguesa.
      */
     @Override
     public String ponerQueso() {
-	return " ";
+	return "Se aplica queso manchego y amarillo, ambos quesos van "
+	    + "derretidos a la braza.";
     }
     
     /**
