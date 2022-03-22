@@ -4,6 +4,7 @@
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version 1.0 - 20/03/2022
+ * @see <code>Platillo</code>.
  */
 
 public class Mc3Queso extends Platillo  {
@@ -87,7 +88,7 @@ public class Mc3Queso extends Platillo  {
     @Override
     public String prepararCarne() {
 	return "Se rostiza la carne marinada en adobo "
-	    + "ranchero con carbón egipcio.";
+	    + "ranchero con carbon egipcio.";
     }
     
     /**

@@ -4,6 +4,7 @@
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version 1.0 - 21/03/2022
+ * @see <code>Platillo</code>.
  */
 
 public class McChill extends Platillo {
@@ -16,14 +17,15 @@ public class McChill extends Platillo {
 	super.id = 2;
 	super.nombre = "Hamburguesa McChill";
 	super.descripcion = "McChill hamburguesa es la sensacion en "
-	    + "algún país, con un sabor casero y picante.";
+	    + "algun pais, con un sabor casero y picante.";
 	super.precio = 87.50f;
 	super.llevaQueso = true;
 	super.esVegetariano = false;
     }
     
     /**
-     * 
+     * Método que devuelve la preparación de la hamburguesa.
+     * @return <code>String</code> -- los pasos de cocinar una <code>McChill</code>.
      */
     @Override
     public String cocinar() {
@@ -71,8 +73,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "A continuación se unta una mostaza estilo mexicana "
-	    + "con sabores únicos.";
+	return "A continuacion se unta una mostaza estilo mexicana "
+	    + "con sabores unicos.";
     }
     
     /**
@@ -83,7 +85,7 @@ public class McChill extends Platillo {
     @Override
     public String prepararCarne() {
 	return "Luego, se asa la carne a la parrilla y ahuma con un poco "
-	    + "de leño de Hickory.";
+	    + "de leño de Hickory y se enchila con salsa chili.";
     }
     
     /**
@@ -126,7 +128,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String tapaPan() {
-	return "Por último, se ahuma a la leña el pan para la "
+	return "Por ultimo, se ahuma a la leña el pan para la "
 	    + "tapa de la hamburguesa, esto con un poco de mantequilla "
 	    + "untada.";
     }
