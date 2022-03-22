@@ -87,17 +87,6 @@ public class McEspeciasMexicanas extends Platillo {
     }
     
     /**
-     * Este método no debe ser implementado en esta clase por la
-     * definición de la hamburguesa.
-     * @throws InvalidOperationException.
-     */
-    @Override
-    public String ponerQueso() throws InvalidOperationException {
-	throw new InvalidOperationException("Lo siento, "
-					    + "aquí no hacemos eso hermano.");
-    }
-    
-    /**
      * Método que devuelve la aplicación de los vegetales.
      * @return <code>String</code> -- descripción de los vegetales
      *                                en la hamburguesa.
