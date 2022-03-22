@@ -23,7 +23,9 @@ public class McPepinillos extends Platillo {
     }
     
     /**
-     * 
+     * Método que devuelve la preparación de la hamburguesa.
+     * @return <code>String</code> -- los pasos de cocinar una 
+     *                                <code>McPepinillos</code>. 
      */
     @Override
     public String cocinar() {
