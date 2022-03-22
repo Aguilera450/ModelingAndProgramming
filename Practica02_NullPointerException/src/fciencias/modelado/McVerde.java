@@ -84,7 +84,7 @@ public class McVerde {
      *
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return " ";
     }    
 }

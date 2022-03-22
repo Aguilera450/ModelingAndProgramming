@@ -10,12 +10,12 @@
 
 public abstract class Platillo {
     /* Atributos de clase.*/
-    protected Integer id;
-    protected String nombre;
-    protected String descripcion;
-    protected float precio;
-    protected boolean llevaQueso;
-    protected boolean esVegetariano;
+    protected Integer id;                // Identificador del tipo de hamburguesa.
+    protected String nombre;             // Nombre de la hamburguesa.
+    protected String descripcion;        // Breve descripción de la hamburguesa.
+    protected float precio;              // Precio de la hamburguesa.
+    protected boolean llevaQueso;        // ¿Lleva queso?
+    protected boolean esVegetariano;     // ¿es vegetariana?
     
     /** 
      * Método nos dice cual el Id de la hamburguesa.

@@ -29,7 +29,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String cocinar() {
-	return return "********** "
+	return "********** "
 	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
 	    + "\n 1. " + ponerBasePan()
 	    + "\n 2. " + ponerMayonesa()
@@ -126,7 +126,7 @@ public class McChill extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "Por ultimo, se ahuma a la leña el pan para la "
 	    + "tapa de la hamburguesa, esto con un poco de mantequilla "
 	    + "untada.";

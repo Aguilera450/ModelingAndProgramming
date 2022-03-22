@@ -124,7 +124,7 @@ public class McLechugaYQueso extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "Finalmente, se coloca pan procesado con lechugas de alta calidad.";
     }    
 }
