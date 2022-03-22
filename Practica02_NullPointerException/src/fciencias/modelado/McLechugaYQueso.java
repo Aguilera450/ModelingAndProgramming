@@ -23,27 +23,6 @@ public class McLechugaYQueso extends Platillo {
     }    
     
     /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McLechugaYQueso</code>.
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
-    /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
      * @return <code>String</code> -- mensaje que le
@@ -52,7 +31,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Se coloca pan procesado con lechugas de alta calidad.";
+	return "\n *) Se coloca pan procesado con lechugas de alta calidad.";
     }
     
     /**
@@ -61,7 +40,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se unta mayonesa McMayonesa en el pan de lechuga base.";
+	return "\n *) Se unta mayonesa McMayonesa en el pan de lechuga base.";
     }
     
     /**
@@ -70,7 +49,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Ahora, estamos untando mostaza junto a la mayonesa en la "
+	return "\n *) Ahora, estamos untando mostaza junto a la mayonesa en la "
 	    + "base de pan de lechuga.";
     }
     
@@ -81,7 +60,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "En este momento estamos dorando la carne de Soja y lechuga "
+	return "\n *) En este momento estamos dorando la carne de Soja y lechuga "
 	    + "con un poco de aceite.";
     }
     
@@ -92,7 +71,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String hook() {
-	return "Se coloca queso manchego y parmesano sobre la carne "
+	return "\n *) Se coloca queso manchego y parmesano sobre la carne "
 	    + "sintética.";
     }
     
@@ -103,7 +82,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "Se le colocan rabanos, lechuga orejona, lechuga romana "
+	return "\n *) Se le colocan rabanos, lechuga orejona, lechuga romana "
 	    + "y aros de cebolla a la hamburguesa.";
     }    
     
@@ -113,7 +92,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se coloca una cucharada de Catsup marca del gallo.";
+	return "\n *) Se coloca una cucharada de Catsup marca del gallo.";
     }
     
     /**
@@ -125,6 +104,6 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Finalmente, se coloca pan procesado con lechugas de alta calidad.";
+	return "\n *) Finalmente, se coloca pan procesado con lechugas de alta calidad.";
     }    
 }

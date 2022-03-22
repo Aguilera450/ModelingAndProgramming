@@ -66,8 +66,25 @@ public abstract class Platillo {
             + "-------------------------------------";
     }
     
-    /** Método que indica como se cocina una hamburguesa. */
-    abstract String cocinar();
+    /**
+     * Método que devuelve la preparación de la hamburguesa.
+     * @return <code>String</code> -- los pasos de cocinar una 
+     *                                hamburguesa. 
+     */
+    public String cocinar() {
+	return "********** "
+	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
+	    +  ponerBasePan()
+	    +  ponerMayonesa()
+	    +  ponerMostaza()
+	    +  prepararCarne()
+	    +  ponerCarne()
+	    +  ponerQueso()
+	    +  ponerVegetales()
+	    +  ponerCatsup()
+	    +  ponerTapaPan()
+	    + "\n ¡Gracias por la espera!";
+    }
     
     /** Método que anuncia que se ha puesto la base de la hamburguesa. */
     abstract String ponerBasePan();
@@ -86,16 +103,15 @@ public abstract class Platillo {
      * Este método implementa un método <code>hook</code>.
      * @return <code>String</code> -- descripción del queso y su
      *                                preparación en la hamburguesa.
-     * @throws InvalidOperationException.
      */
     public String ponerQueso() {
 	if(!llevaQueso)
-	    throw new InvalidOperationException("Lo siento, "
-						+ "aquí no hacemos eso hermano.");
+	    return "";
 	else
-	    hook();
+	    return hook();
     }
     
+    public String hook() { return " ";}
     /**
      * Método que nos anuncia que se le ha colocado carne a nuestra hamburguesa.
      * @return <code>String</code> -- se le pone carne a nuestra hamburguesa y
@@ -109,9 +125,6 @@ public abstract class Platillo {
 	    return "Se coloca la carne de Soja.";
     }
     
-    /** Método que nos dice que se le esta poniendo queso a nuestra hamburguesa. */
-    abstract String ponerQueso();
-
     /** Método que nos dice que se le esta poniendo vegetales a nuestra hamburguesa. */
     abstract String ponerVegetales();
     
@@ -119,5 +132,5 @@ public abstract class Platillo {
     abstract String ponerCatsup();
     
     /** Método que anuncia que se ha puesto la tapa de la hamburguesa. */
-    abstract Strin ponerTapaPan();
+    abstract String ponerTapaPan();
 }

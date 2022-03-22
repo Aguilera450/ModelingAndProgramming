@@ -24,27 +24,6 @@ public class McPolloQueso extends Platillo {
     }
     
     /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McPolloQueso</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
-    /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
      * @return <code>String</code> -- mensaje que le
@@ -53,7 +32,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Empezamos colocando una media pieza de pan "
+	return "\n *) Empezamos colocando una media pieza de pan "
 	    + "crujiente y caliente como base de su hamburguesa.";
     }
     
@@ -63,7 +42,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Untamos un poco de mayonesa McMayonesa.";
+	return "\n *) Untamos un poco de mayonesa McMayonesa.";
     }
     
     /**
@@ -72,7 +51,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Se coloca un cucharada pequeña de mostaza "
+	return "\n *) Se coloca un cucharada pequeña de mostaza "
 	    + "sobre la mayonesa.";
     }
     
@@ -83,7 +62,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "En este momento calentamos con aceite la carne "
+	return "\n *) En este momento calentamos con aceite la carne "
 	    + "de pollo que funge como hamburguesa.";
     }
     
@@ -94,7 +73,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String hook() {
-	return "Se aplican 4 laminas de queso americano sobre la carne "
+	return "\n *) Se aplican 4 laminas de queso americano sobre la carne "
 	    + "recien calentada.";
     }
     
@@ -105,7 +84,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "Se coloca tomate, cebolla y cilantro en una "
+	return "\n *) Se coloca tomate, cebolla y cilantro en una "
 	    + "salsa mexicana [pico de gallo].";
     }    
     
@@ -115,7 +94,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se verte un chorro de Catsup sobre los vegetales.";
+	return "\n *) Se verte un chorro de Catsup sobre los vegetales.";
     }
     
     /**
@@ -127,7 +106,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Finalizamos colocando una media pieza de pan "
+	return "\n *) Finalizamos colocando una media pieza de pan "
 	    + "crujiente y caliente como tapa de su hamburguesa.";
     }
 }

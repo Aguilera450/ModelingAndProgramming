@@ -25,26 +25,6 @@ public class McEspeciasMexicanas extends Platillo {
     }
     
     /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McEspeciasMexicanas</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerVegetales()
-	    + "\n 7. " + ponerCatsup()
-	    + "\n 8. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";;
-    }
-    
-    /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
      * @return <code>String</code> -- mensaje que le
@@ -53,7 +33,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Primero, se coloca la tapa del pan a sofreir con aceites vegetales.";
+	return "\n *) Primero, se coloca la tapa del pan a sofreir con aceites vegetales.";
     }
     
     /**
@@ -62,7 +42,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se coloca mayonesa con grasas vegetales.";
+	return "\n *) Se coloca mayonesa con grasas vegetales.";
     }
     
     /**
@@ -71,7 +51,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Se coloca mostaza parmesana, una de las hechas con plantas "
+	return "\n *) Se coloca mostaza parmesana, una de las hechas con plantas "
 	    + "y eco-friendly.";
     }
     
@@ -82,7 +62,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Se coloca a la freidora de aire una pieza de hambuerguesa "
+	return "\n *) Se coloca a la freidora de aire una pieza de hambuerguesa "
 	    + "de Soja marinada en Betabel.";
     }
     
@@ -93,7 +73,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "Se colocan distintas variedades de especias mexicanas "
+	return "\n *) Se colocan distintas variedades de especias mexicanas "
 	    + "en conjunto con rebanas de aguacate, lechuga, cebolla, "
 	    + "papas, pimientos y espinacas.";
     }    
@@ -104,7 +84,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se colocan algunas cucharadas de Catsup del gallo.";
+	return "\n *) Se colocan algunas cucharadas de Catsup del gallo.";
     }
     
     /**
@@ -116,6 +96,6 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Por ultimo, se coloca la tapa del pan a sofreir con aceites vegetales.";
+	return "\n *) Por ultimo, se coloca la tapa del pan a sofreir con aceites vegetales.";
     }    
 }

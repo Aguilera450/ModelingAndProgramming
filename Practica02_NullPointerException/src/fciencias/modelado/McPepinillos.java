@@ -22,26 +22,6 @@ public class McPepinillos extends Platillo {
 	super.esVegetariano = true;
     }
     
-    /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McPepinillos</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
     
     /**
      * Método que devuelve el estado del pan en la
@@ -52,7 +32,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Iniciamos colocando una base de pan horneado "
+	return "\n *) Iniciamos colocando una base de pan horneado "
 	    + "de una gran marca mexicana.";
     }
     
@@ -62,7 +42,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Ahora, se colca moyonesa McMayonesa sobre la base de pan.";
+	return "\n *) Ahora, se colca moyonesa McMayonesa sobre la base de pan.";
     }
     
     /**
@@ -71,7 +51,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Luego, se unta un poco de mostaza McMostaza sobre la mayonesa. ";
+	return "\n *) Luego, se unta un poco de mostaza McMostaza sobre la mayonesa. ";
     }
     
     /**
@@ -81,7 +61,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Preparamos la carne a base de Pepinillos y Soja "
+	return "\n *) Preparamos la carne a base de Pepinillos y Soja "
 	    + "con un toque de betabel para simular la sangre.";
     }
     
@@ -92,7 +72,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String hook() {
-	return "Se aplica queso manchego y amarillo, ambos quesos van "
+	return "\n *) Se aplica queso manchego y amarillo, ambos quesos van "
 	    + "derretidos a la braza.";
     }
     
@@ -103,7 +83,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "En este momento colocamos cebolla rallada, salsa de tomates, "
+	return "\n *) En este momento colocamos cebolla rallada, salsa de tomates, "
 	    + "pepinillos y unas hojas de lechuga.";
     }    
     
@@ -113,7 +93,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se coloca Catsup McCatsup sobre los vegetales. ";
+	return "\n *) Se coloca Catsup McCatsup sobre los vegetales. ";
     }
     
     /**
@@ -125,7 +105,7 @@ public class McPepinillos extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "terminamos colocando una tapa de pan horneado "
+	return "\n *) Terminamos colocando una tapa de pan horneado "
 	    + "de una gran marca mexicana.";
     }
 }

@@ -23,27 +23,7 @@ public class McVerde extends Platillo {
 	super.esVegetariano = false;
 	
     }
-    
-    /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McVerde</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return 	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerVegetales()
-	    + "\n 7. " + ponerCatsup()
-	    + "\n 8. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
+        
     /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
@@ -53,7 +33,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Empezamos colocando la base de su hamburguesa, "
+	return "\n *) Empezamos colocando la base de su hamburguesa, "
 	    + "no sin antes haberla calentado con leños de caoba.";
     }
     
@@ -63,7 +43,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se coloca la mayonesa sobre el pan. ";
+	return "\n *) Se coloca la mayonesa sobre el pan. ";
     }
     
     /**
@@ -72,7 +52,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Se emplea mostaza con colorante verde para simular "
+	return "\n *) Se emplea mostaza con colorante verde para simular "
 	    + "una tonalidad a pasto.";
     }
     
@@ -83,7 +63,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Se coloca al asador una porción de carne de "
+	return "\n *) Se coloca al asador una porción de carne de "
 	    + "cerdo marinada en algas verdes.";
     }
     
@@ -94,7 +74,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "Se colocan rodajas de papa con algunos pepinillos, "
+	return "\n *) Se colocan rodajas de papa con algunos pepinillos, "
 	    + "aguacate, y algunas hojas de espinaca.";
     }    
     
@@ -104,7 +84,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se verten algunas pizcas de McCatsup.";
+	return "\n *) Se verten algunas pizcas de McCatsup.";
     }
     
     /**
@@ -116,7 +96,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Finalmente colocamos la tapa de su hamburguesa, "
+	return "\n *) Finalmente colocamos la tapa de su hamburguesa, "
 	    + "no sin antes haberla calentado con leños de caoba.";
     }    
 }

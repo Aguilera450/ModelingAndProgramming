@@ -23,26 +23,6 @@ public McNopalitoToreado extends Platillo {
     }
     
     /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McNopalitoToreado</code>.
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerVegetales()
-	    + "\n 7. " + ponerCatsup()
-	    + "\n 8. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
-    /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
      * @return <code>String</code> -- mensaje que le
@@ -51,7 +31,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "En este momento, se coloca pan marquez como base en esta hamburguesa.";
+	return "\n *) En este momento, se coloca pan marquez como base en esta hamburguesa.";
     }
     
     /**
@@ -60,7 +40,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Ahora, se unta mayonesa al pan de la base.";
+	return "\n *) Ahora, se unta mayonesa al pan de la base.";
     }
     
     /**
@@ -69,7 +49,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Colocamos mostaza moscada por encima de la mayonesa.";
+	return "\n *) Colocamos mostaza moscada por encima de la mayonesa.";
     }
     
     /**
@@ -79,7 +59,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Luego, se torean unos nopalitos con chiles abaneros "
+	return "\n *) Luego, se torean unos nopalitos con chiles abaneros "
 	    + "para finalmente porcesarse con Soja, y esto suple la "
 	    + "a la carne en esta hamburguesa.";
     }
@@ -91,7 +71,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "En este momento estamos colocando rodajas de cebolla  "
+	return "\n *) En este momento estamos colocando rodajas de cebolla  "
 	    + "rebanadas de tomates, algunas hojas de lechuga y un "
 	    + "nopalito toreado.";
     }    
@@ -102,7 +82,7 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se ponen algunas pizcas de Catsup por encima de los vegetales.";
+	return "\n *) Se ponen algunas pizcas de Catsup por encima de los vegetales.";
     }
     
     /**
@@ -114,6 +94,6 @@ public McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Por ultimo, se coloca pan marquez como tapa en esta hamburguesa ";
+	return "\n *) Por ultimo, se coloca pan marquez como tapa en esta hamburguesa ";
     }
 }

@@ -21,27 +21,7 @@ public McKongFrijoles extends Platillo {
 	super.llevaQueso = false;
 	super.esVegetariano = true;
     }
-    
-    /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McKongFrijoles</code>.
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerVegetales()
-	    + "\n 7. " + ponerCatsup()
-	    + "\n 8. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
+        
     /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
@@ -51,7 +31,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Se calienta en la plancha la base de la hamburguesa.";
+	return "\n *) Se calienta en la plancha la base de la hamburguesa.";
     }
     
     /**
@@ -60,7 +40,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se coloca mayonesa de limón y sin grasas animales.";
+	return "\n *) Se coloca mayonesa de limón y sin grasas animales.";
     }
     
     /**
@@ -69,7 +49,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Luego, se unta la mostaza sobre la mayoneza, hasta que se mezcla.";
+	return "\n *) Luego, se unta la mostaza sobre la mayoneza, hasta que se mezcla.";
     }
     
     /**
@@ -79,7 +59,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Ahora estamos preparando la carne, de Soja con frijoles, "
+	return "\n *) Ahora estamos preparando la carne, de Soja con frijoles, "
 	    + "a la plancha con aceites vegetales.";
     }
         
@@ -90,7 +70,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "Estamos colocando los vegetales a su hamburguesa, algunos de "
+	return "\n *) Estamos colocando los vegetales a su hamburguesa, algunos de "
 	    + "estos son; epazote, chipilin, albahaca, cilantro, jitomates, "
 	    + "cebollas, entre otras especias y verduras.";
     }    
@@ -101,7 +81,7 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "En este momento estamos poniendo unas pizcas de Catsup "
+	return "\n *) En este momento estamos poniendo unas pizcas de Catsup "
 	    + "a su hamburguesa.";
     }
     
@@ -114,6 +94,6 @@ public McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Se calienta en la plancha la tapa de la hamburguesa.";
+	return "\n *) Se calienta en la plancha la tapa de la hamburguesa.";
     }
 }

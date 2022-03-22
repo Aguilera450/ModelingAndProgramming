@@ -24,27 +24,6 @@ public class McJumbo extends Platillo {
     }
     
     /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McJumbo</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
-    }
-    
-    /**
      * Método que devuelve el estado del pan en la
      * base de la hamburguesa.
      * @return <code>String</code> -- mensaje que le
@@ -53,7 +32,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "Se coloca pan como base de la hamburguesa "
+	return "\n *) Se coloca pan como base de la hamburguesa "
 	    + "con ajonjolí de alta calidad.";
     }
     
@@ -63,7 +42,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se unta la mayonesa imporatada de los ranchos del "
+	return "\n *) Se unta la mayonesa imporatada de los ranchos del "
 	    + "norte de Cánada.";
     }
     
@@ -73,7 +52,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "Se coloca la mostaza por encima de la mayonesa.";
+	return "\n *) Se coloca la mostaza por encima de la mayonesa.";
     }
     
     /**
@@ -83,7 +62,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "Se colocan 3 carnes en la hamburgesa y se colocan a "
+	return "\n *) Se colocan 3 carnes en la hamburgesa y se colocan a "
 	    + "la parrilla por 4 minutos.";
     }
     
@@ -94,7 +73,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String hook() {
-	return "Se coloca el queso después de calentar las carnes, "
+	return "\n *) Se coloca el queso después de calentar las carnes, "
 	    + "de esta manera se gratina en el momento.";
     }
     
@@ -105,7 +84,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "A contiunuacion se colocan pepinillos, jitomates en "
+	return "\n *) A contiunuacion se colocan pepinillos, jitomates en "
 	    + "rodajas, aros de cebolla envueltos en tocino, y un "
 	    + "poco de hojas de espinacas.";
     }    
@@ -116,7 +95,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "Se colocan 2 cucharadas de Catsup premium.";
+	return "\n *) Se colocan 2 cucharadas de Catsup premium.";
     }
     
     /**
@@ -128,7 +107,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "Finalmente se coloca pan como tapa a la hamburguesa "
+	return "\n *) Finalmente se coloca pan como tapa a la hamburguesa "
 	    + "con ajonjolí de alta calidad.";
     }
 }

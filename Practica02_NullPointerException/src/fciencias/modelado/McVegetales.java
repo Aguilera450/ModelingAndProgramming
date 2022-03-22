@@ -7,7 +7,7 @@
  * @see <code>Platillo</code>.
  */
 
-public class McVegetales {
+public class McVegetales extends Platillo {
     
     /**
      * Constructor por omisión de una hamburguesa de
@@ -16,31 +16,10 @@ public class McVegetales {
     public McVegetales() {
 	super.id = 11;
 	super.nombre = "Hamburguesa McVegetales.";
-	super.descripcion = "McVegetales hamburguesa vegetariana."
+	super.descripcion = "McVegetales hamburguesa vegetariana.";
 	super.precio = 39.50f;
 	super.llevaQueso = true;
 	super.esVegetariano = true;
-    }
-    
-    /**
-     * Método que devuelve la preparación de la hamburguesa.
-     * @return <code>String</code> -- los pasos de cocinar una 
-     *                                <code>McPepinillos</code>. 
-     */
-    @Override
-    public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
-	    + "\n 1. " + ponerBasePan()
-	    + "\n 2. " + ponerMayonesa()
-	    + "\n 3. " + ponerMostaza()
-	    + "\n 4. " + prepararCarne()
-	    + "\n 5. " + ponerCarne()
-	    + "\n 6. " + ponerQueso()
-	    + "\n 7. " + ponerVegetales()
-	    + "\n 8. " + ponerCatsup()
-	    + "\n 9. " + ponerTapaPan()
-	    + "\n ¡Gracias por la espera!";
     }
     
     /**
@@ -52,7 +31,7 @@ public class McVegetales {
      */
     @Override
     public String ponerBasePan() {
-	return "Iniciamos colocando pan francés recién calentado a la plancha "
+	return "\n *) Iniciamos colocando pan francés recién calentado a la plancha "
 	    + "como base de nuestra hamburguesa.";
     }
     
@@ -62,7 +41,7 @@ public class McVegetales {
      */
     @Override
     public String ponerMayonesa() {
-	return "Se unta un poco de mayonesa sobre el pan. ";
+	return "\n *) Se unta un poco de mayonesa sobre el pan. ";
     }
     
     /**
@@ -71,7 +50,7 @@ public class McVegetales {
      */
     @Override
     public String ponerMostaza() {
-	return "Se mezcla la mayonesa con la mostaza para generar un sabor unico. ";
+	return "\n *) Se mezcla la mayonesa con la mostaza para generar un sabor unico. ";
     }
     
     /**
@@ -81,7 +60,7 @@ public class McVegetales {
      */
     @Override
     public String prepararCarne() {
-	return "Se frien algunos Nopales con algo de Soja "
+	return "\n *) Se frien algunos Nopales con algo de Soja "
 	    + "triturada, esto fungira de nuestra carne sintetica.";
     }
     
@@ -92,7 +71,7 @@ public class McVegetales {
      */
     @Override
     public String hook() {
-	return "Se emplea queso oaxaca gratinado para aumentar la textura "
+	return "\n *) Se emplea queso oaxaca gratinado para aumentar la textura "
 	    + "en su hamburguesa.";
     }
     
@@ -103,8 +82,8 @@ public class McVegetales {
      */
     @Override
     public String ponerVegetales() {
-	return "Se colocan algunos pepinillos, rebanadas de jitomate "
-	    "y algunos aros de cebolla morada.";
+	return "\n *) Se colocan algunos pepinillos, rebanadas de jitomate "
+	    + "y algunos aros de cebolla morada.";
     }    
     
     /**
@@ -113,7 +92,7 @@ public class McVegetales {
      */
     @Override
     public String ponerCatsup() {
-	return "Se verte un poco de McCatsup sobre las verduras.";
+	return "\n *) Se verte un poco de McCatsup sobre las verduras.";
     }
     
     /**
@@ -125,7 +104,7 @@ public class McVegetales {
      */
     @Override
     public String ponerTapaPan() {
-	return "Por último, colocamos pan francés recién calentado a la plancha "
+	return "\n *) Por último, colocamos pan francés recién calentado a la plancha "
 	    + "como base de nuestra hamburguesa. ";
     }
 }
