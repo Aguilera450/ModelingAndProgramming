@@ -7,7 +7,7 @@
  * @see <code>Platillo</code>.
  */
 
-public McKongFrijoles {
+public McKongFrijoles extends Platillo {
     
     /**
      * Constructor por omisión de una hamburguesa de
