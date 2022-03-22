@@ -1,11 +1,11 @@
 public class ModoMovimiento implements EstadoRobot{
-    /** Robot del cual sera modificado el modo. */
+    /** Robot asociado al estado actual */
     private Robot robot;
 
     /**
      * Constructor del modo Movimiento.
-     * Asigna el Robot pasado como parametro al atributo.
-     * @param robot Recibe un robot de clase Robot.
+     * Asocia el estado al robot recibido por parámetro.
+     * @param robot Robot que será asociado al estado.
      */
     public ModoMovimiento(Robot robot){
         this.robot = robot;
@@ -16,7 +16,8 @@ public class ModoMovimiento implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void suspenderse(){
-
+        System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT pasará a MODO SUSPENDIDO.");
+        robot.asignarNuevoEstado(robot.getEstadoSuspendido());
     }
 
     /**
@@ -24,7 +25,7 @@ public class ModoMovimiento implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void caminar(){
-
+        System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT ya está caminando hacia la mesa del cliente.");
     }
 
     /**
@@ -32,7 +33,8 @@ public class ModoMovimiento implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void atender(){
-
+        System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT ha llegado a la mesa del cliente y cambiara a MODO COMANDA.");
+        robot.asignarNuevoEstado(robot.getEstadoComanda());
     }
 
     /**
@@ -40,7 +42,7 @@ public class ModoMovimiento implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void cocinar(){
-
+        System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT aún no toma la orden del cliente.");
     }
 
     /**
@@ -48,6 +50,6 @@ public class ModoMovimiento implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void entregar(){
-
+        System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT aún no ha cocinado un platillo.");
     }
 }

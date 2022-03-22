@@ -1,11 +1,11 @@
 public class ModoCocinero implements EstadoRobot{
-    /** Robot del cual sera modificado el modo. */
+    /** Robot asociado al estado actual */
     private Robot robot;
 
     /**
      * Constructor del modo Cocinero.
-     * Asigna el Robot pasado como parametro al atributo.
-     * @param robot Recibe un robot de clase Robot.
+     * Asocia el estado al robot recibido por parámetro.
+     * @param robot Robot que será asociado al estado.
      */
     public ModoCocinero(Robot robot){
         this.robot = robot;
@@ -16,7 +16,7 @@ public class ModoCocinero implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void suspenderse(){
-
+        System.out.println("<**** MODO COCINERO ****>\nMcROBOT está cocinando, no puede suspenderse ahora.");
     }
 
     /**
@@ -24,7 +24,7 @@ public class ModoCocinero implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void caminar(){
-
+        System.out.println("<**** MODO COCINERO ****>\nMcROBOT está cocinando, no puede caminar ahora.");
     }
 
     /**
@@ -32,7 +32,7 @@ public class ModoCocinero implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void atender(){
-
+        System.out.println("<**** MODO COCINERO ****>\nMcROBOT está cocinando, no puede atender ahora.");
     }
 
     /**
@@ -40,7 +40,7 @@ public class ModoCocinero implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void cocinar(){
-
+        System.out.println("<**** MODO COCINERO ****>\nMcROBOT ya está cocinando.");
     }
 
     /**
@@ -48,6 +48,11 @@ public class ModoCocinero implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void entregar(){
-
+        if(robot.getPlatoListo()){
+            System.out.println("<**** MODO COCINERO ****>\nMcROBOT ha terminado de preparar el platillo, cambiando a MODO ENTREGA.");
+            robot.asignarNuevoEstado(robot.getEstadoEntrega());
+        } else {
+            System.out.println("<**** MODO COMANDA ****>\nMcROBOT aún no termina de preparar el platillo del cliente.");
+        }
     }
 }

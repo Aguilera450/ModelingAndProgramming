@@ -1,11 +1,11 @@
 public class ModoSuspendido implements EstadoRobot{
-    /** Robot del cual sera modificado el modo. */
+    /** Robot asociado al estado actual */
     private Robot robot;
 
     /**
      * Constructor del modo suspendido.
-     * Asigna el Robot pasado como parametro al atributo.
-     * @param robot Recibe un robot de clase Robot.
+     * Asocia el estado al robot recibido por parámetro.
+     * @param robot Robot que será asociado al estado.
      */
     public ModoSuspendido(Robot robot){
         this.robot = robot;
@@ -16,7 +16,7 @@ public class ModoSuspendido implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void suspenderse(){
-
+        System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT ya está suspendido.");
     }
 
     /**
@@ -24,7 +24,13 @@ public class ModoSuspendido implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void caminar(){
-
+        // Si al robot ya se le asigno una mesa a atender, puede proceder y cambiar a modo movimiento.
+        if(robot.getAtencionMesaCliente()){
+            System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT pasará al MODO MOVIMIENTO.");
+            robot.asignarNuevoEstado(robot.getEstadoMovimiento());
+        } else {
+            System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT aún no ha sido asignado a ninguna mesa.");
+        }
     }
 
     /**
@@ -32,7 +38,7 @@ public class ModoSuspendido implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void atender(){
-
+        System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT está suspendido, ninguna mesa ha solicitado la atención del robot.");
     }
 
     /**
@@ -40,7 +46,7 @@ public class ModoSuspendido implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void cocinar(){
-
+        System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT está suspendido, no puede cocinar en este momento.");
     }
 
     /**
@@ -48,6 +54,6 @@ public class ModoSuspendido implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void entregar(){
-
+        System.out.println("<**** MODO SUSPENDIDO ****>\nMcROBOT está suspendido, no tiene un platillo para entregar.");
     }
 }
