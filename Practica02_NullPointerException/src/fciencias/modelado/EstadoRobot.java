@@ -5,7 +5,7 @@
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version 1.0 - 21/03/2022
  */
-public interface Robot{
+public interface EstadoRobot{
     /** Metodo que inicia el Modo Suspendido. */
     public void suspenderse();
 
