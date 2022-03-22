@@ -10,7 +10,7 @@
 
 public abstract class Platillo {
     /* Atributos de clase.*/
-    protected int id;
+    protected Integer id;
     protected String nombre;
     protected String descripcion;
     protected float precio;
@@ -21,7 +21,7 @@ public abstract class Platillo {
      * Método nos dice cual el Id de la hamburguesa.
      * @return <code>int</code> -- Id de la hamburguesa.
      */
-    public Int getId() {
+    public Integer getId() {
 	return id;
     }
     

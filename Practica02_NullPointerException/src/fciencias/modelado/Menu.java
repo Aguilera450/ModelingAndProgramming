@@ -21,26 +21,26 @@ public abstract class Menu {
      * Nos permite obtener un Iterador con los platillos del menú.
      * @return Iterador de la estructura que guarda los platillos del menú.
      */
-    public abstract Iterador crearIterador();
+    abstract Iterador crearIterador();
 
     /**
      * Método abstracto para obtener un platillo en determinada posición.
      * @param posicion Posición del platillo buscado. La indexación comienza en 0.
      * @return El platillo con la posición recibida o null si la posición esta fuera de rango.
      */
-    public abstract Platillo obtenerPlatillo(int posicion);
+    abstract Platillo obtenerPlatillo(int posicion);
 
     /**
      * Método abstracto para agregar un platillo al menú.
      * Si el platillo ya se encuentra no lo agregará nuevamente.
      * @param platillo Platillo a agregar.
      */
-    public abstract void agregarPlatillo(Platillo platillo);
+    abstract void agregarPlatillo(Platillo platillo);
 
     /**
      * Método abstracto para eliminar un platillo del menú.
      * Si el platillo no se encuentra no se hace nada.
      * @param platillo Platillo a eliminar.
      */
-    public abstract void eliminarPlatillo(Platillo platillo);
+    abstract void eliminarPlatillo(Platillo platillo);
 }   
