@@ -6,7 +6,7 @@
  * @version 1.0 - 20/03/2022
  */
 
-public class Mc3Queso {
+public class Mc3Queso extends Platillo  {
     
     /**
      * Constructor por omisión de una hamburguesa de
