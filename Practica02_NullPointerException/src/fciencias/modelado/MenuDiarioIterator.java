@@ -25,7 +25,7 @@ public class MenuDiarioIterator implements Iterador,Iterator{
     }
 
     /**
-     * Metodo para saber si hay un elemento siguiente.
+     * Método para saber si hay un elemento siguiente.
      * @return True si hay elemento siguiente False en caso contrario.
      */
     @Override
@@ -38,7 +38,7 @@ public class MenuDiarioIterator implements Iterador,Iterator{
     }
 
     /**
-     * Metodo que devuelve el objeto siguiente.
+     * Método que devuelve el objeto siguiente.
      * @return Devuelve el objeto siguiente.
      */
     @Override

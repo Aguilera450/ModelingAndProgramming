@@ -33,21 +33,17 @@ public class MenuDeLujoIterator implements Iterator{
     }
 
     /**
-     * Metodo que nos ayuda a saber si hay un elemento siguiente
+     * Método que nos ayuda a saber si hay un elemento siguiente
      * en los elementos.
      * @return True si hay un elemento siguiente y False en caso contrario.
      */
     @Override
     public boolean hasNext(){
-        if(iterator.hasNext()){
-            return true;
-        } else {
-            return false;
-        }
+        return iterator.hasNext();
     }
 
     /**
-     * Metodo que devuelve el objeto siguiente.
+     * Método que devuelve el objeto siguiente.
      * @return Devuelve el objeto siguiente.
      */
     @Override
