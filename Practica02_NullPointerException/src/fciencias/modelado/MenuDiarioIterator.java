@@ -8,14 +8,10 @@ import java.util.Iterator;
  * @version  1.0 - 20/03/2022
  */
 public class MenuDiarioIterator implements Iterador,Iterator{
-    /**
-     * Arreglo de platillos que se va a recorrer.
-     */
-    public Platillo[] elementos;
+    /** Arreglo de platillos que se va a recorrer. */
+    private Platillo[] elementos;
     
-    /**
-     * Posicion en la que se encuentra el iterador.
-     */
+    /** Posicion en la que se encuentra el iterador. */
     private int posicionArreglo;
 
     /**
@@ -42,8 +38,8 @@ public class MenuDiarioIterator implements Iterador,Iterator{
     }
 
     /**
-     * Metodo que devuelve el objeto siguiente
-     * @return Devuelve el objeto siguiente
+     * Metodo que devuelve el objeto siguiente.
+     * @return Devuelve el objeto siguiente.
      */
     @Override
     public Object next(){

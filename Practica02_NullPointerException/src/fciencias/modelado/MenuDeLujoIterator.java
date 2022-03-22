@@ -13,16 +13,12 @@ public class MenuDeLujoIterator implements Iterator{
     /**
      * Elementos que vamos a recorrer en tipo Hashtable<Integer, Platillo>.
      */
-    public Hashtable<Integer,Platillo> elementos;
+    private Hashtable<Integer,Platillo> elementos;
 
-    /**
-     * Conjunto de claves del HashTable.
-     */
+    /** Conjunto de claves del HashTable. */
     private Set<Integer> conjuntoClaves;
 
-    /**
-     * Iterador con el que vamos a recorrer el HashTable.
-     */
+    /** Iterador con el que vamos a recorrer el HashTable. */
     private Iterator<Integer> iterator;
 
     /**
@@ -51,8 +47,8 @@ public class MenuDeLujoIterator implements Iterator{
     }
 
     /**
-     * Metodo que devuelve el objeto siguiente
-     * @return Devuelve el objeto siguiente
+     * Metodo que devuelve el objeto siguiente.
+     * @return Devuelve el objeto siguiente.
      */
     @Override
     public Object next(){

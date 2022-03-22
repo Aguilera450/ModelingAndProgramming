@@ -9,14 +9,11 @@ import java.util.Iterator;
  * @version  1.0 - 20/03/2022
  */
 public class MenuGeneralIterator implements Iterador,Iterator{
-    /**
-     * ArrayList con los elementos platillo que se van a recorrer.
-     */
-    public ArrayList<Platillo> elementos;
+    
+    /** ArrayList con los elementos platillo que se van a recorrer. */
+    private ArrayList<Platillo> elementos;
 
-    /**
-     * Iterador del ArrayList de platillos
-     */
+    /** Iterador del ArrayList de platillos */
     private Iterator iterator;
 
     /**
@@ -45,8 +42,8 @@ public class MenuGeneralIterator implements Iterador,Iterator{
     }
 
     /**
-     * Metodo que devuelve el objeto siguiente
-     * @return Devuelve el objeto siguiente
+     * Metodo que devuelve el objeto siguiente.
+     * @return Devuelve el objeto siguiente.
      */
     @Override
     public Object next(){

@@ -14,8 +14,8 @@ public interface Iterador{
     public boolean hasNext();
 
     /**
-     * Metodo que devuelve el objeto siguiente
-     * @return Devuelve el objeto siguiente
+     * Metodo que devuelve el objeto siguiente.
+     * @return Devuelve el objeto siguiente.
      */
     public Object next();
 }
