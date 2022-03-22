@@ -71,8 +71,8 @@ public class Robot{
         int contadorPlatillos = 1;
         // Se usa el iterador actual para mostrar el menú.
         menuString += "********" + menuOfrecido.nombre().toUpperCase() + "********\n";
-        while (iterador.hasNext()) {
-            platilloActual = (Platillo) iterador.next();
+        while (iteradorMenu.hasNext()) {
+            platilloActual = (Platillo) iteradorMenu.next();
             menuString +=   "\n\n----------- Platillo " + contadorPlatillos +" -----------\n"
                             + platilloActual.toString();
             contadorPlatillos++;
