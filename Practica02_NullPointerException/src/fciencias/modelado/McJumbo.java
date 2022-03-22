@@ -93,7 +93,7 @@ public class McJumbo extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se coloca el queso después de calentar las carnes, "
 	    + "de esta manera se gratina en el momento.";
     }

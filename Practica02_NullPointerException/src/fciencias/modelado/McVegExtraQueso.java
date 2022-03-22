@@ -92,7 +92,7 @@ public class McVegExtraQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se colocan 2 tipos de quesos, uno de cabra y 3 laminas "
 	    + "de queso manchego.";
     }

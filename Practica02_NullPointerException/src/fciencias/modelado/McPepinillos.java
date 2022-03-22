@@ -91,7 +91,7 @@ public class McPepinillos extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String ponerQueso() {
+    public String hook() {
 	return "Se aplica queso manchego y amarillo, ambos quesos van "
 	    + "derretidos a la braza.";
     }
