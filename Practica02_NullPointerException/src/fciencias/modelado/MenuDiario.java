@@ -20,7 +20,7 @@ public class MenuDiario extends Menu{
      * inicializa la estructura de platillos y agrega 4 platillos.
      * @param nombre Nombre del menú diario.
      */
-    MenuDeLujo(String nombre){
+    public MenuDiario(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new Platillo[10];
         this. ultimo = -1;
@@ -33,7 +33,7 @@ public class MenuDiario extends Menu{
      */
     @Override
     public Iterador crearIterador(){
-        return new MenuDiarioIterador(this.hamburguesas);
+        return new MenuDiarioIterator(this.hamburguesas);
     }
 
     /**

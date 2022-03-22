@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 /**
  * Clase que nos sirve para iterar un menu de arreglo de platillos.
  * @author Adrian Aguilera Moreno     - Aguiler450
@@ -7,7 +5,7 @@ import java.util.Iterator;
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version  1.0 - 20/03/2022
  */
-public class MenuDiarioIterator implements Iterador,Iterator{
+public class MenuDiarioIterator implements Iterador{
     /** Arreglo de platillos que se va a recorrer. */
     private Platillo[] elementos;
     
