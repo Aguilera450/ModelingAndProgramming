@@ -126,7 +126,7 @@ public class McPolloQueso extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "Finalizamos colocando una media pieza de pan "
 	    + "crujiente y caliente como tapa de su hamburguesa.";
     }

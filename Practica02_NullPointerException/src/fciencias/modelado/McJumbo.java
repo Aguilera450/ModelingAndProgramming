@@ -127,7 +127,7 @@ public class McJumbo extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "Finalmente se coloca pan como tapa a la hamburguesa "
 	    + "con ajonjolí de alta calidad.";
     }

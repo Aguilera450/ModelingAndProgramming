@@ -107,7 +107,7 @@ public class McVegetales {
      *
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return " ";
     }
 }

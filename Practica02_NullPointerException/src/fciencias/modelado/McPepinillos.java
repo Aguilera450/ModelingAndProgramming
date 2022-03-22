@@ -124,7 +124,7 @@ public class McPepinillos extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "terminamos colocando una tapa de pan horneado "
 	    + "de una gran marca mexicana.";
     }

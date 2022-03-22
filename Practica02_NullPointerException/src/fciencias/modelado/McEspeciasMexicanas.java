@@ -126,7 +126,7 @@ public class McEspeciasMexicanas extends Platillo {
      * la tapa de la hamburguesa.
      */
     @Override
-    public String tapaPan() {
+    public String ponerTapaPan() {
 	return "Por ultimo, se coloca la tapa del pan a sofreir con aceites vegetales.";
     }    
 }
