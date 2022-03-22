@@ -7,7 +7,7 @@
  * @see <code>Platillo</code>.
  */
 
-public McKongFrijoles extends Platillo {
+public class McKongFrijoles extends Platillo {
     
     /**
      * Constructor por omisión de una hamburguesa de
@@ -16,7 +16,7 @@ public McKongFrijoles extends Platillo {
     public McKongFrijoles() {
 	super.id = 5;
 	super.nombre = "Hamburguesa McKongFrijoles.";
-	super.descripcion = "McKongFrijoles hamburguesa es vegetariana."
+	super.descripcion = "McKongFrijoles hamburguesa es vegetariana.";
 	super.precio = 47.50f;
 	super.llevaQueso = false;
 	super.esVegetariano = true;

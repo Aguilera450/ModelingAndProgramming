@@ -7,7 +7,7 @@
  * @see <code>Platillo</code>.
  */
 
-public McNopalitoToreado extends Platillo {
+public class McNopalitoToreado extends Platillo {
     
     /**
      * Constructor por omisión de una hamburguesa de
@@ -16,7 +16,7 @@ public McNopalitoToreado extends Platillo {
     public McNopalitoToreado() {
 	super.id = 7;
 	super.nombre = "Hamburguesa McNopalitoToreado.";
-	super.descripcion = "McNopalitoToreado hamburguesa vegetariana."
+	super.descripcion = "McNopalitoToreado hamburguesa vegetariana.";
 	super.precio = 59.50f;
 	super.llevaQueso = false;
 	super.esVegetariano = true;

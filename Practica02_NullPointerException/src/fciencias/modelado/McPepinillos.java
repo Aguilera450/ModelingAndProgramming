@@ -16,7 +16,7 @@ public class McPepinillos extends Platillo {
     public McPepinillos() {
 	super.id = 8;
 	super.nombre = "Hamburguesa McPepinillos.";
-	super.descripcion = "McPepinillos hamburguesa vegetariana."
+	super.descripcion = "McPepinillos hamburguesa vegetariana.";
 	super.precio = 109.50f;
 	super.llevaQueso = true;
 	super.esVegetariano = true;

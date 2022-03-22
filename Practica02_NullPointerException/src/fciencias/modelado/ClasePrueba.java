@@ -12,6 +12,8 @@ public class ClasePrueba {
 	McJumbo ham8 = new McJumbo();
 	McKongFrijoles ham9 = new McKongFrijoles();
 	McLechugaYQueso ham10 = new McLechugaYQueso();
+	McNopalitoToreado ham11 = new McNopalitoToreado();
+	McPepinillos ham12 = new McPepinillos();
 	
 	System.out.println(ham1.cocinar());
 	System.out.println(ham2.cocinar());
