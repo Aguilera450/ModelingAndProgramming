@@ -20,9 +20,6 @@ public class Robot{
     /** Boolean que nos dice si el plato esta listo. */
     private boolean platoListo;
 
-    /** Boolean que nos dice si el plato fue entregado. */
-    private boolean platoEntregado;
-
     /** Estado Actual del robot. */
     private EstadoRobot estadoActual;
 
@@ -49,7 +46,15 @@ public class Robot{
     public Robot(Menu menu){
         menuOfrecido = menu;
         iteradorMenu = menuOfrecido.crearIterador();
-        asignarNuevoEstado(new ModoSuspendido(this));
+
+        modoSuspendido = new ModoSuspendido(this);
+        modoMovimiento = new ModoMovimiento(this);
+        modoComanda = new ModoComanda(this);
+        modoCocinero = new ModoCocinero(this);
+        modoEntrega = new ModoEntrega(this);
+        
+        // El Robot inicia en modo suspendido
+        asignarNuevoEstado(getEstadoSuspendido());
     }
 
     /**
@@ -134,14 +139,6 @@ public class Robot{
         return platoListo;
     }
 
-    /**
-     * Metodo que devuelve si el plato fue entregado.
-     * @return True si fue entregado, False en caso contrario.
-     */
-    public boolean getPlatoEntregado(){
-        return platoEntregado;
-    }
-
     /** Metodo que suspende al robot. */
     public void suspenderse(){
         estadoActual.suspenderse();
@@ -192,6 +189,14 @@ public class Robot{
     }
 
     /**
+     * Metodo que devuelve el estado comanda.
+     * @return Devuelve el estado comanda.
+     */
+    public EstadoRobot getEstadoComanda() {
+        return modoComanda;
+    }
+
+    /**
      * Metodo que devuelve el estado cocinero.
      * @return Devuelve el estado cocinero.
      */
@@ -212,7 +217,7 @@ public class Robot{
      * al cliente que platillo quiere.
      */
     public void preguntarPlatillo(){
-        
+        //TODO -  Una vez recibido el platillo cambiar ordenTomada a true.
     }
 
     /**
@@ -221,5 +226,17 @@ public class Robot{
      */
     public void cocinarPlatillo(){
         System.out.println(platilloACocinar.cocinar());
+    }
+
+    /**
+     * Inicializa el estado del robot para poder atender a un cliente nuevamente.
+     */
+    public void inicializar(){
+        mesaAtendida = null;
+        platilloACocinar = null;
+        atencionMesaCliente = false;
+        ordenTomada = false;
+        platoListo = false;
+        estadoActual = getEstadoSuspendido();
     }
 }

@@ -1,11 +1,11 @@
 public class ModoEntrega implements EstadoRobot{
-    /** Robot del cual sera modificado el modo. */
+    /** Robot asociado al estado actual */
     private Robot robot;
 
     /**
      * Constructor del modo Entrega.
-     * Asigna el Robot pasado como parametro al atributo.
-     * @param robot Recibe un robot de clase Robot.
+     * Asocia el estado al robot recibido por parámetro.
+     * @param robot Robot que será asociado al estado.
      */
     public ModoEntrega(Robot robot){
         this.robot = robot;
@@ -16,7 +16,10 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void suspenderse(){
-
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT entregó el platillo y procede a cambiar a MODO SUSPENDIDO.");
+        robot.asignarNuevoEstado(robot.getEstadoSuspendido());
+        // Como el robot se suspenderá deberá "reiniciarse" e inicializar todos sus datos para una nueva ejecución.
+        robot.inicializar();
     }
 
     /**
@@ -24,7 +27,7 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void caminar(){
-
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT está entregando el platillo, no puede caminar ahora.");
     }
 
     /**
@@ -32,7 +35,7 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void atender(){
-
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT está entregando un platillo, no puede atender ahora.");
     }
 
     /**
@@ -40,7 +43,7 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void cocinar(){
-
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT está entregando un platillo, no puede regresar a la cocina.");
     }
 
     /**
@@ -48,6 +51,6 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void entregar(){
-
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT ya está entregando el platillo.");
     }
 }
