@@ -17,7 +17,7 @@ public class McJumbo extends Platillo {
 	super.id = 4;
 	super.nombre = "Hamburguesa McJumbo.";
 	super.descripcion = "McJumbo hamburguesa es la de mayor tamaño "
-	    + "y la promocionamos por su excelente sabor..";
+	    + "y la promocionamos por su excelente sabor.";
 	super.precio = 587.50f;
 	super.llevaQueso = true;
 	super.esVegetariano = false;
@@ -30,7 +30,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String cocinar() {
-		return "********** "
+	return "********** "
 	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
 	    + "\n 1. " + ponerBasePan()
 	    + "\n 2. " + ponerMayonesa()
