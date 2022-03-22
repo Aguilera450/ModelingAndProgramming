@@ -20,9 +20,6 @@ public class Robot{
     /** Boolean que nos dice si el plato esta listo. */
     private boolean platoListo;
 
-    /** Boolean que nos dice si el plato fue entregado. */
-    private boolean platoEntregado;
-
     /** Estado Actual del robot. */
     private EstadoRobot estadoActual;
 
@@ -142,14 +139,6 @@ public class Robot{
         return platoListo;
     }
 
-    /**
-     * Metodo que devuelve si el plato fue entregado.
-     * @return True si fue entregado, False en caso contrario.
-     */
-    public boolean getPlatoEntregado(){
-        return platoEntregado;
-    }
-
     /** Metodo que suspende al robot. */
     public void suspenderse(){
         estadoActual.suspenderse();
@@ -248,7 +237,6 @@ public class Robot{
         atencionMesaCliente = false;
         ordenTomada = false;
         platoListo = false;
-        platoEntregado = false;
         estadoActual = getEstadoSuspendido();
     }
 }

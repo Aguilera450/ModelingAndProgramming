@@ -16,14 +16,10 @@ public class ModoEntrega implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void suspenderse(){
-        if(robot.getPlatoEntregado()){
-            System.out.println("<**** MODO ENTREGA ****>\nMcROBOT entregó el platillo y procede a cambiar a MODO SUSPENDIDO.");
-            robot.asignarNuevoEstado(robot.getEstadoSuspendido());
-            // Como el robot se suspenderá deberá "reiniciarse" e inicializar todos sus datos para una nueva ejecución.
-            robot.inicializar();
-        } else {
-            System.out.println("<**** MODO COCINERO ****>\nMcROBOT aún no puede suspenderse porque no ha entregado el platillo.");
-        }
+        System.out.println("<**** MODO ENTREGA ****>\nMcROBOT entregó el platillo y procede a cambiar a MODO SUSPENDIDO.");
+        robot.asignarNuevoEstado(robot.getEstadoSuspendido());
+        // Como el robot se suspenderá deberá "reiniciarse" e inicializar todos sus datos para una nueva ejecución.
+        robot.inicializar();
     }
 
     /**
