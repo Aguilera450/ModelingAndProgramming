@@ -57,9 +57,11 @@ public class MenuDiario extends Menu{
      */
     public boolean contienePlatillo(Platillo platillo){
         // TODO - Ver que si funcione
-        for (int i = 0; i < hamburguesas.length ; i++) {
-            if(hamburguesas[i].equals(platillo))
-                return true;
+        if(longitud() != 0){
+            for (int i = 0; i < hamburguesas.length ; i++) {
+                if(hamburguesas[i].equals(platillo))
+                    return true;
+            }
         }
         return false;
     }
