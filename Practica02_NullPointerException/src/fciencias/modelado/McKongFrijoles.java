@@ -15,7 +15,7 @@ public class McKongFrijoles extends Platillo {
      */
     public McKongFrijoles() {
 	super.id = 5;
-	super.nombre = "Hamburguesa McKongFrijoles.";
+	super.nombre = "Hamburguesa McKongFrijoles";
 	super.descripcion = "McKongFrijoles hamburguesa es vegetariana.";
 	super.precio = 47.50f;
 	super.llevaQueso = false;

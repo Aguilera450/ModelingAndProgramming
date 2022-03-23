@@ -15,7 +15,7 @@ public class McJumbo extends Platillo {
      */
     public McJumbo() {
 	super.id = 4;
-	super.nombre = "Hamburguesa McJumbo.";
+	super.nombre = "Hamburguesa McJumbo";
 	super.descripcion = "McJumbo hamburguesa es la de mayor tamaño "
 	    + "y la promocionamos por su excelente sabor.";
 	super.precio = 587.50f;

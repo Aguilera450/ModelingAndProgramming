@@ -61,7 +61,7 @@ public abstract class Platillo {
             + "\n-------------------------------------"
             + "\n Nombre: " + getNombre()
             + "\n Precio: " + getPrecio()
-            + "\n Descripcion:" + getDescripcion()
+            + "\n Descripcion: " + getDescripcion()
             + "\n------------------------------------"
             + "\n-------------------------------------";
     }
@@ -72,7 +72,7 @@ public abstract class Platillo {
      *                                hamburguesa. 
      */
     public String cocinar() {
-        return "**** PREPARACIÓN DE " + getNombre().toUpperCase() + " ****"
+        return "**** Preparación de " + getNombre() + " ****"
 	    +  ponerBasePan()
 	    +  ponerMayonesa()
 	    +  ponerMostaza()

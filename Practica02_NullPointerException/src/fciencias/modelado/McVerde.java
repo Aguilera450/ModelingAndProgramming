@@ -15,7 +15,7 @@ public class McVerde extends Platillo {
      */
     public McVerde() {
 	super.id = 12;
-	super.nombre = "Hamburguesa McPolloQueso.";
+	super.nombre = "Hamburguesa McPolloQueso";
 	super.descripcion = "McVerde hamburguesa es una hamburguesa "
 	    + "de carne marinada en jugos verdes.";
 	super.precio = 74.50f;

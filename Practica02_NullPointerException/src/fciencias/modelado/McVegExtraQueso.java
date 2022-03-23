@@ -15,7 +15,7 @@ public class McVegExtraQueso extends Platillo {
      */
     public McVegExtraQueso() {
 	super.id = 10;
-	super.nombre = "Hamburguesa McVegExtraQueso.";
+	super.nombre = "Hamburguesa McVegExtraQueso";
 	super.descripcion = "McVegExtraQueso hamburguesa vegetariana.";
 	super.precio = 109.50f;
 	super.llevaQueso = true;

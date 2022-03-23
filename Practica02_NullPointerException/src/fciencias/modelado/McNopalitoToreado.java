@@ -15,7 +15,7 @@ public class McNopalitoToreado extends Platillo {
      */
     public McNopalitoToreado() {
 	super.id = 7;
-	super.nombre = "Hamburguesa McNopalitoToreado.";
+	super.nombre = "Hamburguesa McNopalitoToreado";
 	super.descripcion = "McNopalitoToreado hamburguesa vegetariana.";
 	super.precio = 59.50f;
 	super.llevaQueso = false;

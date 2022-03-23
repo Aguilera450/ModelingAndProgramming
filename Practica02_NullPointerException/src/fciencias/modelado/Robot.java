@@ -240,7 +240,7 @@ public class Robot{
                 try{
                 System.out.println("[*] "+ "Ingrese el número de platillo que desea ordenar: ");
                 userInput = input.nextInt();
-                if(userInput >= 0 && userInput <= menuOfrecido.longitud())
+                if(userInput > 0 && userInput <= menuOfrecido.longitud())
                     exit = true;
                 else 
                     throw new Exception("Rango inválido");

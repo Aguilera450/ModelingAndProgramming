@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Practica02{
     /** Menu usado para la prueba */
-     static Menu menuPrueba = new MenuDiario("Menu Diario");
+     static Menu menuPrueba = new MenuGeneral("Menu general");
     // static Menu menuPrueba = new MenuDeLujo("Menu de Lujo");
     // static Menu menuPrueba = new MenuGeneral("Menu General");
     

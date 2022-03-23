@@ -15,7 +15,7 @@ public class McPolloQueso extends Platillo {
      */
     public McPolloQueso() {
 	super.id = 9;
-	super.nombre = "Hamburguesa McPolloQueso.";
+	super.nombre = "Hamburguesa McPolloQueso";
 	super.descripcion = "McPolloQueso hamburguesa es la de mayor tamaño "
 	    + "y la promocionamos por su excelente sabor.";
 	super.precio = 64.50f;
