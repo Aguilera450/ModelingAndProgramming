@@ -230,23 +230,23 @@ public class Robot{
 	System.out.println(mostrarMenu());
 	
 	Scanner input = new Scanner(System.in);
-        boolean exit  = false;
-        int userInput = 0;
-        do{
-            try{
-                System.out.println("\n[*] "+ "Eliga un platillo por favor: ");
-                userInput = input.nextInt();
-                if(userInput >= min && userInput <= max)
-                    exit = true;
-                else 
-                    throw new Exception("Rango inválido");
+	boolean exit  = false;
+	int userInput = 0;
+	do{
+	    try{
+		System.out.println("\n[*] "+ "Eliga un platillo por favor: ");
+		userInput = input.nextInt();
+		if(userInput >= 0 && userInput <= menuOfrecido.longitud())
+		    exit = true;
+		else 
+		    throw new Exception("Rango inválido");
 
 	    }catch(Exception e){
-                System.out.println("\n[!!] Excepción. Se ingreso un valor inválido, intentelo nuevamente.");
-            }finally{
-                input.nextLine(); // Limpiamos el buffer.
-            }
-        }while(exit == false);
+		System.out.println("\n[!!] Excepción. Se ingreso un valor inválido, intentelo nuevamente.");
+	    }finally{
+		input.nextLine(); // Limpiamos el buffer.
+	    }
+	}while(exit == false);
 
 	platilloACocinar = menuOfrecido.obtenerPlatillo(userInput);
     }
