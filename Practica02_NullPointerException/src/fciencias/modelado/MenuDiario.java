@@ -24,10 +24,10 @@ public class MenuDiario extends Menu{
         this.nombre = nombre;
         this.hamburguesas = new Platillo[10];
         this. ultimo = -1;
-	
         agregarPlatillo(new McVerde());
-	    agregarPlatillo(new McPepinillos());
 	    agregarPlatillo(new McKongFrijoles());
+        agregarPlatillo(new McPolloQueso());
+	    agregarPlatillo(new McPepinillos());
     }
 
     /**
@@ -42,11 +42,10 @@ public class MenuDiario extends Menu{
     /**
      * Método para obtener un platillo en determinada posición.
      * @param posicion Posición del platillo buscado. La indexación comienza en 0.
-     * @return El platillo con la posición recibida o null si la posición esta fuera de rango.
+     * @return El platillo con la posición recibida o null si la posición esta fuera de rango. Si no hay platillos regresa null.
      */
     @Override
     public Platillo obtenerPlatillo(int posicion){
-        // TODO - Ver que si funcione
         if(posicion > (hamburguesas.length - 1) || posicion < 0)
             return null;
         else
@@ -59,7 +58,6 @@ public class MenuDiario extends Menu{
      * @return Regresa True si el elemento existe, False si no fue encontrado.
      */
     public boolean contienePlatillo(Platillo platillo){
-        // TODO - Ver que si funcione
         for (int i = 0; i < hamburguesas.length ; i++) {
             try {
                 if(hamburguesas[i].equals(platillo))
@@ -80,7 +78,6 @@ public class MenuDiario extends Menu{
      */
     @Override
     public void agregarPlatillo(Platillo platillo){
-        // TODO - Ver que si funcione
         // Se valida que el elemento a agregar tenga lugar en el menú.
         if(ultimo + 1 <= hamburguesas.length - 1){
             // Si hay espacio, y el platillo no existe ya, se agrega.
@@ -99,7 +96,6 @@ public class MenuDiario extends Menu{
      */
     @Override
     public void eliminarPlatillo(Platillo platillo){
-        // TODO - Ver que si funcione
         boolean encontrado = false;
         // Se recorren los platillos en busca del platillo a eliminar.
         for (int i = 0; i < hamburguesas.length ; i++) {

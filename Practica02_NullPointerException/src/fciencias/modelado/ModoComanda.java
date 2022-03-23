@@ -21,7 +21,7 @@ public class ModoComanda implements EstadoRobot{
     }
 
     /**
-     * Metodo que inicia el modo suspendido si es que se
+     * Método que inicia el modo suspendido si es que se
      * cumplen con las condiciones.
      */
     public void suspenderse(){
@@ -29,7 +29,7 @@ public class ModoComanda implements EstadoRobot{
     }
 
     /**
-     * Metodo que inicia el modo movimiento si es que se
+     * Método que inicia el modo movimiento si es que se
      * cumplen con las condiciones.
      */
     public void caminar(){
@@ -37,7 +37,7 @@ public class ModoComanda implements EstadoRobot{
     }
 
     /**
-     * Metodo que inicia el modo comanda si es que se
+     * Método que inicia el modo comanda si es que se
      * cumplen con las condiciones.
      */
     public void atender(){
@@ -45,7 +45,7 @@ public class ModoComanda implements EstadoRobot{
     }
 
     /**
-     * Metodo que inicia el modo cocinero si es que se
+     * Método que inicia el modo cocinero si es que se
      * cumplen con las condiciones.
      */
     public void cocinar(){
@@ -58,7 +58,7 @@ public class ModoComanda implements EstadoRobot{
     }
 
     /**
-     * Metodo que inicia el modo suspendido si es que se
+     * Método que inicia el modo suspendido si es que se
      * cumplen con las condiciones.
      */
     public void entregar(){

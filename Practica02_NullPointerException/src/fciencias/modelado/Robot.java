@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Clase que simula un <code>Robot</code>.
+ * La clase implementa los patrónes de diseño <code>State</code> e <code>Iterator</code>.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -21,6 +22,7 @@ public class Robot{
     /** Platillo que se va a cocinar. Se tipo Platillo. */
     private Platillo platilloACocinar;
 
+    // Condiconales para los Estados del Robot.
     /** Boolean que nos dice si se esta atendiendo una mesa. */
     private boolean atencionMesaCliente;
 
@@ -30,6 +32,7 @@ public class Robot{
     /** Boolean que nos dice si el plato esta listo. */
     private boolean platoListo;
 
+    // Estados del Robot
     /** Estado Actual del robot. */
     private EstadoRobot estadoActual;
 
@@ -68,7 +71,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que cambia el Menu del Robot.
+     * Método que cambia el Menu del Robot.
      * @param nuevoMenu nuevo Menu a mostrar.
      */
     public void cambiarMenu(Menu nuevoMenu){
@@ -76,7 +79,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el Menu en tipo String.
+     * Método que devuelve el Menu en tipo String.
      * @return Menu en tipo String.
      */
     public String mostrarMenu(){
@@ -101,7 +104,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que asigna un nuevo estado actual al robot.
+     * Método que asigna un nuevo estado actual al robot.
      * @param nuevoEstado Nuevo estado a asignar.
      */
     public void asignarNuevoEstado(EstadoRobot nuevoEstado){
@@ -109,7 +112,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que asigna una nueva mesa a atender.
+     * Método que asigna una nueva mesa a atender.
      * @param mesa Nueva mesa a atender.
      */
     public void asignarMesaAAtender(MesaCliente mesa){
@@ -118,7 +121,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve la mesa atendida.
+     * Método que devuelve la mesa atendida.
      * @return Mesa atendia
      */
     public MesaCliente getMesaAtendida(){
@@ -126,7 +129,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve si se esta atendiendo una mesa.
+     * Método que devuelve si se esta atendiendo una mesa.
      * @return True si es atendia, False en caso contrario.
      */
     public boolean getAtencionMesaCliente(){
@@ -134,7 +137,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve si la orden fue tomada.
+     * Método que devuelve si la orden fue tomada.
      * @return True si ya fue tomada, False en caso contrario.
      */
     public boolean getOrdenTomada(){
@@ -142,40 +145,40 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve si el plato esta listo.
+     * Método que devuelve si el plato esta listo.
      * @return True si esta listo, False en caso contrario.
      */
     public boolean getPlatoListo(){
         return platoListo;
     }
 
-    /** Metodo que suspende al robot. */
+    /** Método que suspende al robot. */
     public void suspenderse(){
         estadoActual.suspenderse();
     }
 
-    /** Metodo que pone en modo movimiento al robot. */
+    /** Método que pone en modo movimiento al robot. */
     public void caminar(){
         estadoActual.caminar();
     }
 
-    /** Metodo que pone en modo comanda al robot. */
+    /** Método que pone en modo comanda al robot. */
     public void atender(){
         estadoActual.atender();
     }
 
-    /** Metodo que pone en modo cocinero al robot. */
+    /** Método que pone en modo cocinero al robot. */
     public void cocinar(){
         estadoActual.cocinar();
     }
 
-    /** Metodo que pone en modo Entrega al robot. */
+    /** Método que pone en modo Entrega al robot. */
     public void entregar(){
         estadoActual.entregar();
     }
 
     /**
-     * Metodo que devuelve el estado Actual.
+     * Método que devuelve el estado Actual.
      * @return Devuelve el estado actual del Robot.
      */
     public EstadoRobot getEstadoActual(){
@@ -183,7 +186,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el estado suspendido.
+     * Método que devuelve el estado suspendido.
      * @return Devuelve el estado suspendido.
      */
     public EstadoRobot getEstadoSuspendido(){
@@ -191,7 +194,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el estado movimiento.
+     * Método que devuelve el estado movimiento.
      * @return Devuelve el estado movimiento.
      */
     public EstadoRobot getEstadoMovimiento(){
@@ -199,7 +202,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el estado comanda.
+     * Método que devuelve el estado comanda.
      * @return Devuelve el estado comanda.
      */
     public EstadoRobot getEstadoComanda() {
@@ -207,7 +210,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el estado cocinero.
+     * Método que devuelve el estado cocinero.
      * @return Devuelve el estado cocinero.
      */
     public EstadoRobot getEstadoCocinero(){
@@ -215,7 +218,7 @@ public class Robot{
     }
 
     /**
-     * Metodo que devuelve el estado entrega.
+     * Método que devuelve el estado entrega.
      * @return Devuelve el estado entrega.
      */
     public EstadoRobot getEstadoEntrega(){
@@ -223,7 +226,7 @@ public class Robot{
     }
 
     /**
-     * Metodo para hacer que el robot le pregunte
+     * Método para hacer que el robot le pregunte
      * al cliente que platillo quiere.
      * Este método solo se podrá realizar cuando el robot este en modo comanda 
      * y no haya tomado la orden del cliente.
@@ -265,7 +268,7 @@ public class Robot{
     }
     
     /**
-     * Metodo que hace que el robot cocine el platillo
+     * Método que hace que el robot cocine el platillo
      * que ordeno el cliente.
      * Se cocinará el platillo solo si esta en MODO COCINERO,
      * si la orden ya ha sido tomada 

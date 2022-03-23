@@ -12,22 +12,22 @@ import java.util.Set;
  */
 public class MenuDeLujo extends Menu{
 
-    /** Estructura que almacena los platillos del Menu de lujo
-     * La llave de los platillos será su identificador.
+    /** Estructura que almacena los platillos del Menú de lujo
+     * La llave de los platillos será su atributo id (identificador).
     */
     private Hashtable<Integer,Platillo> hamburguesas;
 
     /**
      * Constructor de un menú de lujo.
      * Además de asignar el nombre recibido, 
-     * inicializa la estructura de platillos y agrega 4 platillos.
+     * inicializa la estructura de platillos y agrega 3 platillos.
      * @param nombre Nombre del menú de lujo.
      */
     MenuDeLujo(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new Hashtable<>();
-        agregarPlatillo(new McJumbo());
         agregarPlatillo(new Mc3Queso());
+        agregarPlatillo(new McJumbo());
         agregarPlatillo(new McVegExtraQueso());
     }
 
@@ -43,7 +43,7 @@ public class MenuDeLujo extends Menu{
     /**
      * Método para obtener un platillo en determinada posición.
      * @param posicion Posición del platillo buscado. La indexación comienza en 0.
-     * @return El platillo con la posición recibida o null si la posición esta fuera de rango.
+     * @return El platillo con la posición recibida o null si la posición esta fuera de rango. Si no hay platillos regresa null.
      */
     @Override
     public Platillo obtenerPlatillo(int posicion){
@@ -53,8 +53,10 @@ public class MenuDeLujo extends Menu{
         if(posicion > (hamburguesas.size() - 1) || posicion < 0){
             return null;
         } else {
+            // Usaremos posición para calcular cuando nos posicionaremos en el elemento.
             while(iterator.hasNext() && posicion > -1){
-                if(posicion == 0) // Se regresará el siguiente elemento, es decir, el último
+                // Cuando la posición sea 0, significa que ya llegamos al elemento.
+                if(posicion == 0)
                     return hamburguesas.get(iterator.next());
                 iterator.next();
                 posicion--;
@@ -70,7 +72,6 @@ public class MenuDeLujo extends Menu{
      */
     @Override
     public void agregarPlatillo(Platillo platillo){
-        // TODO - Ver que si funcione
         if(!hamburguesas.contains(platillo.getId()))
             hamburguesas.put(platillo.getId(), platillo);
     }
@@ -82,7 +83,6 @@ public class MenuDeLujo extends Menu{
      */
     @Override
     public void eliminarPlatillo(Platillo platillo){
-        // TODO - Ver que si funcione
         hamburguesas.remove(platillo.getId());
     }
 

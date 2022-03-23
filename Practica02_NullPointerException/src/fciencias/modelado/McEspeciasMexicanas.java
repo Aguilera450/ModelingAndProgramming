@@ -14,14 +14,14 @@ public class McEspeciasMexicanas extends Platillo {
      * McEspeciasMexicanas.
      */
     public McEspeciasMexicanas() {
-	super.id = 3;
-	super.nombre = "Hamburguesa McEspeciasMexicanas";
-	super.descripcion = "McEspeciasMexicanas hamburguesa "
-	    + "es una hamburgesa vegetariana sin queso, con "
-	    + "sabores irresistibles.";
-	super.precio = 147.50f;
-	super.llevaQueso = false;
-	super.esVegetariano = true;
+        super.id = 3;
+        super.nombre = "Hamburguesa McEspeciasMexicanas";
+        super.descripcion = "McEspeciasMexicanas hamburguesa "
+            + "es una hamburgesa vegetariana sin queso, con "
+            + "sabores irresistibles.";
+        super.precio = 147.50f;
+        super.llevaQueso = false;
+        super.esVegetariano = true;
     }
     
     /**
@@ -33,7 +33,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Primero, se coloca la tapa del pan a sofreir con aceites vegetales.";
+	    return "\n *) Primero, se coloca la tapa del pan a sofreir con aceites vegetales.";
     }
     
     /**
@@ -42,7 +42,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se coloca mayonesa con grasas vegetales.";
+	    return "\n *) Se coloca mayonesa con grasas vegetales.";
     }
     
     /**
@@ -51,7 +51,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se coloca mostaza parmesana, una de las hechas con plantas "
+	    return "\n *) Se coloca mostaza parmesana, una de las hechas con plantas "
 	    + "y eco-friendly.";
     }
     
@@ -62,7 +62,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Se coloca a la freidora de aire una pieza de hambuerguesa "
+	    return "\n *) Se coloca a la freidora de aire una pieza de hambuerguesa "
 	    + "de Soja marinada en Betabel.";
     }
     
@@ -73,9 +73,12 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se colocan distintas variedades de especias mexicanas "
-	    + "en conjunto con rebanas de aguacate, lechuga, cebolla, "
-	    + "papas, pimientos y espinacas.";
+        if(esVegetariano)
+            return "\n *) Se colocan distintas variedades de especias mexicanas "
+            + "en conjunto con rebanas de aguacate, lechuga, cebolla, "
+            + "papas, pimientos y espinacas.";
+        else
+            return "";
     }    
     
     /**
@@ -84,7 +87,7 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se colocan algunas cucharadas de Catsup del gallo.";
+	    return "\n *) Se colocan algunas cucharadas de Catsup del gallo.";
     }
     
     /**
@@ -96,6 +99,6 @@ public class McEspeciasMexicanas extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Por ultimo, se coloca la tapa del pan a sofreir con aceites vegetales.";
+	    return "\n *) Por ultimo, se coloca la tapa del pan a sofreir con aceites vegetales.";
     }    
 }
