@@ -49,7 +49,7 @@ public class MesaCliente {
             // Y damos inicio al proceso de orden
             robotAsignado.caminar();
         } else {
-            System.out.println("El Robot solicitado no puede ser solicitado ahora.");
+            System.out.println("El Robot no puede ser solicitado ahora.");
         }
     }
 }

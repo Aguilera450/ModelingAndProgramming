@@ -225,41 +225,66 @@ public class Robot{
     /**
      * Metodo para hacer que el robot le pregunte
      * al cliente que platillo quiere.
+     * Este método solo se podrá realizar cuando el robot este en modo comanda 
+     * y no haya tomado la orden del cliente.
      */
     public void preguntarPlatillo(){
-	System.out.println(mostrarMenu());
-	
-	Scanner input = new Scanner(System.in);
-	boolean exit  = false;
-	int userInput = 0;
-	do{
-	    try{
-		System.out.println("\n[*] "+ "Eliga un platillo por favor: ");
-		userInput = input.nextInt();
-		if(userInput >= 0 && userInput <= menuOfrecido.longitud())
-		    exit = true;
-		else 
-		    throw new Exception("Rango inválido");
+        // Si el robot esta en MODO COMANDA y no ha tomado la orden, solo en ese entonces podrá tomarla.
+        if(getEstadoActual() == getEstadoComanda() && !getOrdenTomada()){
+            System.out.println(mostrarMenu());
+            
+            Scanner input = new Scanner(System.in);
+            boolean exit  = false;
+            int userInput = 0;
+            do{
+                try{
+                System.out.println("[*] "+ "Ingrese el número de platillo que desea ordenar: ");
+                userInput = input.nextInt();
+                if(userInput >= 0 && userInput <= menuOfrecido.longitud())
+                    exit = true;
+                else 
+                    throw new Exception("Rango inválido");
+    
+                }catch(Exception e){
+                System.out.println("\n[!!] Ingrese una opción válida, por favor.");
+                }finally{
+                input.nextLine(); // Limpiamos el buffer.
+                }
+            }while(exit == false);
 
-	    }catch(Exception e){
-		System.out.println("\n[!!] Excepción. Se ingreso un valor inválido, intentelo nuevamente.");
-	    }finally{
-		input.nextLine(); // Limpiamos el buffer.
-	    }
-	}while(exit == false);
-
-	platilloACocinar = menuOfrecido.obtenerPlatillo(userInput);
+            // Guardamos el platillo que cocinaremos. Se resta uno porque la indexación comienza en 0.
+            // y el Menú mostrado al usuario comenzaba en 1.
+            platilloACocinar = menuOfrecido.obtenerPlatillo(userInput - 1);
+            // E indicamos a ordenTomada que ya tenemos un platillo.
+            ordenTomada = true;
+            // Y le mostramos al usuario el platillo elejido.
+            System.out.println("El platillo a cocinar será: " + platilloACocinar.getNombre());
+        } else {
+            System.out.println("McROBOT ya tomó su orden o aún no se encuentra en su mesa.");
+        }
     }
     
     /**
      * Metodo que hace que el robot cocine el platillo
      * que ordeno el cliente.
+     * Se cocinará el platillo solo si esta en MODO COCINERO,
+     * si la orden ya ha sido tomada 
+     * y si el platillo no ha sido preparado aún.
      */
     public void cocinarPlatillo(){
-        if(platilloACocinar != null){
+        if(getEstadoActual() == getEstadoCocinero() && ordenTomada && !platoListo){
+            // Si se cumplen con las condiciones se procede a cocinar el platillo 
+            // y mostrarle al usuario la preparación.
             System.out.println(platilloACocinar.cocinar());
+            // Y también se le indica que el platillo ya esta listo
+            platoListo = true;
         } else {
-            System.out.println("Aún no se ha tomado la orden del cliente.");
+            if(!ordenTomada)
+                System.out.println("McROBOT aún no ha tomado la orden del cliente.");
+            else if(platoListo)
+                System.out.println("McROBOT ya ha preparado el platillo.");
+            else
+                System.out.println("McROBOT no se encuentra en MODO COCINERO.");
         }
     }
 

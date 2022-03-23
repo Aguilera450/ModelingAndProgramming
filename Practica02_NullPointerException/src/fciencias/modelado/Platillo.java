@@ -72,8 +72,7 @@ public abstract class Platillo {
      *                                hamburguesa. 
      */
     public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
+        return "**** PREPARACIÓN DE " + getNombre().toUpperCase() + " ****"
 	    +  ponerBasePan()
 	    +  ponerMayonesa()
 	    +  ponerMostaza()

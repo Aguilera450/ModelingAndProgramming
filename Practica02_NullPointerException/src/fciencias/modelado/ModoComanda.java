@@ -62,6 +62,6 @@ public class ModoComanda implements EstadoRobot{
      * cumplen con las condiciones.
      */
     public void entregar(){
-        System.out.println("<**** MODO COMANDA ****>\nMcROBOT aún no recibe el platillo que comerá el cliente.");
+        System.out.println("<**** MODO COMANDA ****>\nMcROBOT aún no recibe el platillo que comerá el cliente o aún no lo cocina.");
     }
 }
