@@ -15,7 +15,7 @@ public class Practica02{
     static Robot mcrobot = new Robot(menuPrueba);
     /** Mesa del cliente para la prueba */
     static MesaCliente mesa = new MesaCliente("Arturo");
-
+    
     /**
      * Método que genera una pausa dentro del programa y solicita presionar Enter
      * para continuar

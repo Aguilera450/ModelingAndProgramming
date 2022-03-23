@@ -26,7 +26,9 @@ public class MenuDeLujo extends Menu{
     MenuDeLujo(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new Hashtable<>();
-        // TODO - Agregar hamburguesas de lujo
+	agregarPlatillo(new McJumbo());
+	agregarPlatillo(new Mc3Queso());
+	agregarPlatillo(new McVegExtraQueso());
     }
 
     /**

@@ -3,16 +3,21 @@ public class ClasePrueba {
     public static void main(String[] pps) {
 	//System.out.println("Sí es así.");
 	McPolloQueso ham1 = new McPolloQueso();
-	McVegExtraQueso ham2 = new McVegExtraQueso();
-	McVegetales ham3 = new McVegetales();
-	McVerde ham4 = new McVerde();
-	Mc3Queso ham5 = new Mc3Queso();
+	
+	
+
 	McChill ham6 = new McChill();
+	McVegetales ham3 = new McVegetales();
 	McEspeciasMexicanas ham7 = new McEspeciasMexicanas();
-	McJumbo ham8 = new McJumbo();
-	McKongFrijoles ham9 = new McKongFrijoles();
-	McLechugaYQueso ham10 = new McLechugaYQueso();
 	McNopalitoToreado ham11 = new McNopalitoToreado();
+	McLechugaYQueso ham10 = new McLechugaYQueso();
+	
+	McJumbo ham8 = new McJumbo();
+	Mc3Queso ham5 = new Mc3Queso();
+	McVegExtraQueso ham2 = new McVegExtraQueso();
+	
+	McKongFrijoles ham9 = new McKongFrijoles();
+	McVerde ham4 = new McVerde();
 	McPepinillos ham12 = new McPepinillos();
 	
 	System.out.println(ham1.cocinar());

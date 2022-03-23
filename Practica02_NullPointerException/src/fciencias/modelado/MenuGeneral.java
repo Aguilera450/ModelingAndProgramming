@@ -21,7 +21,12 @@ public class MenuGeneral extends Menu{
     public MenuGeneral(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new ArrayList<>();
-        // TODO - Agregar hamburguesas generales
+	
+	agregarPlatillo(new McChill());
+	agregarPlatillo(new McVegetales());
+	agregarPlatillo(new McLechugaYQueso());
+	agregarPlatillo(new McNopalitoToreado());
+	agregarPlatillo(new McEspeciasMexicanas());
     }
 
     /**
