@@ -225,7 +225,11 @@ public class Robot{
      * que ordeno el cliente.
      */
     public void cocinarPlatillo(){
-        System.out.println(platilloACocinar.cocinar());
+        if(platilloACocinar != null){
+            System.out.println(platilloACocinar.cocinar());
+        } else {
+            System.out.println("Aún no se ha tomado la orden del cliente.");
+        }
     }
 
     /**

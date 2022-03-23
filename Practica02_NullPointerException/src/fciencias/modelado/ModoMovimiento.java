@@ -18,6 +18,9 @@ public class ModoMovimiento implements EstadoRobot{
     public void suspenderse(){
         System.out.println("<**** MODO MOVIMIENTO ****>\nMcROBOT pasará a MODO SUSPENDIDO.");
         robot.asignarNuevoEstado(robot.getEstadoSuspendido());
+        // Como el robot se suspenderá deberá "reiniciarse" e inicializar todos sus
+        // datos para una nueva ejecución.
+        robot.inicializar();
     }
 
     /**
