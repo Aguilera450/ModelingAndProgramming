@@ -84,5 +84,13 @@ public class MenuDeLujo extends Menu{
         hamburguesas.remove(platillo.getId());
     }
 
+    /**
+     * Método para conocer la cantidad de elementos en el menú.
+     * @return la longitud del menú, es decir, la cantidad de platillo en el.
+     */
+    @Override
+    public int longitud() {
+        return hamburguesas.size();
+    }
 
 }

@@ -43,4 +43,10 @@ public abstract class Menu {
      * @param platillo Platillo a eliminar.
      */
     abstract void eliminarPlatillo(Platillo platillo);
+
+    /**
+     * Método asbtracto para conocer la cantidad de elementos en el menú.
+     * @return la longitud del menú, es decir, la cantidad de platillo en el.
+     */
+    abstract int longitud();
 }   

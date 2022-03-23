@@ -105,4 +105,13 @@ public class MenuDiario extends Menu{
             }                
         }
     }
+
+    /**
+     * Método para conocer la cantidad de elementos en el menú.
+     * @return la longitud del menú, es decir, la cantidad de platillo en el.
+     */
+    @Override
+    public int longitud() {
+        return ultimo + 1;
+    }
 }

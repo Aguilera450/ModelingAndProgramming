@@ -72,4 +72,13 @@ public class MenuGeneral extends Menu{
         // TODO - Ver que si funcione
         hamburguesas.remove(platillo);
     }
+
+    /**
+     * Método para conocer la cantidad de elementos en el menú.
+     * @return la longitud del menú, es decir, la cantidad de platillo en el.
+     */
+    @Override
+    public int longitud(){
+        return hamburguesas.size();
+    }
 }
