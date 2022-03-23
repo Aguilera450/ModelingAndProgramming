@@ -24,7 +24,10 @@ public class MenuDiario extends Menu{
         this.nombre = nombre;
         this.hamburguesas = new Platillo[10];
         this. ultimo = -1;
-        // TODO - Agregar hamburguesas diarias
+	
+        agregarPlatillo(new McVerde());
+	agregarPlatillo(new McPepinillos());
+	agregarPlatillo(new McKongFrijoles());
     }
 
     /**
