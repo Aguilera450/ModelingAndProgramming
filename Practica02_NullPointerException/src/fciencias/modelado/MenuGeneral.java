@@ -18,7 +18,7 @@ public class MenuGeneral extends Menu{
      * inicializa la estructura de platillos y agrega 4 platillos.
      * @param nombre Nombre del menú general.
      */
-    MenuGeneral(String nombre){
+    public MenuGeneral(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new ArrayList<>();
         // TODO - Agregar hamburguesas generales
@@ -30,7 +30,7 @@ public class MenuGeneral extends Menu{
      */
     @Override
     public Iterador crearIterador(){
-        return new MenuGeneralIterador(this.hamburguesas);
+        return (Iterador) new MenuGeneralIterator(this.hamburguesas);
     }
 
     /**

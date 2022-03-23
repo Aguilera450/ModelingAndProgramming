@@ -1,5 +1,6 @@
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Clase que simula un menú de lujo.
@@ -34,7 +35,7 @@ public class MenuDeLujo extends Menu{
      */
     @Override
     public Iterador crearIterador(){
-        return new MenuDeLujoIterador(this.hamburguesas);
+        return (Iterador) new MenuDeLujoIterator(this.hamburguesas);
     }
 
     /**
@@ -44,7 +45,7 @@ public class MenuDeLujo extends Menu{
      */
     @Override
     public Platillo obtenerPlatillo(int posicion){
-        Set<Integer> claves = hamburguesas.keySet();;
+        Set<Integer> claves = hamburguesas.keySet();
         Iterator<Integer> iterator = claves.iterator();
 
         if(posicion > (hamburguesas.size() - 1) || posicion < 0){
@@ -56,6 +57,7 @@ public class MenuDeLujo extends Menu{
                 iterator.next();
                 posicion--;
             }
+	    return null;
         }
     }
 

@@ -1,7 +1,17 @@
+import java.util.Scanner;
+
+/**
+ * Clase que simula un <code>Robot</code>.
+ * @author Adrian Aguilera Moreno     - Aguiler450
+ * @author Rosas Franco Diego Angel   - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version 1.0 - 22/03/2022
+ */
+
 public class Robot{
     /** Menu que ofrece el robot de Tipo Menu. */
     private Menu menuOfrecido;
-
+    
     /** Iterador que recorrera el menu. De tipo Iterator. */
     private Iterador iteradorMenu;
 
@@ -217,9 +227,30 @@ public class Robot{
      * al cliente que platillo quiere.
      */
     public void preguntarPlatillo(){
-        //TODO -  Una vez recibido el platillo cambiar ordenTomada a true.
-    }
+	System.out.println(mostrarMenu());
+	
+	Scanner input = new Scanner(System.in);
+        boolean exit  = false;
+        int userInput = 0;
+        do{
+            try{
+                System.out.println("\n[*] "+ "Eliga un platillo por favor: ");
+                userInput = input.nextInt();
+                if(userInput >= min && userInput <= max)
+                    exit = true;
+                else 
+                    throw new Exception("Rango inválido");
 
+	    }catch(Exception e){
+                System.out.println("\n[!!] Excepción. Se ingreso un valor inválido, intentelo nuevamente.");
+            }finally{
+                input.nextLine(); // Limpiamos el buffer.
+            }
+        }while(exit == false);
+
+	platilloACocinar = menuOfrecido.obtenerPlatillo(userInput);
+    }
+    
     /**
      * Metodo que hace que el robot cocine el platillo
      * que ordeno el cliente.

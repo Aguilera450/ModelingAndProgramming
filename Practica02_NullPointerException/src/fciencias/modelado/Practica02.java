@@ -1,4 +1,12 @@
 import java.util.Scanner;
+/**
+ * Ejecución de los algoritmos implementados para la simulación
+ * del Robot y todas las cosas que puede realizar.
+ * @author Adrian Aguilera Moreno     - Aguiler450
+ * @author Rosas Franco Diego Angel   - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version 1.0 - 22/03/2022
+ */
 
 public class Practica02{
     /** Menu usado para la prueba */

@@ -1,3 +1,14 @@
+/**
+ * Clase que simula el estado <code>ModoCocinero</code>
+ * del Robot, este modo le permite al Robot preparar la
+ * orden del cliente.
+ * @author Adrian Aguilera Moreno - Aguiler450
+ * @author Rosas Franco Diego Angel - shikitimiau
+ * @author Marco Antonio Rivera Silva - DONMARCORS
+ * @version 1.0 - 22/03/2022
+ * @see <code>EstadoRobot</code>.
+ */
+
 public class ModoCocinero implements EstadoRobot{
     /** Robot asociado al estado actual */
     private Robot robot;
