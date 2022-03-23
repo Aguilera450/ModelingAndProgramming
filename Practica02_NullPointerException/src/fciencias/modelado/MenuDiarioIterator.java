@@ -29,10 +29,10 @@ public class MenuDiarioIterator implements Iterador{
     @Override
     public boolean hasNext(){
         if(posicionArreglo < elementos.length){
-            return true;
-        } else {
-            return false;
+            if(elementos[posicionArreglo] != null)
+                return true;
         }
+        return false;
     }
 
     /**

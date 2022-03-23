@@ -26,9 +26,9 @@ public class MenuDeLujo extends Menu{
     MenuDeLujo(String nombre){
         this.nombre = nombre;
         this.hamburguesas = new Hashtable<>();
-	agregarPlatillo(new McJumbo());
-	agregarPlatillo(new Mc3Queso());
-	agregarPlatillo(new McVegExtraQueso());
+        agregarPlatillo(new McJumbo());
+        agregarPlatillo(new Mc3Queso());
+        agregarPlatillo(new McVegExtraQueso());
     }
 
     /**
@@ -37,7 +37,7 @@ public class MenuDeLujo extends Menu{
      */
     @Override
     public Iterador crearIterador(){
-        return (Iterador) new MenuDeLujoIterator(this.hamburguesas);
+        return new MenuDeLujoIterator(this.hamburguesas);
     }
 
     /**

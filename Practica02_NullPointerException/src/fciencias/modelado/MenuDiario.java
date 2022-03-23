@@ -26,8 +26,8 @@ public class MenuDiario extends Menu{
         this. ultimo = -1;
 	
         agregarPlatillo(new McVerde());
-	agregarPlatillo(new McPepinillos());
-	agregarPlatillo(new McKongFrijoles());
+	    agregarPlatillo(new McPepinillos());
+	    agregarPlatillo(new McKongFrijoles());
     }
 
     /**
@@ -60,12 +60,15 @@ public class MenuDiario extends Menu{
      */
     public boolean contienePlatillo(Platillo platillo){
         // TODO - Ver que si funcione
-        if(longitud() != 0){
-            for (int i = 0; i < hamburguesas.length ; i++) {
+        for (int i = 0; i < hamburguesas.length ; i++) {
+            try {
                 if(hamburguesas[i].equals(platillo))
                     return true;
+            } catch (NullPointerException e) {
+                // Si captura esta excepción es que llegamos a la parte donde no hay elementos
+                break;
             }
-        }
+        }    
         return false;
     }
 

@@ -9,7 +9,7 @@ import java.util.Set;
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version  1.0 - 20/03/2022
  */
-public class MenuDeLujoIterator implements Iterator{
+public class MenuDeLujoIterator implements Iterador{
     /**
      * Elementos que vamos a recorrer en tipo Hashtable<Integer, Platillo>.
      */

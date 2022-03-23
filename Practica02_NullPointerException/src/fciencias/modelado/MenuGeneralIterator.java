@@ -8,7 +8,7 @@ import java.util.Iterator;
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version  1.0 - 20/03/2022
  */
-public class MenuGeneralIterator implements Iterador,Iterator{
+public class MenuGeneralIterator implements Iterador{
     
     /** ArrayList con los elementos platillo que se van a recorrer. */
     private ArrayList<Platillo> elementos;
