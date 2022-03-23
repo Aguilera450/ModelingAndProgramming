@@ -54,7 +54,35 @@ public abstract class Platillo {
     public float getPrecio() {
 	return precio;
     }
-    
+
+    /**
+     * Método para indicar que la hamburguesa lleva queso.
+     */
+    public void siLlevaQueso(){
+        llevaQueso = true;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa no lleva queso.
+     */
+    public void noLlevaQueso(){
+        llevaQueso = false;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa lleva vegetales o es vegetariana.
+     */
+    public void siLlevaVegetales(){
+        esVegetariano = true;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa no lleva vegetales o no es vegetariana.
+     */
+    public void noLlevaVegetales(){
+        esVegetariano = false;
+    }
+
     /**
      * Método que nos regresa la información a cerca de algún
      * tipo de hamburguesa.
