@@ -14,13 +14,13 @@ public class McPolloQueso extends Platillo {
      * McPolloQueso.
      */
     public McPolloQueso() {
-	super.id = 9;
-	super.nombre = "Hamburguesa McPolloQueso";
-	super.descripcion = "McPolloQueso hamburguesa es la de mayor tamaño "
-	    + "y la promocionamos por su excelente sabor.";
-	super.precio = 64.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = false;
+        super.id = 9;
+        super.nombre = "Hamburguesa McPolloQueso";
+        super.descripcion = "McPolloQueso hamburguesa es la de mayor tamaño "
+            + "y la promocionamos por su excelente sabor.";
+        super.precio = 64.50f;
+        super.llevaQueso = true;
+        super.esVegetariano = false;
     }
     
     /**
@@ -32,7 +32,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Empezamos colocando una media pieza de pan "
+	    return "\n *) Empezamos colocando una media pieza de pan "
 	    + "crujiente y caliente como base de su hamburguesa.";
     }
     
@@ -42,7 +42,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Untamos un poco de mayonesa McMayonesa.";
+	    return "\n *) Untamos un poco de mayonesa McMayonesa.";
     }
     
     /**
@@ -51,7 +51,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se coloca un cucharada pequeña de mostaza "
+	    return "\n *) Se coloca un cucharada pequeña de mostaza "
 	    + "sobre la mayonesa.";
     }
     
@@ -62,7 +62,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) En este momento calentamos con aceite la carne "
+	    return "\n *) En este momento calentamos con aceite la carne "
 	    + "de pollo que funge como hamburguesa.";
     }
     
@@ -72,9 +72,12 @@ public class McPolloQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
-	return "\n *) Se aplican 4 laminas de queso americano sobre la carne "
-	    + "recien calentada.";
+    public String ponerQueso() {
+	    if(llevaQueso)
+            return "\n *) Se aplican 4 laminas de queso americano sobre la carne "
+	        + "recien calentada.";
+        else
+            return "";
     }
     
     /**
@@ -84,8 +87,11 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se coloca tomate, cebolla y cilantro en una "
-	    + "salsa mexicana [pico de gallo].";
+        if(esVegetariano)
+	        return "\n *) Se coloca tomate, cebolla y cilantro en una "
+	        + "salsa mexicana [pico de gallo].";
+        else
+            return "";
     }    
     
     /**
@@ -94,7 +100,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se verte un chorro de Catsup sobre los vegetales.";
+	    return "\n *) Se verte un chorro de Catsup sobre los vegetales.";
     }
     
     /**
@@ -106,7 +112,7 @@ public class McPolloQueso extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Finalizamos colocando una media pieza de pan "
+	    return "\n *) Finalizamos colocando una media pieza de pan "
 	    + "crujiente y caliente como tapa de su hamburguesa.";
     }
 }

@@ -14,12 +14,12 @@ public class McKongFrijoles extends Platillo {
      * McKongFrijoles.
      */
     public McKongFrijoles() {
-	super.id = 5;
-	super.nombre = "Hamburguesa McKongFrijoles";
-	super.descripcion = "McKongFrijoles hamburguesa es vegetariana.";
-	super.precio = 47.50f;
-	super.llevaQueso = false;
-	super.esVegetariano = true;
+        super.id = 5;
+        super.nombre = "Hamburguesa McKongFrijoles";
+        super.descripcion = "McKongFrijoles hamburguesa es vegetariana.";
+        super.precio = 47.50f;
+        super.llevaQueso = false;
+        super.esVegetariano = true;
     }
         
     /**
@@ -31,7 +31,7 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se calienta en la plancha la base de la hamburguesa.";
+	    return "\n *) Se calienta en la plancha la base de la hamburguesa.";
     }
     
     /**
@@ -40,7 +40,7 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se coloca mayonesa de limón y sin grasas animales.";
+	    return "\n *) Se coloca mayonesa de limón y sin grasas animales.";
     }
     
     /**
@@ -49,7 +49,7 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Luego, se unta la mostaza sobre la mayoneza, hasta que se mezcla.";
+	    return "\n *) Luego, se unta la mostaza sobre la mayoneza, hasta que se mezcla.";
     }
     
     /**
@@ -59,7 +59,7 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Ahora estamos preparando la carne, de Soja con frijoles, "
+	    return "\n *) Ahora estamos preparando la carne, de Soja con frijoles, "
 	    + "a la plancha con aceites vegetales.";
     }
         
@@ -70,9 +70,12 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Estamos colocando los vegetales a su hamburguesa, algunos de "
-	    + "estos son; epazote, chipilin, albahaca, cilantro, jitomates, "
-	    + "cebollas, entre otras especias y verduras.";
+        if(esVegetariano)
+            return "\n *) Estamos colocando los vegetales a su hamburguesa, algunos de "
+            + "estos son; epazote, chipilin, albahaca, cilantro, jitomates, "
+            + "cebollas, entre otras especias y verduras.";
+        else    
+            return "";
     }    
     
     /**
@@ -81,7 +84,7 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) En este momento estamos poniendo unas pizcas de Catsup "
+	    return "\n *) En este momento estamos poniendo unas pizcas de Catsup "
 	    + "a su hamburguesa.";
     }
     
@@ -94,6 +97,6 @@ public class McKongFrijoles extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Se calienta en la plancha la tapa de la hamburguesa.";
+	    return "\n *) Se calienta en la plancha la tapa de la hamburguesa.";
     }
 }

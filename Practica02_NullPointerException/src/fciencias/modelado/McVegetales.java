@@ -74,7 +74,7 @@ public class McVegetales extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
+    public String ponerQueso() {
 	    if(llevaQueso){
             return "\n *) Se emplea queso oaxaca gratinado para aumentar la textura "
 	        + "en su hamburguesa.";
@@ -90,8 +90,11 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	    return "\n *) Se colocan algunos pepinillos, rebanadas de jitomate "
-	    + "y algunos aros de cebolla morada.";
+        if(esVegetariano)
+	        return "\n *) Se colocan algunos pepinillos, rebanadas de jitomate "
+	        + "y algunos aros de cebolla morada.";
+        else 
+            return "";
     }    
     
     /**

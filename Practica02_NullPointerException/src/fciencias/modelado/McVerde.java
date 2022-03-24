@@ -14,14 +14,13 @@ public class McVerde extends Platillo {
      * McVerde.
      */
     public McVerde() {
-	super.id = 12;
-	super.nombre = "Hamburguesa McPolloQueso";
-	super.descripcion = "McVerde hamburguesa es una hamburguesa "
-	    + "de carne marinada en jugos verdes.";
-	super.precio = 74.50f;
-	super.llevaQueso = false;
-	super.esVegetariano = false;
-	
+        super.id = 12;
+        super.nombre = "Hamburguesa McPolloQueso";
+        super.descripcion = "McVerde hamburguesa es una hamburguesa "
+            + "de carne marinada en jugos verdes.";
+        super.precio = 74.50f;
+        super.llevaQueso = false;
+        super.esVegetariano = false;
     }
         
     /**
@@ -33,7 +32,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Empezamos colocando la base de su hamburguesa, "
+	    return "\n *) Empezamos colocando la base de su hamburguesa, "
 	    + "no sin antes haberla calentado con leños de caoba.";
     }
     
@@ -43,7 +42,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se coloca la mayonesa sobre el pan. ";
+	    return "\n *) Se coloca la mayonesa sobre el pan. ";
     }
     
     /**
@@ -52,7 +51,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se emplea mostaza con colorante verde para simular "
+	    return "\n *) Se emplea mostaza con colorante verde para simular "
 	    + "una tonalidad a pasto.";
     }
     
@@ -63,7 +62,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Se coloca al asador una porción de carne de "
+	    return "\n *) Se coloca al asador una porción de carne de "
 	    + "cerdo marinada en algas verdes.";
     }
     
@@ -74,8 +73,11 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se colocan rodajas de papa con algunos pepinillos, "
-	    + "aguacate, y algunas hojas de espinaca.";
+        if(esVegetariano)
+	        return "\n *) Se colocan rodajas de papa con algunos pepinillos, "
+	        + "aguacate, y algunas hojas de espinaca.";
+        else
+            return "";
     }    
     
     /**
@@ -84,7 +86,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se verten algunas pizcas de McCatsup.";
+	    return "\n *) Se verten algunas pizcas de McCatsup.";
     }
     
     /**
@@ -96,7 +98,7 @@ public class McVerde extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Finalmente colocamos la tapa de su hamburguesa, "
+	    return "\n *) Finalmente colocamos la tapa de su hamburguesa, "
 	    + "no sin antes haberla calentado con leños de caoba.";
     }    
 }

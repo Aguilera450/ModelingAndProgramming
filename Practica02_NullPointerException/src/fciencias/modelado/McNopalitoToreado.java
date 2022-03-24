@@ -77,9 +77,12 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	    return "\n *) En este momento estamos colocando rodajas de cebolla  "
-	    + "rebanadas de tomates, algunas hojas de lechuga y un "
-	    + "nopalito toreado.";
+        if(esVegetariano)
+	        return "\n *) En este momento estamos colocando rodajas de cebolla  "
+	        + "rebanadas de tomates, algunas hojas de lechuga y un "
+	        + "nopalito toreado.";
+        else   
+            return "";
     }    
     
     /**

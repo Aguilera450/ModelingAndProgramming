@@ -70,7 +70,7 @@ public class McLechugaYQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
+    public String ponerQueso() {
 	    if(llevaQueso){
             return "\n *) Se coloca queso manchego y parmesano sobre la carne "
 	        + "sintética.";
@@ -86,8 +86,11 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	    return "\n *) Se le colocan rabanos, lechuga orejona, lechuga romana "
-	    + "y aros de cebolla a la hamburguesa.";
+        if(esVegetariano)
+	        return "\n *) Se le colocan rabanos, lechuga orejona, lechuga romana "
+	        + "y aros de cebolla a la hamburguesa.";
+        else
+            return "";
     }    
     
     /**

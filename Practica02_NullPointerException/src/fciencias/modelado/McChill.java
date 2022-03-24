@@ -64,13 +64,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String prepararCarne() {
-        if(esVegetariano){
-            return "\n *) Luego, se asa la carne de soja a la parrilla y ahuma con un poco "
+        return "\n *) Luego, se asa la carne de soja a la parrilla y ahuma con un poco "
             + "de leño de Hickory y se enchila con salsa chili.";
-        } else {
-            return "\n *) Luego, se asa la carne a la parrilla y ahuma con un poco "
-            + "de leño de Hickory y se enchila con salsa chili.";
-        }
     }
         
     /**
@@ -80,8 +75,11 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-        return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
+        if(esVegetariano)
+            return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
             + "de jitomates.";
+        else
+            return "";
     }    
     
     /**
@@ -90,7 +88,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	    
+	    return "*) Se coloca una pequeña cantidad de catsup";
     }
     
     /**
