@@ -14,12 +14,12 @@ public class McNopalitoToreado extends Platillo {
      * McNopalitoToreado.
      */
     public McNopalitoToreado() {
-	super.id = 7;
-	super.nombre = "Hamburguesa McNopalitoToreado";
-	super.descripcion = "McNopalitoToreado hamburguesa vegetariana.";
-	super.precio = 59.50f;
-	super.llevaQueso = false;
-	super.esVegetariano = true;
+        super.id = 7;
+        super.nombre = "Hamburguesa McNopalitoToreado";
+        super.descripcion = "McNopalitoToreado hamburguesa vegetariana.";
+        super.precio = 59.50f;
+        super.llevaQueso = false;
+        super.esVegetariano = true;
     }
     
     /**
@@ -31,7 +31,7 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) En este momento, se coloca pan marquez como base en esta hamburguesa.";
+	    return "\n *) En este momento, se coloca pan marquez como base en esta hamburguesa.";
     }
     
     /**
@@ -40,7 +40,7 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Ahora, se unta mayonesa al pan de la base.";
+	    return "\n *) Ahora, se unta mayonesa al pan de la base.";
     }
     
     /**
@@ -49,7 +49,7 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Colocamos mostaza moscada por encima de la mayonesa.";
+	    return "\n *) Colocamos mostaza moscada por encima de la mayonesa.";
     }
     
     /**
@@ -59,9 +59,15 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Luego, se torean unos nopalitos con chiles abaneros "
-	    + "para finalmente porcesarse con Soja, y esto suple la "
+	    if(esVegetariano){
+            return "\n *) Luego, se torean unos nopalitos con chiles abaneros "
+	        + "para finalmente procesarse con Soja, y esto suple la "
+	        + "a la carne en esta hamburguesa.";
+        } else {
+            return "\n *) Luego, se torean unos nopalitos con chiles abaneros "
+	    + "para finalmente procesarse con la carne, y esto suple la "
 	    + "a la carne en esta hamburguesa.";
+        }
     }
         
     /**
@@ -71,7 +77,7 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) En este momento estamos colocando rodajas de cebolla  "
+	    return "\n *) En este momento estamos colocando rodajas de cebolla  "
 	    + "rebanadas de tomates, algunas hojas de lechuga y un "
 	    + "nopalito toreado.";
     }    
@@ -82,7 +88,7 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se ponen algunas pizcas de Catsup por encima de los vegetales.";
+	    return "\n *) Se ponen algunas pizcas de Catsup por encima de los vegetales.";
     }
     
     /**
@@ -94,6 +100,6 @@ public class McNopalitoToreado extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Por ultimo, se coloca pan marquez como tapa en esta hamburguesa ";
+	    return "\n *) Por ultimo, se coloca pan marquez como tapa en esta hamburguesa ";
     }
 }

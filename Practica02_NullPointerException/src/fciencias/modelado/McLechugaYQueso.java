@@ -14,12 +14,12 @@ public class McLechugaYQueso extends Platillo {
      * McKongLechugaYQueso.
      */
     public McLechugaYQueso() {
-	super.id = 6;
-	super.nombre = "Hamburguesa McLechugaYQueso";
-	super.descripcion = "McLechugaYQueso hamburguesa vegetariana.";
-	super.precio = 89.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = true;
+        super.id = 6;
+        super.nombre = "Hamburguesa McLechugaYQueso";
+        super.descripcion = "McLechugaYQueso hamburguesa vegetariana.";
+        super.precio = 89.50f;
+        super.llevaQueso = true;
+        super.esVegetariano = true;
     }    
     
     /**
@@ -31,7 +31,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se coloca pan procesado con lechugas de alta calidad.";
+	    return "\n *) Se coloca pan procesado con lechugas de alta calidad.";
     }
     
     /**
@@ -40,7 +40,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se unta mayonesa McMayonesa en el pan de lechuga base.";
+	    return "\n *) Se unta mayonesa McMayonesa en el pan de lechuga base.";
     }
     
     /**
@@ -49,7 +49,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Ahora, estamos untando mostaza junto a la mayonesa en la "
+	    return "\n *) Ahora, estamos untando mostaza junto a la mayonesa en la "
 	    + "base de pan de lechuga.";
     }
     
@@ -60,7 +60,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) En este momento estamos dorando la carne de Soja y lechuga "
+	    return "\n *) En este momento estamos dorando la carne de Soja y lechuga "
 	    + "con un poco de aceite.";
     }
     
@@ -71,8 +71,12 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String hook() {
-	return "\n *) Se coloca queso manchego y parmesano sobre la carne "
-	    + "sintética.";
+	    if(llevaQueso){
+            return "\n *) Se coloca queso manchego y parmesano sobre la carne "
+	        + "sintética.";
+        } else {
+            return "";
+        }
     }
     
     /**
@@ -82,7 +86,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se le colocan rabanos, lechuga orejona, lechuga romana "
+	    return "\n *) Se le colocan rabanos, lechuga orejona, lechuga romana "
 	    + "y aros de cebolla a la hamburguesa.";
     }    
     
@@ -92,7 +96,7 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se coloca una cucharada de Catsup marca del gallo.";
+	    return "\n *) Se coloca una cucharada de Catsup marca del gallo.";
     }
     
     /**
@@ -104,6 +108,6 @@ public class McLechugaYQueso extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Finalmente, se coloca pan procesado con lechugas de alta calidad.";
+	    return "\n *) Finalmente, se coloca pan procesado con lechugas de alta calidad.";
     }    
 }
