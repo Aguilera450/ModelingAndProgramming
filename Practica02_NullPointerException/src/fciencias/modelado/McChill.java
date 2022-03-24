@@ -80,8 +80,12 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-        return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
+        if(esVegetariano){
+	    return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
             + "de jitomates.";
+	} else {
+	    return "";
+	}
     }    
     
     /**
@@ -90,7 +94,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	    
+        return "\n *) Se agrega catsup a la hambusrguesa";
     }
     
     /**
