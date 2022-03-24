@@ -14,13 +14,13 @@ public class McChill extends Platillo {
      * McChill con carne picante.
      */
     public McChill() {
-	super.id = 2;
-	super.nombre = "Hamburguesa McChill";
-	super.descripcion = "McChill hamburguesa es la sensacion en "
-	    + "algun pais, con un sabor casero y picante.";
-	super.precio = 87.50f;
-	super.llevaQueso = false;
-	super.esVegetariano = false;
+        super.id = 2;
+        super.nombre = "Hamburguesa McChill";
+        super.descripcion = "McChill hamburguesa es la sensacion en "
+            + "algun pais, con un sabor casero y picante.";
+        super.precio = 87.50f;
+        super.llevaQueso = false;
+        super.esVegetariano = false;
     }
         
     /**
@@ -32,9 +32,9 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se ahuma a la leña el pan para la base de "
-	    + "la hamburguesa, esto con un poco de mantequilla "
-	    + "untada.";
+        return "\n *) Se ahuma a la leña el pan para la base de "
+            + "la hamburguesa, esto con un poco de mantequilla "
+            + "untada.";
     }
     
     /**
@@ -43,8 +43,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) En este momento se esta aplicando la mayonesa a la base de "
-	    + "la hamburguesa.";
+        return "\n *) En este momento se esta aplicando la mayonesa a la base de "
+            + "la hamburguesa.";
     }
     
     /**
@@ -53,8 +53,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) A continuacion se unta una mostaza estilo mexicana "
-	    + "con sabores unicos.";
+        return "\n *) A continuacion se unta una mostaza estilo mexicana "
+            + "con sabores unicos.";
     }
     
     /**
@@ -64,8 +64,13 @@ public class McChill extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Luego, se asa la carne a la parrilla y ahuma con un poco "
-	    + "de leño de Hickory y se enchila con salsa chili.";
+        if(esVegetariano){
+            return "\n *) Luego, se asa la carne de soja a la parrilla y ahuma con un poco "
+            + "de leño de Hickory y se enchila con salsa chili.";
+        } else {
+            return "\n *) Luego, se asa la carne a la parrilla y ahuma con un poco "
+            + "de leño de Hickory y se enchila con salsa chili.";
+        }
     }
         
     /**
@@ -75,8 +80,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
-	    + "de jitomates.";
+        return "\n *) Se coloca lechuga, rodajas de cebolla y unas rebanadas "
+            + "de jitomates.";
     }    
     
     /**
@@ -85,7 +90,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se coloca Catsup del gallo.";
+	    
     }
     
     /**
@@ -97,8 +102,8 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Por ultimo, se ahuma a la leña el pan para la "
-	    + "tapa de la hamburguesa, esto con un poco de mantequilla "
-	    + "untada.";
-    }
+        return "\n *) Por ultimo, se ahuma a la leña el pan para la "
+            + "tapa de la hamburguesa, esto con un poco de mantequilla "
+            + "untada.";
+        }
 }
