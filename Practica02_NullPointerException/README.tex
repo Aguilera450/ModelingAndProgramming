@@ -78,6 +78,9 @@ Principios de diseño esenciales:
 
 Desventajas:
 \begin{itemize}
+  \item \textbf{Agregar un paso implicaría tener que implementar ese paso (si se requiere) en todas las subclases.}
+  Es decir, si en nuestro algoritmo agregamos uno o más pasos extras que las subclases deben implementar, este cambio puede ser muy exhaustivo si es que se tienen demasiadas subclases.
+
 \item \textbf{Si se usa mal el patrón perderíamos flexibilidad en el código.}
   
   Ya que al tener una estructura definida, y querer un cambio radical en el algoritmo,
@@ -98,7 +101,7 @@ Principios de diseño esenciales:
 Desventajas:
 \begin{itemize}
 \item Si se tienen demasiados estados y hay varias conexiones entre ellos, puede
-  resultar difícil el entendimiento del código.
+  resultar difícil el saber como se relacionan teniendo solamente el código.
 \item El impacto en espacio, ya que por cada estado tendríamos una clase y si son
   demasiados estados, sería mucho espacio.
 \end{itemize}
@@ -107,8 +110,8 @@ Desventajas:
 Principios de diseño esenciales:
 \begin{itemize}
 \item Nos permite acceder a los elementos de un objeto que los contiene de manera
-  secuencial sin exponer su representación interna.
-\item Ayuda a generalizar la tarea de recorrer los elementos de una estructura.
+  secuencial sin exponer su representación interna mediante Iteradores.
+\item Ayuda a generalizar la tarea de recorrer los elementos de una estructura con un Iterador.
 \end{itemize}
 
 Desventajas:
@@ -120,6 +123,34 @@ Desventajas:
   y posicionarse donde se había quedado o en una determinada posición.
 \end{itemize}
 
+\subsection*{Instrucciones de instalación, compilación y ejecución.}
+Se dará por hecho que el usuario sabe moverse en terminal.\\
+
+\subsubsection*{Requerimientos previos:}
+\begin{itemize}
+\item[-] Se debe contar con Java en su computadora. De preferencia la versión más reciente.
+\end{itemize}
+
+\subsubsection*{Ejecución del proyecto:}
+\begin{itemize}
+\item[-] Si está leyendo esto significa que desempaquetó con éxito el proyecto.
+\item[-] Abra su terminal y diríjase a la ruta donde desempaquetó el proyecto.
+\item[-] Una vez estando en la ruta \code{Practica02\_NullPointerException}, diríjase a
+
+  \code{Practica02\_NullPointerException/src/fciencias/modelado/}
+\item[-] Ejecute: “javac Practica02.java”, esto generará los .class del proyecto.
+\item[-] Ejecute: “java Practica02”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
+\end{itemize}
+
 \subsection*{Diagrama UML:}
+\begin{center}
+  \includegraphics[scale=0.12]{./Practica02UML.png}
+\end{center}
+
+\subsection*{Diagrama de Estados:}
+\begin{center}
+  \includegraphics[scale=0.40]{./Practica02DiagramaDeEstados.png}
+\end{center}
+
 
 \end{document}

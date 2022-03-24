@@ -88,7 +88,7 @@ public class McChill extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	    return "*) Se coloca una pequeña cantidad de catsup";
+	    return "\n *) Se coloca una pequeña cantidad de catsup";
     }
     
     /**

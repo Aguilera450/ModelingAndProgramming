@@ -10,15 +10,15 @@ import java.util.Scanner;
 
 public class Practica02{
     /** Menu usado para la prueba */
-     static Menu menuPrueba = new MenuGeneral("Menu general");
+    private static Menu menuPrueba = new MenuGeneral("Menu general");
     // static Menu menuPrueba = new MenuDeLujo("Menu de Lujo");
     // static Menu menuPrueba = new MenuGeneral("Menu General");
     
     /** Robot usado para la prueba */
-    static Robot mcrobot = new Robot(menuPrueba);
+    private static Robot mcrobot = new Robot(menuPrueba);
 
     /** Mesa del cliente para la prueba */
-    static MesaCliente mesa = new MesaCliente("Arturo");
+    private static MesaCliente mesa = new MesaCliente("Arturo");
     
 
     // Métodos de apoyo para el menú
