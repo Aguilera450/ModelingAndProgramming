@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * Clase que nos sirve para iterar un menu de HashTable de platillos.
+ * Clase que nos sirve para iterar un menú de HashTable de platillos.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -11,7 +11,7 @@ import java.util.Set;
  */
 public class MenuDeLujoIterator implements Iterador{
     /**
-     * Elementos que vamos a recorrer en tipo Hashtable<Integer, Platillo>.
+     * Elementos que vamos a recorrer.
      */
     private Hashtable<Integer,Platillo> elementos;
 

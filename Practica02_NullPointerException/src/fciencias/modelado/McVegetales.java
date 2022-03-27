@@ -14,12 +14,12 @@ public class McVegetales extends Platillo {
      * McVegetales.
      */
     public McVegetales() {
-	super.id = 11;
-	super.nombre = "Hamburguesa McVegetales.";
-	super.descripcion = "McVegetales hamburguesa vegetariana.";
-	super.precio = 39.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = true;
+        super.id = 11;
+        super.nombre = "Hamburguesa McVegetales";
+        super.descripcion = "McVegetales hamburguesa vegetariana.";
+        super.precio = 39.50f;
+        super.llevaQueso = true;
+        super.esVegetariano = true;
     }
     
     /**
@@ -31,7 +31,7 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Iniciamos colocando pan francés recién calentado a la plancha "
+	    return "\n *) Iniciamos colocando pan francés recién calentado a la plancha "
 	    + "como base de nuestra hamburguesa.";
     }
     
@@ -41,7 +41,7 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se unta un poco de mayonesa sobre el pan. ";
+	    return "\n *) Se unta un poco de mayonesa sobre el pan. ";
     }
     
     /**
@@ -50,7 +50,7 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se mezcla la mayonesa con la mostaza para generar un sabor unico. ";
+	    return "\n *) Se mezcla la mayonesa con la mostaza para generar un sabor unico. ";
     }
     
     /**
@@ -60,8 +60,12 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Se frien algunos Nopales con algo de Soja "
+	    if(esVegetariano){
+            return "\n *) Se frien algunos Nopales con algo de Soja "
 	    + "triturada, esto fungira de nuestra carne sintetica.";
+        } else {
+            return "\n *) Se frien algunos Nopales con algo carne";
+        }
     }
     
     /**
@@ -70,9 +74,13 @@ public class McVegetales extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
-	return "\n *) Se emplea queso oaxaca gratinado para aumentar la textura "
-	    + "en su hamburguesa.";
+    public String ponerQueso() {
+	    if(llevaQueso){
+            return "\n *) Se emplea queso oaxaca gratinado para aumentar la textura "
+	        + "en su hamburguesa.";
+        } else {
+            return "";
+        }
     }
     
     /**
@@ -82,8 +90,11 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se colocan algunos pepinillos, rebanadas de jitomate "
-	    + "y algunos aros de cebolla morada.";
+        if(esVegetariano)
+	        return "\n *) Se colocan algunos pepinillos, rebanadas de jitomate "
+	        + "y algunos aros de cebolla morada.";
+        else 
+            return "";
     }    
     
     /**
@@ -92,7 +103,7 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se verte un poco de McCatsup sobre las verduras.";
+	    return "\n *) Se verte un poco de McCatsup sobre las verduras.";
     }
     
     /**
@@ -104,7 +115,7 @@ public class McVegetales extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Por último, colocamos pan francés recién calentado a la plancha "
+	    return "\n *) Por último, colocamos pan francés recién calentado a la plancha "
 	    + "como base de nuestra hamburguesa. ";
     }
 }

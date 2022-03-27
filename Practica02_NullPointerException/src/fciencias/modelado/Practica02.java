@@ -10,14 +10,19 @@ import java.util.Scanner;
 
 public class Practica02{
     /** Menu usado para la prueba */
-     static Menu menuPrueba = new MenuDiario("Menu Diario");
+    private static Menu menuPrueba = new MenuGeneral("Menu general");
     // static Menu menuPrueba = new MenuDeLujo("Menu de Lujo");
     // static Menu menuPrueba = new MenuGeneral("Menu General");
-    /** Robot usado para la prueba */
-    static Robot mcrobot = new Robot(menuPrueba);
-    /** Mesa del cliente para la prueba */
-    static MesaCliente mesa = new MesaCliente("Arturo");
     
+    /** Robot usado para la prueba */
+    private static Robot mcrobot = new Robot(menuPrueba);
+
+    /** Mesa del cliente para la prueba */
+    private static MesaCliente mesa = new MesaCliente("Arturo");
+    
+
+    // Métodos de apoyo para el menú
+
     /**
      * Método que genera una pausa dentro del programa y solicita presionar Enter
      * para continuar
@@ -28,36 +33,52 @@ public class Practica02{
         input.nextLine();
         System.out.println("\033[H\033[2J");
     }
-    
-    public static void main(String[] args) {
-        System.out.println("¡Bienvenido a McHamburguesas, " + mesa.nombreCliente() +"!");
-        System.out.println("En la prueba piloto de hoy, el robot que te atenderá será McROBOT.");
-        requestEnter();
 
-        String opcionesMenu = "\n\n---- MENU DE MC\'BURGUESAS -----\n" +
+    public static String mostrarMenu(EstadoRobot estadoRobot){
+        String cadenaEstado = "";
+        if(estadoRobot instanceof ModoSuspendido)
+            cadenaEstado = " <**** MODO SUSPENDIDO ****>\n";
+        if(estadoRobot instanceof ModoMovimiento)
+            cadenaEstado = " <**** MODO MOVIMIENTO ****>\n";
+        if(estadoRobot instanceof ModoComanda)
+            cadenaEstado = " <**** MODO COMANDA ****>\n";
+        if(estadoRobot instanceof ModoCocinero)
+            cadenaEstado = " <**** MODO COCINERO ****>\n";
+        if(estadoRobot instanceof ModoEntrega)
+            cadenaEstado = " <**** MODO ENTREGA ****>\n";
+
+        return "\n\n---- MENU DE OPCIONES DE MC\'BURGUESAS -----\n" +
                     "1.- Solicitar un McROBOT.\n" + 
                     "2.- Indicarle un platillo a McROBOT.\n" +
                     "3.- Ver preparacion de platillo.\n" +
                     "-- OPCIONES DIRECTAS DE McROBOT --\n" +
+                    " McROBOT se encuentra en el estado de:\n" +
+                    cadenaEstado + 
                     "4.- Suspenderse.\n" +
                     "5.- Caminar.\n" +
                     "6.- Atender.\n" +
                     "7.- Cocinar.\n" +
                     "8.- Entregar.\n" +
                     "9.- Terminar simulacion.\n";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("¡Bienvenido a McHamburguesas, " + mesa.nombreCliente() +"!");
+        System.out.println("En la prueba piloto de hoy, el robot que te atenderá será McROBOT.");
+        requestEnter();
 
         //  ------ MENU DEL PROGRAMA ------
         Scanner sc = new Scanner(System.in);
         int opcion;
         do {
-            System.out.println(opcionesMenu);
+            System.out.println(mostrarMenu(mcrobot.getEstadoActual()));
             while (true) {
                 try {
                     String opcionUsuario = sc.nextLine();
                     opcion = Integer.parseInt(opcionUsuario);
                     break;
                 } catch (NumberFormatException ex) {
-                    System.out.println("Por favor elige una opcion válida \n"+ opcionesMenu);
+                    System.out.println("Por favor elige una opcion válida \n"+ mostrarMenu(mcrobot.getEstadoActual()));
                 }
             }
 
@@ -67,10 +88,7 @@ public class Practica02{
                     break;
 
                 case 2:
-                    if(mcrobot.getEstadoActual() == mcrobot.getEstadoComanda())
-                        mcrobot.preguntarPlatillo();
-                    else
-                        System.out.println("\nMcROBOT debe estar en su mesa para poder tomar su orden.");
+                    mcrobot.preguntarPlatillo();    
                     break;
 
                 case 3:

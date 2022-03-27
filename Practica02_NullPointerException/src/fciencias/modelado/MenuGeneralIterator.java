@@ -10,20 +10,15 @@ import java.util.Iterator;
  */
 public class MenuGeneralIterator implements Iterador{
     
-    /** ArrayList con los elementos platillo que se van a recorrer. */
-    private ArrayList<Platillo> elementos;
-
-    /** Iterador del ArrayList de platillos */
+    /** Iterador del menú general de platillos */
     private Iterator iterator;
 
     /**
      * Constructor de la clase.
-     * Asigna los elementos del parametro a nuestro arraylist y
-     * crea un iterador de ArrayList.
-     * @param elementos
+     * Crea un iterador del ArrayList y lo guarda en el iterador actual.
+     * @param elementos Estructura con los platillos a recorrer.
      */
     public MenuGeneralIterator(ArrayList<Platillo> elementos){
-        this.elementos = elementos;
         iterator = elementos.iterator();
     }
 

@@ -1,5 +1,5 @@
 /**
- * Clase que nos sirve para iterar un menu de arreglo de platillos.
+ * Clase que nos sirve para iterar un menú de arreglo de platillos.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS

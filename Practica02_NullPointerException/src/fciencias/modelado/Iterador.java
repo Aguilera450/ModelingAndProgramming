@@ -1,5 +1,5 @@
 /**
- * Interfaz la cual sera implementada por los iteradores de Menus.
+ * Interfaz la cual será implementada por los iteradores de Menús.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -8,13 +8,13 @@
 public interface Iterador{
 
     /**
-     * Metodo para saber si hay un elemento siguiente.
-     * @return True si hay elemento siguiente False en caso contrario.
+     * Método para saber si hay un elemento siguiente.
+     * @return True si hay elemento siguiente, False en caso contrario.
      */
     public boolean hasNext();
 
     /**
-     * Metodo que devuelve el objeto siguiente.
+     * Método que devuelve el objeto siguiente.
      * @return Devuelve el objeto siguiente.
      */
     public Object next();

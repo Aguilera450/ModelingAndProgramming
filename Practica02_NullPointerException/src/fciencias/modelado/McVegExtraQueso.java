@@ -14,12 +14,12 @@ public class McVegExtraQueso extends Platillo {
      * McPepinillos.
      */
     public McVegExtraQueso() {
-	super.id = 10;
-	super.nombre = "Hamburguesa McVegExtraQueso.";
-	super.descripcion = "McVegExtraQueso hamburguesa vegetariana.";
-	super.precio = 109.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = true;
+        super.id = 10;
+        super.nombre = "Hamburguesa McVegExtraQueso";
+        super.descripcion = "McVegExtraQueso hamburguesa vegetariana.";
+        super.precio = 109.50f;
+        super.llevaQueso = true;
+	    super.esVegetariano = true;
     }
         
     /**
@@ -31,8 +31,8 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se coloca pan espolvoreado de arina y recién "
-	    + "horneado como base de su hamburguesa.";
+	    return "\n *) Se coloca pan espolvoreado de arina y recién "
+        + "horneado como base de su hamburguesa.";
     }
     
     /**
@@ -41,7 +41,7 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se unta mayonesa en el pan base de su hamburguesa.";
+	    return "\n *) Se unta mayonesa en el pan base de su hamburguesa.";
     }
     
     /**
@@ -50,7 +50,7 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se coloca mostaza sobre la mayonesa y el pan para "
+	    return "\n *) Se coloca mostaza sobre la mayonesa y el pan para "
 	    + "formar un tipo de adereso.";
     }
     
@@ -61,7 +61,7 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Ahora, calentamos y colocamos sobre su pan y adereso "
+	    return "\n *) Ahora, calentamos y colocamos sobre su pan y adereso "
 	    + "una carne de Soja y mezcla de vegetales.";
     }
     
@@ -71,9 +71,12 @@ public class McVegExtraQueso extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
-	return "\n *) Se colocan 2 tipos de quesos, uno de cabra y 3 laminas "
-	    + "de queso manchego.";
+    public String ponerQueso() {
+        if(llevaQueso)
+	        return "\n *) Se colocan 2 tipos de quesos, uno de cabra y 3 laminas "
+	        + "de queso manchego.";
+        else
+            return "";
     }
     
     /**
@@ -83,8 +86,11 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Estamos colocando aros de cebolla fritos, rodajas "
-	    + "de jitomates, algunas hojas de espinaca.";
+        if(esVegetariano)
+	        return "\n *) Estamos colocando aros de cebolla fritos, rodajas "
+	        + "de jitomates, algunas hojas de espinaca.";
+        else
+            return "";
     }    
     
     /**
@@ -93,7 +99,7 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se anexa un poco de Catsup a la mezcla que llevamos. ";
+	    return "\n *) Se anexa un poco de Catsup a la mezcla que llevamos. ";
     }
     
     /**
@@ -105,7 +111,7 @@ public class McVegExtraQueso extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Se coloca pan espolvoreado de arina y recién "
+	    return "\n *) Se coloca pan espolvoreado de arina y recién "
 	    + "horneado como tapa de su hamburguesa.";
     }
 }

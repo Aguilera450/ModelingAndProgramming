@@ -26,7 +26,7 @@ public abstract class Menu {
     /**
      * Método abstracto para obtener un platillo en determinada posición.
      * @param posicion Posición del platillo buscado. La indexación comienza en 0.
-     * @return El platillo con la posición recibida o null si la posición esta fuera de rango.
+     * @return El platillo con la posición recibida o null si la posición esta fuera de rango. Si no hay platillos regresa null.
      */
     abstract Platillo obtenerPlatillo(int posicion);
 

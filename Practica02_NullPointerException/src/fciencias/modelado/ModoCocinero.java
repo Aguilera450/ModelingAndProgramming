@@ -1,7 +1,6 @@
 /**
  * Clase que simula el estado <code>ModoCocinero</code>
- * del Robot, este modo le permite al Robot preparar la
- * orden del cliente.
+ * del Robot.
  * @author Adrian Aguilera Moreno - Aguiler450
  * @author Rosas Franco Diego Angel - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS

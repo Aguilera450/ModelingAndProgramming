@@ -9,13 +9,19 @@
  */
 
 public abstract class Platillo {
-    /* Atributos de clase.*/
-    protected Integer id;                // Identificador del tipo de hamburguesa.
-    protected String nombre;             // Nombre de la hamburguesa.
-    protected String descripcion;        // Breve descripción de la hamburguesa.
-    protected float precio;              // Precio de la hamburguesa.
-    protected boolean llevaQueso;        // ¿Lleva queso?
-    protected boolean esVegetariano;     // ¿es vegetariana?
+    // Atributos de clase. 
+    /** Identificador del tipo de hamburguesa. */
+    protected Integer id;
+    /** Nombre de la hamburguesa. */
+    protected String nombre;
+    /** Breve descripción de la hamburguesa. */
+    protected String descripcion;
+    /** Precio de la hamburguesa. */
+    protected float precio;
+    /** Nos indica si la hamburgiesa lleva queso*/
+    protected boolean llevaQueso;
+    /** Nos indica si la hamburgesa lleva vegetales */
+    protected boolean esVegetariano;
     
     /** 
      * Método nos dice cual el Id de la hamburguesa.
@@ -48,12 +54,40 @@ public abstract class Platillo {
     public float getPrecio() {
 	return precio;
     }
-    
+
+    /**
+     * Método para indicar que la hamburguesa lleva queso.
+     */
+    public void siLlevaQueso(){
+        llevaQueso = true;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa no lleva queso.
+     */
+    public void noLlevaQueso(){
+        llevaQueso = false;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa lleva vegetales o es vegetariana.
+     */
+    public void siLlevaVegetales(){
+        esVegetariano = true;
+    }
+
+    /**
+     * Método para indicar que la hamburguesa no lleva vegetales o no es vegetariana.
+     */
+    public void noLlevaVegetales(){
+        esVegetariano = false;
+    }
+
     /**
      * Método que nos regresa la información a cerca de algún
      * tipo de hamburguesa.
      * @return <code>String</code> -- información a cerca de
-     *                                precios, nombres, ids,
+     *                                precios, nombres,
      *                                y descipciones.
      */
     public String toString() {
@@ -61,7 +95,7 @@ public abstract class Platillo {
             + "\n-------------------------------------"
             + "\n Nombre: " + getNombre()
             + "\n Precio: " + getPrecio()
-            + "\n Descripcion:" + getDescripcion()
+            + "\n Descripcion: " + getDescripcion()
             + "\n------------------------------------"
             + "\n-------------------------------------";
     }
@@ -72,8 +106,7 @@ public abstract class Platillo {
      *                                hamburguesa. 
      */
     public String cocinar() {
-	return "********** "
-	    + "La preparacion de su hamburguesa esta hecha en los siguientes pasos:"
+        return "**** Preparación de " + getNombre() + " ****"
 	    +  ponerBasePan()
 	    +  ponerMayonesa()
 	    +  ponerMostaza()
@@ -97,21 +130,7 @@ public abstract class Platillo {
     
     /** Método que prepara la carne de nuestra hamburguesa. */
     abstract String prepararCarne();
-    
-    /**
-     * Método que devuelve la aplicación del queso.
-     * Este método implementa un método <code>hook</code>.
-     * @return <code>String</code> -- descripción del queso y su
-     *                                preparación en la hamburguesa.
-     */
-    public String ponerQueso() {
-	if(!llevaQueso)
-	    return "";
-	else
-	    return hook();
-    }
-    
-    public String hook() { return " ";}
+
     /**
      * Método que nos anuncia que se le ha colocado carne a nuestra hamburguesa.
      * @return <code>String</code> -- se le pone carne a nuestra hamburguesa y
@@ -119,14 +138,34 @@ public abstract class Platillo {
      *                                sintética o carne de verdad.
      */
     public String ponerCarne() {
-	if(!esVegetariano)
-	    return "Se coloca la carne.";
-	else
-	    return "Se coloca la carne de Soja.";
+        if(!esVegetariano)
+            return "Se coloca la carne.";
+        else
+            return "Se coloca la carne de Soja.";
+    }
+
+    /**
+     * Método que devuelve la aplicación del queso.
+     * @return <code>String</code> -- descripción del queso y su
+     *                                preparación en la hamburguesa.
+     */
+    public String ponerQueso() {
+	    if(llevaQueso)
+	        return "Se coloca una rebanada de queso de marca McQuesitosOriginales.";
+	    else
+	        return "";
     }
     
-    /** Método que nos dice que se le esta poniendo vegetales a nuestra hamburguesa. */
-    abstract String ponerVegetales();
+    /** Método que nos dice que se le esta poniendo vegetales a nuestra hamburguesa.
+     * @return <code>String</code> -- descripción de los vegetales y su
+     *                                proción en la hamburguesa.
+     */
+    public String ponerVegetales(){
+        if(esVegetariano)
+            return "Se colocan dos hojas de lechuga fresca, dos rebanadas de jitomate recién cortado, 10 gramos de cebolla y tres pepinillos.";
+        else 
+            return "";
+    }
     
     /** Método que nos avisa que se le coloca la Catsup a la Hamburguesa. */
     abstract String ponerCatsup();

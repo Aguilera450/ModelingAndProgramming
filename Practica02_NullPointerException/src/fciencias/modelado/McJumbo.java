@@ -14,13 +14,13 @@ public class McJumbo extends Platillo {
      * McJumbo con extra queso.
      */
     public McJumbo() {
-	super.id = 4;
-	super.nombre = "Hamburguesa McJumbo.";
-	super.descripcion = "McJumbo hamburguesa es la de mayor tamaño "
-	    + "y la promocionamos por su excelente sabor.";
-	super.precio = 587.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = false;
+        super.id = 4;
+        super.nombre = "Hamburguesa McJumbo";
+        super.descripcion = "McJumbo hamburguesa es la de mayor tamaño "
+            + "y la promocionamos por su excelente sabor.";
+        super.precio = 587.50f;
+        super.llevaQueso = true;
+        super.esVegetariano = false;
     }
     
     /**
@@ -32,7 +32,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se coloca pan como base de la hamburguesa "
+	    return "\n *) Se coloca pan como base de la hamburguesa "
 	    + "con ajonjolí de alta calidad.";
     }
     
@@ -42,7 +42,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se unta la mayonesa imporatada de los ranchos del "
+	    return "\n *) Se unta la mayonesa imporatada de los ranchos del "
 	    + "norte de Cánada.";
     }
     
@@ -52,7 +52,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Se coloca la mostaza por encima de la mayonesa.";
+	    return "\n *) Se coloca la mostaza por encima de la mayonesa.";
     }
     
     /**
@@ -62,7 +62,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Se colocan 3 carnes en la hamburgesa y se colocan a "
+	    return "\n *) Se colocan 3 carnes en la hamburgesa y se colocan a "
 	    + "la parrilla por 4 minutos.";
     }
     
@@ -72,9 +72,12 @@ public class McJumbo extends Platillo {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
-	return "\n *) Se coloca el queso después de calentar las carnes, "
-	    + "de esta manera se gratina en el momento.";
+    public String ponerQueso() {
+        if(llevaQueso)
+	        return "\n *) Se coloca el queso después de calentar las carnes, "
+	        + "de esta manera se gratina en el momento.";
+        else
+            return "";
     }
     
     /**
@@ -84,9 +87,12 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) A contiunuacion se colocan pepinillos, jitomates en "
-	    + "rodajas, aros de cebolla envueltos en tocino, y un "
-	    + "poco de hojas de espinacas.";
+        if(esVegetariano)
+            return "\n *) A contiunuacion se colocan pepinillos, jitomates en "
+            + "rodajas, aros de cebolla envueltos en tocino, y un "
+            + "poco de hojas de espinacas.";
+        else
+            return "";
     }    
     
     /**
@@ -95,7 +101,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se colocan 2 cucharadas de Catsup premium.";
+	    return "\n *) Se colocan 2 cucharadas de Catsup premium.";
     }
     
     /**
@@ -107,7 +113,7 @@ public class McJumbo extends Platillo {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Finalmente se coloca pan como tapa a la hamburguesa "
+	    return "\n *) Finalmente se coloca pan como tapa a la hamburguesa "
 	    + "con ajonjolí de alta calidad.";
     }
 }

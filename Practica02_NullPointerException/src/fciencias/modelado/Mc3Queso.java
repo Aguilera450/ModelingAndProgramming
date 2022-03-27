@@ -14,15 +14,15 @@ public class Mc3Queso extends Platillo  {
      * 3 quesos con carne.
      */
     public Mc3Queso() {
-	super.id = 1;
-	super.nombre = "Hamburguesa Mc3Queso";
-	super.descripcion = "Esta hamburguesa es de la linea de hamburguesas de lujo, "
-	    + "pues contiene quesos gurmet traidos desde Suiza y hechos con leche de "
-	    + "las mejores cabras del mundo. Esta es una de las hamburguesas más "
-	    + "costosas que ofrecemos.";
-	super.precio = 876.50f;
-	super.llevaQueso = true;
-	super.esVegetariano = false;
+        super.id = 1;
+        super.nombre = "Hamburguesa Mc3Queso";
+        super.descripcion = "Esta hamburguesa es de la linea de hamburguesas de lujo, "
+            + "pues contiene quesos gurmet traidos desde Suiza y hechos con leche de "
+            + "las mejores cabras del mundo. Esta es una de las hamburguesas más "
+            + "costosas que ofrecemos.";
+        super.precio = 876.50f;
+        super.llevaQueso = true;
+	    super.esVegetariano = false;
     }
         
     /**
@@ -34,7 +34,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerBasePan() {
-	return "\n *) Se corta un pan artesanal de Oaxaca "
+	    return "\n *) Se corta un pan artesanal de Oaxaca "
 	    + "se coloca como base para la hamburguesa"
 	    + ", y se calienta en la plancha de marmol.";
     }
@@ -45,7 +45,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerMayonesa() {
-	return "\n *) Se aplica mayonesa Maiye, una mayonesa "
+	    return "\n *) Se aplica mayonesa Maiye, una mayonesa "
 	    + "oriental con estilo esloveno a la base "
 	    + "de la hamburguesa.";
     }
@@ -56,7 +56,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerMostaza() {
-	return "\n *) Sobre la mayonesa se unta la mostaza que es "
+	    return "\n *) Sobre la mayonesa se unta la mostaza que es "
 	    + "importada desde Italia.";
     }
     
@@ -67,7 +67,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String prepararCarne() {
-	return "\n *) Se rostiza la carne marinada en adobo "
+	    return "\n *) Se rostiza la carne marinada en adobo "
 	    + "ranchero con carbon egipcio.";
     }
     
@@ -77,9 +77,12 @@ public class Mc3Queso extends Platillo  {
      *                                preparación en la hamburguesa.
      */
     @Override
-    public String hook() {
-	return "\n *) Se gratinan los quesos a la parrilla "
-	    + "con un poco de aceite de nuez.";
+    public String ponerQueso() {
+        if(llevaQueso)
+	        return "\n *) Se gratinan los quesos a la parrilla "
+	        + "con un poco de aceite de nuez.";
+        else
+            return "";
     }
     
     /**
@@ -89,10 +92,13 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerVegetales() {
-	return "\n *) Se coloca lechuga romana, "
-	    + "aros de cebolla empanizados, "
-	    + "rodajas de jitomate y espinacas "
-	    + "para ponerse como popeye.";
+        if(esVegetariano)
+	        return "\n *) Se coloca lechuga romana, "
+            + "aros de cebolla empanizados, "
+            + "rodajas de jitomate y espinacas "
+            + "para ponerse como popeye.";
+        else
+            return "";
     }    
     
     /**
@@ -102,7 +108,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerCatsup() {
-	return "\n *) Se colaca salsa Catsup canadiense, "
+	    return "\n *) Se colaca salsa Catsup canadiense, "
 	    + "por su dulcura.";
     }
     
@@ -115,7 +121,7 @@ public class Mc3Queso extends Platillo  {
      */
     @Override
     public String ponerTapaPan() {
-	return "\n *) Finalmente se coloca la tapa de "
+	    return "\n *) Finalmente se coloca la tapa de "
 	    + "pan de la hamburguesa.";
     }
 }
