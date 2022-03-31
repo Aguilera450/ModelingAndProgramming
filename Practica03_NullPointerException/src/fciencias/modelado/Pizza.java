@@ -30,6 +30,7 @@ public class Pizza {
 	this.queso = queso;
 	this.carne = carne;
 	this.masa = masa;
+	this.precio = queso.getPrecio() + carne.getPrecio() + masa.getPrecio();
     }
     
     /** @return <code>queso</code> -- tipo de queso que tiene la pizza. */
