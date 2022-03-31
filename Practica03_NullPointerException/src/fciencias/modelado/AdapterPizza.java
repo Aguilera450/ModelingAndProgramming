@@ -35,6 +35,6 @@ public class AdapterPizza implements Platillo {
     
     /** @return <code>float</code> -- <code>precio</code> de la <code>Pizza</code>.  */
     public float getPrecio() {
-	return pizza.precio;
+	return pizza.getPrecio();
     }
 }
