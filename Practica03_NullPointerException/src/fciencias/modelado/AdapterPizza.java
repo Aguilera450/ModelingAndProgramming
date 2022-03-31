@@ -28,6 +28,7 @@ public class AdapterPizza implements Platillo {
      */
     public String getTicket() {
 	return "-----------------------------------------------------------------------------------\n"
+	    + "   Tipo de Pizza: " + pizza.getNombre()
 	    + "   Queso: " + pizza.getQueso() + ",      Precio: " pizza.tipoQueso().getPrecio() + "\n"
 	    + "   Carne: " + pizza.getCarne() + ",      Precio: " pizza.tipoCarne().getPrecio() + "\n"
 	    + "   Masa:  " + pizza.getMasa()  + ",      Precio: " pizza.tipoMasa().getPrecio() + "\n"

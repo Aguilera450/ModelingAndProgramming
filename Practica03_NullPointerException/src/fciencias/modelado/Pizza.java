@@ -62,4 +62,13 @@ public class Pizza {
     public Masa getMasa() {
 	return masa;
     }
+    
+    /**
+     * Método que regresa la representación en cadena de una <code>Pizza</code>.
+     * @return <code>String</code> -- descripción de una <code>Pizza</code>.
+     */
+    public String toString() {
+	return "\n Pizza "+ nombre +"   - $"+ precio +"\n"
+	    "con "+ getQueso() +", "+ getCarne() +", "+ getMasa() +".";
+    }
 }
