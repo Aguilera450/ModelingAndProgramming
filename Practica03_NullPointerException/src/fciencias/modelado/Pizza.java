@@ -27,32 +27,33 @@ public class Pizza {
 	this.masa = masa;
     }
     
-    /**
-     * Método nos dice que tipo de queso tiene nuestra pizza.
-     * @return <code>queso</code> -- tipo de queso que tiene la pizza.
-     */
+    /** @return <code>queso</code> -- tipo de queso que tiene la pizza. */
     public String tipoQueso() {
 	return queso.nombre();
     }
     
-    /**
-     * Método nos dice que tipo de carne tiene nuestra pizza.
-     * @return <code>carne</code> -- tipo de carne que tiene la pizza.
-     */
+    /** @return <code>carne</code> -- tipo de carne que tiene la pizza. */
     public String tipoCarne() {
 	return carne.nombre();
     }
     
-    /**
-     * Método nos dice que tipo de masa tiene nuestra pizza.
-     * @return <code>masa</code> -- tipo de masa que tiene la pizza.
-     */
+    /** @return <code>masa</code> -- tipo de masa que tiene la pizza. */
     public String tipoMasa() {
 	return masa.nombre();
     }
     
-    /**
-     *
-     */
+    /** @return <code>Queso</code> -- queso en la <code>Pizza</code>. */
+    public Queso getQueso() {
+	return queso;
+    }
+
+    /** @return <code>Carne</code> -- carne en la <code>Pizza</code>. */
+    public Carne getCarne() {
+	return carne;
+    }
     
+    /** @return <code>Masa</code> -- masa de la que esta hecha la <code>Pizza</code>. */
+    public Masa getMasa() {
+	return masa;
+    }
 }
