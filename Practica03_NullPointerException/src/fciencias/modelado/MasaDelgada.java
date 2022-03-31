@@ -23,7 +23,7 @@ public class MasaDelgada implements Masa{
     }
 
     /**
-     * Metodo Abstracto el cual nos devuelve el nombre
+     * Metodo Abstracto que nos devuelve el nombre
      * de la Masa.
      * @return Nombre del queso en tipo String.
      */

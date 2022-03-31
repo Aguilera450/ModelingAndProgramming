@@ -9,7 +9,7 @@
 public interface Queso{
 
     /**
-     * Metodo Abstracto el cual nos devuelve el nombre
+     * Metodo Abstracto que nos devuelve el nombre
      * del queso.
      * @return Nombre del queso en tipo String.
      */

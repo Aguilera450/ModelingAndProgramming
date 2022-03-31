@@ -9,7 +9,7 @@
 public interface Masa{
 
     /**
-     * Metodo Abstracto el cual nos devuelve el nombre
+     * Metodo Abstracto que nos devuelve el nombre
      * de la masa.
      * @return Nombre de la masa en tipo String.
      */
