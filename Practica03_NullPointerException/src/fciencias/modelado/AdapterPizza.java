@@ -12,7 +12,15 @@ public class AdapterPizza implements Platillo {
     
     /* Atributos de clase. */
     private Pizza pizza;
-    
+
+    /**
+     * Constructor del adaptador.
+     * @param pizza Pizza que será adaptada.
+     */
+    AdapterPizza(Pizza pizza){
+        this.pizza = pizza;
+    }
+
     /**
      * Método que adapta el ticket de una <code>Pizza</code> al del restaurant
      * <code>WaySubLasPizzasDeDonCangrejo</code>, junto al de las baggets.
