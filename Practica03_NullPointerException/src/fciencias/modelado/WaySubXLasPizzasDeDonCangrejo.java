@@ -25,4 +25,9 @@ public class WaySubXLasPizzasDeDonCangrejo {
 
     }
 
+    public void mostrarTicketPlatillo(Platillo platillo){
+	System.out.println("Tome su Ticket, vuelva pronto!")
+	System.out.println(platillo.getTicket());
+    }
+
 }
