@@ -10,15 +10,15 @@ public class Pizza {
     
     /* Atributos de clase. */
     /** Nombre del tipo de <code>Pizza</code>. */
-    public String nombre;
+    private String nombre;
     /** Precio del tipo de <code>Pizza</code>. */
-    public float precio;
+    private float precio;
     /** Queso del tipo de <code>Pizza</code>. */
-    public Queso queso;
+    private Queso queso;
     /** Carne del tipo de <code>Pizza</code>. */
-    public Carne carne;
+    private Carne carne;
     /** Masa del tipo de <code>Pizza</code>. */
-    public Masa masa;
+    private Masa masa;
     
     /**
      * Método constructor por parámetros.
@@ -61,5 +61,19 @@ public class Pizza {
     /** @return <code>Masa</code> -- masa de la que esta hecha la <code>Pizza</code>. */
     public Masa getMasa() {
 	return masa;
+    }
+    
+    /** @return <code>float</code> -- precio de la Pizza. */
+    public float getPrecio() {
+	return precio;
+    }
+    
+    /**
+     * Método que regresa la representación en cadena de una <code>Pizza</code>.
+     * @return <code>String</code> -- descripción de una <code>Pizza</code>.
+     */
+    public String toString() {
+	return "\n Pizza "+ nombre +"   - $"+ precio +"\n"
+	    "con "+ getQueso() +", "+ getCarne() +", "+ getMasa() +".";
     }
 }
