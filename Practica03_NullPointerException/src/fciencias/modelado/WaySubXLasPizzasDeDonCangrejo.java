@@ -8,19 +8,10 @@ import java.util.Scanner;
  * @version 1.0 - 31/03/2022
  */
 public class WaySubXLasPizzasDeDonCangrejo {
-    private static Platillo listaPizzas[];
-
-    public WaySubXLasPizzasDeDonCangrejo(Queso queso, Carne carne, Masa masa){
-        listaPizzas = new Platillo[3];
-        
-        // Se crean las Pizzas por defecto
-        listaPizzas[0] = new AdapterPizza(new Pizza(new QuesoChedar(), new CarnePollo(), new MasaGruesa()));
-
-        listaPizzas[1] = new AdapterPizza(new Pizza(new QuesoManchego(), new CarneJamon(), new MasaGruesa()));
-
-        listaPizzas[2] = new AdapterPizza(new Pizza(new QuesoChedar(), new CarneSalchicha(), new MasaDelgada()));
-
-    }
+    private static Platillo listaPizzas[] = {
+            new AdapterPizza(new Pizza(new QuesoChedar(), new CarnePollo(), new MasaGruesa())),
+            new AdapterPizza(new Pizza(new QuesoManchego(), new CarneJamon(), new MasaGruesa())),
+            new AdapterPizza(new Pizza(new QuesoChedar(), new CarneSalchicha(), new MasaDelgada()))};
 
     /**
      * Método que le solicita un entero al usuario dentro de un rango acorde al menú proporcionado.
@@ -117,7 +108,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
             "\n8) Catsup" +  
             "\n9) Mayonesa" +
             "\n0) Eso es todo:)" 
-            , 1, 9);
+            , 0, 9);
             
             // Se agrega ese ingrediente elejido a la baguette.
             switch (opcion) {
@@ -163,7 +154,6 @@ public class WaySubXLasPizzasDeDonCangrejo {
         } while (opcion != 0);
 
         return baguette;
->>>>>>> 50f83ef45b853b5ea6e8a6db89d255a9079c0bdd
     }
 
 
