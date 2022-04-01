@@ -80,7 +80,7 @@ public class Pizza {
      * @return <code>String</code> -- descripción de una <code>Pizza</code>.
      */
     public String toString() {
-	    return "\n Pizza "+ nombre +"   - $"+ precio +"\n" +
+	    return "\n"+ nombre +"   - $"+ precio +"\n" +
 	    "Ingredientes: "+ tipoQueso() +", "+ tipoCarne() +", "+ tipoMasa() +".";
     }
 }

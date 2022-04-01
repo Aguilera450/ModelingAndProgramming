@@ -9,9 +9,12 @@ import java.util.Scanner;
  */
 public class WaySubXLasPizzasDeDonCangrejo {
     private static Platillo listaPizzas[] = {
-            new AdapterPizza(new Pizza("Pizza Granj'Chedar", new QuesoChedar(), new CarnePollo(), new MasaGruesa())),
-            new AdapterPizza(new Pizza("Pizza JamonChego", new QuesoManchego(), new CarneJamon(), new MasaGruesa())),
-            new AdapterPizza(new Pizza("Pizza Dog", new QuesoChedar(), new CarneSalchicha(), new MasaDelgada()))};
+            new AdapterPizza(new Pizza("Pizza Che'pollo ligera", new QuesoChedar(), new CarnePollo(), new MasaGruesa())),
+            new AdapterPizza(new Pizza("Pizza Che'pollo densa", new QuesoManchego(), new CarnePollo(), new MasaDelgada())),
+            new AdapterPizza(new Pizza("Pizza Jam'Chego", new QuesoManchego(), new CarneJamon(), new MasaGruesa())),
+            new AdapterPizza(new Pizza("Pizza Dog", new QuesoChedar(), new CarneSalchicha(), new MasaDelgada())),
+            new AdapterPizza(new Pizza("Pizza Mega Dog", new QuesoManchego(), new CarneSalchicha(), new MasaGruesa()))
+        };
 
     /**
      * Método que le solicita un entero al usuario dentro de un rango acorde al menú proporcionado.
@@ -177,8 +180,14 @@ public class WaySubXLasPizzasDeDonCangrejo {
         "\nPIZZA 3: "+
         listaPizzas[2].toString() +
         "\n-----------------------------------" +
+        "\nPIZZA 4: "+
+        listaPizzas[3].toString() +
+        "\n-----------------------------------" +
+        "\nPIZZA 5: "+
+        listaPizzas[4].toString() +
+        "\n-----------------------------------" +
         "\nElije el número de pizza a ordenar: "
-        , 1, 3);
+        , 1, 5);
         // Se guarda la pizza elejida por el usuario.
         switch (opcion) {
             case 1:
@@ -191,6 +200,14 @@ public class WaySubXLasPizzasDeDonCangrejo {
 
             case 3:
                 pizza = listaPizzas[2];
+                break;
+            
+            case 4:
+                pizza = listaPizzas[3];
+                break;
+            
+            case 5:
+                pizza = listaPizzas[4];
                 break;
             
             default:
