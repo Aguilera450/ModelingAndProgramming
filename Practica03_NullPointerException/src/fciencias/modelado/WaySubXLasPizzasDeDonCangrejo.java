@@ -163,7 +163,6 @@ public class WaySubXLasPizzasDeDonCangrejo {
         } while (opcion != 0);
 
         return baguette;
->>>>>>> 50f83ef45b853b5ea6e8a6db89d255a9079c0bdd
     }
 
 
