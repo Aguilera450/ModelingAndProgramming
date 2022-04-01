@@ -11,8 +11,8 @@ public class WaySubXLasPizzasDeDonCangrejo {
     private static Platillo listaPizzas[];
 
     public WaySubXLasPizzasDeDonCangrejo(Queso queso, Carne carne, Masa masa){
-        this.listaPizzas = new Platillo[3];
-
+        listaPizzas = new Platillo[3];
+        
         // Se crean las Pizzas por defecto
         listaPizzas[0] = new AdapterPizza(new Pizza(new QuesoChedar(), new CarnePollo(), new MasaGruesa()));
 
