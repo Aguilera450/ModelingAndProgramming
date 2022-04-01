@@ -46,13 +46,64 @@
 \pagestyle{fancyplain}
 
 \begin{document}
-	\input{../Portada/Portada}
-	\section*{\LARGE{Práctica 3}}
-	Menciona los principios de diseño esenciales de los patrónes Decorator y Adapter:
+\input{../Portada/Portada}
+\section*{\LARGE{Práctica 3}}
+Menciona los principios de diseño esenciales de los patrónes Decorator y Adapter:
 
-	\subsubsection*{Decorator}
-	Principios de diseño esenciales:
-	\begin{itemize}
-		\item 
-	\end{itemize}
+\subsubsection*{Decorator}
+
+Principios de diseño esenciales:
+\newcommand{\localtextbulletone}{\textcolor{black}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+\begin{itemize}
+\item Hace que la composición de un objeto se pueda hacer de manera dinámica en tiempo de ejecución.
+\item Es un patrón abierto al cambio y cerrado a la modificación.
+\end{itemize}
+
+Desventajas del patrón de diseño:
+\begin{itemize}
+\item Si quisieramos realizar modificaciones internas a las decoraciones más superficiales
+  (\textit{e.g.}, modificaciones al núcleo) tenemos que ``desmontar'' las decoraciones hechas
+  posteriormente a la que queremos modificar, esto le aporta rígidez a nuestro código.
+\item El diseño se vuelve más complejo en términos de líneas de código.
+\end{itemize}
+
+\subsubsection*{Adapter}
+
+Principios de diseño esenciales:
+\begin{itemize}
+\item Vuelve compatibles dos sistemas que antes no lo eran.
+\item El usuario no percive que hay dos sistemas distintos funcionando como uno a tráves del Adapter.
+\end{itemize}
+
+Desventajas del patrón de diseño:
+\begin{itemize}
+\item Este patrón no optimiza lo que ya existe, solo parcha lo que hay y lo hace funcional (de funcionar),
+  aunque esto no necesariamente implica que sea la mejor implementación.
+\item Añade complejidad al diseño planteado inicialmente.
+\end{itemize}
+
+
+\subsection*{Instrucciones de instalación, compilación y ejecución.}
+Se dará por hecho que el usuario sabe moverse en terminal.\\
+
+\subsubsection*{Requerimientos previos:}
+\begin{itemize}
+\item[-] Se debe contar con Java en su computadora. De preferencia la versión más reciente.
+\end{itemize}
+
+\subsubsection*{Ejecución del proyecto:}
+\begin{itemize}
+\item[-] Si está leyendo esto significa que desempaquetó con éxito el proyecto.
+\item[-] Abra su terminal y diríjase a la ruta donde desempaquetó el proyecto.
+\item[-] Una vez estando en la ruta \code{Practica03\_NullPointerException}, diríjase a
+
+  \code{Practica03\_NullPointerException/src/fciencias/modelado/}
+\item[-] Ejecute: “javac Practica03.java”, esto generará los .class del proyecto.
+\item[-] Ejecute: “java Practica03”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
+\end{itemize}
+
+\newpage
+\subsection*{Diagrama UML:}
+
 \end{document}
