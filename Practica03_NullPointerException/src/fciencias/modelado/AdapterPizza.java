@@ -1,6 +1,6 @@
 /**
- * Clase que funge de <code>Adapter</code> a la clase
- * <code>Pizza</code> y a la clase <code>Platillo</code>
+ * Clase que funge de Adapter a la clase
+ * Pizza y a la clase Platillo
  * junto a sus dependencias.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
@@ -22,9 +22,9 @@ public class AdapterPizza implements Platillo {
     }
 
     /**
-     * Método que adapta el ticket de una <code>Pizza</code> al del restaurant
-     * <code>WaySubLasPizzasDeDonCangrejo</code>, junto al de las baggets.
-     * @return <code>String</code> -- Ticket de la <code>Pizza</code>.
+     * Método que adapta el ticket de una Pizza al del restaurant
+     * WaySubLasPizzasDeDonCangrejo, junto al de las baggets.
+     * @return String -- Ticket de la Pizza.
      */
     public String getTicket() {
 	return "\n" + pizza.getNombre() +"\n"
@@ -33,12 +33,12 @@ public class AdapterPizza implements Platillo {
 	    + "   Masa:  " + pizza.tipoMasa()  + " - $" + pizza.getMasa().precio();
     }
     
-    /** @return <code>float</code> -- <code>precio</code> de la <code>Pizza</code>.  */
+    /** @return float -- precio de la Pizza.  */
     public float getPrecio() {
 	    return pizza.getPrecio();
     }
     
-    /** @return <code>String</code> -- genera una pizza en forma de una cadena. */
+    /** @return String -- genera una pizza en forma de una cadena. */
     public String toString() {
 	    return pizza.toString();
     }
