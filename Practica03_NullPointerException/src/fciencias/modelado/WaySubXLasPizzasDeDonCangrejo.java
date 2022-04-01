@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /**
  * Clase que simula la fusión de las empresas de WaySub y Las Pizzas de Don Canrejo.
  * 
@@ -21,8 +22,191 @@ public class WaySubXLasPizzasDeDonCangrejo {
 
     }
 
-    public Platillo pedirBaguette(){
+    /**
+     * Método que le solicita un entero al usuario dentro de un rango acorde al menú proporcionado.
+     * 
+     * @param message Menu con opciones.
+     * @param min     Minimo del rango
+     * @param max     Máximo del rango
+     * @return La opción ingresada por el usuario.
+     */
+    public int opcionMenu(String message, int min, int max) {
+        Scanner input = new Scanner(System.in);
+        boolean exit = false;
+        int userInput = 0;
+        do {
+            try {
+                System.out.println("\n" + message);
+                userInput = input.nextInt();
+                if (userInput >= min && userInput <= max)
+                    exit = true;
+                else
+                    throw new Exception("Rango inválido");
 
+            } catch (Exception e) {
+                System.out.println("\nSe ingresó una opción inválida, intentelo nuevamente.");
+            } finally {
+                input.nextLine(); // Limpiamos el buffer.
+            }
+        } while (exit == false);
+
+        return userInput;
     }
 
+    /**
+     * Método que se encarga del proceso para ordenar una baguette.
+     * 
+     * @return La baguette armada por el usuario.
+     */
+    public Platillo pedirBaguette(){
+        Platillo baguette = null;
+        // Se comienza el proceso  para elejir el tipo de pan
+
+        // Opcion elejida por el usuario
+        int opcion;
+        opcion = opcionMenu(
+        "\n------ ARMA TU BAGUETTE ------" + 
+        "\nElije el tipo de pan:" +
+        "\n1) Pan Integral" +
+        "\n2) Pan Integral con Avena y Miel" +
+        "\n3) Pan Blanco" +
+        "\n4) Pan Italiano con Queso y Oregano" +
+        "\n5) Pan Italiano Sesamo" + 
+        "\nIngrese el número del pan que quiere: "
+        , 1, 5);
+        // Se inicializa la baguette con el tipo de pan seleccionado
+        switch (opcion) {
+            case 1:
+                baguette = new PanIntegral();
+                break;
+            
+            case 2:
+                baguette = new PanIntegralConAvenaYMiel();
+                break;
+            
+            case 3:
+                baguette = new PanBlanco();
+                break;
+            
+            case 4:
+                baguette = new PanItalianoConQuesoYOregano();
+                break;
+            
+            case 5:
+                baguette = new PanItalianoSesamo();
+                break;
+        
+            default:
+                break;
+        }
+
+        // Se le pregunta al usuario todos los ingredientes extras que quiere:
+        System.out.println("\n------ VAMOS A AGREGAR INGREDIENTES A TU BAGUETTE ------");
+
+        do {
+            // Se le solicita al usuario una opción asociada a un ingrediente
+            opcion = opcionMenu(
+            "\nINGREDIENTES DISPONIBLES:" +
+            "\n1) Jamon" + 
+            "\n2) Peperoni" + 
+            "\n3) Pollo" + 
+            "\n4) Lechuga" +
+            "\n5) Jitomate" +  
+            "\n6) Cebolla" + 
+            "\n7) Mostaza" +
+            "\n8) Catsup" +  
+            "\n9) Mayonesa" +
+            "\n0) Eso es todo:)" 
+            , 1, 9);
+            
+            // Se agrega ese ingrediente elejido a la baguette.
+            switch (opcion) {
+                case 1:
+                    baguette = new IngredienteJamon(baguette);
+                    break;
+                
+                case 2:
+                    baguette = new IngredientePeperoni(baguette);
+                    break;
+
+                case 3:
+                    baguette = new IngredientePollo(baguette);
+                    break;
+                
+                case 4:
+                    baguette = new IngredienteLechuga(baguette);
+                    break;
+
+                case 5:
+                    baguette = new IngredienteJitomate(baguette);
+                    break;
+                
+                case 6:
+                    baguette = new IngredienteCebolla(baguette);
+                    break;
+                
+                case 7:
+                    baguette = new IngredienteMostaza(baguette);
+                    break;
+                
+                case 8:
+                    baguette = new IngredienteCatsup(baguette);
+                    break;
+                
+                case 9:
+                    baguette = new IngredienteMayonesa(baguette);
+                    break;
+
+                default:
+                    break;
+            }
+        } while (opcion != 0);
+
+        return baguette;
+    }
+
+
+    /**
+     * Método que se encarga del proceso para ordenar una pizza.
+     * @return La pizza elejida por el usuario.
+     */
+    public Platillo pedirPizza(){
+        Platillo pizza = null;
+        // Opcion elejida por el usuario
+        int opcion;
+        // Se le solicita al usuario elegir una opción
+        opcion = opcionMenu(
+        "\n------ PIZZAS DE DON CANGREJO -----" + 
+        "\nPizza 1: "+
+        listaPizzas[0].toString() + 
+        "\nPizza 2: "+
+        listaPizzas[1].toString() +
+        "\nPizza 3: "+
+        listaPizzas[2].toString() +
+        "Elije el número de pizza a ordenar: "
+        , 1, 3);
+        // Se guarda la pizza elejida por el usuario.
+        switch (opcion) {
+            case 1:
+                pizza = listaPizzas[0];
+                break;
+            
+            case 2:
+                pizza = listaPizzas[1];
+                break;
+
+            case 3:
+                pizza = listaPizzas[2];
+                break;
+            
+            default:
+                break;
+        }
+        return pizza;
+    }
+
+    public static void main(String[] args) {
+        
+    }
+    
 }
