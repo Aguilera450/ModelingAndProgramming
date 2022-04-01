@@ -28,9 +28,9 @@ public class AdapterPizza implements Platillo {
      */
     public String getTicket() {
 	return "\nTipo de Pizza: " + pizza.getNombre()
-	    + "Queso: " + pizza.getQueso() + ",      Precio: " pizza.tipoQueso().getPrecio() + "\n"
-	    + "Carne: " + pizza.getCarne() + ",      Precio: " pizza.tipoCarne().getPrecio() + "\n"
-	    + "Masa:  " + pizza.getMasa()  + ",      Precio: " pizza.tipoMasa().getPrecio() + "\n";
+	    + "Queso: " + pizza.tipoQueso() + ",      Precio: " + pizza.getQueso().precio() + "\n"
+	    + "Carne: " + pizza.tipoCarne() + ",      Precio: " + pizza.getCarne().precio() + "\n"
+	    + "Masa:  " + pizza.tipoMasa()  + ",      Precio: " + pizza.getMasa().precio() + "\n";
     }
     
     /** @return <code>float</code> -- <code>precio</code> de la <code>Pizza</code>.  */

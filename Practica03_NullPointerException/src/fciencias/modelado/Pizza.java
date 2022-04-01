@@ -30,9 +30,19 @@ public class Pizza {
 	this.queso = queso;
 	this.carne = carne;
 	this.masa = masa;
-	this.precio = queso.getPrecio() + carne.getPrecio() + masa.getPrecio();
+	this.precio = queso.precio() + carne.precio() + masa.precio();
     }
     
+    /** @return <code>String</code> -- nombre de la Pizza. */
+    public String getNombre(){
+        return nombre;
+    }
+
+    /** @return <code>float</code> -- precio de la Pizza. */
+    public float getPrecio() {
+        return precio;
+    }
+
     /** @return <code>queso</code> -- tipo de queso que tiene la pizza. */
     public String tipoQueso() {
 	return queso.nombre();
@@ -62,18 +72,14 @@ public class Pizza {
     public Masa getMasa() {
 	return masa;
     }
-    
-    /** @return <code>float</code> -- precio de la Pizza. */
-    public float getPrecio() {
-	return precio;
-    }
+
     
     /**
      * Método que regresa la representación en cadena de una <code>Pizza</code>.
      * @return <code>String</code> -- descripción de una <code>Pizza</code>.
      */
     public String toString() {
-	return "\n Pizza "+ nombre +"   - $"+ precio +"\n"
+	return "\n Pizza "+ nombre +"   - $"+ precio +"\n" +
 	    "con "+ getQueso() +", "+ getCarne() +", "+ getMasa() +".";
     }
 }

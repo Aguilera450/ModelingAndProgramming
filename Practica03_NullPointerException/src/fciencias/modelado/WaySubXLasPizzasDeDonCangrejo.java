@@ -183,7 +183,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
         listaPizzas[1].toString() +
         "\nPIZZA 3: "+
         listaPizzas[2].toString() +
-        "Elije el número de pizza a ordenar: "
+        "\nElije el número de pizza a ordenar: "
         , 1, 3);
         // Se guarda la pizza elejida por el usuario.
         switch (opcion) {
@@ -219,11 +219,11 @@ public class WaySubXLasPizzasDeDonCangrejo {
         int opcion;
         do {
             opcion = opcionMenu(
-            "----- ¿QUE PLATILLO DESEA ORDENAR? -----" +
-            "1) UNA BAGUETTE WAYSUB PERSONALIZADA" +
-            "2) UNA PIZZA DE DON CANGREJO"+
-            "3) ESO ES TODO:)" +
-            "Elije una opción: "
+            "\n----- ¿QUE PLATILLO DESEA ORDENAR? -----" +
+            "\n1) UNA BAGUETTE WAYSUB PERSONALIZADA" +
+            "\n2) UNA PIZZA DE DON CANGREJO"+
+            "\n3) ESO ES TODO:)" +
+            "\nElije una opción: "
             ,1,3);
             switch (opcion) {
                 case 1:
