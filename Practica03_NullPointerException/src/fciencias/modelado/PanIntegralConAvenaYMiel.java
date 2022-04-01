@@ -7,7 +7,7 @@
  */
 public class PanIntegralConAvenaYMiel extends PanBaguette{
     /**
-     * Constructur de un pan
+     * Constructur de un pan integral con avena y miel
      */
     public PanIntegralConAvenaYMiel(){
         precio = 26.99f;

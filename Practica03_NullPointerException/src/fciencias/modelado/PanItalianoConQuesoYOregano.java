@@ -7,7 +7,7 @@
  */
 public class PanItalianoConQuesoYOregano extends PanBaguette{
     /**
-     * Constructur de un pan
+     * Constructur de un pan italiano con queso y oregano
      */
     public PanItalianoConQuesoYOregano(){
        precio = 20.99f;

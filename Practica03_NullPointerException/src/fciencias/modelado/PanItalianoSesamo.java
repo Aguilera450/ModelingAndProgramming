@@ -7,7 +7,7 @@
  */
 public class PanItalianoSesamo extends PanBaguette{
     /**
-     * Constructur de un pan
+     * Constructur de un pan italiano sesamo
      */
     public PanItalianoSesamo(){
         precio = 20.99f;

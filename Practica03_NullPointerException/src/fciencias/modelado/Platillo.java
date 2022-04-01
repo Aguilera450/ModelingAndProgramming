@@ -12,7 +12,6 @@ public interface Platillo {
      * El ticket muestra el nombre del platillo,
      * un listado de los ingredientes que lo componen 
      * junto a su precio de cada ingrediente.
-     * Y el precio total del platillo.
      * 
      * @return Ticket del platillo.
      */

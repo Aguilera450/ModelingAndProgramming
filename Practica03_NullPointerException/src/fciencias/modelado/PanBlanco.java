@@ -7,7 +7,7 @@
  */
 public class PanBlanco extends PanBaguette{
     /**
-     * Constructur de un pan
+     * Constructur de un pan blanco
      */
     public PanBlanco(){
         precio = 19.99f;

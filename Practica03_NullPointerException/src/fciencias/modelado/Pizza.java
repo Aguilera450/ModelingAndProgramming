@@ -9,15 +9,15 @@
 public class Pizza {
     
     /* Atributos de clase. */
-    /** Nombre del tipo de <code>Pizza</code>. */
+    /** Nombre de la <code>Pizza</code>. */
     private String nombre;
-    /** Precio del tipo de <code>Pizza</code>. */
+    /** Precio de la <code>Pizza</code>. */
     private float precio;
-    /** Queso del tipo de <code>Pizza</code>. */
+    /** Queso del tipo de la <code>Pizza</code>. */
     private Queso queso;
-    /** Carne del tipo de <code>Pizza</code>. */
+    /** Carne del tipo de la <code>Pizza</code>. */
     private Carne carne;
-    /** Masa del tipo de <code>Pizza</code>. */
+    /** Masa del tipo de la <code>Pizza</code>. */
     private Masa masa;
     
     /**

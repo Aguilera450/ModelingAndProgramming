@@ -7,7 +7,7 @@
  */
 public class PanIntegral extends PanBaguette{
     /**
-     * Constructur de un pan
+     * Constructur de un pan integral
      */
     public PanIntegral(){
         precio = 20.99f;
