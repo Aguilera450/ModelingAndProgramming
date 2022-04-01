@@ -163,6 +163,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
         } while (opcion != 0);
 
         return baguette;
+>>>>>>> 50f83ef45b853b5ea6e8a6db89d255a9079c0bdd
     }
 
 
@@ -204,7 +205,10 @@ public class WaySubXLasPizzasDeDonCangrejo {
         }
         return pizza;
     }
-    
+
+    /** Metodo que nos imprimer el Ticket del platillo.
+     * @param platillo Platillo del cual se va a imprimir el ticket.
+     */
     public static void mostrarTicketPlatillo(Platillo platillo){
 	    System.out.println("Tome su Ticket, ¡vuelva pronto!");
 	    System.out.println(platillo.getTicket());
