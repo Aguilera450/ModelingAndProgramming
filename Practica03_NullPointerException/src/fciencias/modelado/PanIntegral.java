@@ -6,8 +6,11 @@
  * @version 1.0 - 28/03/2022
  */
 public class PanIntegral extends PanBaguette{
-    /** Precio del pan de baguette integral, o bien el precio inicial*/
-    protected float precio = 20;
-    /** Tipo de pan */
-    protected String tipoPan = "Pan Integral";
+    /**
+     * Constructur de un pan
+     */
+    public PanIntegral(){
+        precio = 20.99f;
+        tipoPan = "Pan Integral";
+    }
 }

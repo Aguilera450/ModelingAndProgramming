@@ -6,11 +6,9 @@
  * @version 1.0 - 28/03/2022
  */
 public class PanBlanco extends PanBaguette{
-    /** Precio del pan de baguette blanco, o bien el precio inicial*/
-    protected float precio;
-    /** Tipo de pan */
-    protected String tipoPan;
-
+    /**
+     * Constructur de un pan
+     */
     public PanBlanco(){
         precio = 19.99f;
         tipoPan = "Pan Blanco";

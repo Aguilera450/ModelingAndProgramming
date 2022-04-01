@@ -6,8 +6,11 @@
  * @version 1.0 - 28/03/2022
  */
 public class PanItalianoSesamo extends PanBaguette{
-    /** Precio del pan de baguette italiano sesamo, o bien el precio inicial*/
-    protected float precio = 20;
-    /** Tipo de pan */
-    protected String tipoPan = "Pan Italiano Sesamo";
+    /**
+     * Constructur de un pan
+     */
+    public PanItalianoSesamo(){
+        precio = 20.99f;
+        tipoPan = "Pan Italiano Sesamo";
+    }
 }

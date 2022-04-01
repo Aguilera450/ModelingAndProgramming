@@ -6,8 +6,11 @@
  * @version 1.0 - 28/03/2022
  */
 public class PanIntegralConAvenaYMiel extends PanBaguette{
-    /** Precio del pan de baguette integral con avena y miel, o bien el precio inicial*/
-    protected float precio = 26;
-    /** Tipo de pan */
-    protected String tipoPan = "Pan Integral con avena y miel";
+    /**
+     * Constructur de un pan
+     */
+    public PanIntegralConAvenaYMiel(){
+        precio = 26.99f;
+        tipoPan = "Pan Integral con avena y miel";
+    }
 }
