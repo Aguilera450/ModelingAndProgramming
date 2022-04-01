@@ -28,7 +28,7 @@ public class IngredientePollo extends Ingrediente {
      */
     @Override
     public String getTicket(){
-        return  "\n   Pollo - $" + precio + platillo.getTicket();
+        return  platillo.getTicket() + "\n   Pollo - $" + precio;
     }
 
     /**

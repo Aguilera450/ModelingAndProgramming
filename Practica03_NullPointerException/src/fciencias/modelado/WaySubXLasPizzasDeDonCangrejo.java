@@ -152,7 +152,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
                     break;
             }
         } while (opcion != 0);
-
+        System.out.println("BAGUETTE A REGRESAR: " +baguette.toString());
         return baguette;
     }
 
