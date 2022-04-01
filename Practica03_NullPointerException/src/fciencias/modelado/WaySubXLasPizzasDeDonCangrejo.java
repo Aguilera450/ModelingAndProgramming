@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @version 1.0 - 31/03/2022
  */
 public class WaySubXLasPizzasDeDonCangrejo {
-    private Platillo listaPizzas[];
+    private static Platillo listaPizzas[];
 
     public WaySubXLasPizzasDeDonCangrejo(Queso queso, Carne carne, Masa masa){
         this.listaPizzas = new Platillo[3];
@@ -30,7 +30,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
      * @param max     Máximo del rango
      * @return La opción ingresada por el usuario.
      */
-    public int opcionMenu(String message, int min, int max) {
+    public static int opcionMenu(String message, int min, int max) {
         Scanner input = new Scanner(System.in);
         boolean exit = false;
         int userInput = 0;
@@ -58,7 +58,7 @@ public class WaySubXLasPizzasDeDonCangrejo {
      * 
      * @return La baguette armada por el usuario.
      */
-    public Platillo pedirBaguette(){
+    public static Platillo pedirBaguette(){
         Platillo baguette = null;
         // Se comienza el proceso  para elejir el tipo de pan
 
@@ -170,18 +170,18 @@ public class WaySubXLasPizzasDeDonCangrejo {
      * Método que se encarga del proceso para ordenar una pizza.
      * @return La pizza elejida por el usuario.
      */
-    public Platillo pedirPizza(){
+    public static Platillo pedirPizza(){
         Platillo pizza = null;
         // Opcion elejida por el usuario
         int opcion;
         // Se le solicita al usuario elegir una opción
         opcion = opcionMenu(
         "\n------ PIZZAS DE DON CANGREJO -----" + 
-        "\nPizza 1: "+
+        "\nPIZZA 1: "+
         listaPizzas[0].toString() + 
-        "\nPizza 2: "+
+        "\nPIZZA 2: "+
         listaPizzas[1].toString() +
-        "\nPizza 3: "+
+        "\nPIZZA 3: "+
         listaPizzas[2].toString() +
         "Elije el número de pizza a ordenar: "
         , 1, 3);
@@ -204,9 +204,39 @@ public class WaySubXLasPizzasDeDonCangrejo {
         }
         return pizza;
     }
-
-    public static void main(String[] args) {
-        
+    
+    public static void mostrarTicketPlatillo(Platillo platillo){
+	    System.out.println("Tome su Ticket, ¡vuelva pronto!");
+	    System.out.println(platillo.getTicket());
     }
     
+    /**
+     * Método principal para elejir entre una baguette y una pizza.
+     * Acorde a la anterior elección se realizará el proceso de orden.
+     */
+    public static void main(String[] args) {
+        // Opcion elejida por el usuario
+        int opcion;
+        do {
+            opcion = opcionMenu(
+            "----- ¿QUE PLATILLO DESEA ORDENAR? -----" +
+            "1) UNA BAGUETTE WAYSUB PERSONALIZADA" +
+            "2) UNA PIZZA DE DON CANGREJO"+
+            "3) ESO ES TODO:)" +
+            "Elije una opción: "
+            ,1,3);
+            switch (opcion) {
+                case 1:
+                    mostrarTicketPlatillo(pedirBaguette());
+                    break;
+                
+                case 2:
+                    mostrarTicketPlatillo(pedirPizza());
+                    break;
+            
+                default:
+                    break;
+            }
+        } while (opcion != 3);
+    }
 }
