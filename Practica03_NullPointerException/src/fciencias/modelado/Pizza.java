@@ -1,5 +1,5 @@
 /**
- * Clase que simula el comportamiento de una <code>Pizza</code>.
+ * Clase que simula el comportamiento de una Pizza.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -9,22 +9,22 @@
 public class Pizza {
     
     /* Atributos de clase. */
-    /** Nombre de la <code>Pizza</code>. */
+    /** Nombre de la Pizza. */
     private String nombre;
-    /** Precio de la <code>Pizza</code>. */
+    /** Precio de la Pizza. */
     private float precio;
-    /** Queso del tipo de la <code>Pizza</code>. */
+    /** Queso del tipo de la Pizza. */
     private Queso queso;
-    /** Carne del tipo de la <code>Pizza</code>. */
+    /** Carne del tipo de la Pizza. */
     private Carne carne;
-    /** Masa del tipo de la <code>Pizza</code>. */
+    /** Masa del tipo de la Pizza. */
     private Masa masa;
     
     /**
      * Método constructor por parámetros.
-     * @param <code>queso</code> -- tipo de queso en la pizza.
-     * @param <code>carne</code> -- tipo de carne en la pizza.
-     * @param <code>masa</code> -- tipo de masa en la pizza.
+     * @param queso -- tipo de queso en la pizza.
+     * @param carne -- tipo de carne en la pizza.
+     * @param masa -- tipo de masa en la pizza.
      */
     public Pizza(String nombre, Queso queso, Carne carne, Masa masa) {
         this.nombre = nombre;
@@ -34,50 +34,50 @@ public class Pizza {
         this.precio = queso.precio() + carne.precio() + masa.precio();
     }
     
-    /** @return <code>String</code> -- nombre de la Pizza. */
+    /** @return String -- nombre de la Pizza. */
     public String getNombre(){
         return nombre;
     }
 
-    /** @return <code>float</code> -- precio de la Pizza. */
+    /** @return float -- precio de la Pizza. */
     public float getPrecio() {
         return precio;
     }
 
-    /** @return <code>queso</code> -- tipo de queso que tiene la pizza. */
+    /** @return queso -- tipo de queso que tiene la pizza. */
     public String tipoQueso() {
 	    return queso.nombre();
     }
     
-    /** @return <code>carne</code> -- tipo de carne que tiene la pizza. */
+    /** @return carne -- tipo de carne que tiene la pizza. */
     public String tipoCarne() {
 	    return carne.nombre();
     }
     
-    /** @return <code>masa</code> -- tipo de masa que tiene la pizza. */
+    /** @return masa -- tipo de masa que tiene la pizza. */
     public String tipoMasa() {
 	    return masa.nombre();
     }
     
-    /** @return <code>Queso</code> -- queso en la <code>Pizza</code>. */
+    /** @return Queso -- queso en la Pizza. */
     public Queso getQueso() {
 	    return queso;
     }
 
-    /** @return <code>Carne</code> -- carne en la <code>Pizza</code>. */
+    /** @return Carne -- carne en la Pizza. */
     public Carne getCarne() {
 	    return carne;
     }
     
-    /** @return <code>Masa</code> -- masa de la que esta hecha la <code>Pizza</code>. */
+    /** @return Masa -- masa de la que esta hecha la Pizza. */
     public Masa getMasa() {
 	    return masa;
     }
 
     
     /**
-     * Método que regresa la representación en cadena de una <code>Pizza</code>.
-     * @return <code>String</code> -- descripción de una <code>Pizza</code>.
+     * Método que regresa la representación en cadena de una Pizza.
+     * @return String -- descripción de una Pizza.
      */
     public String toString() {
 	    return "\n"+ nombre +"   - $"+ precio +"\n" +
