@@ -26,11 +26,12 @@ public class Pizza {
      * @param <code>carne</code> -- tipo de carne en la pizza.
      * @param <code>masa</code> -- tipo de masa en la pizza.
      */
-    public Pizza(Queso queso, Carne carne, Masa masa) {
-	this.queso = queso;
-	this.carne = carne;
-	this.masa = masa;
-	this.precio = queso.precio() + carne.precio() + masa.precio();
+    public Pizza(String nombre, Queso queso, Carne carne, Masa masa) {
+        this.nombre = nombre;
+        this.queso = queso;
+        this.carne = carne;
+        this.masa = masa;
+        this.precio = queso.precio() + carne.precio() + masa.precio();
     }
     
     /** @return <code>String</code> -- nombre de la Pizza. */
@@ -45,32 +46,32 @@ public class Pizza {
 
     /** @return <code>queso</code> -- tipo de queso que tiene la pizza. */
     public String tipoQueso() {
-	return queso.nombre();
+	    return queso.nombre();
     }
     
     /** @return <code>carne</code> -- tipo de carne que tiene la pizza. */
     public String tipoCarne() {
-	return carne.nombre();
+	    return carne.nombre();
     }
     
     /** @return <code>masa</code> -- tipo de masa que tiene la pizza. */
     public String tipoMasa() {
-	return masa.nombre();
+	    return masa.nombre();
     }
     
     /** @return <code>Queso</code> -- queso en la <code>Pizza</code>. */
     public Queso getQueso() {
-	return queso;
+	    return queso;
     }
 
     /** @return <code>Carne</code> -- carne en la <code>Pizza</code>. */
     public Carne getCarne() {
-	return carne;
+	    return carne;
     }
     
     /** @return <code>Masa</code> -- masa de la que esta hecha la <code>Pizza</code>. */
     public Masa getMasa() {
-	return masa;
+	    return masa;
     }
 
     
@@ -79,7 +80,7 @@ public class Pizza {
      * @return <code>String</code> -- descripción de una <code>Pizza</code>.
      */
     public String toString() {
-	return "\n Pizza "+ nombre +"   - $"+ precio +"\n" +
-	    "con "+ getQueso() +", "+ getCarne() +", "+ getMasa() +".";
+	    return "\n Pizza "+ nombre +"   - $"+ precio +"\n" +
+	    "Ingredientes: "+ tipoQueso() +", "+ tipoCarne() +", "+ tipoMasa() +".";
     }
 }

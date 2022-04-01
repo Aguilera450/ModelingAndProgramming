@@ -9,9 +9,9 @@ import java.util.Scanner;
  */
 public class WaySubXLasPizzasDeDonCangrejo {
     private static Platillo listaPizzas[] = {
-            new AdapterPizza(new Pizza(new QuesoChedar(), new CarnePollo(), new MasaGruesa())),
-            new AdapterPizza(new Pizza(new QuesoManchego(), new CarneJamon(), new MasaGruesa())),
-            new AdapterPizza(new Pizza(new QuesoChedar(), new CarneSalchicha(), new MasaDelgada()))};
+            new AdapterPizza(new Pizza("Pizza Granj'Chedar", new QuesoChedar(), new CarnePollo(), new MasaGruesa())),
+            new AdapterPizza(new Pizza("Pizza JamonChego", new QuesoManchego(), new CarneJamon(), new MasaGruesa())),
+            new AdapterPizza(new Pizza("Pizza Dog", new QuesoChedar(), new CarneSalchicha(), new MasaDelgada()))};
 
     /**
      * Método que le solicita un entero al usuario dentro de un rango acorde al menú proporcionado.
@@ -170,10 +170,13 @@ public class WaySubXLasPizzasDeDonCangrejo {
         "\n------ PIZZAS DE DON CANGREJO -----" + 
         "\nPIZZA 1: "+
         listaPizzas[0].toString() + 
+        "\n-----------------------------------" +
         "\nPIZZA 2: "+
         listaPizzas[1].toString() +
+        "\n-----------------------------------" +
         "\nPIZZA 3: "+
         listaPizzas[2].toString() +
+        "\n-----------------------------------" +
         "\nElije el número de pizza a ordenar: "
         , 1, 3);
         // Se guarda la pizza elejida por el usuario.
@@ -232,6 +235,6 @@ public class WaySubXLasPizzasDeDonCangrejo {
                     break;
             }
         } while (opcion != 3);
-        System.out.println("\n¡nGRACIAS, VUELVA PRONTO!");
+        System.out.println("\n¡GRACIAS, VUELVA PRONTO!");
     }
 }
