@@ -8,7 +8,7 @@
  */
 public class IngredienteCebolla extends Ingrediente {
     /** Precio del ingrediente */
-    private float precio = 5;
+    private float precio = 5.99f;
 
     /**
      * Constructor de un ingrediente cebolla.

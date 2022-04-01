@@ -8,7 +8,7 @@
  */
 public class IngredienteMostaza extends Ingrediente {
     /** Precio del ingrediente */
-    private float precio = 2;
+    private float precio = 2.99f;
     
     /**
      * Constructor de un ingrediente mostaza.

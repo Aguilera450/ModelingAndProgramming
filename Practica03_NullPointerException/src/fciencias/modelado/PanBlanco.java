@@ -7,7 +7,12 @@
  */
 public class PanBlanco extends PanBaguette{
     /** Precio del pan de baguette blanco, o bien el precio inicial*/
-    protected float precio = 19;
+    protected float precio;
     /** Tipo de pan */
-    protected String tipoPan = "Pan Blanco";
+    protected String tipoPan;
+
+    public PanBlanco(){
+        precio = 19.99f;
+        tipoPan = "Pan Blanco";
+    }
 }
