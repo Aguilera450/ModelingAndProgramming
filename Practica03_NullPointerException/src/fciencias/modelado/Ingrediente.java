@@ -27,11 +27,11 @@ public abstract class Ingrediente implements Platillo{
      * 
      * @return Ticket del platillo.
      */
-    @Override
     public String getTicket(){
         return platillo.getTicket();
     }
 
+    
     /**
      * Regresa el precio del Platillo.
      * Este precio ya toma en cuenta los ingredientes

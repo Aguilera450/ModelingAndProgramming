@@ -23,13 +23,12 @@ public class IngredientePollo extends Ingrediente {
      * El ticket muestra el nombre del platillo,
      * un listado de los ingredientes que lo componen 
      * junto a su precio de cada ingrediente.
-     * Y el precio total del platillo.
      * 
      * @return Ticket del platillo.
      */
     @Override
     public String getTicket(){
-        return platillo.getTicket() + "\n   Pollo - $" + precio;
+        return  "\n   Pollo - $" + precio + platillo.getTicket();
     }
 
     /**

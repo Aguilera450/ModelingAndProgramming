@@ -200,8 +200,8 @@ public class WaySubXLasPizzasDeDonCangrejo {
      * @param platillo Platillo del cual se va a imprimir el ticket.
      */
     public static void mostrarTicketPlatillo(Platillo platillo){
-	    System.out.println("Tome su Ticket, ¡vuelva pronto!");
-	    System.out.println(platillo.getTicket());
+	    System.out.println("\n---- TOME SU TICKET ----");
+	    System.out.println(platillo.getTicket() + "\nTotal: $" + platillo.getPrecio());
     }
     
     /**
@@ -232,5 +232,6 @@ public class WaySubXLasPizzasDeDonCangrejo {
                     break;
             }
         } while (opcion != 3);
+        System.out.println("\n¡nGRACIAS, VUELVA PRONTO!");
     }
 }

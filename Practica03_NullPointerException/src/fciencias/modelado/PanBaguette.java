@@ -18,7 +18,8 @@ public abstract class PanBaguette implements Platillo{
      * @return Ticket de la baguette.
      */
     public String getTicket(){
-        return "\nBaguette de " + tipoPan + ", Total: $"+ getPrecio();
+        return  "\nBaguette de " + tipoPan + 
+                "\n   Pan - $" + getPrecio();
     }
 
     /**
