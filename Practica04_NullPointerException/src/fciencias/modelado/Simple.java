@@ -19,13 +19,13 @@ public class abstract Simple extends Blindaje {
      *  general hecho en la clase <code>Blindaje</code>.</p>
      */
     public class Simple() {
-	super();
-	super.nombre += "Simple.";
-	super.descripcion += "Este tipo de blindaje es sencillo "
-	    + "y solo repele balas de tipo A, puede llegar a ser "
-	    + "algo problemático si se necesita esquivar barreras.";
-	super.precio += 800.50f;
-	super.peso += 5600.80f;
-	super.defensa += 1;
+        super();
+        super.nombre += "Simple.";
+        super.descripcion += "Este tipo de blindaje es sencillo "
+            + "y solo repele balas de tipo A, puede llegar a ser "
+            + "algo problemático si se necesita esquivar barreras.";
+        super.precio += 800.50f;
+        super.peso += 5600.80f;
+        super.defensa += 1;
     }
 }

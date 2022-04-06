@@ -14,13 +14,13 @@ public class abstract SistemaPropulsion extends Componentes {
      * de Propulsión para una nave espacial.
      */
     public SistemaPropulsion() {
-	super.nombre = "Sistema de propulsion tipo: ";
-	super.descripcion = "Sistema de propulsion: ";
-	super.precio = 0.0f;
-	super.velocidad = 0;
-	super.defensa = 0;
-	super.peso = 0.0f;
-	super.ataque = 0;
+		super.nombre = "Sistema de propulsion tipo: ";
+		super.descripcion = "Sistema de propulsion: ";
+		super.precio = 0.0f;
+		super.velocidad = 0;
+		super.defensa = 0;
+		super.peso = 0.0f;
+		super.ataque = 0;
     }
     
 }

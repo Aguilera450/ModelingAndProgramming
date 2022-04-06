@@ -24,7 +24,7 @@ public class abstract Componentes {
      * @return <code>nombre</code> -- nombre del componente.
      */
     public String nombre() {
-	return nombre;
+	    return nombre;
     }
     
     /**
@@ -32,7 +32,7 @@ public class abstract Componentes {
      * @return <code>descripcion</code> -- descripción del componente.
      */
     public String descripcion() {
-	return descripcion;
+	    return descripcion;
     }
     
     /**
@@ -41,7 +41,7 @@ public class abstract Componentes {
      *                                el precio de nuestro componente anexado.
      */
     public float precio() {
-	return precio;
+	    return precio;
     }
     
     /**
@@ -50,7 +50,7 @@ public class abstract Componentes {
      *                                al poder de ataque.
      */
     public int ataque() {
-	return ataque;
+	    return ataque;
     }
     
     /**
@@ -59,7 +59,7 @@ public class abstract Componentes {
      *                                al poder de defensa.
      */
     public int defensa() {
-	return defensa;
+	    return defensa;
     }
     
     /**
@@ -68,7 +68,7 @@ public class abstract Componentes {
      *                                a la velocidad.
      */
     public int velocidad() {
-	return velocidad;
+	    return velocidad;
     }
     
     /**
@@ -77,6 +77,6 @@ public class abstract Componentes {
      *                              indica el peso del nuevo componente.
      */
     public float peso() {
-	return peso;
+	    return peso;
     }
 }

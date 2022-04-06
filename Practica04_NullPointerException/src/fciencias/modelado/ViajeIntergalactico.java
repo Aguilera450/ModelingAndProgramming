@@ -17,14 +17,14 @@ public class abstract ViajeIntergalactico extends SistemaPropulsion {
      * <code>SistemaPropulsion</code>.</p>
      */
     public class ViajeIntercontinental() {
-	super();
-	super.nombre += "Viaje Intergalactico.";
-	super.descripcion += "Este sistema es utilizado para viajar "
-	    + "entre galaxias y dentro de algún k-universo (para alguna "
-	    + "0 < k < ∞, y en el que se encuentre la nave espacial).";
-	super.precio += 898000.50f;
-	super.peso += 24000.49f;
-	super.velocidad += 9;
-	super.defensa += 3;
+		super();
+		super.nombre += "Viaje Intergalactico.";
+		super.descripcion += "Este sistema es utilizado para viajar "
+			+ "entre galaxias y dentro de algún k-universo (para alguna "
+			+ "0 < k < ∞, y en el que se encuentre la nave espacial).";
+		super.precio += 898000.50f;
+		super.peso += 24000.49f;
+		super.velocidad += 9;
+		super.defensa += 3;
     }    
 }

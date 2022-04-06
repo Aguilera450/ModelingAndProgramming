@@ -19,13 +19,13 @@ public class abstract Fortaleza extends Blindaje {
      *  general hecho en la clase <code>Blindaje</code>.</p>
      */
     public class Fortaleza() {
-	super();
-	super.nombre += "Fortaleza.";
-	super.descripcion += "Este tipo de blindaje esta preparado "
-	    + "para soportar impactos con asteroides y cometas, pero "
-	    + "no soporta impactos con lunas, soles y otros planetas.";
-	super.precio += 1200.50f;
-	super.peso += 87430.80f;
-	super.defensa += 3;
+        super();
+        super.nombre += "Fortaleza.";
+        super.descripcion += "Este tipo de blindaje esta preparado "
+            + "para soportar impactos con asteroides y cometas, pero "
+            + "no soporta impactos con lunas, soles y otros planetas.";
+        super.precio += 1200.50f;
+        super.peso += 87430.80f;
+        super.defensa += 3;
     }
 }

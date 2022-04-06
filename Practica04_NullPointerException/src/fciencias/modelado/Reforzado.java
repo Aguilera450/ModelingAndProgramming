@@ -19,13 +19,13 @@ public class abstract Reforzado extends Blindaje {
      *  general hecho en la clase <code>Blindaje</code>.</p>
      */
     public class Reforzado() {
-	super();
-	super.nombre += "Reforzado.";
-	super.descripcion += "Este tipo de blindaje esta preparado "
-	    + "para soportar impactos con cualquier cosa en el espacio "
-	    + "y la mayoría del arsenal balistico.";
-	super.precio += 2900.00f;
-	super.peso += 123430.87f;
-	super.defensa += 9;
+        super();
+        super.nombre += "Reforzado.";
+        super.descripcion += "Este tipo de blindaje esta preparado "
+            + "para soportar impactos con cualquier cosa en el espacio "
+            + "y la mayoría del arsenal balistico.";
+        super.precio += 2900.00f;
+        super.peso += 123430.87f;
+        super.defensa += 9;
     }
 }

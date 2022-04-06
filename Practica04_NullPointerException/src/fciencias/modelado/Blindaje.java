@@ -15,13 +15,13 @@ public class abstract Blindaje extends Componentes {
      *  el <code>Blindaje</code> para una nave espacial.
      */
     public SistemaPropulsion() {
-	super.nombre = "Blindaje de tipo: ";
-	super.descripcion = "Blindaje: ";
-	super.precio = 0.0f;
-	super.velocidad = 0;
-	super.defensa = 0;
-	super.peso = 0.0f;
-	super.ataque = 0;
+		super.nombre = "Blindaje de tipo: ";
+		super.descripcion = "Blindaje: ";
+		super.precio = 0.0f;
+		super.velocidad = 0;
+		super.defensa = 0;
+		super.peso = 0.0f;
+		super.ataque = 0;
     }
     
 }
