@@ -25,7 +25,6 @@ public class abstract ViajeIntergalactico extends SistemaPropulsion {
 	super.precio += 898000.50f;
 	super.peso += 24000.49f;
 	super.velocidad += 9;
-	super.defensa += 12;
-	super.ataque += 10;
+	super.defensa += 3;
     }    
 }
