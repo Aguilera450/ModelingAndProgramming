@@ -26,6 +26,5 @@ public class abstract ViajeIntercontinental extends SistemaPropulsion {
 	super.peso += 4000.00f;
 	super.velocidad += 1;
 	super.defensa += 1;
-	super.ataque += 1;
     }
 }
