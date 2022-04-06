@@ -1,5 +1,6 @@
 /**
- * Clase que simula el <code>Blindaje</code> de la nave espacial.
+ * Clase que simula un <code>Blindaje</code>
+ * <code>Simple</code> en la nave espacial.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
