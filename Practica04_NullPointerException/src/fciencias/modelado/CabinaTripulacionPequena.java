@@ -8,7 +8,7 @@
  * @see <code>Cabina</code>.
  */
 
-public abstract class CabinaTripulacionPequena extends Cabina {
+public class CabinaTripulacionPequena extends Cabina {
     
     /**
      * Constructor de una <code>CabinaTripulacionPequena</code>.

@@ -8,7 +8,7 @@
  * @see <code>Arma</code>.
  */
 
-public abstract class LaserDestructorDePlanetas extends Arma {
+public class LaserDestructorDePlanetas extends Arma {
     
     /**
      * Constructor de un <code>LaserDestructorDePlanetas</code>.

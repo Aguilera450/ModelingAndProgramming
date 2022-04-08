@@ -8,7 +8,7 @@
  * @see <code>Arma</code>.
  */
 
-public abstract class MisilesDePlasma extends Arma {
+public class MisilesDePlasma extends Arma {
     
     /**
      * Constructor de un <code>MisilesDePlasma</code>.
@@ -27,3 +27,4 @@ public abstract class MisilesDePlasma extends Arma {
         super.ataque += 23;
         super.defensa = 2;
     }
+}

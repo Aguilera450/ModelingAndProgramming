@@ -8,7 +8,7 @@
  * @see <code>Blindaje</code>.
  */
 
-public abstract class BlindajeFortaleza extends Blindaje {
+public class BlindajeFortaleza extends Blindaje {
     /**
      * Constructor de un <code>BlindajeFortaleza</code>.
      * Se concatenan o autosuman los valores referentes a este tipo de blindaje.

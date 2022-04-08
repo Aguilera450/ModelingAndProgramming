@@ -8,7 +8,7 @@
  * @see <code>Blindaje</code>.
  */
 
-public abstract class BlindajeSimple extends Blindaje {
+public class BlindajeSimple extends Blindaje {
     
     /**
      * Constructor de un <code>BlindajeSimple</code>.
