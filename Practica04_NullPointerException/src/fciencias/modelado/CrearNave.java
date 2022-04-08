@@ -12,7 +12,7 @@ public class CrearNave {
      * Método que crea una nave individual de combate.
      * @return <code>NaveEspacial</code> -- Nave individual de combate.
      */
-    public NaveEspacial crearNaveIndividualCombate(){
+    public static NaveEspacial crearNaveIndividualCombate(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeInterplanetario());
         naveModelo.darBlindaje(new BlindajeReforzado());
@@ -25,11 +25,11 @@ public class CrearNave {
      * Método que crea una nave militar de transporte
      * @return <code>NaveEspacial</code> -- Nave militar de transporte.
      */
-    public NaveEspacial crearNaveMilitarTransporte(){
+    public static NaveEspacial crearNaveMilitarTransporte(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeIntergalactico());
         naveModelo.darBlindaje(new BlindajeReforzado());
-        naveModelo.darCabina(new CabinaTripulasionPequena());
+        naveModelo.darCabina(new CabinaTripulacionPequena());
         naveModelo.darArmas(new LaserSimple());
         return naveModelo;
     }
@@ -38,7 +38,7 @@ public class CrearNave {
      * Método que crea una nave base espacial de guerra.
      * @return <code>NaveEspacial</code> -- Nave base espacial de guerra.
      */
-    public NaveEspacial crearNaveBaseEspacialDeGuerra(){
+    public static NaveEspacial crearNaveBaseEspacialDeGuerra(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeIntergalactico());
         naveModelo.darBlindaje(new BlindajeFortaleza());
@@ -53,6 +53,34 @@ public class CrearNave {
      * @return <code>NaveEspacial</code> -- Nave Espacial personalizada por el usuario.
      */
     public NaveEspacial crearNavePersonalizada(){
-        
+        MenuTerminal menu = new MenuTerminal();
+        NaveEspacial naveEscogida = null;
+        int opcion = menu.opcionMenu("\nNuestro catálogo de naves es el siguiente:" +
+                    "\n1 - Nave Individual de Combate"+
+                    "\n2 - Nave Militar de Transporte"+
+                    "\n3 - Nave Base Espacial de Guerra"+
+                    "\n4 - Salir"+
+                    "\nElije una opcion(1-4): ",1,4);
+
+        switch (opcion) {
+            case 1:
+                naveEscogida = crearNaveIndividualCombate();
+                break;
+            
+            case 2:
+                naveEscogida = crearNaveMilitarTransporte();
+                break;
+
+            case 3:
+                naveEscogida = crearNaveBaseEspacialDeGuerra();
+                break;
+            
+            case 4:
+                break;
+
+            default:
+                break;
+        }
+        return naveEscogida;
     }
 }
