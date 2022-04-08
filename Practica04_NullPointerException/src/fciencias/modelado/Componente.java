@@ -1,7 +1,6 @@
 /**
- * Clase abstracta <code>Componentes</code> que define las
- * características de cada componente en la nave espacial
- * en cuestión.
+ * Clase abstracta <code>Componente</code> que define las
+ * características de un componente de una nave espacial.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -10,71 +9,73 @@
 
 public abstract class Componente {
     
-    /* Atributos. */
-    protected String nombre = null;
-    protected String descripcion = null;
-    protected float precio = 0.0f;
-    protected int ataque = 0;
-    protected int defensa = 0;
-    protected int velocidad = 0;
-    protected float peso = 0.0f;
+    /** Nombre del componente */
+    protected String nombre;
+    /** Descripción del componente */
+    protected String descripcion;
+    /** Precio del componente */
+    protected float precio;
+
+    /** Ataque extra que el componente proporciona a la nave */
+    protected int ataque;
+    /** Defensa extra que el componente proporciona a la nave */
+    protected int defensa;
+    /** Velocidad extra que el componente proporciona a la nave */
+    protected int velocidad;
+    /** Peso extra que el componente proporciona a la nave */
+    protected float peso;
 
     /**
-     * Método que nos dice el nombre del componente anexado.
-     * @return <code>nombre</code> -- nombre del componente.
+     * Método para saber el nombre del componente.
+     * @return <code>String</code> -- nombre del componente.
      */
     public String nombre() {
 	    return nombre;
     }
     
     /**
-     * Método que nos dice como es el componente anexado.
-     * @return <code>descripcion</code> -- descripción del componente.
+     * Método que nos dice como es el componente.
+     * @return <code>String</code> -- descripción del componente.
      */
     public String descripcion() {
 	    return descripcion;
     }
     
     /**
-     * Método que nos dice cuanto cuesta cada componente en nuestra nave espacial.
-     * @return <code>precio</code> -- devuelve un <code>float</code> que nos indica
-     *                                el precio de nuestro componente anexado.
+     * Método que nos indica el precio del componente.
+     * @return <code>float</code> -- precio de nuestro componente.
      */
     public float precio() {
 	    return precio;
     }
     
     /**
-     * Método que nos indica cuantitativamente el ataque de la nave espacial.
-     * @return <code>ataque</code> -- devuelve un <code>int</code> equivalente
-     *                                al poder de ataque.
+     * Método que nos indica cuantitativamente el ataque proporcionado por el componente.
+     * @return <code>int</code> -- ataque proporcionado por el componente.
      */
     public int ataque() {
 	    return ataque;
     }
     
     /**
-     * Método que nos indica cuantitativamente la defensa de la nave espacial.
-     * @return <code>ataque</code> -- devuelve un <code>int</code> equivalente
-     *                                al poder de defensa.
+     * Método que nos indica cuantitativamente la defensa proporcionada por el componente.
+     * @return <code>int</code> -- defensa proporcionada por el componente.
      */
     public int defensa() {
 	    return defensa;
     }
     
     /**
-     * Método que nos indica cuantitativamente la velocidad de la nave espacial.
-     * @return <code>ataque</code> -- devuelve un <code>int</code> equivalente
-     *                                a la velocidad.
+     * Método que nos indica cuantitativamente la velocidad proporcionada por el componente.
+     * @return <code>int</code> -- velocidad proporcionada por el componente.
      */
     public int velocidad() {
 	    return velocidad;
     }
     
     /**
-     * Método que genera el peso del componente anexado a la nave espacial.
-     * @return <code>peso</code> -- devuelve un <code>float</code> que nos
-     *                              indica el peso del nuevo componente.
+     * Método que nos indica el peso proporcionado por el componente.
+     * @return <code>float</code> -- peso del componente.
      */
     public float peso() {
 	    return peso;
