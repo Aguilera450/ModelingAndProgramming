@@ -23,9 +23,9 @@ public abstract class PropulsionViajeInterplanetario extends SistemaPropulsion{
 			+ "entre planetas y dentro de algún sistema solar (para "
 			+ "algun sistema solar en el que se encuentre la nave "
 			+ "espacial).";
-		super.precio += 98000.75f;
-		super.peso += 9400.90f;
-		super.velocidad += 3;
-		super.defensa += 2;
+		super.precio += 294000.99f;
+		super.peso += 2985.90f;
+		super.velocidad += 500;
+		super.defensa += 3;
     }    
 }

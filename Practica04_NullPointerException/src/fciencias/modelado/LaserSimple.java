@@ -22,8 +22,9 @@ public abstract class LaserSimple extends Arma {
         super.descripcion += "Un laser simple, eficaz y barato, nunca  "
             + " hay que salir sin uno de estos a la galaxia fría y cruel."
             + " Todos nuestros clientes lo recomiendan.";
-        super.precio += 32000.99f;
-        super.peso += 40000.52f;
-        super.ataque += 3;
+        super.precio += 79834.99f;
+        super.peso += 999.52f;
+        super.ataque += 7;
+        super.defensa = 2;
     }
 }

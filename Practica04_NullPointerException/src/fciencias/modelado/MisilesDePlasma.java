@@ -22,8 +22,8 @@ public abstract class MisilesDePlasma extends Arma {
         super.descripcion += "Unos poderosos Misiles de Plasma, mortales y rápidos "
             + " contra seres vivos y construcciones avanzadas."
             + " Aprovecha que la munición de plasma viene incluida.";
-        super.precio += 48000.99f;
-        super.peso += 60200.52f;
-        super.ataque += 7;
+        super.precio += 298777.99f;
+        super.peso += 1987.52f;
+        super.ataque += 23;
+        super.defensa = 2;
     }
-}

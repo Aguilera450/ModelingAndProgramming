@@ -22,8 +22,9 @@ public abstract class LaserDestructorDePlanetas extends Arma {
         super.descripcion += "No hace falta explicar lo que hace, lo apodan "
             + " el Temor de Dios, apto para cualquiera que quiera desatar un"
             + " infierno. Por cuestiones legales no proporcionamos factura.";
-        super.precio += 100000.12f;
-        super.peso += 750000.29f;
-        super.ataque += 45;
+        super.precio += 945785.99f;
+        super.peso += 10000.52f;
+        super.ataque += 50;
+        super.defensa = 2;
     }
 }

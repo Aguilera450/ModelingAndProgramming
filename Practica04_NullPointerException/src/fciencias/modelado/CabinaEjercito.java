@@ -22,8 +22,8 @@ public abstract class CabinaEjercito extends Cabina {
         super.descripcion += "La cabina ideal si se necesitas invadir una  "
             + "nación, planeta, galaxia, lo que quieras. Usada por los"
             + " genocidas más famosos de la galaxia.";
-        super.precio += 912000.99f;
-        super.peso += 100000.00f;
+        super.precio += 199789.99f;
+        super.peso += 34567.00f;
         super.defensa += 10;
     }
 }

@@ -22,9 +22,9 @@ public abstract class PropulsionViajeIntercontinental extends SistemaPropulsion 
 		super.descripcion += "Este sistema es utilizado para viajar "
 			+ "entre continentes y dentro del planeta receptor (en "
 			+ "el que se encuentre la nave espacial).";
-		super.precio += 1980.50f;
-		super.peso += 4000.00f;
-		super.velocidad += 1;
+		super.precio += 105000.99f;
+		super.peso += 997.90f;
+		super.velocidad += 100;
 		super.defensa += 1;
     }
 }

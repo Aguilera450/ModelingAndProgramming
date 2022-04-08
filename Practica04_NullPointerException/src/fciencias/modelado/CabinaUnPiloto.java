@@ -22,8 +22,8 @@ public abstract class CabinaUnPiloto extends Cabina {
         super.descripcion += "La cabina de nave más popular,  "
             + "barata y confiable, adecuada para cualquier tipo de nave "
             + "pero si necesitas más pasajeros hay mejores opciones.";
-        super.precio += 1200.99f;
-        super.peso += 8300.10f;
-        super.defensa += 1;
+        super.precio += 19878.99f;
+        super.peso += 1986.10f;
+        super.defensa += 2;
     }
 }

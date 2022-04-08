@@ -22,8 +22,8 @@ public abstract class CabinaTripulacionPequena extends Cabina {
         super.descripcion += "La cabina ideal si se necesitan pequeñas  "
             + "excursiones o invaciones a baja escala. "
             + " La mejor parte de todo es que incluye portavasos.";
-        super.precio += 2450.99f;
-        super.peso += 19000.52f;
-        super.defensa += 3;
+        super.precio += 69876.99f;
+        super.peso += 4899.52f;
+        super.defensa += 5;
     }
 }

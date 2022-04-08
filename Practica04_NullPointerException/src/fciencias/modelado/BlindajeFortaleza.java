@@ -21,8 +21,8 @@ public abstract class BlindajeFortaleza extends Blindaje {
         super.descripcion += "Este tipo de blindaje esta preparado "
             + "para soportar impactos con asteroides y cometas, pero "
             + "no soporta impactos con lunas, soles y otros planetas.";
-        super.precio += 2900.50f;
-        super.peso += 123430.80f;
-        super.defensa += 10;
+        super.precio += 385000.50f;
+        super.peso += 49750.80f;
+        super.defensa += 50;
     }
 }

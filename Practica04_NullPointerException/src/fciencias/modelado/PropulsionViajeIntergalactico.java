@@ -22,9 +22,9 @@ public abstract class PropulsionViajeIntergalactico extends SistemaPropulsion {
 		super.descripcion += "Este sistema es utilizado para viajar "
 			+ "entre galaxias y dentro de algún k-universo (para alguna "
 			+ "0 < k < ∞, y en el que se encuentre la nave espacial).";
-		super.precio += 898000.50f;
-		super.peso += 24000.49f;
-		super.velocidad += 9;
-		super.defensa += 3;
+		super.precio += 875000.50f;
+		super.peso += 9950.49f;
+		super.velocidad += 1000;
+		super.defensa += 5;
     }    
 }

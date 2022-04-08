@@ -22,8 +22,8 @@ public abstract class BlindajeSimple extends Blindaje {
         super.descripcion += "Este tipo de blindaje es sencillo "
             + "y solo repele balas de tipo A, puede llegar a ser "
             + "algo problemático si se necesita esquivar barreras.";
-        super.precio += 800.50f;
-        super.peso += 5600.80f;
-        super.defensa += 3;
+        super.precio += 50000.50f;
+        super.peso += 4900.80f;
+        super.defensa += 5;
     }
 }

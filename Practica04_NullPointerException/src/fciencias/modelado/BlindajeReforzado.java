@@ -22,8 +22,8 @@ public abstract class BlindajeReforzado extends Blindaje {
         super.descripcion += "Este tipo de blindaje esta preparado "
             + "para soportar impactos con cualquier cosa en el espacio "
             + "y la mayoría del arsenal balistico.";
-        super.precio += 1200.00f;
-        super.peso += 87430.87f;
-        super.defensa += 7;
+        super.precio += 145000.00f;
+        super.peso += 9975.87f;
+        super.defensa += 15;
     }
 }
