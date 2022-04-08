@@ -4,7 +4,7 @@
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
- * @version 1.0 - 05/04/2022
+ * @version 1.0 - 08/04/2022
  */
 
 public abstract class Componente {
