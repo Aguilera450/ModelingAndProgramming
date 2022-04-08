@@ -1,25 +1,23 @@
 /**
- * Clase que simula un <code>Laser Destructor De Planetas</code>
- * en la nave espacial.
+ * Clase que simula un <code>Arma</code> de tipo <code>LaserDestructorDePlanetas</code>.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
- * @version 1.0 - 06/04/2022
- * @see <code>Componentes</code>.
- * @see <code>Armas</code>.
+ * @version 1.0 - 08/04/2022
+ * @see <code>Componente</code>.
+ * @see <code>Arma</code>.
  */
 
-public abstract class LaserDestructorDePlanetas extends Armas {
+public abstract class LaserDestructorDePlanetas extends Arma {
     
     /**
-     * Constructor por omisión de una <code>Armas</code>
-     * de tipo <code>Laser Destructor De Planetas</code>.
-     * <p> Se concatenan o autosuman los valores referentes
-     *  a este tipo de armas en específico, al constructor
-     *  general hecho en la clase <code>Armas</code>.</p>
+     * Constructor de un <code>LaserDestructorDePlanetas</code>.
+     * Se concatenan o autosuman los valores referentes a este tipo de arma.
      */
     public LaserDestructorDePlanetas() {
-	super();
+        // Se inicializan los valores en general
+		super();
+		// Se modifican los valores relacionados al componente.
         super.nombre += "Laser Destructor de Planetas.";
         super.descripcion += "No hace falta explicar lo que hace, lo apodan "
             + " el Temor de Dios, apto para cualquiera que quiera desatar un"
@@ -27,15 +25,5 @@ public abstract class LaserDestructorDePlanetas extends Armas {
         super.precio += 100000.12f;
         super.peso += 750000.29f;
         super.ataque += 45;
-    }
-    
-    /**
-     * Constructor por omisión que crea e inicializa
-     *  el <code>Armas</code> para una nave espacial.
-     */
-    public Armas() {
-	super.nombre = "\nArmas de tipo: ";
-	super.descripcion = "Armas: ";
-	new LaserDestructorDePlanetas();
     }
 }
