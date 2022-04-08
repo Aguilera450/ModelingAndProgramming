@@ -14,7 +14,7 @@ public abstract class SistemaPropulsion extends Componente {
      */
     public SistemaPropulsion() {
 		super.nombre = "Sistema de propulsion tipo: ";
-		super.descripcion = "Sistema de propulsion: ";
+		super.descripcion = "Descripcion del sistema de propulsion: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;

@@ -14,7 +14,7 @@ public abstract class Armas extends Componente{
      */
     public Armas(){
         super.nombre = "Armas de tipo: ";
-		super.descripcion = "Armas: ";
+        super.descripcion = "Descripcion de las armas: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;

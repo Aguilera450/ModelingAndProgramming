@@ -14,7 +14,7 @@ public abstract class Cabina extends Componente {
      */
     public Cabina() {
 		super.nombre = "Cabina de tipo: ";
-		super.descripcion = "Cabina: ";
+		super.descripcion = "Descripcion de la cabina: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;
