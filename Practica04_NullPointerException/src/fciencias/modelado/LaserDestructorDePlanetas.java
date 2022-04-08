@@ -9,7 +9,7 @@
  * @see <code>Armas</code>.
  */
 
-public class abstract LaserDestructorDePlanetas extends Armas {
+public abstract class LaserDestructorDePlanetas extends Armas {
     
     /**
      * Constructor por omisión de una <code>Armas</code>
@@ -18,8 +18,8 @@ public class abstract LaserDestructorDePlanetas extends Armas {
      *  a este tipo de armas en específico, al constructor
      *  general hecho en la clase <code>Armas</code>.</p>
      */
-    public class LaserDestructorDePlanetas() {
-	    super();
+    public LaserDestructorDePlanetas() {
+	super();
         super.nombre += "Laser Destructor de Planetas.";
         super.descripcion += "No hace falta explicar lo que hace, lo apodan "
             + " el Temor de Dios, apto para cualquiera que quiera desatar un"

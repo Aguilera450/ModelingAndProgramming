@@ -9,7 +9,7 @@
  * @see <code>Armas</code>.
  */
 
-public class abstract LaserSimple extends Armas {
+public abstract class LaserSimple extends Armas {
     
     /**
      * Constructor por omisión de una <code>Armas</code>
@@ -18,8 +18,8 @@ public class abstract LaserSimple extends Armas {
      *  a este tipo de armas en específico, al constructor
      *  general hecho en la clase <code>Armas</code>.</p>
      */
-    public class LaserSimple() {
-	    super();
+    public LaserSimple() {
+	super();
         super.nombre += "Laser Simple.";
         super.descripcion += "Un laser simple, eficaz y barato, nunca  "
             + " hay que salir sin uno de estos a la galaxia fría y cruel."

@@ -9,7 +9,7 @@
  * @see <code>Cabina</code>.
  */
 
-public class abstract CabinaEjercito extends Cabina {
+public abstract class CabinaEjercito extends Cabina {
     
     /**
      * Constructor por omisión de una <code>Cabina</code>

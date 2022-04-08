@@ -9,7 +9,7 @@
  * @see <code>Armas</code>.
  */
 
-public class abstract MisilesDePlasma extends Armas {
+public abstract class MisilesDePlasma extends Armas {
     
     /**
      * Constructor por omisión de una <code>Armas</code>
@@ -18,8 +18,8 @@ public class abstract MisilesDePlasma extends Armas {
      *  a este tipo de armas en específico, al constructor
      *  general hecho en la clase <code>Armas</code>.</p>
      */
-    public class MisilesDePlasma() {
-	    super();
+    public MisilesDePlasma() {
+	super();
         super.nombre += "Misiles de Plasma.";
         super.descripcion += "Unos poderosos Misiles de Plasma, mortales y rápidos "
             + " contra seres vivos y construcciones avanzadas."

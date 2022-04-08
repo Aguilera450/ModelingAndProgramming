@@ -8,7 +8,7 @@
  * @version 1.0 - 05/04/2022
  */
 
-public class abstract Componentes {
+public abstract class Componente {
     
     /* Atributos. */
     protected String nombre;

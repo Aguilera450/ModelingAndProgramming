@@ -9,7 +9,7 @@
  * @see <code>Cabina</code>.
  */
 
-public class abstract CabinaTripulacionPequena extends Cabina {
+public abstract class CabinaTripulacionPequena extends Cabina {
     
     /**
      * Constructor por omisión de una <code>Cabina</code>
@@ -18,8 +18,8 @@ public class abstract CabinaTripulacionPequena extends Cabina {
      *  a este tipo de cabina en específico, al constructor
      *  general hecho en la clase <code>Cabina</code>.</p>
      */
-    public class CabinaUnPiloto() {
-	    super();
+    public CabinaUnPiloto() {
+	super();
         super.nombre += "Cabina para una pequeña tripulación.";
         super.descripcion += "La cabina ideal si se necesitan pequeñas  "
             + "excursiones o invaciones a baja escala. "

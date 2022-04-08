@@ -7,7 +7,7 @@
  * @see <code>Componentes</code>.
  */
 
-public class abstract SistemaPropulsion extends Componentes {
+public abstract class SistemaPropulsion extends Componente {
     
     /**
      * Constructor por omisión que crea e inicializa un Sistema 

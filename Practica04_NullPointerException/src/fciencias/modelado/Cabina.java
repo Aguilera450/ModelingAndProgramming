@@ -8,7 +8,7 @@
  * @see <code>Componentes</code>.
  */
 
-public class abstract Cabina extends Componentes {
+public abstract class Cabina extends Componente {
     
     /**
      * Constructor por omisión que crea e inicializa

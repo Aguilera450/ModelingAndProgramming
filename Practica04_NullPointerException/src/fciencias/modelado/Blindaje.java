@@ -8,7 +8,7 @@
  * @see <code>Componentes</code>.
  */
 
-public class abstract Blindaje extends Componentes {
+public abstract class Blindaje extends Componente {
     
     /**
      * Constructor por omisión que crea e inicializa

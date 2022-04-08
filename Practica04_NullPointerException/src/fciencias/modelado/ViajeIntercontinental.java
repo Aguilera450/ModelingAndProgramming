@@ -8,7 +8,7 @@
  * @see <code>Componentes</code>.
  */
 
-public class abstract ViajeIntercontinental extends SistemaPropulsion {
+public abstract class ViajeIntercontinental extends SistemaPropulsion {
     
     /**
      * Constructor por omisión de un <code>ViajeIntercontinental</code>.
@@ -16,7 +16,7 @@ public class abstract ViajeIntercontinental extends SistemaPropulsion {
      * de viaje en específico al constructor general hecho en la clase
      * <code>SistemaPropulsion</code>.</p>
      */
-    public class ViajeIntercontinental() {
+    public ViajeIntercontinental() {
 		super();
 		super.nombre += "Viaje Intercontinental.";
 		super.descripcion += "Este sistema es utilizado para viajar "

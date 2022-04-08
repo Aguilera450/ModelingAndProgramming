@@ -9,7 +9,7 @@
  * @see <code>Blindaje</code>.
  */
 
-public class abstract Simple extends Blindaje {
+public abstract class Simple extends Blindaje {
     
     /**
      * Constructor por omisión de un <code>Blindaje</code>
@@ -18,7 +18,7 @@ public class abstract Simple extends Blindaje {
      *  a este tipo de blindaje en específico, al constructor
      *  general hecho en la clase <code>Blindaje</code>.</p>
      */
-    public class Simple() {
+    public Simple() {
         super();
         super.nombre += "Simple.";
         super.descripcion += "Este tipo de blindaje es sencillo "

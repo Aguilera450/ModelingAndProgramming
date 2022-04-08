@@ -9,7 +9,7 @@
  * @see <code>Blindaje</code>.
  */
 
-public class abstract Fortaleza extends Blindaje {
+public abstract class Fortaleza extends Blindaje {
     
     /**
      * Constructor por omisión de un <code>Blindaje</code>
@@ -18,7 +18,7 @@ public class abstract Fortaleza extends Blindaje {
      *  a este tipo de blindaje en específico, al constructor
      *  general hecho en la clase <code>Blindaje</code>.</p>
      */
-    public class Fortaleza() {
+    public Fortaleza() {
         super();
         super.nombre += "Fortaleza.";
         super.descripcion += "Este tipo de blindaje esta preparado "
