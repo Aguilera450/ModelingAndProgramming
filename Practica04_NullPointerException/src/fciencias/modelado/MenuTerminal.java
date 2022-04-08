@@ -13,16 +13,16 @@ public class MenuTerminal {
     /**
      * Método que le solicita un entero al usuario acorde al menú proporcionado.
      * 
-     * @param message Menu con opciones.
+     * @param mensaje Menu con opciones.
      * @return La opción ingresada por el usuario.
      */
-    public int opcionMenu(String message) {
+    public int opcionMenu(String mensaje) {
         Scanner input = new Scanner(System.in);
         boolean exit = false;
         int userInput = 0;
         do {
             try {
-                System.out.println("\n" + message);
+                System.out.println("\n" + mensaje);
                 userInput = input.nextInt();
             } catch (Exception e) {
                 System.out.println("\nSe ingresó una opción inválida, intentelo nuevamente.");
@@ -37,18 +37,18 @@ public class MenuTerminal {
     /**
      * Método que le solicita un entero al usuario dentro de un rango acorde al menú proporcionado.
      * 
-     * @param message Menu con opciones.
+     * @param mensaje Menu con opciones.
      * @param min     Minimo del rango
      * @param max     Máximo del rango
      * @return La opción ingresada por el usuario.
      */
-    public int opcionMenu(String message, int min, int max) {
+    public int opcionMenu(String mensaje, int min, int max) {
         Scanner input = new Scanner(System.in);
         boolean exit = false;
         int userInput = 0;
         do {
             try {
-                System.out.println("\n" + message);
+                System.out.println("\n" + mensaje);
                 userInput = input.nextInt();
                 if (userInput >= min && userInput <= max)
                     exit = true;
