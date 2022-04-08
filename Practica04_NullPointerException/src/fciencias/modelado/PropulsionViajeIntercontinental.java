@@ -8,7 +8,7 @@
  * @see <code>Componente</code>.
  */
 
-public abstract class PropulsionViajeIntercontinental extends SistemaPropulsion {
+public class PropulsionViajeIntercontinental extends SistemaPropulsion {
     
     /**
      * Constructor de un <code>PropulsionViajeIntercontinental</code>.
