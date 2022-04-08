@@ -11,13 +11,13 @@
 public abstract class Componente {
     
     /* Atributos. */
-    protected String nombre;
-    protected String descripcion;
-    protected float precio;
-    protected int ataque;
-    protected int defensa;
-    protected int velocidad;
-    protected float peso;
+    protected String nombre = null;
+    protected String descripcion = null;
+    protected float precio = 0.0f;
+    protected int ataque = 0;
+    protected int defensa = 0;
+    protected int velocidad = 0;
+    protected float peso = 0.0f;
 
     /**
      * Método que nos dice el nombre del componente anexado.

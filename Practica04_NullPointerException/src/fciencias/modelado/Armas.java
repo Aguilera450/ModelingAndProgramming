@@ -10,18 +10,6 @@
 
 public class abstract Armas extends Componentes {
     
-    /**
-     * Constructor por omisión que crea e inicializa
-     *  el <code>Armas</code> para una nave espacial.
-     */
-    public Armas() {
-		super.nombre = "Armas de tipo: ";
-		super.descripcion = "Armas: ";
-		super.precio = 0.0f;
-		super.velocidad = 0;
-		super.defensa = 0;
-		super.peso = 0.0f;
-		super.ataque = 0;
-    }
-    
+    /** Se crea un objeto de tipo <code>Armas</code>. */
+    public Armas();
 }

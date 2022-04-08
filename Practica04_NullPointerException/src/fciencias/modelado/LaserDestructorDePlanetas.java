@@ -28,4 +28,14 @@ public abstract class LaserDestructorDePlanetas extends Armas {
         super.peso += 750000.29f;
         super.ataque += 45;
     }
+    
+    /**
+     * Constructor por omisión que crea e inicializa
+     *  el <code>Armas</code> para una nave espacial.
+     */
+    public Armas() {
+	super.nombre = "\nArmas de tipo: ";
+	super.descripcion = "Armas: ";
+	new LaserDestructorDePlanetas();
+    }
 }

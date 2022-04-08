@@ -28,4 +28,14 @@ public abstract class MisilesDePlasma extends Armas {
         super.peso += 60200.52f;
         super.ataque += 7;
     }
+    
+    /**
+     * Constructor por omisión que crea e inicializa
+     *  el <code>Armas</code> para una nave espacial.
+     */
+    public Armas() {
+	super.nombre = "\nArmas de tipo: ";
+	super.descripcion = "Armas: ";
+	new MisilesDePlasma();
+    }
 }

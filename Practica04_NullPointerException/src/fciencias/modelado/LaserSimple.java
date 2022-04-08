@@ -10,7 +10,7 @@
  */
 
 public abstract class LaserSimple extends Armas {
-    
+
     /**
      * Constructor por omisión de una <code>Armas</code>
      * de tipo <code>Laser Simple</code>.
@@ -27,5 +27,15 @@ public abstract class LaserSimple extends Armas {
         super.precio += 32000.99f;
         super.peso += 40000.52f;
         super.ataque += 3;
+    }
+    
+    /**
+     * Constructor por omisión que crea e inicializa
+     *  el <code>Armas</code> para una nave espacial.
+     */
+    public Armas() {
+	super.nombre = "\nArmas de tipo: ";
+	super.descripcion = "Armas: ";
+	new LaserSimple();
     }
 }
