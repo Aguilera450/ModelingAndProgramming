@@ -54,33 +54,118 @@ public class CrearNave {
      */
     public NaveEspacial crearNavePersonalizada(){
         MenuTerminal menu = new MenuTerminal();
-        NaveEspacial naveEscogida = null;
-        int opcion = menu.opcionMenu("\nNuestro catálogo de naves es el siguiente:" +
-                    "\n1 - Nave Individual de Combate"+
-                    "\n2 - Nave Militar de Transporte"+
-                    "\n3 - Nave Base Espacial de Guerra"+
-                    "\n4 - Salir"+
-                    "\nElije una opcion(1-4): ",1,4);
+        NaveEspacial naveArmada = new NaveEspacial();
+
+        System.out.println("\n*Gracias por su preferencia, comencemos con la construccion de su nave."+
+        "\nLos componentes se listaran de mas barato a mas caro*");
+
+        // ------ SELECCIÓN DE SISTEMA DE PROPULSIÓN ------
+        int opcion = menu.opcionMenu(
+                    "--------------------------------------" +
+                    "\nSistemas de Propulsion disponibles:" +
+                    "\n1 - Viaje Intercontinental"+
+                    "\n2 - Viaje Interplanetario"+
+                    "\n3 - Viaje Intergalactico"+
+                    "\nElije una opcion(1-3): ",1,3);
 
         switch (opcion) {
             case 1:
-                naveEscogida = crearNaveIndividualCombate();
+                naveArmada.darSistemasPropulsion(new PropulsionViajeIntercontinental());
                 break;
             
             case 2:
-                naveEscogida = crearNaveMilitarTransporte();
+                naveArmada.darSistemasPropulsion(new PropulsionViajeInterplanetario());
                 break;
 
             case 3:
-                naveEscogida = crearNaveBaseEspacialDeGuerra();
+                naveArmada.darSistemasPropulsion(new PropulsionViajeIntergalactico());
                 break;
             
-            case 4:
-                break;
-
             default:
                 break;
         }
-        return naveEscogida;
+
+
+        // ------ SELECCIÓN DE BLINDAJE ------
+        opcion = menu.opcionMenu(
+                    "--------------------------------------" +
+                    "\nBlindajes disponibles:" +
+                    "\n1 - Simple"+
+                    "\n2 - Reforzado"+
+                    "\n3 - Fortaleza"+
+                    "\nElije una opcion(1-3): ",1,3);
+
+        switch (opcion) {
+            case 1:
+                naveArmada.darBlindaje(new BlindajeSimple());
+                break;
+            
+            case 2:
+                naveArmada.darBlindaje(new BlindajeReforzado());
+                break;
+
+            case 3:
+                naveArmada.darBlindaje(new BlindajeFortaleza());
+                break;
+            
+            default:
+                break;
+        }
+
+
+        // ------ SELECCIÓN DE CABINA ------
+        opcion = menu.opcionMenu(
+                    "--------------------------------------" +
+                    "\nCabinas disponibles:" +
+                    "\n1 - Un Piloto"+
+                    "\n2 - Tripulación pequeña"+
+                    "\n3 - Ejercito"+
+                    "\nElije una opcion(1-3): ",1,3);
+
+        switch (opcion) {
+            case 1:
+                naveArmada.darCabina(new CabinaUnPiloto());
+                break;
+            
+            case 2:
+                naveArmada.darCabina(new CabinaTripulacionPequena());
+                break;
+
+            case 3:
+                naveArmada.darCabina(new CabinaTripulacionEjercito());
+                break;
+            
+            default:
+                break;
+        }
+
+        // ------ SELECCIÓN DE ARMAS ------
+        opcion = menu.opcionMenu(
+                    "--------------------------------------" +
+                    "\nArmas disponibles:" +
+                    "\n1 - Laser Simple"+
+                    "\n2 - Misiles de Plasma"+
+                    "\n3 - Laser Destructor de Planetas"+
+                    "\nElije una opcion(1-3): ",1,3);
+
+        switch (opcion) {
+            case 1:
+                naveArmada.darArmas(new LaserSimple());
+                break;
+            
+            case 2:
+                naveArmada.darArmas(new MisilesDePlasma());
+                break;
+
+            case 3:
+                naveArmada.darArmas(new LaserDestructorDePlanetas());
+                break;
+            
+            default:
+                break;
+        }
+        System.out.println("\n*Construcción de nave personalizada completada*");
+        
+        return naveArmada;
     }
 }
