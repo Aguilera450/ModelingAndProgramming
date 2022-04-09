@@ -13,8 +13,8 @@ public abstract class Blindaje extends Componente{
      * Constructor que inicializa un <code>Componente</code> de tipo <code>Blindaje</code>.
      */
     public Blindaje() {
-		super.nombre = "Blindaje de tipo: ";
-		super.descripcion = "Descripcion del blindaje: ";
+		super.nombre = "Blindaje tipo ";
+		super.descripcion = "Descripción del blindaje: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;

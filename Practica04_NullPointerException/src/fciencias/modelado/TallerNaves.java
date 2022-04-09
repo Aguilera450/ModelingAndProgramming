@@ -82,6 +82,7 @@ public class TallerNaves {
                             break;
                         
                         case 4:
+                        System.out.println("\n-Su presupuesto no es suficiente para esta nave, le pediremos que se retiré porque hay más clientes esperando.-");
                             seguir = false;
                             break;
 

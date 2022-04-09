@@ -163,15 +163,25 @@ public class NaveEspacial {
 
     @Override
     public String toString(){
-        return sistemaPropulsion.nombre()
+        return "\n-------------------------"  
+            + "\n" + sistemaPropulsion.nombre()
+            + "\n" + sistemaPropulsion.descripcion()
+            + "\n---------------"  
             + "\n" + armas.nombre()
+            + "\n" + armas.descripcion()
+            + "\n---------------"  
             + "\n" + cabina.nombre()
+            + "\n" + cabina.descripcion()
+            + "\n---------------"  
             + "\n" + blindaje.nombre()
-            + "\nAtaque: " +ataque
-            + "\nDefensa: " +defensa
-            + "\nVelocidad: " +velocidad
-            + "\nPeso: " +peso
-            + "\nPrecio: " +precio;
+            + "\n" + blindaje.descripcion()
+            + "\n---------------" 
+            + "\nAtaque: " + ataque
+            + "\nDefensa: " + defensa
+            + "\nVelocidad: " + velocidad
+            + "\nPeso: " + peso
+            + "\nPrecio: " + precio
+            + "\n-------------------------"; 
     }
 
 }

@@ -13,8 +13,8 @@ public abstract class Arma extends Componente{
      * Constructor que inicializa un <code>Componente</code> de tipo <code>Arma</code>.
      */
     public Arma(){
-        super.nombre = "Armas de tipo: ";
-        super.descripcion = "Descripcion de las armas: ";
+        super.nombre = "Armas tipo ";
+		super.descripcion = "Descripción de las armas: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;

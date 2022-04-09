@@ -13,8 +13,8 @@ public abstract class Cabina extends Componente {
 	 * Constructor que inicializa un <code>Componente</code> de tipo <code>Cabina</code>.
      */
     public Cabina() {
-		super.nombre = "Cabina de tipo: ";
-		super.descripcion = "Descripcion de la cabina: ";
+		super.nombre = "Cabina tipo ";
+		super.descripcion = "Descripción de la cabina: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;

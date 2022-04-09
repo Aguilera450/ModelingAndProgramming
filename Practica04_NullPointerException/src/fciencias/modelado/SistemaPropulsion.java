@@ -13,8 +13,8 @@ public abstract class SistemaPropulsion extends Componente {
 	 * Constructor que inicializa un <code>Componente</code> de tipo <code>SistemaPropulsion</code>.
      */
     public SistemaPropulsion() {
-		super.nombre = "Sistema de propulsion tipo: ";
-		super.descripcion = "Descripcion del sistema de propulsion: ";
+		super.nombre = "Sistema propulsión tipo ";
+		super.descripcion = "Descripción del sistema de propulsión: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;
