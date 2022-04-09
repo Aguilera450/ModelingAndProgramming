@@ -24,7 +24,7 @@ public class MisilesDePlasma extends Arma {
             + " Aprovecha que la munición de plasma viene incluida.";
         super.precio += 298777.99f;
         super.peso += 1987.52f;
-        super.ataque += 23;
-        super.defensa = 2;
+        super.ataque += 23.00f;
+        super.defensa = 2.00f;
     }
 }

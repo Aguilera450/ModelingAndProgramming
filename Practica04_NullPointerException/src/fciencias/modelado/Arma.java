@@ -16,9 +16,9 @@ public abstract class Arma extends Componente{
         super.nombre = "Armas de tipo: ";
         super.descripcion = "Descripcion de las armas: ";
 		super.precio = 0.0f;
-		super.ataque = 0;
-		super.defensa = 0;
-		super.velocidad = 0;
+		super.ataque = 0.0f;
+		super.defensa = 0.0f;
+		super.velocidad = 0.0f;
 		super.peso = 0.0f;
     }
 }

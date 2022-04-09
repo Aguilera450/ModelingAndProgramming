@@ -16,9 +16,9 @@ public abstract class Blindaje extends Componente{
 		super.nombre = "Blindaje de tipo: ";
 		super.descripcion = "Descripcion del blindaje: ";
 		super.precio = 0.0f;
-		super.ataque = 0;
-		super.defensa = 0;
-		super.velocidad = 0;
+		super.ataque = 0.0f;
+		super.defensa = 0.0f;
+		super.velocidad = 0.0f;
 		super.peso = 0.0f;
     }
     

@@ -24,6 +24,6 @@ public class BlindajeSimple extends Blindaje {
             + "algo problemático si se necesita esquivar barreras.";
         super.precio += 50000.50f;
         super.peso += 4900.80f;
-        super.defensa += 5;
+        super.defensa += 5.00f;
     }
 }

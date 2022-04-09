@@ -25,7 +25,7 @@ public class PropulsionViajeInterplanetario extends SistemaPropulsion{
 			+ "espacial).";
 		super.precio += 294000.99f;
 		super.peso += 2985.90f;
-		super.velocidad += 500;
-		super.defensa += 3;
+		super.velocidad += 500.00f;
+		super.defensa += 3.00f;
     }    
 }
