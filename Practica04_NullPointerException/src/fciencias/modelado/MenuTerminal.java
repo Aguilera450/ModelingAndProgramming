@@ -14,7 +14,7 @@ public class MenuTerminal {
      * Método que le solicita un entero al usuario acorde al menú proporcionado.
      * 
      * @param mensaje Menu con opciones.
-     * @return La opción ingresada por el usuario.
+     * @return <code>int</code> -- La opción ingresada por el usuario.
      */
     public int opcionMenu(String mensaje) {
         Scanner input = new Scanner(System.in);
@@ -40,7 +40,7 @@ public class MenuTerminal {
      * @param mensaje Menu con opciones.
      * @param min     Minimo del rango
      * @param max     Máximo del rango
-     * @return La opción ingresada por el usuario.
+     * @return <code>int</code> -- La opción ingresada por el usuario.
      */
     public int opcionMenu(String mensaje, int min, int max) {
         Scanner input = new Scanner(System.in);
@@ -65,6 +65,29 @@ public class MenuTerminal {
         return userInput;
     }
 
+    /**
+    * Método que le solicita un número float al usuario.
+    * @param message mensaje de solicitud del float.
+    * @return <code>float</code> -- El número ingresado por el usuario.
+    */
+    public float dameUnFloat(String message){
+        Scanner input = new Scanner(System.in);
+        boolean exit  = false;
+        float userInput = 0;
+        do{
+            try{
+                System.out.println("\n[*] "+ message);
+                userInput = input.nextFloat();
+                exit = true;
+            }catch(Exception e){
+                System.out.println("\nSe ingreso un valor inválido, intentelo nuevamente.");
+            }finally{
+                input.nextLine(); // Limpiamos el buffer.
+            }
+        }while(exit == false);
+
+        return userInput;
+    }
     /**
      * Método que limpia la terminal.
      */
