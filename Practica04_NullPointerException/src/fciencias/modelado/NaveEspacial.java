@@ -30,6 +30,17 @@ public class NaveEspacial {
     private float peso;
 
     /**
+     * Método que actualiza el precio, ataque, defensa velocidad y precio
+     * de una nave acorde a un componente.
+     */
+    private void actualizarCaracteristicas(NaveEspacial nave, Componente componente){
+        nave.precio += componente.precio();
+        nave.ataque += componente.ataque();
+        nave.defensa += componente.defensa();
+        nave.velocidad += componente.velocidad();
+        nave.peso += componente.peso();
+    }
+    /**
      * Método para obtener los sistemas de propulsion de la nave.
      * @return <code>SistemasPropulsion</code> -- Sistemas de propulsion de la nave.
      */
@@ -107,6 +118,7 @@ public class NaveEspacial {
      */
     public void darSistemasPropulsion(SistemaPropulsion sistemaPropulsion){
         this.sistemaPropulsion = sistemaPropulsion;
+        actualizarCaracteristicas(this, sistemaPropulsion);
     }
 
     /**
@@ -115,6 +127,7 @@ public class NaveEspacial {
      */
     public void darBlindaje(Blindaje blindaje){
         this.blindaje = blindaje;
+        actualizarCaracteristicas(this, blindaje);
     }
 
     /**
@@ -123,6 +136,7 @@ public class NaveEspacial {
      */
     public void darCabina(Cabina cabina){
         this.cabina = cabina;
+        actualizarCaracteristicas(this, cabina);
     }
 
     /**
@@ -131,6 +145,7 @@ public class NaveEspacial {
      */
     public void darArmas(Arma armas){
         this.armas = armas;
+        actualizarCaracteristicas(this, armas);
     }
 
     @Override
