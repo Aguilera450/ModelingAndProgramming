@@ -135,10 +135,10 @@ public class NaveEspacial {
 
     @Override
     public String toString(){
-        return "Sistema de Propulsión: " + sistemaPropulsion.nombre()
-            + "\nArma de la Nave: " + armas.nombre()
-            + "\nCabina de la Nave: " + cabina.nombre()
-            + "\nBlindaje de la Nave: " + blindaje.nombre()
+        return sistemaPropulsion.nombre()
+            + "\n" + armas.nombre()
+            + "\n" + cabina.nombre()
+            + "\n" + blindaje.nombre()
             + "\nAtaque: " +ataque
             + "\nDefensa: " +defensa
             + "\nVelocidad: " +velocidad
