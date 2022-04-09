@@ -24,7 +24,7 @@ public class PropulsionViajeIntercontinental extends SistemaPropulsion {
 			+ "el que se encuentre la nave espacial).";
 		super.precio += 105000.99f;
 		super.peso += 997.90f;
-		super.velocidad += 100.00f;
-		super.defensa += 1.00f;
+		super.velocidad += 100;
+		super.defensa += 1;
     }
 }

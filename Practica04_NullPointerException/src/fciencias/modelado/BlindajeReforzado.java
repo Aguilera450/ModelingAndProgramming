@@ -24,6 +24,6 @@ public class BlindajeReforzado extends Blindaje {
             + "y la mayoría del arsenal balistico.";
         super.precio += 145000.00f;
         super.peso += 9975.87f;
-        super.defensa += 15.00f;
+        super.defensa += 15;
     }
 }
