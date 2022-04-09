@@ -11,13 +11,13 @@
  */
 public class NaveEspacial {
     /** Sistema de propulsion de la nave */
-    private SistemaPropulsion sistemaPropulsion;
+    private SistemaPropulsion sistemaPropulsion = null;
     /** Blindaje de la nave */
-    private Blindaje blindaje;
+    private Blindaje blindaje = null;
     /** Cabina de la nave */
-    private Cabina cabina;
+    private Cabina cabina = null;
     /** Armas de la nave */
-    private Arma armas;
+    private Arma armas = null;
     /** Precio total de la nave considerando sus componentes */
     private float precio;
     /** Ataque total de la nave considerando sus componentes*/
@@ -28,6 +28,18 @@ public class NaveEspacial {
     private float velocidad;
     /** Peso total de la nave considerando sus componentes*/
     private float peso;
+
+    /**
+     * Método que actualiza el precio, ataque, defensa velocidad y precio
+     * de una nave acorde a un componente.
+     */
+    private void actualizarCaracteristicas(NaveEspacial nave, Componente componente){
+        nave.precio += componente.precio();
+        nave.ataque += componente.ataque();
+        nave.defensa += componente.defensa();
+        nave.velocidad += componente.velocidad();
+        nave.peso += componente.peso();
+    }
 
     /**
      * Método para obtener los sistemas de propulsion de la nave.
@@ -103,34 +115,50 @@ public class NaveEspacial {
 
     /**
      * Método para asignar el sistema de propulsion de la nave.
+     * Si la nave ya cuenta con un sistema de propulsión no se sustituirá.
      * @param sistemaPropulsion -- Sistema de propulsion de la nave.
      */
     public void darSistemasPropulsion(SistemaPropulsion sistemaPropulsion){
-        this.sistemaPropulsion = sistemaPropulsion;
+        if(this.sistemaPropulsion == null){
+            this.sistemaPropulsion = sistemaPropulsion;
+            actualizarCaracteristicas(this, sistemaPropulsion);
+        }
     }
 
     /**
      * Método para asignar el blindaje de la nave.
+     * * Si la nave ya cuenta con un blindaje no se sustituirá.
      * @param blindaje -- Blindaje de la nave.
      */
     public void darBlindaje(Blindaje blindaje){
-        this.blindaje = blindaje;
+        if(this.blindaje == null){
+            this.blindaje = blindaje;
+            actualizarCaracteristicas(this, blindaje);
+        }
     }
 
     /**
      * Método para asginar la cabina de la nave.
+     * Si la nave ya cuenta con una cabina no se sustituirá.
      * @param cabina -- Cabina de la nave.
      */
     public void darCabina(Cabina cabina){
-        this.cabina = cabina;
+        if(this.cabina == null){
+            this.cabina = cabina;
+            actualizarCaracteristicas(this, cabina);
+        }
     }
 
     /**
      * Método apra asignar las armas de la nave.
+     * * Si la nave ya cuenta con armas no se sustituirán.
      * @param armas -- Armas de la nave.
      */
     public void darArmas(Arma armas){
-        this.armas = armas;
+        if(this.armas == null){
+            this.armas = armas;
+            actualizarCaracteristicas(this, armas);
+        }
     }
 
     @Override
