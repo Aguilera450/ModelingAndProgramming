@@ -121,14 +121,22 @@ Se dará por hecho que el usuario sabe moverse en terminal.\\
 
 \newpage
 \subsection*{Justificación de uso de patrón:}
-Para esta práctica usamos el patrón \textbf{Builder}. En un primer vistazo vimos que builder nos ayudaba a definir toda la estructura del proyecto, mientras que con Factory teníamos más libertad de implementar como quisieramos el proyecto y buscar una parte más especifica donde implementarlo. Ahora comparado con Abstract Factory
+Para esta práctica usamos el patrón \textbf{Builder} debido a que conciamos claramente los objetos simples (Compomentes de la nave) y el objeto complejo (Nave Espacial), además conocíamos el alcance que tendría, es decir, el número de componentes. 
+A diferencia de Abstract Factory, donde tendríamos un sistema más abierto en ese sentido, decidimos usar Builder porque se adaptaba a la problematica que se nos pedía programar, además de que permitía escalar más facilmente los componentes que conformaban la nave.
+Y además Builder no nos límitaba a un número de pasos ni un orden en específico como Abstract Factory.
+Por otra parte, en Abstract Factory hubieramos necesitado más clases que representarían las Fábricas de cada componente, esto lo vimos innecesario ya que como mencionamos, ya conocíamos los componentes especificos que conformaban la nave y de que tipo serían.
+Y también builder ya nos decía como trabajar la parte de las naves ya construídas (las del catalogo). 
+Es por esto que decidimos usar builder, pues se adaptaba muy bien a la problematica.
+
+\subsection*{Otras justificaciones:}
+A pesar de que en el PDF no se indicaba, consideramos útil el que el usuario pudiera salir del sistema en ciertos puntos. Esto para no obligar al usuario a seguir ciertas opciones para poder salir (legalmente, sin un Ctrl+C) del sistema.
 
 \subsection*{Tabla de Estadisticas de los Componentes de una Nave:}
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
-		Tipo Coponente & Precio & Peso & Ataque & Defensa & Velocidad \\ \hline
+		Tipo Componente & Precio & Peso & Ataque & Defensa & Velocidad \\ \hline
 		Laser Simple & 79,834.99\$ & 999.52 kg & 7 & 2 & - \\
 		Misiles de Plasma & 298,777.99\$ & 1,987.52 kg & 23 & 2 & - \\
 		Laser Destructor de Planetas & 945,785.99\$ & 10,000.52 kg & 50 & 2 & - \\
