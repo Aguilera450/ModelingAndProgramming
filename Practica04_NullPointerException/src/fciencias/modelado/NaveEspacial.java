@@ -33,7 +33,7 @@ public class NaveEspacial {
      * Método para obtener los sistemas de propulsion de la nave.
      * @return <code>SistemasPropulsion</code> -- Sistemas de propulsion de la nave.
      */
-    public SistemasPropulsion sistemasPropulsion(){
+    public SistemaPropulsion sistemaPropulsion(){
         return sistemaPropulsion;
     }
 
@@ -131,6 +131,10 @@ public class NaveEspacial {
      */
     public void darArmas(Arma armas){
         this.armas = armas;
+    }
+
+    public String toString(){
+        
     }
 
 }

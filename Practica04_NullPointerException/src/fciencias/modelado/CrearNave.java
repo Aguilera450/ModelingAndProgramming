@@ -132,7 +132,7 @@ public class CrearNave {
                 break;
 
             case 3:
-                naveArmada.darCabina(new CabinaTripulacionEjercito());
+                naveArmada.darCabina(new CabinaEjercito());
                 break;
             
             default:
