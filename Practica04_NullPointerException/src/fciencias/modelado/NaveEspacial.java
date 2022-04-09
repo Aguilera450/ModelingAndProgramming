@@ -21,11 +21,11 @@ public class NaveEspacial {
     /** Precio total de la nave considerando sus componentes */
     private float precio;
     /** Ataque total de la nave considerando sus componentes*/
-    private float ataque;
+    private int ataque;
     /** Defensa total de la nave considerando sus componentes*/
-    private float defensa;
+    private int defensa;
     /** Velocidad total de la nave considerando sus componentes*/
-    private float velocidad;
+    private int velocidad;
     /** Peso total de la nave considerando sus componentes*/
     private float peso;
 
@@ -85,7 +85,7 @@ public class NaveEspacial {
      * Método para obtener el ataque total de la nave considerando sus componentes.
      * @return <code>float</code> -- Ataque total de la nave.
      */
-    public float ataque(){
+    public int ataque(){
         return ataque;
     }
 
@@ -93,7 +93,7 @@ public class NaveEspacial {
      * Método para obtener la defensa total de la nave considerando sus componentes.
      * @return <code>float</code> -- Defensa total de la nave.
      */
-    public float defensa(){
+    public int defensa(){
         return defensa;
     }
 
@@ -101,7 +101,7 @@ public class NaveEspacial {
      * Método para obtener la velocidad total de la nave considerando sus componentes.
      * @return <code>float</code> -- Velocidad total de la nave.
      */
-    public float velocidad(){
+    public int velocidad(){
         return velocidad;
     }
 
