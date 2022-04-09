@@ -70,15 +70,15 @@ public class TallerNaves {
 
                     switch (opcion) {
                         case 1:
-                            naveUsuario = CrearNave.crearNaveIndividualCombate();
+                            naveUsuario = creadorNaves.crearNaveIndividualCombate();
                             break;
                         
                         case 2:
-                            naveUsuario = CrearNave.crearNaveMilitarTransporte();
+                            naveUsuario = creadorNaves.crearNaveMilitarTransporte();
                             break;
 
                         case 3:
-                            naveUsuario = CrearNave.crearNaveBaseEspacialDeGuerra();
+                            naveUsuario = creadorNaves.crearNaveBaseEspacialDeGuerra();
                             break;
                         
                         case 4:
