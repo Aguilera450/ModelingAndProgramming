@@ -41,6 +41,7 @@ public class TallerNaves {
         boolean seguir = false;
 
         // Primero se le pregunta al usuario su presupuesto
+        presupuestoCliente = menu.dameUnFloat("Ingrese su presupuesto: ");
         
         do{
             // El usuario construye su nave personalizada
