@@ -133,8 +133,17 @@ public class NaveEspacial {
         this.armas = armas;
     }
 
+    @Override
     public String toString(){
-        
+        return "Sistema de Propulsión: " + sistemaPropulsion.nombre()
+            + "\nArma de la Nave: " + armas.nombre()
+            + "\nCabina de la Nave: " + cabina.nombre()
+            + "\nBlindaje de la Nave: " + blindaje.nombre()
+            + "\nAtaque: " +ataque
+            + "\nDefensa: " +defensa
+            + "\nVelocidad: " +velocidad
+            + "\nPeso: " +peso
+            + "\nPrecio: " +precio;
     }
 
 }
