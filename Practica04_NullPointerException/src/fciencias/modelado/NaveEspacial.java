@@ -40,6 +40,7 @@ public class NaveEspacial {
         nave.velocidad += componente.velocidad();
         nave.peso += componente.peso();
     }
+
     /**
      * Método para obtener los sistemas de propulsion de la nave.
      * @return <code>SistemasPropulsion</code> -- Sistemas de propulsion de la nave.
@@ -114,38 +115,50 @@ public class NaveEspacial {
 
     /**
      * Método para asignar el sistema de propulsion de la nave.
+     * Si la nave ya cuenta con un sistema de propulsión no se sustituirá.
      * @param sistemaPropulsion -- Sistema de propulsion de la nave.
      */
     public void darSistemasPropulsion(SistemaPropulsion sistemaPropulsion){
-        this.sistemaPropulsion = sistemaPropulsion;
-        actualizarCaracteristicas(this, sistemaPropulsion);
+        if(sistemaPropulsion == null){
+            this.sistemaPropulsion = sistemaPropulsion;
+            actualizarCaracteristicas(this, sistemaPropulsion);
+        }
     }
 
     /**
      * Método para asignar el blindaje de la nave.
+     * * Si la nave ya cuenta con un blindaje no se sustituirá.
      * @param blindaje -- Blindaje de la nave.
      */
     public void darBlindaje(Blindaje blindaje){
-        this.blindaje = blindaje;
-        actualizarCaracteristicas(this, blindaje);
+        if(blindaje == null){
+            this.blindaje = blindaje;
+            actualizarCaracteristicas(this, blindaje);
+        }
     }
 
     /**
      * Método para asginar la cabina de la nave.
+     * Si la nave ya cuenta con una cabina no se sustituirá.
      * @param cabina -- Cabina de la nave.
      */
     public void darCabina(Cabina cabina){
-        this.cabina = cabina;
-        actualizarCaracteristicas(this, cabina);
+        if(cabina == null){
+            this.cabina = cabina;
+            actualizarCaracteristicas(this, cabina);
+        }
     }
 
     /**
      * Método apra asignar las armas de la nave.
+     * * Si la nave ya cuenta con armas no se sustituirán.
      * @param armas -- Armas de la nave.
      */
     public void darArmas(Arma armas){
-        this.armas = armas;
-        actualizarCaracteristicas(this, armas);
+        if(armas == null){
+            this.armas = armas;
+            actualizarCaracteristicas(this, armas);
+        }
     }
 
     @Override
