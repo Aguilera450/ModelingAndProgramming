@@ -82,7 +82,6 @@ public class TallerNaves {
                             break;
                         
                         case 4:
-                        System.out.println("\n-Su presupuesto no es suficiente para esta nave, le pediremos que se retiré porque hay más clientes esperando.-");
                             seguir = false;
                             break;
 
@@ -90,8 +89,10 @@ public class TallerNaves {
                             break;
                     }
                     // Si ya se le mostró al usuario el catálogo y aún así no le alcanza, se le saca de la tienda (se termina la ejecución)
-                    if(!meAlcanza(naveUsuario, presupuestoCliente))
+                    if(!meAlcanza(naveUsuario, presupuestoCliente)){
+                        System.out.println("\n-Su presupuesto no es suficiente para esta nave, le pediremos que se retiré porque hay más clientes esperando.-");
                         break;
+                    }
                 } else if(opcion == 3)
                     seguir = false;
             }
