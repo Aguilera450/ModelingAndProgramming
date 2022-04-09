@@ -24,6 +24,6 @@ public class CabinaUnPiloto extends Cabina {
             + "pero si necesitas más pasajeros hay mejores opciones.";
         super.precio += 19878.99f;
         super.peso += 1986.10f;
-        super.defensa += 2;
+        super.defensa += 2.00f;
     }
 }

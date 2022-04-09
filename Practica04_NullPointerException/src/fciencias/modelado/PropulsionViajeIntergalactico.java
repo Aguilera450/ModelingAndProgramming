@@ -24,7 +24,7 @@ public class PropulsionViajeIntergalactico extends SistemaPropulsion {
 			+ "0 < k < ∞, y en el que se encuentre la nave espacial).";
 		super.precio += 875000.50f;
 		super.peso += 9950.49f;
-		super.velocidad += 1000;
-		super.defensa += 5;
+		super.velocidad += 1000.00f;
+		super.defensa += 5.00f;
     }    
 }

@@ -23,6 +23,6 @@ public class BlindajeFortaleza extends Blindaje {
             + "no soporta impactos con lunas, soles y otros planetas.";
         super.precio += 385000.50f;
         super.peso += 49750.80f;
-        super.defensa += 50;
+        super.defensa += 50.00f;
     }
 }

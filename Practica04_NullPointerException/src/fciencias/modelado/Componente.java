@@ -17,11 +17,11 @@ public abstract class Componente {
     protected float precio;
 
     /** Ataque extra que el componente proporciona a la nave */
-    protected int ataque;
+    protected float ataque;
     /** Defensa extra que el componente proporciona a la nave */
-    protected int defensa;
+    protected float defensa;
     /** Velocidad extra que el componente proporciona a la nave */
-    protected int velocidad;
+    protected float velocidad;
     /** Peso extra que el componente proporciona a la nave */
     protected float peso;
 
@@ -53,7 +53,7 @@ public abstract class Componente {
      * Método que nos indica cuantitativamente el ataque proporcionado por el componente.
      * @return <code>int</code> -- ataque proporcionado por el componente.
      */
-    public int ataque() {
+    public float ataque() {
 	    return ataque;
     }
     
@@ -61,7 +61,7 @@ public abstract class Componente {
      * Método que nos indica cuantitativamente la defensa proporcionada por el componente.
      * @return <code>int</code> -- defensa proporcionada por el componente.
      */
-    public int defensa() {
+    public float defensa() {
 	    return defensa;
     }
     
@@ -69,7 +69,7 @@ public abstract class Componente {
      * Método que nos indica cuantitativamente la velocidad proporcionada por el componente.
      * @return <code>int</code> -- velocidad proporcionada por el componente.
      */
-    public int velocidad() {
+    public float velocidad() {
 	    return velocidad;
     }
     

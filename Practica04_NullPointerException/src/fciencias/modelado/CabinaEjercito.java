@@ -24,6 +24,6 @@ public class CabinaEjercito extends Cabina {
             + " genocidas más famosos de la galaxia.";
         super.precio += 199789.99f;
         super.peso += 34567.00f;
-        super.defensa += 10;
+        super.defensa += 10.00f;
     }
 }

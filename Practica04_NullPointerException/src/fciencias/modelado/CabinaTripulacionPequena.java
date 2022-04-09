@@ -24,6 +24,6 @@ public class CabinaTripulacionPequena extends Cabina {
             + " La mejor parte de todo es que incluye portavasos.";
         super.precio += 69876.99f;
         super.peso += 4899.52f;
-        super.defensa += 5;
+        super.defensa += 5.00f;
     }
 }
