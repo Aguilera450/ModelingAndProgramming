@@ -92,6 +92,11 @@ public class TallerNaves {
                     if(!meAlcanza(naveUsuario, presupuestoCliente)){
                         System.out.println("\n-Su presupuesto no es suficiente para esta nave, le pediremos que se retiré porque hay más clientes esperando.-");
                         break;
+                    } else {
+                        System.out.println("\nTu nave está lista para recoger, estas son sus características:\n" +
+                        naveUsuario.toString() + 
+                        "\nPaga en la caja la cantidad de $" + naveUsuario.precio());
+                        seguir = false;
                     }
                 } else if(opcion == 3)
                     seguir = false;
