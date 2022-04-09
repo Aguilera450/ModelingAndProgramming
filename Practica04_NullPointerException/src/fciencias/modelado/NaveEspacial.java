@@ -11,13 +11,13 @@
  */
 public class NaveEspacial {
     /** Sistema de propulsion de la nave */
-    private SistemaPropulsion sistemaPropulsion;
+    private SistemaPropulsion sistemaPropulsion = null;
     /** Blindaje de la nave */
-    private Blindaje blindaje;
+    private Blindaje blindaje = null;
     /** Cabina de la nave */
-    private Cabina cabina;
+    private Cabina cabina = null;
     /** Armas de la nave */
-    private Arma armas;
+    private Arma armas = null;
     /** Precio total de la nave considerando sus componentes */
     private float precio;
     /** Ataque total de la nave considerando sus componentes*/
@@ -119,7 +119,7 @@ public class NaveEspacial {
      * @param sistemaPropulsion -- Sistema de propulsion de la nave.
      */
     public void darSistemasPropulsion(SistemaPropulsion sistemaPropulsion){
-        if(sistemaPropulsion == null){
+        if(this.sistemaPropulsion == null){
             this.sistemaPropulsion = sistemaPropulsion;
             actualizarCaracteristicas(this, sistemaPropulsion);
         }
@@ -131,7 +131,7 @@ public class NaveEspacial {
      * @param blindaje -- Blindaje de la nave.
      */
     public void darBlindaje(Blindaje blindaje){
-        if(blindaje == null){
+        if(this.blindaje == null){
             this.blindaje = blindaje;
             actualizarCaracteristicas(this, blindaje);
         }
@@ -143,7 +143,7 @@ public class NaveEspacial {
      * @param cabina -- Cabina de la nave.
      */
     public void darCabina(Cabina cabina){
-        if(cabina == null){
+        if(this.cabina == null){
             this.cabina = cabina;
             actualizarCaracteristicas(this, cabina);
         }
@@ -155,7 +155,7 @@ public class NaveEspacial {
      * @param armas -- Armas de la nave.
      */
     public void darArmas(Arma armas){
-        if(armas == null){
+        if(this.armas == null){
             this.armas = armas;
             actualizarCaracteristicas(this, armas);
         }
