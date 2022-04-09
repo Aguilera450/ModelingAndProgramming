@@ -12,7 +12,7 @@ public class CrearNave {
      * Método que crea una nave individual de combate.
      * @return <code>NaveEspacial</code> -- Nave individual de combate.
      */
-    public static NaveEspacial crearNaveIndividualCombate(){
+    public NaveEspacial crearNaveIndividualCombate(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeInterplanetario());
         naveModelo.darBlindaje(new BlindajeReforzado());
@@ -25,7 +25,7 @@ public class CrearNave {
      * Método que crea una nave militar de transporte
      * @return <code>NaveEspacial</code> -- Nave militar de transporte.
      */
-    public static NaveEspacial crearNaveMilitarTransporte(){
+    public NaveEspacial crearNaveMilitarTransporte(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeIntergalactico());
         naveModelo.darBlindaje(new BlindajeReforzado());
@@ -38,7 +38,7 @@ public class CrearNave {
      * Método que crea una nave base espacial de guerra.
      * @return <code>NaveEspacial</code> -- Nave base espacial de guerra.
      */
-    public static NaveEspacial crearNaveBaseEspacialDeGuerra(){
+    public NaveEspacial crearNaveBaseEspacialDeGuerra(){
         NaveEspacial naveModelo = new NaveEspacial();
         naveModelo.darSistemasPropulsion(new PropulsionViajeIntergalactico());
         naveModelo.darBlindaje(new BlindajeFortaleza());

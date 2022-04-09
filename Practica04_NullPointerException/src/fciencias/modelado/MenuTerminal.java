@@ -67,16 +67,16 @@ public class MenuTerminal {
 
     /**
     * Método que le solicita un número float al usuario.
-    * @param message mensaje de solicitud del float.
+    * @param mensaje mensaje de solicitud del float.
     * @return <code>float</code> -- El número ingresado por el usuario.
     */
-    public float dameUnFloat(String message){
+    public float dameUnFloat(String mensaje){
         Scanner input = new Scanner(System.in);
         boolean exit  = false;
         float userInput = 0;
         do{
             try{
-                System.out.println("\n[*] "+ message);
+                System.out.println("\n[*] "+ mensaje);
                 userInput = input.nextFloat();
                 exit = true;
             }catch(Exception e){
