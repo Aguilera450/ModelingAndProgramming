@@ -24,7 +24,7 @@ public class LaserDestructorDePlanetas extends Arma {
             + " infierno. Por cuestiones legales no proporcionamos factura.";
         super.precio += 945785.99f;
         super.peso += 10000.52f;
-        super.ataque += 50.00f;
-        super.defensa = 2.00f;
+        super.ataque += 50;
+        super.defensa = 2;
     }
 }

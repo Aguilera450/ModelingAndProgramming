@@ -24,7 +24,7 @@ public class LaserSimple extends Arma {
             + " Todos nuestros clientes lo recomiendan.";
         super.precio += 79834.99f;
         super.peso += 999.52f;
-        super.ataque += 7.00f;
-        super.defensa = 2.00f;
+        super.ataque += 7;
+        super.defensa = 2;
     }
 }
