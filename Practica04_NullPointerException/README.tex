@@ -53,57 +53,51 @@ Menciona los principios de diseño esenciales de los patrones Factory, Abstract 
 Menciona una desventaja de cada patrón.
 
 \subsubsection*{Factory}
-Principios de diseño :
+Principios de diseño:
 \newcommand{\localtextbulletone}{\textcolor{black}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
 \begin{itemize}
-\item Esta abierto al cambio pero no a la modificación, es decir que te permiten añadir
-  clases nuevas sin que el código tenga que cambiar de ninguna manera.
-\item Si una de las clases, que no sea la principal y que a su vez forme parte del patrón,
-  no funciona de manera correcta, esta no afecta a las demás, pues es esta quién depende de
-  alguna otra y no al réves.
-\item Ordena la herencia en las clases.
+\item Se define una interfaz para crear objetos, pero permite decidir entre varias subclases cuál se usará para instanciar
+\item Se tiene un método conocido conceptualmente como "Factory Method" encargado de la creación de objetos segun las subclases.
+\item Encapsula las partes de código que cambian, de las que no cambian en un objeto sin exponer la lógica de creación al cliente.
+\item Ayuda que el código no dependa especificamente de alguna clase, lo cual ayuda a modularizar el proyecto.
+
 \end{itemize}
 Desventajas:
 \begin{itemize}
-\item No es el patrón más óptimo para complejidad en espacio.
-\item Se necesitan muchas clases para concretar el patrón, y cada vez que se quiera extender,
-  entonces se agregan más clases.
-\item Cada vez que se necesita anexar más partes de código le agregamos complejidad al diseño,
-  esto no permite que sea tan fácil.
+
+\item Al extender el sistema, cuando se agrega una nueva clase, se deberá modificar el Factory Method considerando las nuevas clases. 
+Esto es una desventaja pues estamos exponiendo el código a modificaciones inesperadas (por ejemplo).
 \end{itemize}
+
 \subsubsection*{Abstract Factory}
-Principios de diseño :
+Principios de diseño:
 \begin{itemize}
-\item Encapsula la responsabilidades de los objetos.
-\item Hace intercambiables compartamientos que ya dependen de alguna implementación del patrón
-  \code{abstract factory}.
-\item Los comportamientos en una familia dada son compatibles entre sí.
-\item Se puede mover el código de creación de productos a un solo lugar,
-  haciendo que el código sea más fácil de mantener.
-\item Es abierto al cambio y cerrado a la modificación
+\item El patrón funciona alrededor de una "fábrica" que crea "fábricas".
+\item Una interfaz es responsable de crear una fábrica de objetos relacionados sin especificar explícitamente las clases que involucran dichos objetos.
+\item Cada fábrica generada crea objetos como se establece en el patrón Factory. 
+
 \end{itemize}
 Desventajas:
 \begin{itemize}
-\item Cada vez que necesitemos anexar más comportamientos o clases, se necesitará una nueva
-  interfaz (en caso de no poder depender de alguna ya existente) e implementar cada método
-  en esta.
-\item Crece en complejidad en espacio.
-\item Hace más complejo el diseño del código.
+\item Cada vez que necesitemos anexar otra entidad, necesitaremos una "Fábrica" extra, es decir, una interfaz que administre los objetos de este tipo de entidad.
+\item El sistema crece mucho si se abusa del patrón, y esto lo hace más complejo mediante la creacion de clases para administrar objetos.
 \end{itemize}
+
 \subsubsection*{Builder}
-Principios de diseño :
+Principios de diseño:
 \begin{itemize}
-\item El código puede ser reutilizable, o ser extendido y modificado de manera significativa,
-  esto simplifica el proceso de extensión cuando el comportamiento a anexar tiene similitudes
-  con los ya existentes.
-\item Puedes construir objetos paso a paso.
-\item A menudo se usa para construir estructuras compuestas.
+	\item Permite construír distintas representaciones de objetos complejos mediante el uso de constructores de objetos simples.
+	\item La construcción de estos objetos complejos dependerá de un constructor o director que tratará a cada componente como una etapa de la construcción.
+	\item Se pueden tener directores concretos que se dediquen a un objeto complejo especígfico o directores abstractos que permitirán la construcción cualquier combinación de componentes.
+	\item Cada componente está modularizado, lo cual nos permite cambiar el orden de construcción con facilidad.
+	\item Encapsula la forma en que se construye un objeto complejo.
+	\item Permite que los objetos se construyan en un proceso de varios pasos y variable (a diferencia de las fábricas que es un solo paso).
 \end{itemize}
 Desventajas:
 \begin{itemize}
-\item El diseño del código se vuelve complejo.
-\item Aumenta la complejidad en espacio.
+\item La construcción de objetos requiere más conocimiento del dominio del cliente, ya que de no tener claro desde un inicio todas las posibilidades o la estructura final de los objetos, vamos a tener que estar modificando el código constantemente.
+
 \end{itemize}
 
 
@@ -120,15 +114,48 @@ Se dará por hecho que el usuario sabe moverse en terminal.\\
 \item[-] Si está leyendo esto significa que desempaquetó con éxito el proyecto.
 \item[-] Abra su terminal y diríjase a la ruta donde desempaquetó el proyecto.
 \item[-] Una vez estando en la ruta \code{Practica04\_NullPointerException}, diríjase a
-
   \code{Practica04\_NullPointerException/src/fciencias/modelado/}
-\item[-] Ejecute: “\code{javac Práctica04.java}”, esto generará los .class del proyecto.
-\item[-] Ejecute: “\code{java Práctica04}”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
+\item[-] Ejecute: “\code{javac TallerNaves.java}”, esto generará los .class del proyecto.
+\item[-] Ejecute: “\code{java TallerNaves}”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
 \end{itemize}
 
 \newpage
+\subsection*{Justificación de uso de patrón:}
+Para esta práctica usamos el patrón \textbf{Builder} debido a que conciamos claramente los objetos simples (Compomentes de la nave) y el objeto complejo (Nave Espacial), además conocíamos el alcance que tendría, es decir, el número de componentes. 
+A diferencia de Abstract Factory, donde tendríamos un sistema más abierto en ese sentido, decidimos usar Builder porque se adaptaba a la problematica que se nos pedía programar, además de que permitía escalar más facilmente los componentes que conformaban la nave.
+Y además Builder no nos límitaba a un número de pasos ni un orden en específico como Abstract Factory.
+Por otra parte, en Abstract Factory hubieramos necesitado más clases que representarían las Fábricas de cada componente, esto lo vimos innecesario ya que como mencionamos, ya conocíamos los componentes especificos que conformaban la nave y de que tipo serían.
+Y también builder ya nos decía como trabajar la parte de las naves ya construídas (las del catalogo). 
+Es por esto que decidimos usar builder, pues se adaptaba muy bien a la problematica.
+
+\subsection*{Otras justificaciones:}
+A pesar de que en el PDF no se indicaba, consideramos útil el que el usuario pudiera salir del sistema en ciertos puntos. Esto para no obligar al usuario a seguir ciertas opciones para poder salir (legalmente, sin un Ctrl+C) del sistema.
+
+\subsection*{Tabla de Estadisticas de los Componentes de una Nave:}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Tipo Componente & Precio & Peso & Ataque & Defensa & Velocidad \\ \hline
+		Laser Simple & 79,834.99\$ & 999.52 kg & 7 & 2 & - \\
+		Misiles de Plasma & 298,777.99\$ & 1,987.52 kg & 23 & 2 & - \\
+		Laser Destructor de Planetas & 945,785.99\$ & 10,000.52 kg & 50 & 2 & - \\
+		Blindaje Simple & 50,000.50\$ & 4,900.90 kg & - & 5 & - \\
+		Blindaje Reforzado & 145,000.00\$ & 9,975.87 kg & - & 15 & - \\
+		Blindaje Fortaleza & 385.000.00\$ & 49750.80 kg & - & 50 & - \\
+		Cabina Un Piloto & 19,878.99\$ & 1,986.10 kg & - & 2 & - \\
+		Cabina Tripulación Pequeña & 69,876.00\$ & 4,899.52 kg & - & 5 & - \\
+		Cabina Ejercito & 199.789.99\$ & 34,567.00 kg & - & 10 & - \\
+		Propulsión Viaje Intercontinental & 105,000.00\$ & 997.90 kg & - & 1 & 100 \\
+		Propulsión Viaje Interplanetario & 294.000.00\$ & 2,985.90 kg & - & 3 & 500 \\
+		Propulsión Viaje Intergalactico & 875,000.00\$ & 9,950.49 kg & - & 5 & 1000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\newpage
 \subsection*{Diagrama UML:}
-%\begin{center}
-%  \includegraphics[scale=0.16]{./Practica04UML.png}
-%\end{center}
+\begin{center}
+  \includegraphics[scale=0.18]{./Practica04UML.png}
+\end{center}
+
 \end{document}

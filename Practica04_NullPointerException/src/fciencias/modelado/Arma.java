@@ -1,5 +1,5 @@
 /**
- * Clase abstracta que modela un <code>Componente</code> de tipo <code>Cabina</code>.
+ * Clase abstracta que modela un <code>Componente</code> de tipo <code>Arma</code>.
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
@@ -7,19 +7,18 @@
  * @see <code>Componente</code>.
  */
 
-public abstract class Cabina extends Componente {
+public abstract class Arma extends Componente{
     
     /**
-	 * Constructor que inicializa un <code>Componente</code> de tipo <code>Cabina</code>.
+     * Constructor que inicializa un <code>Componente</code> de tipo <code>Arma</code>.
      */
-    public Cabina() {
-		super.nombre = "Cabina tipo ";
-		super.descripcion = "Descripción de la cabina: ";
+    public Arma(){
+        super.nombre = "Armas tipo ";
+		super.descripcion = "Descripción de las armas: ";
 		super.precio = 0.0f;
 		super.ataque = 0;
 		super.defensa = 0;
 		super.velocidad = 0;
 		super.peso = 0.0f;
     }
-    
 }
