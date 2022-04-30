@@ -3,6 +3,7 @@
 ### Objetivo
 <div class=text-justify>
 Usando los patrones de diseño vistos en clase resuelvan la siguiente problemática. *La solución propuesta debe evitar caer en problemas de rigidez, fragilidad, inmovilidad, y viscosidad*.
+
 ### Requerimientos
 <div class=text-justify>
 La tienda CheemsMart te ha encargado implementar un sistema de prueba de tienda virtual. Si les gusta, usarán tu implementación.
