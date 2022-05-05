@@ -50,8 +50,38 @@ public class Producto implements ProductoConDescuento {
 	return "Este producto no ha sido anexado al carrito.";
     }
     
+    /** Método que nos regresa el código de barras de nuestro producto. */
+    public String getCodigoBarras() {
+	return codigoBarras;
+    }
+    
+    /** Método que nos devuelve el nombre del producto. */
+    public String getNombreProducto() {
+	return nombreProducto;
+    }
+    
+    /** Método que nos regresa el departamento del producto. */
+    public String getDepartamento() {
+	return departamento;
+    }
+    
+    /** Método modificador que asigna un nuevo precio a nuestro producto. */
+    public void setPrecio(Float precio) {
+ 	this.precio = precio;
+    }
+    
+    /** Método modificador que asigna un código de barras nuevo a nuestro producto. */
+    public void setCodigoBarras(String codigoBarras) {
+	this.codigoBarras = codigoBarras;
+    }
+    
+    /** Método modificador que asigna un nuevo departamento a nuestro producto. */
+    public void setDepartamento(String departamento) {
+	this.departamento = departamento;
+    }
+    	
     /** Método que nos dice si dos productos son iguales. */
-    public boolean equals(ProductoConDescuento producto) {
+    public boolean equals(Producto producto) {//(ProductoConDescuento producto) {
 	return (producto.codigoBarras.equals(this.codigoBarras))  &&
 	    (producto.nombreProducto.equals(this.nombreProducto)) &&
 	    (producto.departamento.equals(this.departamento))     &&
