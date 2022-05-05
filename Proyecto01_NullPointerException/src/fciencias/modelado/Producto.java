@@ -49,4 +49,12 @@ public class Producto implements ProductoConDescuento {
 		    + (producto.getDescuentoAAplicar*100) + "%.";
 	return "Este producto no ha sido anexado al carrito.";
     }
+    
+    /** Método que nos dice si dos productos son iguales. */
+    public boolean equals(ProductoConDescuento producto) {
+	return (producto.codigoBarras.equals(this.codigoBarras))  &&
+	    (producto.nombreProducto.equals(this.nombreProducto)) &&
+	    (producto.departamento.equals(this.departamento))     &&
+	    (producto.precio == this.precio);
+    }
 }
