@@ -25,7 +25,7 @@ public class ServidorProxy implements InterfazServidor{
      */
     @Override
     public boolean validarUsuario(Usuario usuario){
-        return servidorReal.validarUsuario(usuario;)
+        return servidorReal.validarUsuario(usuario);
     }
 
     /**
