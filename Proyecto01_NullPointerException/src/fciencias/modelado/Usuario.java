@@ -9,9 +9,7 @@ import java.util.Stack;
  * @version 1.0 - 06/05/2022
  */
 public class Usuario {
-    /** Identificador del usuario */
-    private Long id;
-    /** Nickname del usuario */
+    /** Nickname del usuario que servirá como identificador único */
     private String nombreUsuario;
     /** Nombre real completo del usuario */
     private String nombreCompleto;
@@ -52,11 +50,12 @@ public class Usuario {
     }
 
     /**
-     * Método para obtener el identificador del usuario.
-     * @return - <code>Long</code> con el identificador del usuario.
+     * Método que permite saber si una contrasena coincide con la del usuario.
+     * @param contrasena - <code>String</code> con la contrasena a comprar.
+     * @return - <code>True</code> si son iguales.
      */
-    public Long getId(){
-        return id;
+    public boolean coincideContrasena(String contrasena){
+        return contrasena.equals(this.contrasena);
     }
 
     /**
