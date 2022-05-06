@@ -20,7 +20,7 @@ public interface ProductoConDescuento {
      *                                e.g. (15% de descuento): 
      *                                    precio - 0.15*precio.
      */
-    public Float getPrecio(Usuario usuario);
+    public float getPrecio(Usuario usuario);
 
     /**
      * Método abstracto que nos regresa la información del catálogo
