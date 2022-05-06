@@ -8,9 +8,7 @@ public class DescuentoEspania extends Descuento {
      *
      */
     public Descuento(Producto producto) {
-	this.producto = producto;
-	int[] array = getDescuentosDisponibles();
-	this.descuentoAAplicar = array[generarRandom()];
+	super();
     }
     
     /**
