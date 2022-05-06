@@ -5,45 +5,37 @@
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @see <code>ProductoConDescuento</code>.
- * @version 1.0 - 05/05/2022
+ * @version 1.0 - 06/05/2022
  */
 
 public abstract class Descuento implements ProductoConDescuento {
-    /* Atributos de clase. */
-    protected ProductoConDescuento producto;          // Producto al que se le aplica el descuento.
-    protected float[] descuentosDisponibles           // Conjunto de descuentos disponibles.
-	= {0.2, 0.3, 0.4};
-    protected float descuentoAAplicar;               // descuento partícular a aplicar.
+    /** Producto al que se le aplica el descuento */
+    protected ProductoConDescuento producto;
+
+    /** Conjunto de descuentos disponibles */
+    protected float[] descuentosDisponibles = {(float)0.2, (float)0.3, (float)0.4};
+
+    /** Descuento partícular a aplicar */
+    protected float descuentoAAplicar;
         
     /**
      * Constructor abstracto que obliga a las clases que hereden de esta a implementarlo.
      * @param <code>producto</code> -- al que se le aplica el
      *                                 descuento elegido acorde
-     *                                 a la nacionalidad del usuario.
+     *                                 al pais del usuario.
      */
-    public void Descuento(Producto producto) {
-	this.producto = producto;
-	descuentoAAplicar = descuentosDisponibles[generarRandom()];
-    }
-    
-    /** @return <code>int</code> -- valor aleatorio en el rango [0,2]. */
-    protected int generaRandom() {
-	return (int) (Math.random() * (3));
+    public Descuento(ProductoConDescuento producto) {
+        this.producto = producto;
+        descuentoAAplicar = descuentosDisponibles[generaRandom(descuentosDisponibles.length)];
     }
     
     /**
-     * Método que devuelve el descuento que se aplica al producto
-     * en cuestión.
+     * Método que genera un número aleatorio del 0 a n, donde n es el parámetro recibido.
+     * @param max - <code>int</code> con el valor máximo aleatorio.
+     * @return <code>int</code> con un número aleatorio de 0 a n.
      */
-    public float getDescuentoAAplicar() {
-	return descuentoAAplicar;
-    }
-    
-    /**
-     * Obtiene los descuentos disponibles.
-     */
-    public float[]  getDescuentosDisponibles() {
-	return descuentosDisponibles;
+    protected int generaRandom(int max) {
+	    return (int) (Math.random() * (max - 1));
     }
     
     /**
@@ -57,7 +49,7 @@ public abstract class Descuento implements ProductoConDescuento {
      */
     @Override
     public float getPrecio(Usuario usuario) {
-	return producto.getPrecio();
+	    return producto.getPrecio(usuario);
     }
     
     /**
@@ -69,7 +61,22 @@ public abstract class Descuento implements ProductoConDescuento {
      *                                su respectivo descuento.
      */
     @Override
-    public String getCatalogInf(Usuario usuario) {
-	return producto.getCatalogInf();
+    public String getCatalogInfo(Usuario usuario) {
+	    return producto.getCatalogInfo(usuario);
+    }
+
+    /**
+     * Método que devuelve el descuento que se aplica al producto
+     * en cuestión.
+     */
+    public float getDescuentoAAplicar() {
+	    return descuentoAAplicar;
+    }
+    
+    /**
+     * Obtiene los descuentos disponibles.
+     */
+    public float[]  getDescuentosDisponibles() {
+	    return descuentosDisponibles.clone();
     }
 }

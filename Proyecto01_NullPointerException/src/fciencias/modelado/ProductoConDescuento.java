@@ -30,5 +30,5 @@ public interface ProductoConDescuento {
      * @return <code>String</code> -- catálogo con las ofertas incluidas,
      *                                con referente a su nacionalidad.
      */
-    public String getCatalogInf(Usuario usuario);
+    public String getCatalogInfo(Usuario usuario);
 }
