@@ -25,13 +25,13 @@ public class DescuentoEspania extends Descuento {
     /**
      *
      */
-    public String getCatalogo(Usuario usuario) {
+    public String getCatalogInf(Usuario usuario) {
 	if(usuario.getPais().equalsIgnoreCase("Espania") && producto.getPrecio() > 0)
-	    return producto.getCatalogo()
+	    return producto.getCatalogInf()
 		+ "\nSe anexa un descuento del "
 		+ (producto.descuentoAAplicar * 100) + "%"
 		+ " por la compra de este producto.";
 	else
-	    return producto.getCatalogo();
+	    return producto.getCatalogInf();
     }
 }

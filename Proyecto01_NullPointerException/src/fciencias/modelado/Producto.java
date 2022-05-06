@@ -24,7 +24,7 @@ public class Producto implements ProductoConDescuento {
      *                                que se aplica el descuento.
      */
     @Override
-    public Float getPrecio(Usuario usuario) {
+    public float getPrecio(Usuario usuario) {
         return precio;
     }
     
@@ -38,6 +38,26 @@ public class Producto implements ProductoConDescuento {
      */
     @Override
     public String getCatalogInf(Usuario usuario) {
+	return codigoBarras + "\n"
+	    + "Nombre del producto: " nombreProducto + "/n"
+	    + "Departamento: " + departamento + "/n"
+	    + "Precio: $" + precio;
+    }
+    
+    /**
+     * Método que nos regresa el precio.
+     * @return <code>Float</code>  -- precio del producto.
+     */
+    public float getPrecio() {
+	return precio;
+    }
+    
+    /**
+     * Método que nos regresa la información del producto que se
+     * encuentra en el catálogo.
+     * @return <code>String</code> -- Información del producto.
+     */
+    public String getCatalogInf() {
 	return codigoBarras + "\n"
 	    + "Nombre del producto: " nombreProducto + "/n"
 	    + "Departamento: " + departamento + "/n"

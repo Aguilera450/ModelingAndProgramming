@@ -16,7 +16,7 @@ public class DescuentoGlobal {
      *
      */
     public float getPrecio(Usuario usuario) {
-	if(producto.getPrecio())
+	if(producto.getPrecio() > 0)
 	    return producto.getPrecio()
 		- producto.getPrecio()*producto.descuentoAAplicar;
 	else
@@ -26,13 +26,13 @@ public class DescuentoGlobal {
     /**
      *
      */
-    public String getCatalogo(Usuario usuario) {
-	if(producto.getPrecio())
-	    return producto.getCatalogo()
+    public String getCatalogInf(Usuario usuario) {
+	if(producto.getPrecio() > 0)
+	    return producto.getCatalogInf()
 		+ "\nSe anexa un descuento del "
 		+ (producto.descuentoAAplicar * 100) + "%"
 		+ " por la compra de este producto.";
 	else
-	    return producto.getCatalogo();
+	    return producto.getCatalogInf();
     }
 }
