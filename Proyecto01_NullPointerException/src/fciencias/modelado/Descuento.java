@@ -39,7 +39,7 @@ public abstract class Descuento implements ProductoConDescuento {
     /**
      * Obtiene los descuentos disponibles.
      */
-    public float[] getDescuentosDisponibles() {
+    public float[]  getDescuentosDisponibles() {
 	return descuentosDisponibles;
     }
     
