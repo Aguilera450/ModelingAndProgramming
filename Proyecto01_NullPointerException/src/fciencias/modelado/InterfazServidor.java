@@ -10,7 +10,7 @@ public interface InterfazServidor {
     /**
      * Método que valida que un usuario se encuentre en la BD del servidor.
      * @param usuario - <code>Usuario</code> a validar si se encuentra en la BD.
-      * @return - True si el usuario se encuentra en la BD.
+     * @return - True si el usuario se encuentra en la BD.
      */
     public boolean validarUsuario(Usuario usuario);
 
