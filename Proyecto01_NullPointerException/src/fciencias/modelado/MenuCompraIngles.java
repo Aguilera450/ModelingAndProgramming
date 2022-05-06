@@ -7,7 +7,7 @@
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version 1.0 - 06/06/2022
  */
-public class MenuCompraIngles implements MenuCompra{
+public class MenuCompraIngles extends MenuCompra{
     /** Variable que almacena el mensaje al comprar */
     private String completarCompra;
 

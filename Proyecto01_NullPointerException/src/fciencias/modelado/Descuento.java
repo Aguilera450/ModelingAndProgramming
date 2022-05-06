@@ -21,7 +21,10 @@ public abstract class Descuento implements ProductoConDescuento {
      *                                 descuento elegido acorde
      *                                 a la nacionalidad del usuario.
      */
-    public void Descuento(Producto producto);
+    public void Descuento(Producto producto) {
+	this.producto = producto;
+	descuentoAAplicar = descuentosDisponibles[generarRandom()];
+    }
     
     /** @return <code>int</code> -- valor aleatorio en el rango [0,2]. */
     protected int generaRandom() {
@@ -39,7 +42,7 @@ public abstract class Descuento implements ProductoConDescuento {
     /**
      * Obtiene los descuentos disponibles.
      */
-    public float[] getDescuentosDisponibles() {
+    public float[]  getDescuentosDisponibles() {
 	return descuentosDisponibles;
     }
     
