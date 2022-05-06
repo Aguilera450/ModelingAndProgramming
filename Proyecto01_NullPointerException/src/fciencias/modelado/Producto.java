@@ -9,10 +9,10 @@
 
 public class Producto implements ProductoConDescuento {
     /* Atributos de clase. */
-    private String codigoBarras;
-    private String nombreProducto;
-    private String departamento;
-    private float precio;
+    private String codigoBarras;      /* código de barras para un producto. */
+    private String nombreProducto;    /* nombre del producto. */
+    private String departamento;      /* clasificación de los productos. */
+    private float precio;             /* costo del producto. */
     
     /**
      * Método que nos regresa el precio del producto después
@@ -46,7 +46,7 @@ public class Producto implements ProductoConDescuento {
     
     /**
      * Método que nos regresa el precio.
-     * @return <code>Float</code>  -- precio del producto.
+     * @return <code>float</code>  -- precio del producto.
      */
     public float getPrecio() {
 	return precio;
@@ -64,32 +64,53 @@ public class Producto implements ProductoConDescuento {
 	    + "Precio: $" + precio;
     }
     
-    /** Método que nos regresa el código de barras de nuestro producto. */
+    /**
+     * Método que nos regresa el código de barras de nuestro producto. 
+     * @return <code>String</code> -- el código de barras correspondiente
+     *                                al producto.
+     */
     public String getCodigoBarras() {
 	return codigoBarras;
     }
     
-    /** Método que nos devuelve el nombre del producto. */
+    /** 
+     * Método que nos devuelve el nombre del producto. 
+     * @return <code>String</code> -- nombre del producto.
+     */
     public String getNombreProducto() {
 	return nombreProducto;
     }
     
-    /** Método que nos regresa el departamento del producto. */
+    /** 
+     * Método que nos regresa el departamento del producto. 
+     * @return <code>String</code> -- deparamento al que pertenece
+     *                                el producto.
+     */
     public String getDepartamento() {
 	return departamento;
     }
     
-    /** Método modificador que asigna un nuevo precio a nuestro producto. */
-    public void setPrecio(Float precio) {
+    /** 
+     * Método modificador que asigna un nuevo precio a nuestro producto.
+     * @param <code>precio</code> -- precio del producto.
+     */
+    public void setPrecio(float precio) {
  	this.precio = precio;
     }
     
-    /** Método modificador que asigna un código de barras nuevo a nuestro producto. */
+    /** 
+     * Método modificador que asigna un código de barras nuevo a nuestro producto.
+     *  @param <code>codigoBarras</code> -- código de barras correspondiente al
+     *                                      producto.
+     */
     public void setCodigoBarras(String codigoBarras) {
 	this.codigoBarras = codigoBarras;
     }
     
-    /** Método modificador que asigna un nuevo departamento a nuestro producto. */
+    /** 
+     * Método modificador que asigna un nuevo departamento a nuestro producto.
+     * @param <code>depertamento</code> -- clasificación del producto.
+     */
     public void setDepartamento(String departamento) {
 	this.departamento = departamento;
     }
