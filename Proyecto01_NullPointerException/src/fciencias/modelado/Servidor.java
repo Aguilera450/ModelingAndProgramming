@@ -21,8 +21,8 @@ public class Servidor implements InterfazServidor{
     /** Identificador del Servidor */
     private Long id;
     
-    /** "BD" de usuarios, en realidad es un HashMap que simula dicha BD */
-    private HashMap<Long,Usuario> listaUsuarios;
+    /** "BD" de usuarios, en realidad es un HashMap que simula dicha BD, la clave es el nombre de usuario */
+    private HashMap<String,Usuario> listaUsuarios;
     
     /** "BD" de los productos de la tienda, en realidad es un HashMap que separa por departamento (key) los productos(Lista de procuctos pertenecientes a ese departamento) */
     private HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
@@ -42,12 +42,15 @@ public class Servidor implements InterfazServidor{
 
     /**
      * Método que valida que un usuario se encuentre en la BD del servidor.
-     * @param usuario - <code>Usuario</code> a validar si se encuentra en la BD.
-      * @return - True si el usuario se encuentra en la BD.
+     * @param nombreUsuario - <code>String</code> con el usuario a validar si se encuentra en la BD.
+     * @return - Una copia del <code>Usuario</code> en la BD, regresa null en caso de no encontrarlo.
      */
     @Override
-    public boolean validarUsuario(Usuario usuario){
-        return listaUsuarios.containsKey(usuario.getId());
+    public Usuario validarUsuario(String nombreUsuario){
+        if(listaUsuarios.containsKey(nombreUsuario))
+          return listaUsuarios.get(nombreUsuario);
+        else
+          return null;
     }
 
     /**
@@ -131,7 +134,7 @@ public class Servidor implements InterfazServidor{
       int i = 0;
             objeto = lector.readObject();
             if (objeto != null){
-                listaUsuarios = (HashMap<Long,Usuario>) objeto;
+                listaUsuarios = (HashMap<String,Usuario>) objeto;
     
     } catch(java.lang.ClassNotFoundException e){
     } catch(java.io.EOFException e){

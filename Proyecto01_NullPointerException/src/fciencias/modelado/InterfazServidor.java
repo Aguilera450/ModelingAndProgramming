@@ -9,10 +9,10 @@
 public interface InterfazServidor {
     /**
      * Método que valida que un usuario se encuentre en la BD del servidor.
-     * @param usuario - <code>Usuario</code> a validar si se encuentra en la BD.
-     * @return - True si el usuario se encuentra en la BD.
+     * @param nombreUsuario - <code>String</code> con el usuario a validar si se encuentra en la BD.
+     * @return - Una copia del <code>Usuario</code> en la BD.
      */
-    public boolean validarUsuario(Usuario usuario);
+    public Usuario validarUsuario(String nombreUsuario);
 
     /**
      *  Método que regresa el catálogo de la tienda.
