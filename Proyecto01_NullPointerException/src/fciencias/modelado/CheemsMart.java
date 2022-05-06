@@ -102,7 +102,7 @@ public class CheemsMart {
                 // Ingresa un usuario al sistema  y se cambia el idioma del siguiente menú para este usuario.
                 Usuario usuario = ingresarAlSistema();
                 cambiarIdioma(usuario);
-                menuCompra.menuPrincipal(usuario);    
+                menuCompra.menuPrincipal(usuario, servidor);    
             } else {
                 ingreso = false;
             }
