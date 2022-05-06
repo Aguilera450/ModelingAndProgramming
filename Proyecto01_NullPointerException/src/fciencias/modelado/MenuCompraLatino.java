@@ -16,6 +16,9 @@ public class MenuCompraLatino extends MenuCompra {
     /** Variable que almacena el mensaje al despedirse */
     private String despedirse;
 
+    /** Variable que guarda el menu */
+    private String menu;
+
     /** 
      * Constructor sin parametros para definir los mensajes del idioma.
      */
@@ -23,6 +26,7 @@ public class MenuCompraLatino extends MenuCompra {
         completarCompra = "Muchas gracias por su compra!, Vuelva pronto!";
         saludar = "Te damos la bienvenida a nuestra tienda!";
         despedirse = "Vuelva pronto!";
+        menu = "1) Quiero ver tus productos." + "\n2) Quiero comprar algo."+ "\n Me tengo que ir, nos vemos!.";
     }
 
     /**
@@ -31,10 +35,11 @@ public class MenuCompraLatino extends MenuCompra {
      * @param saludar Mensaje al saludar.
      * @param despedirse Mensaje al Despedirse.
      */
-    public MenuCompraLatino(String completarCompra, String saludar, String despedirse){
+    public MenuCompraLatino(String completarCompra, String saludar, String despedirse, String menu){
         this.completarCompra = completarCompra;
         this.saludar = saludar;
         this.despedirse = despedirse;
+        this.menu = menu;
     }
 
     /**
@@ -61,4 +66,12 @@ public class MenuCompraLatino extends MenuCompra {
         return despedirse;
     }
 
+
+    /**
+     * Devuelve el mensaje al mostrar el menu del usuario en el idioma latino.
+     * @return Despedida en tipo String-
+     */
+    public String menu(){
+        return menu;
+    }
 }

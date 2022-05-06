@@ -16,6 +16,9 @@ public class MenuCompraCastellano extends MenuCompra {
     /** Variable que almacena el mensaje al despedirse */
     private String despedirse;
 
+    /** Variable que guarda el menu */
+    private String menu;
+
     /** 
      * Constructor sin parametros para definir los mensajes del idioma.
      */
@@ -23,6 +26,7 @@ public class MenuCompraCastellano extends MenuCompra {
         completarCompra = "Disfrutad de vuestra compra!";
         saludar = "Bienveniros a vuestra tienda favorita!";
         despedirse = "Gracias por vuestra preferencia! volved pronto.";
+        menu = "1) Quiero ver vuestro catalogo." + "\n Quiero comprar uno de vuestros productos." + "\n 3) Me piro vampiro.";
     }
 
     /**
@@ -31,10 +35,11 @@ public class MenuCompraCastellano extends MenuCompra {
      * @param saludar Mensaje al saludar.
      * @param despedirse Mensaje al Despedirse.
      */
-    public MenuCompraCastellano(String completarCompra, String saludar, String despedirse){
+    public MenuCompraCastellano(String completarCompra, String saludar, String despedirse, String menu){
         this.completarCompra = completarCompra;
         this.saludar = saludar;
         this.despedirse = despedirse;
+        this.menu = menu;
     }
 
     /**
@@ -59,5 +64,13 @@ public class MenuCompraCastellano extends MenuCompra {
      */
     public String despedirse(){
         return despedirse;
+    }
+
+    /**
+     * Devuelve el mensaje al mostrar el menu del usuario en el idioma castellano.
+     * @return Despedida en tipo String-
+     */
+    public String menu(){
+        return menu;
     }
 }
