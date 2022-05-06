@@ -35,7 +35,7 @@ public abstract class Descuento implements ProductoConDescuento {
      * @return <code>int</code> con un número aleatorio de 0 a n.
      */
     protected int generaRandom(int max) {
-	    return (int) (Math.random() * (max - 1));
+	    return (int) (Math.random() * max);
     }
     
     /**
@@ -68,6 +68,7 @@ public abstract class Descuento implements ProductoConDescuento {
     /**
      * Método que devuelve el descuento que se aplica al producto
      * en cuestión.
+     * @return <code>float</code> -- descuento en partícular a aplicar.
      */
     public float getDescuentoAAplicar() {
 	    return descuentoAAplicar;
@@ -75,6 +76,7 @@ public abstract class Descuento implements ProductoConDescuento {
     
     /**
      * Obtiene los descuentos disponibles.
+     * @return <code>float[]</code> -- arreglo de descuentos.
      */
     public float[]  getDescuentosDisponibles() {
 	    return descuentosDisponibles.clone();

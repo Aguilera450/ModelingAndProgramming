@@ -10,8 +10,7 @@
  */
 
 public class DescuentoEUA extends Descuento {
-    
-        
+            
     /**
      * Constructor por parámetros de un <code>DescuentoEspania</code>.
      * @param <code>producto</code> -- al cual se le aplica el descuento.
