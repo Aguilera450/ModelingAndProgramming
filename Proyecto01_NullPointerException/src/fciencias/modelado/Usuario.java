@@ -28,6 +28,26 @@ public class Usuario {
     private Stack<ProductoConDescuento> carrito;
 
     /**
+     * Constructor de uso exclusivo del sistema para un Usuario.
+     * @param nU - <code>String</code> Nombre de usuario.
+     * @param nC - <code>String</code> Nombre completo y real del usuario-
+     * @param psw - <code>String</code> Contraseña del usuario.
+     * @param t - <code>int</code> Telefono del usuario.
+     * @param dir - <code>String</code> Dirección del usuario.
+     * @param cB - <code>int</code> Cuenta bancaria del usuario.
+     * @param p - <code>String</code> País del usuario.
+     */
+    public Usuario(String nU, String nC, String psw, int t, String dir, int cB, String p){
+        nombreUsuario = nU;
+        nombreCompleto = nC;
+        contrasena = psw;
+        telefono = t;
+        direccion = dir;
+        cuentaBancaria = cB;
+        pais = p;
+    }
+    
+    /**
      * Método que muestra los articulos en el carrito del usuario.
      * Si alguno de los articulos tiene descuento, este se verá reflejado en este listado.
      * @return - <code>String</code> con los articulos en el carrito del usuario.
