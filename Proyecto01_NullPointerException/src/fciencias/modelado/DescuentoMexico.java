@@ -15,7 +15,7 @@ public class DescuentoMexico extends Descuento {
      * Constructor por parámetros de un <code>DescuentoEspania</code>.
      * @param <code>producto</code> -- al cual se le aplica el descuento.
      */
-    public DescuentoMexico(Producto producto) {
+    public DescuentoMexico(ProductoConDescuento producto) {
 	super(producto);
     }
     
@@ -29,11 +29,10 @@ public class DescuentoMexico extends Descuento {
      *                                aplicarse el descuento.
      */
     public float getPrecio(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Mexico") && producto.getPrecio())
-	    return producto.getPrecio()
-		- producto.getPrecio()*producto.descuentoAAplicar;
+	if(usuario.getPais().equalsIgnoreCase("Mexico"))
+	    return producto.getPrecio(usuario) - producto.getPrecio(usuario)*producto.descuentoAAplicar;
 	else
-	    return producto.getPrecio();
+	    return producto.getPrecio(usuario);
     }
     
     /**
@@ -44,13 +43,12 @@ public class DescuentoMexico extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getCatalogInf(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Mexico") && producto.getPrecio())
-	    return producto.getCatalogInf()
-		+ "\nSe anexa un descuento del "
-		+ (producto.descuentoAAplicar * 100) + "%"
-		+ " por la compra de este producto.";
+    public String getCatalogInfo(Usuario usuario) {
+	if(usuario.getPais().equalsIgnoreCase("Mexico"))
+	    return "\nSe anexa un descuento del "
+		+ (producto.descuentoAAplicar * 100) + "%."
+		+ "\n" + producto.getCatalogInfo(usuario);
 	else
-	    return producto.getCatalogInf();
+	    return producto.getCatalogInfo(usuario);
     }
 }

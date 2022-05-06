@@ -15,7 +15,7 @@ public class DescuentoGlobal extends Descuento {
      * Constructor por parámetros de un <code>DescuentoEspania</code>.
      * @param <code>producto</code> -- al cual se le aplica el descuento.
      */
-    public DescuentoGlobal(Producto producto) {
+    public DescuentoGlobal(ProductoConDescuento producto) {
 	super(producto);
     }
     
@@ -29,11 +29,7 @@ public class DescuentoGlobal extends Descuento {
      *                                aplicarse el descuento.
      */
     public float getPrecio(Usuario usuario) {
-	if(producto.getPrecio() > 0)
-	    return producto.getPrecio()
-		- producto.getPrecio()*producto.descuentoAAplicar;
-	else
-	    return producto.getPrecio();
+	return producto.getPrecio() - producto.getPrecio()*producto.descuentoAAplicar;
     }
     
     /**
@@ -44,13 +40,9 @@ public class DescuentoGlobal extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getCatalogInf(Usuario usuario) {
-	if(producto.getPrecio() > 0)
-	    return producto.getCatalogInf()
-		+ "\nSe anexa un descuento del "
-		+ (producto.descuentoAAplicar * 100) + "%"
-		+ " por la compra de este producto.";
-	else
-	    return producto.getCatalogInf();
+    public String getCatalogInfo(Usuario usuario) {
+	return "\nSe anexa un descuento del "
+	    + (producto.descuentoAAplicar * 100) + "%."
+	    + "\n" + producto.getCatalogInf(usuario);
     }
 }

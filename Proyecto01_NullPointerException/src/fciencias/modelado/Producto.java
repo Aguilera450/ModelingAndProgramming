@@ -9,10 +9,14 @@
 
 public class Producto implements ProductoConDescuento {
     /* Atributos de clase. */
-    private String codigoBarras;      /* código de barras para un producto. */
-    private String nombreProducto;    /* nombre del producto. */
-    private String departamento;      /* clasificación de los productos. */
-    private float precio;             /* costo del producto. */
+    /** Código de barras para un producto. */
+    private String codigoBarras;
+    /** Nombre del producto. */
+    private String nombreProducto;
+    /** Clasificación de los productos. */
+    private String departamento;
+    /** Costo del producto. */
+    private float precio;             
     
     /**
      * Método que nos regresa el precio del producto después
@@ -37,19 +41,11 @@ public class Producto implements ProductoConDescuento {
      *                                su respectivo descuento.
      */
     @Override
-    public String getCatalogInf(Usuario usuario) {
+    public String getCatalogInfo(Usuario usuario) {
 	return codigoBarras + "\n"
 	    + "Nombre del producto: " nombreProducto + "/n"
 	    + "Departamento: " + departamento + "/n"
-	    + "Precio: $" + precio;
-    }
-    
-    /**
-     * Método que nos regresa el precio.
-     * @return <code>float</code>  -- precio del producto.
-     */
-    public float getPrecio() {
-	return precio;
+	    + "Precio final: $" + getPrecio(usuario);
     }
     
     /**
@@ -57,7 +53,7 @@ public class Producto implements ProductoConDescuento {
      * encuentra en el catálogo.
      * @return <code>String</code> -- Información del producto.
      */
-    public String getCatalogInf() {
+    public String getCatalogInfo() {
 	return codigoBarras + "\n"
 	    + "Nombre del producto: " nombreProducto + "/n"
 	    + "Departamento: " + departamento + "/n"

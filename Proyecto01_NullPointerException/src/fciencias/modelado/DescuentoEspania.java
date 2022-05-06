@@ -5,7 +5,7 @@
  * @author Adrian Aguilera Moreno     - Aguiler450
  * @author Rosas Franco Diego Angel   - shikitimiau
  * @author Marco Antonio Rivera Silva - DONMARCORS
- * @see <code>ProductoConDescuento</code>.
+ * @see <code>Descuento</code>.
  * @version 1.0 - 06/05/2022
  */
 
@@ -15,7 +15,7 @@ public class DescuentoEspania extends Descuento {
      * Constructor por parámetros de un <code>DescuentoEspania</code>.
      * @param <code>producto</code> -- al cual se le aplica el descuento.
      */
-    public DescuentoEspania(Producto producto) {
+    public DescuentoEspania(ProductoConDescuento producto) {
 	super(producto);
     }
     
@@ -29,11 +29,10 @@ public class DescuentoEspania extends Descuento {
      *                                aplicarse el descuento.
      */
     public float getPrecio(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Espania") && producto.getPrecio() > 0)
-	    return producto.getPrecio()
-		- producto.getPrecio()*producto.descuentoAAplicar;
+	if(usuario.getPais().equals("Espania"))
+	    return producto.getPrecio(usuario) - producto.getPrecio(usuario)*producto.descuentoAAplicar;
 	else
-	    return producto.getPrecio();
+	    return producto.getPrecio(usuario);
     }
     
     /**
@@ -44,13 +43,12 @@ public class DescuentoEspania extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getCatalogInf(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Espania") && producto.getPrecio() > 0)
-	    return producto.getCatalogInf()
-		+ "\nSe anexa un descuento del "
-		+ (producto.descuentoAAplicar * 100) + "%"
-		+ " por la compra de este producto.";
+    public String getCatalogInfo(Usuario usuario) {
+	if(usuario.getPais().equals("Espania"))
+	    return "\nSe anexa un descuento del "
+		+ (producto.descuentoAAplicar * 100) + "%."
+		+ "\n" + producto.getCatalogInfo(usuario);
 	else
-	    return producto.getCatalogInf();
+	    return producto.getCatalogInfo(usuario);
     }
 }
