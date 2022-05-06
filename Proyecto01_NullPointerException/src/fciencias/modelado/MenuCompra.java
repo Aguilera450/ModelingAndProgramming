@@ -25,6 +25,28 @@ public abstract class MenuCompra {
     public abstract String despedirse();
 
     /**
-     * Menu
+     * Devuelve el mensaje al mostrar el menu del usuario en el idioma castellano.
+     * @return Despedida en tipo String-
      */
+    public abstract String menu();
+
+    /**
+     * Menu Principal
+     */
+    public void menuPrincipal(Usuario usuario){
+        MenuTerminal menu = new MenuTerminal();
+        boolean seguir = true;
+        int opcion = menu.opcionMenu(saludar() + "\n"+ menu(), 1, 3);
+        do {
+            switch(opcion){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    seguir = false;
+                    break;
+            }
+        } while (seguir);
+    }
 }
