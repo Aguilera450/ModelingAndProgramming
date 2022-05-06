@@ -12,7 +12,7 @@ public class Producto implements ProductoConDescuento {
     private String codigoBarras;
     private String nombreProducto;
     private String departamento;
-    private Float precio;
+    private float precio;
     
     /**
      * Método que nos regresa el precio del producto después
@@ -25,12 +25,7 @@ public class Producto implements ProductoConDescuento {
      */
     @Override
     public Float getPrecio(Usuario usuario) {
-	Float precio = 0.0;
-	for(ProductoConDescuento elem : usuario.getCarrito())
-	    if(producto.equals(elem))
-		precio = elem.getPrecio()
-		    - elem.getDescuentoAAplicar()*elem.getPrecio();
-	return precio;
+        return precio;
     }
     
     /**
@@ -43,11 +38,10 @@ public class Producto implements ProductoConDescuento {
      */
     @Override
     public String getCatalogInf(Usuario usuario) {
-	for(ProductoConDescuento elem : usuario.getCarrito())
-	    if(producto.equals(elem))
-		return producto.getCatalogInf() + "\n Con un descuento del "
-		    + (producto.getDescuentoAAplicar*100) + "%.";
-	return "Este producto no ha sido anexado al carrito.";
+	return codigoBarras + "\n"
+	    + "Nombre del producto: " nombreProducto + "/n"
+	    + "Departamento: " + departamento + "/n"
+	    + "Precio: $" + precio;
     }
     
     /** Método que nos regresa el código de barras de nuestro producto. */
@@ -78,13 +72,5 @@ public class Producto implements ProductoConDescuento {
     /** Método modificador que asigna un nuevo departamento a nuestro producto. */
     public void setDepartamento(String departamento) {
 	this.departamento = departamento;
-    }
-    	
-    /** Método que nos dice si dos productos son iguales. */
-    public boolean equals(Producto producto) {//(ProductoConDescuento producto) {
-	return (producto.codigoBarras.equals(this.codigoBarras))  &&
-	    (producto.nombreProducto.equals(this.nombreProducto)) &&
-	    (producto.departamento.equals(this.departamento))     &&
-	    (producto.precio == this.precio);
     }
 }
