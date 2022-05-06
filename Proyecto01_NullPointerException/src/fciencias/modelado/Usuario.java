@@ -16,11 +16,11 @@ public class Usuario {
     /** Contraseña del usuario */
     private String contrasena;
     /** Telefono del usuario */
-    private int telefono;
+    private long telefono;
     /** Dirección del usuario */
     private String direccion;
     /** Número de cuenta bancaria del usuario */
-    private int cuentaBancaria;
+    private long cuentaBancaria;
     /** País al que pertenece el usuario */
     private String pais;
 
@@ -32,12 +32,12 @@ public class Usuario {
      * @param nU - <code>String</code> Nombre de usuario.
      * @param nC - <code>String</code> Nombre completo y real del usuario-
      * @param psw - <code>String</code> Contraseña del usuario.
-     * @param t - <code>int</code> Telefono del usuario.
+     * @param t - <code>long</code> Telefono del usuario.
      * @param dir - <code>String</code> Dirección del usuario.
-     * @param cB - <code>int</code> Cuenta bancaria del usuario.
+     * @param cB - <code>long</code> Cuenta bancaria del usuario.
      * @param p - <code>String</code> País del usuario.
      */
-    public Usuario(String nU, String nC, String psw, int t, String dir, int cB, String p){
+    public Usuario(String nU, String nC, String psw, long t, String dir, long cB, String p){
         nombreUsuario = nU;
         nombreCompleto = nC;
         contrasena = psw;
@@ -96,9 +96,9 @@ public class Usuario {
 
     /**
      * Método para obtener el telefono del usuario.
-     * @return - <code>int</code> con el telefono del usuario.
+     * @return - <code>long</code> con el telefono del usuario.
      */
-    public int getTelefono(){
+    public long getTelefono(){
         return telefono;
     }
 
@@ -112,9 +112,9 @@ public class Usuario {
 
     /**
      * Método para obtener la cuenta bancaria del usuario.
-     * @return - <code>int</code> con la cuenta bancaria del usuario.
+     * @return - <code>long</code> con la cuenta bancaria del usuario.
      */
-    public int getCuentaBancaria(){
+    public long getCuentaBancaria(){
         return cuentaBancaria;
     }
 
