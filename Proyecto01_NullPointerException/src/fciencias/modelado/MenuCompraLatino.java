@@ -7,47 +7,12 @@
  * @version 1.0 - 06/06/2022
  */
 public class MenuCompraLatino extends MenuCompra {
-    /** Variable que almacena el mensaje al comprar */
-    private String completarCompra;
-
-    /** Variable que almacena el mensaje al saludar */
-    private String saludar;
-
-    /** Variable que almacena el mensaje al despedirse */
-    private String despedirse;
-
-    /** Variable que guarda el menu */
-    private String menu;
-
-    /** 
-     * Constructor sin parametros para definir los mensajes del idioma.
-     */
-    public MenuCompraLatino(){
-        completarCompra = "Muchas gracias por su compra!, Vuelva pronto!";
-        saludar = "Te damos la bienvenida a nuestra tienda!";
-        despedirse = "Vuelva pronto!";
-        menu = "1) Quiero ver tus productos." + "\n2) Quiero comprar algo."+ "\n Me tengo que ir, nos vemos!.";
-    }
-
-    /**
-     * Constructor de la clase con 3 parametros.
-     * @param completarCompra Mensaje al comprar.
-     * @param saludar Mensaje al saludar.
-     * @param despedirse Mensaje al Despedirse.
-     */
-    public MenuCompraLatino(String completarCompra, String saludar, String despedirse, String menu){
-        this.completarCompra = completarCompra;
-        this.saludar = saludar;
-        this.despedirse = despedirse;
-        this.menu = menu;
-    }
-
     /**
      * Devuelve el mensaje al completar una compra en el idioma latino.
      * @return Mensaje de agradecimiento por su compra en tipo String.
      */
     public String completarCompra(){
-        return completarCompra;
+        return "¡Muchas gracias por su compra!, Vuelva pronto!";
     }
 
     /**
@@ -55,7 +20,7 @@ public class MenuCompraLatino extends MenuCompra {
      * @return Saludo en tipo String.
      */
     public String saludar(){
-        return saludar;
+        return "¡Te damos la bienvenida a nuestra tienda!";
     }
 
     /**
@@ -63,15 +28,15 @@ public class MenuCompraLatino extends MenuCompra {
      * @return Despedida en tipo String-
      */
     public String despedirse(){
-        return despedirse;
+        return "¡Vuelva pronto!";
     }
 
 
     /**
      * Devuelve el mensaje al mostrar el menu del usuario en el idioma latino.
-     * @return Despedida en tipo String-
+     * @return Despedida en tipo String.
      */
-    public String menu(){
-        return menu;
+    public String opcionesMenu(){
+        return "1) Quiero ver tus productos." + "\n2) Quiero comprar algo."+ "\n Me tengo que ir, nos vemos!.";
     }
 }

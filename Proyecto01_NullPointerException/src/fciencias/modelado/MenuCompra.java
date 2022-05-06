@@ -28,7 +28,7 @@ public abstract class MenuCompra {
      * Devuelve el mensaje al mostrar el menu del usuario en el idioma castellano.
      * @return Despedida en tipo String-
      */
-    public abstract String menu();
+    public abstract String opcionesMenu();
 
     /**
      * Menu Principal
@@ -36,7 +36,7 @@ public abstract class MenuCompra {
     public void menuPrincipal(Usuario usuario, ServidorProxy servidor){
         MenuTerminal menu = new MenuTerminal();
         boolean seguir = true;
-        int opcion = menu.opcionMenu(saludar() + "\n"+ menu(), 1, 3);
+        int opcion = menu.opcionMenu(saludar() + "\n"+ opcionesMenu(), 1, 3);
         do {
             switch(opcion){
                 case 1:
@@ -46,6 +46,7 @@ public abstract class MenuCompra {
                     System.out.println(servidor.solicitarCatalogo(usuario));
                     break;
                 case 3:
+                    System.out.println(despedirse());
                     seguir = false;
                     break;
             }
