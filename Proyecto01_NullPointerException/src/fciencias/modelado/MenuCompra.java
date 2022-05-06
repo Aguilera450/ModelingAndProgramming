@@ -33,15 +33,17 @@ public abstract class MenuCompra {
     /**
      * Menu Principal
      */
-    public void menuPrincipal(Usuario usuario){
+    public void menuPrincipal(Usuario usuario, ServidorProxy servidor){
         MenuTerminal menu = new MenuTerminal();
         boolean seguir = true;
         int opcion = menu.opcionMenu(saludar() + "\n"+ menu(), 1, 3);
         do {
             switch(opcion){
                 case 1:
+                    System.out.println(servidor.solicitarCatalogo(usuario));
                     break;
                 case 2:
+                    System.out.println(servidor.solicitarCatalogo(usuario));
                     break;
                 case 3:
                     seguir = false;
