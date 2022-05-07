@@ -43,6 +43,6 @@ public class DescuentoGlobal extends Descuento {
     public String getCatalogInfo(Usuario usuario) {
 	return "\nSe anexa un descuento del "
 	    + (super.descuentoAAplicar * 100) + "%."
-	    + "\n" + producto.getCatalogInf(usuario);
+	    + "\n" + producto.getCatalogInfo(usuario);
     }
 }

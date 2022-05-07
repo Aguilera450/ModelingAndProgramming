@@ -91,4 +91,15 @@ public abstract class Descuento implements ProductoConDescuento {
     public float[]  getDescuentosDisponibles() {
 	    return descuentosDisponibles.clone();
     }
+
+    /**
+     * Método que devuelve el departamento de un <code>Producto</code>
+     *  sin restricción de usuario.
+     * @return <code>String</code> -- información del departamento.
+     */
+    @Override
+    public String getDepartamento(){
+        return producto.getDepartamento();
+    }
+
 }
