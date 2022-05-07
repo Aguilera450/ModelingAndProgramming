@@ -1,0 +1,108 @@
+\documentclass{article}
+
+% Symbols
+\usepackage{amsfonts, amsthm}
+\usepackage{upgreek}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{amssymb, latexsym, amsmath}
+\usepackage{import}
+
+%Algorithms
+\usepackage[ruled,lined,linesnumbered,commentsnumbered]{algorithm2e}
+
+%% Identación
+\setlength{\parindent}{0cm}
+
+% Código
+\newcommand{\code}[1]{\textcolor{white!25!black}{\texttt{#1}}}
+\usepackage{listings}
+
+%AMS
+\usepackage{amsthm}
+\newtheorem{algo-thm}{Algoritmo}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{pgf}
+
+% Margins
+\addtolength{\voffset}{-1.5cm}
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{3cm}
+
+%Header-Footer
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{1pt}
+
+\newcommand{\set}[1]{
+  \left\{ #1 \right\}
+}
+
+\footskip = 50pt
+\renewcommand{\headrulewidth}{1pt}
+
+\pagestyle{fancyplain}
+
+\begin{document}
+\input{../Portada/Portada}
+\section*{\LARGE{Proyecto 01}}
+
+\subsection*{Instrucciones de instalación, compilación y ejecución.}
+Se dará por hecho que el usuario sabe moverse en terminal.
+\subsubsection*{Requerimientos previos:}
+\begin{itemize}
+\item[-] Se debe contar con Java en su computadora. De preferencia la versión más reciente.
+\end{itemize}
+
+\subsubsection*{Ejecución del proyecto:}
+\begin{itemize}
+\item[-] Si está leyendo esto significa que desempaquetó con éxito el proyecto.
+\item[-] Abra su terminal y diríjase a la ruta donde desempaquetó el proyecto.
+\item[-] Una vez estando en la ruta
+  
+  \code{Proyecto01\_NullPointerException},
+  
+  diríjase a
+
+  \code{Proyecto01\_NullPointerException/src/fciencias/modelado/}
+\item[-] Ejecute: “\code{javac CheemsMart.java}”, esto generará los .class del proyecto.
+\item[-] Ejecute: “\code{java CheemsMart}”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
+\end{itemize}
+\newpage
+\subsection*{Justificación de uso de patrones:}
+\subsubsection*{Strategy}
+Utilizamos Strategy en en la parte de cambiar el idioma debido a que lo resuelve
+de una forma conveniente ya que teníamos pensado utilizar State, sin embargo notamos
+que a pesar que en ambos tendríamos que modificar el idioma en tiempo de ejecución
+había una gran desventaja al usar State, por ejemplo limitar los estados con múltiples
+condiciones para evitar que se tuviera más de un estado a la vez, en cambio Strategy
+podíamos controlar que en efecto solo tuviera un idioma de una manera mucho más sencilla
+y efectiva, además de que sería sumamente sencillo agregar nuevos idiomas en Strategy
+que en State.
+\subsubsection*{Decorator}
+Implementamos el patrón de diseño Decorator en la parte de descuentos, pues los productos
+pueden aplicar a uno o más descuentos, incluso del mismo tipo (al menos no hay una restricción
+para esto) de manera conveniente en nuestra implementación, donde el \code{Producto} original
+sin modificaciones en precios es el centro del decorador.
+
+\subsection*{Otros patrones que se pudieron usar:}
+\subsubsection*{Singleton}
+Nos percatamos que podíamos haber usado Singleton en la clase Servidor, pues de esa forma
+tendríamos un servidor centralizado en el que tendríamos a todos nuestros usarios y el catálogo
+de la tienda. Sin embargo, vimos que esto podría causar un problema de rigidez, pues a futuro
+es posible que la tienda planeé tener servidores a lo largo del mundo para mejorar la velocidad
+de respuesta acorde a la región en la que se encuentre el usuario (teoricamente hablando), y
+en cada servidor, regional por ejemplo, tener un catálogo distinto a futuro, ya que actualmente
+solo se tiene un catálogo en el mismo idioma para todas las regiones. Debido a esto es que
+Servidor cuenta con un identificador único, para asi poder diferenciarlo de los demás servidores
+futuros.
+
+\newpage
+\subsection*{Diagrama UML:}
+%\begin{center}
+%  \includegraphics[scale=0.18]{./Practica04UML.png}
+%\end{center}
+
+\end{document}
