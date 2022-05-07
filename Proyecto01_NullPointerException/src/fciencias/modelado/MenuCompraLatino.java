@@ -34,6 +34,22 @@ public class MenuCompraLatino extends MenuCompra {
     }
 
     /**
+     * Devuelve el mensaje para decirle al usuario que seleccione una opcion en el idioma latino.
+     * @return Despedida en tipo String.
+     */
+    public String seleccionaOpcion(){
+        return "16) Salir \nIngresa el número asociado al producto que quieres: " ;
+    }
+
+    /**
+     * Devuelve el mensaje para informar el contenido del carrito.
+     * @return Despedida en tipo String.
+     */
+    public String contenidoCarrito(){
+        return "Esto es lo que llevas en tu carrito: " ;
+    }
+
+    /**
      * Devuelve la opcióm 1 del menu en el idioma latino.
      * @return La opcion 1 en tipo String.
      */
@@ -55,5 +71,13 @@ public class MenuCompraLatino extends MenuCompra {
      */
     public String opcion3(){
         return "3) ¡Me tengo que ir, nos vemos!.";
+    }
+
+    /**
+     * Devuelve la opción 4 del menu en el idioma latino.
+     * @return La opcion 4 en tipo String.
+     */
+    public String opcion4(){
+        return "4) asdasdad.";
     }
 }

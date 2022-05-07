@@ -35,6 +35,22 @@ public class MenuCompraIngles extends MenuCompra{
     }
 
     /**
+     * Devuelve el mensaje para decirle al usuario que seleccione una opcion en el idioma castellano.
+     * @return Despedida en tipo String.
+     */
+    public String seleccionaOpcion(){
+        return "16) Exit \nPlease put the index product: " ;
+    }
+
+    /**
+     * Devuelve el mensaje para informar el contenido del carrito.
+     * @return Despedida en tipo String.
+     */
+    public String contenidoCarrito(){
+        return "This is the content of your shopping cart: " ;
+    }
+
+    /**
      * Devuelve la opcióm 1 del menu en el idioma ingles.
      * @return La opcion 1 en tipo String.
      */
@@ -56,5 +72,13 @@ public class MenuCompraIngles extends MenuCompra{
      */
     public String opcion3(){
         return "3) I have to go home!";
+    }
+
+    /**
+     * Devuelve la opción 4 del menu en el idioma ingles.
+     * @return La opcion 4 en tipo String.
+     */
+    public String opcion4(){
+        return "4) asdadsd";
     }
 }

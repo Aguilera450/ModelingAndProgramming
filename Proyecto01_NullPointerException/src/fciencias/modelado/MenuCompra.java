@@ -27,6 +27,18 @@ public abstract class MenuCompra {
     public abstract String despedirse(String nombre);
 
     /**
+     * Devuelve el mensaje al despedirse del usuario en el idioma correcto.
+     * @return Despedida en tipo String-
+     */
+    public abstract String seleccionaOpcion();
+
+    /**
+     * Devuelve el mensaje para informar el contenido del carrito.
+     * @return Despedida en tipo String-
+     */
+    public abstract String contenidoCarrito();
+
+    /**
      * Devuelve la opcion 1 del menu del usuario.
      * @return La opcion 1 en tipo String.
      */
@@ -43,6 +55,12 @@ public abstract class MenuCompra {
      * @return La opcion 3 en tipo String.
      */
     public abstract String opcion3();
+
+    /**
+     * Devuelve la opcion 4 del menu del usuario.
+     * @return La opcion 4 en tipo String.
+     */
+    public abstract String opcion4();
 
     /**
      * Devuelve el menu completo de opciones en el idioma correcto.
@@ -70,11 +88,11 @@ public abstract class MenuCompra {
                     break;
                 case 2:
                     System.out.println(servidor.solicitarCatalogo(usuario));
-                    int numProd = menu.dameUnNatural("16) Salir"+"\nIngrese el número asociado al producto: ",1,16);
+                    int numProd = menu.dameUnNatural(seleccionaOpcion(),1,16);
                     if(numProd != 16){
                         ProductoConDescuento producto = servidor.solicitarProducto(numProd);
                         usuario.agregarAlCarrito(producto);
-                        System.out.println("Su carrito actual es:" + usuario.mostrarCarrito());
+                        System.out.println(contenidoCarrito() + usuario.mostrarCarrito());
                     }
                     break;
                 case 3:
