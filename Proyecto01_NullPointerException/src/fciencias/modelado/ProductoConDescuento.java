@@ -33,7 +33,9 @@ public interface ProductoConDescuento {
     public String getCatalogInfo(Usuario usuario);
     
     /**
-     *
+     * Método que devuelve la información de un <code>Producto</code>
+     *  sin restricción de usuario.
+     * @return <code>String</code> -- información del producto.
      */
     public String getCatalogInfo();
 }
