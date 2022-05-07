@@ -108,10 +108,26 @@ public class MenuCompraCastellano extends MenuCompra {
     }
 
     /**
-     * Devuelve le titulo ticket
+     * Devuelve el titulo ticket
      * @return Despedida en tipo String.
      */
     public String ticket(){
         return "FACTURA " ;
+    }
+
+    /**
+     * Devuelve el mensaje que avusa a donde se va a enviar:
+     * @return Despedida en tipo String.
+     */
+    public String direccion(){
+        return "Os mandaremos sus productos a: " ;
+    }
+
+    /**
+     * Devuelve el tiu
+     * @return Despedida en tipo String.
+     */
+    public String direccion(){
+        return "Os mandaremos sus productos a: " ;
     }
 }
