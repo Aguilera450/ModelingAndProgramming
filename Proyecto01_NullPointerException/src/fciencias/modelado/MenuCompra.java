@@ -121,6 +121,9 @@ public abstract class MenuCompra {
                         System.out.println(usuario.mostrarCarrito());
                         System.out.println("$" + usuario.totalCarrito());
                         usuario.vaciarCarrito();
+                        System.out.println(direccion());
+                        System.out.println(usuario.getDireccion());
+                        System.out.println(dia() + "XX/XX/XXXX");
                     } else {
                         System.out.println(pagoRechazado());
                     }
