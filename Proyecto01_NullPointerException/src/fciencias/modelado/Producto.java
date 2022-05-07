@@ -30,8 +30,8 @@ public class Producto implements ProductoConDescuento {
         nombreProducto = nP;
         departamento = dep;
         precio = p;
-
     }
+
     /**
      * Método que nos regresa el precio del producto después
      * de aplicar el descuento, siempre que el usuario tenga
@@ -80,7 +80,7 @@ public class Producto implements ProductoConDescuento {
      *                                al producto.
      */
     public String getCodigoBarras() {
-	return codigoBarras;
+	    return codigoBarras;
     }
     
     /** 
@@ -88,7 +88,7 @@ public class Producto implements ProductoConDescuento {
      * @return <code>String</code> -- nombre del producto.
      */
     public String getNombreProducto() {
-	return nombreProducto;
+	    return nombreProducto;
     }
     
     /** 
@@ -96,8 +96,9 @@ public class Producto implements ProductoConDescuento {
      * @return <code>String</code> -- deparamento al que pertenece
      *                                el producto.
      */
+    @Override
     public String getDepartamento() {
-	return departamento;
+	    return departamento;
     }
     
     /** 
@@ -105,7 +106,7 @@ public class Producto implements ProductoConDescuento {
      * @param <code>precio</code> -- precio del producto.
      */
     public void setPrecio(float precio) {
- 	this.precio = precio;
+ 	    this.precio = precio;
     }
     
     /** 
@@ -114,7 +115,7 @@ public class Producto implements ProductoConDescuento {
      *                                      producto.
      */
     public void setCodigoBarras(String codigoBarras) {
-	this.codigoBarras = codigoBarras;
+	    this.codigoBarras = codigoBarras;
     }
     
     /** 
@@ -122,6 +123,6 @@ public class Producto implements ProductoConDescuento {
      * @param <code>depertamento</code> -- clasificación del producto.
      */
     public void setDepartamento(String departamento) {
-	this.departamento = departamento;
+	    this.departamento = departamento;
     }
 }
