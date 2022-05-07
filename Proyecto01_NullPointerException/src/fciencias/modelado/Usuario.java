@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -8,7 +9,8 @@ import java.util.Stack;
  * @author Marco Antonio Rivera Silva - DONMARCORS
  * @version 1.0 - 06/05/2022
  */
-public class Usuario {
+@SuppressWarnings("serial")
+public class Usuario implements Serializable{
     /** Nickname del usuario que servirá como identificador único */
     private String nombreUsuario;
     /** Nombre real completo del usuario */
@@ -54,9 +56,11 @@ public class Usuario {
      */
     public String mostrarCarrito(){
         String carritoStr = "\n";
-        Iterator carritoIt = carrito.iterator();
+        Iterator<ProductoConDescuento> carritoIt = carrito.iterator();
+        ProductoConDescuento producto;
         while(carritoIt.hasNext()){
-            carritoStr += carritoIt.next().getCatalogInfo(this);
+            producto = carritoIt.next();
+            carritoStr += producto.getCatalogInfo(this);
         }
         return carritoStr;
     }

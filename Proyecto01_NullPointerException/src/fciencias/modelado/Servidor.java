@@ -128,11 +128,12 @@ public class Servidor implements InterfazServidor{
    * @param art - Arreglo con articulos de un tipo a guardar.
    */
   public static void guardarUsuarios(HashMap<String,Usuario> listaUsuarios ){
-    String nombreArch = "BDUsuarios.txt";
+    String nombreArch = "./BDUsuarios.ser";
     ObjectOutputStream escritor = null;
     try {
         escritor = new ObjectOutputStream(new FileOutputStream(nombreArch)); 
         escritor.writeObject(listaUsuarios);
+        System.out.println("Se guardo el listado");
     } catch(NotSerializableException e){
       System.out.println("El objeto a guardar no es serializable");
     } catch(FileNotFoundException e){
@@ -149,16 +150,20 @@ public class Servidor implements InterfazServidor{
     }
   }
 
-  public void recuperarArticulos(){
-    String ruta = "BDUsuarios.txt";
+  @SuppressWarnings("unchecked")
+  public static void recuperarArticulos(){
+    String ruta = "BDUsuarios.ser";
     ObjectInputStream lector = null;
     try{
       lector = new ObjectInputStream(new FileInputStream(ruta));
 			Object objeto;
+      HashMap<String,Usuario> map = null;
       int i = 0;
             objeto = lector.readObject();
-            if (objeto != null){
-                listaUsuarios = (HashMap<String,Usuario>) objeto;
+            if(objeto != null){
+              map = (HashMap<String,Usuario>) objeto;
+              listaUsuarios = map;
+            }
     
     } catch(java.lang.ClassNotFoundException e){
     } catch(java.io.EOFException e){
@@ -186,20 +191,22 @@ public class Servidor implements InterfazServidor{
     }
 
     public static void main(String[] args) {
-      //Usuario shikitimiau = new Usuario("shikitimiau", "Diego Angel Rosas Franco", "ArrayList123",5578551018, );
+      /*
       Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4510467245L, "Calle Olivos 145, Azulejos, Madrid", 0124317234L, "Espania");
 
       Usuario arturGod = new Usuario("arturGod", "Arturo Lemus Pablo", "Password",5512235681L, "5ta Avenida No 45, Chicago", 1234543210L, "Estados Unidos");
       
       Usuario fulano = new Usuario("fulano", "Fulano Federico Fernandez Tragedio", "diosEstaAqui123",5578551018L, "Calle Chongus 132, Colonia De las Tragedias", 0224716230L, "Mexico");
 
-
+      listaUsuarios = new HashMap<>();
       listaUsuarios.put("Ross",ross);
       listaUsuarios.put("arturGod",arturGod);
       listaUsuarios.put("fulano",fulano);
-
+      
       guardarUsuarios(listaUsuarios);
-
+      */
+      recuperarArticulos();
+      System.out.println(listaUsuarios.get("fulano").getNombreCompleto());
 
 
       
