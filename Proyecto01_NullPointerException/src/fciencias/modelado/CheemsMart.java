@@ -10,8 +10,8 @@ import java.util.Scanner;
  * @version 1.0 - 06/05/2022
  */
 public class CheemsMart {
-    /** Menu de compra con el idioma correspondiente al usuario que ingresó al sistema */
-    private static MenuCompra menuCompra;
+    /** Menu de compra con el idioma correspondiente al usuario que ingresó al sistema, en Latino por defecto */
+    private static MenuCompra menuCompra = new MenuCompraLatino();;
     /** Servidor asociado a la tienda */
     private static ServidorProxy servidor;
     /** Lista de paises por idioma, donde el idioma es la clave */
@@ -39,6 +39,8 @@ public class CheemsMart {
                     ingreso = true;
                 else
                     System.out.println("[!] La contraseña no coincide.");
+            } else {
+                System.out.println("[!] El usuario no está registrado.");
             }
         }
         return usuario;
@@ -49,6 +51,8 @@ public class CheemsMart {
      * @param usuario - <code>Usuario</code> al que se adaptará el menu de compra.
      */
     public static void cambiarIdioma(Usuario usuario){
+        System.out.println("Iidoma del usuario" + idiomaPais(usuario.getPais()));
+
         if(idiomaPais(usuario.getPais()).equals("Castellano"))
             menuCompra = new MenuCompraCastellano();
         else if(idiomaPais(usuario.getPais()).equals("Ingles"))
@@ -64,7 +68,7 @@ public class CheemsMart {
         String[] castellano = {"Espana", "Andorra"};
         String[] ingles = {"Estados Unidos", "Reino Unido", "Australia","Canada","Irlanda", "Nueva Zelanda"};
         String[] latino = {"Mexico", "Argentina", "Bolivia", "Chile", "Colombia", "Costa Rica", "Cuba", "Ecuador", "El Salvador", "Guatemala", "Guinea Ecuatorial", "Honduras", "Nicaragua", "Panama", "Uruguay", "Peru", "Puerto Rico", "Republica Dominicana", "Uruguay", "Venezuela"};
-
+        idiomasPorPais = new HashMap<>();
         idiomasPorPais.put("Castellano",castellano);
         idiomasPorPais.put("Ingles",ingles);
         idiomasPorPais.put("Latino",latino);
@@ -76,6 +80,7 @@ public class CheemsMart {
      * @return - <code>String</code> con el idioma del pais, regresa una cadena vacia en caso de no encontrar algún idioma asociado al país.
      */
     public static String idiomaPais(String pais){
+        System.out.println("País recibido: " + pais);
         String[] paises;
         for(String idioma: idiomasPorPais.keySet()){
             paises = idiomasPorPais.get(idioma);
@@ -91,6 +96,10 @@ public class CheemsMart {
         MenuTerminal menu = new MenuTerminal();
         // Se cargan los paises asociados a su idioma
         inicializarIdiomasPais();
+        Servidor servidorReal = new Servidor();
+        servidor = new ServidorProxy(servidorReal);
+
+
         boolean ingreso = true;
         int opcion = 0;
         do{

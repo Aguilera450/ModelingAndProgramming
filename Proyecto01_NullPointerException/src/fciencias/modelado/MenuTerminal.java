@@ -107,7 +107,7 @@ public class MenuTerminal {
             }catch(Exception e){
                 System.out.println("\nSe ingreso un valor inválido, intentelo nuevamente.");
             }finally{
-                input.nextLine(); // Limpiamos el buffer.
+                //input.nextLine(); // Limpiamos el buffer.
             }
         }while(exit == false);
 

@@ -36,8 +36,8 @@ public class Servidor implements InterfazServidor{
      * Se inicializa cargando sus usuarios y catalogo.
     */
     public Servidor(){
-        cargarUsuarios();
         cargarCatalogo();
+        cargarUsuarios();
         aplicarDescuentos(10);
     }
 
@@ -285,36 +285,15 @@ public class Servidor implements InterfazServidor{
         } catch (IOException e) {}
       }
     }
+
+
+    LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Electronica");
+      ProductoConDescuento prodAct = productosDelDep.get(2);
+      System.out.println(prodAct.getCatalogInfo()); // Atun
   }
 
 
-  @SuppressWarnings("unchecked")
-  public static void recuperarArticulos(){
-    String ruta = "BDUsuarios.ser";
-    ObjectInputStream lector = null;
-    try{
-      lector = new ObjectInputStream(new FileInputStream(ruta));
-			Object objeto;
-      HashMap<String,Usuario> map = null;
-      int i = 0;
-            objeto = lector.readObject();
-            if(objeto != null){
-              map = (HashMap<String,Usuario>) objeto;
-              listaUsuarios = map;
-            }
-    
-    } catch(java.lang.ClassNotFoundException e){
-    } catch(java.io.EOFException e){
-		} catch(IOException e){
-			System.out.println("Lectura fallida: "+e);
-		} finally{
-      if(lector != null) {
-        try {
-          lector.close();
-        } catch (IOException e) {}
-      }
-    }
-  }
+
 
     /**
      * Nos permite consultar el identificador del servidor.
@@ -341,8 +320,7 @@ public class Servidor implements InterfazServidor{
       listaUsuarios.put("arturGod",arturGod);
       listaUsuarios.put("fulano",fulano);
       
-      guardarUsuarios(listaUsuarios);
-
+      //guardarUsuarios(listaUsuarios);
       Producto a1 = new Producto("182312394","La Costeña Chile Jalapeño Rajas 105 Gr", "Alimentos", 8.10f);
       Producto a2 = new Producto("645120012","Atun Ancla En Agua Lata", "Alimentos",  12.70f);
       Producto a3 = new Producto("199283431","Leche Evaporada Alpura", "Alimentos",  16.40f);
@@ -354,13 +332,13 @@ public class Servidor implements InterfazServidor{
       Producto e3 = new Producto("814729122", "TV JVC 32 Pulgadas HD LED SI32H", "Electronicos", 2999.00f);
       Producto e4 = new Producto("928381288", "Smartphone Samsung Galaxy A52", "Electronicos", 7848.00f);
       Producto e5 = new Producto("712361236", "Xiaomi Poco M4 Pro 5G", "Electronicos", 5449.00f);
-
+      
       Producto ed1 = new Producto("912931233", "Lavadora Mabe 21 Kg Blanca", "Electrodomesticos", 10490.00f);
       Producto ed2 = new Producto("992320042", "Refrigerador 11 Pies Winia Cúbicos con Despachador Silver", "Electrodomesticos", 7490.00f);
       Producto ed3 = new Producto("891231232", "Refrigerador 18 Pies Whirlpool Acero Inox", "Electrodomesticos", 14790.00f);
       Producto ed4 = new Producto("772938233", "Frigobar Hisense 3.3 Pies Cúbicos Silver", "Electrodomesticos", 5390.00f);
       Producto ed5 = new Producto("111284837", "Refrigerador Mabe Bottom Freezer 19 pies", "Electrodomesticos", 18490.00f);
-
+      
       LinkedList<ProductoConDescuento> electronica = new LinkedList<>();
       electronica.add(e1);
       electronica.add(e2);
@@ -385,19 +363,20 @@ public class Servidor implements InterfazServidor{
       catalogo.put("Electrodomesticos", electrodomesticos);
       catalogo.put("Electronica", electronica);
       
-      guardarCatalogo(catalogo);
-
-*/      
-
-      cargarUsuarios();
+      //guardarCatalogo(catalogo);
+      
+      
+      
+      //cargarUsuarios();
       System.out.println(listaUsuarios.get("Ross").getNombreCompleto());
       
-
-      cargarCatalogo();
+      
+      //cargarCatalogo();
       LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Electronica");
       ProductoConDescuento prodAct = productosDelDep.get(2);
       System.out.println(prodAct.getCatalogInfo()); // Atun
-
+      
+      */
       
     }
 

@@ -47,4 +47,7 @@ public class ServidorProxy implements InterfazServidor{
         return servidorReal.solicitarCatalogo(usuario);
     }
     
+    public void aplicarDescuentos(int tot){
+        servidorReal.aplicarDescuentos(tot);
+    }
 }
