@@ -6,6 +6,7 @@ import java.io.NotSerializableException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -108,9 +109,11 @@ public class Servidor implements InterfazServidor{
         int cont = 1;
         for(String dpto: catalogo.keySet()){
             catalogoString += "\n\n###### " + dpto+ " #####";
+
             productos = catalogo.get(dpto);
-            for(int i = 0; i < productos.size(); i++){
-                catalogoString += "\n" + (cont++) + ") " + productos.get(i).getCatalogInfo();
+            Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
+            while(iterador.hasNext()){
+                catalogoString += "\n\n" + (cont++) + ") " + iterador.next().getCatalogInfo();
             }
         }
         return catalogoString;
@@ -130,8 +133,9 @@ public class Servidor implements InterfazServidor{
         for(String dpto: catalogo.keySet()){
             catalogoString += "\n\n\n###### " + dpto+ " #####";
             productos = catalogo.get(dpto);
-            for(int i = 0; i < productos.size(); i++){
-                catalogoString += "\n\n" + (cont++) + ") " + productos.get(i).getCatalogInfo(usuario);
+            Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
+            while(iterador.hasNext()){
+                catalogoString += "\n\n" + (cont++) + ") " + iterador.next().getCatalogInfo(usuario);
             }
         }
         return catalogoString;
@@ -148,11 +152,12 @@ public class Servidor implements InterfazServidor{
       if(n >= 0){
         for(String dpto: catalogo.keySet()){
             productos = catalogo.get(dpto);
-            for(int i = 0; i < productos.size(); i++){
-              cont++;
-              if(cont == n){
-                return productos.get(cont);
-              }
+            Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
+            while(iterador.hasNext()){
+                cont++;
+                if(cont == n){
+                  return productos.get(cont);
+                }
             }
         }
       }
