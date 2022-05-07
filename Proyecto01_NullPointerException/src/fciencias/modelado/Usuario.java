@@ -67,6 +67,21 @@ public class Usuario implements Serializable{
     }
 
     /**
+     * Método que calcula el precio total de los articulos del carrito
+     * @return - <code>float</float> con el precio total de los articulos del carrito.
+     */
+    public float totalCarrito(){
+        float total = 0f;
+        Iterator<ProductoConDescuento> carritoIt = carrito.iterator();
+        ProductoConDescuento producto;
+        while(carritoIt.hasNext()){
+            producto = carritoIt.next();
+            total += producto.getPrecio(this);
+        }
+        return total;
+    }
+
+    /**
      * Agrega un producto al carrito del usuario.
      * @param producto - <code>ProductoConDescuento</code> a agregar al carrito.
      */

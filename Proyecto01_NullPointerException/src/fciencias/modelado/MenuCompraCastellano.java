@@ -39,7 +39,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * @return Despedida en tipo String.
      */
     public String seleccionaOpcion(){
-        return "Ingresad el número asociado al producto: " ;
+        return "16) Salir \nIngresad el número asociado al producto: " ;
     }
 
     /**

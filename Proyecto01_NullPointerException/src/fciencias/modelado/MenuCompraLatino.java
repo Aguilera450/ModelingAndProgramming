@@ -38,7 +38,7 @@ public class MenuCompraLatino extends MenuCompra {
      * @return Despedida en tipo String.
      */
     public String seleccionaOpcion(){
-        return "Ingresa el número asociado al producto que quieres: " ;
+        return "16) Salir \nIngresa el número asociado al producto que quieres: " ;
     }
 
     /**

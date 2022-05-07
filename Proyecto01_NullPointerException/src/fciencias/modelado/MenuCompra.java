@@ -88,11 +88,12 @@ public abstract class MenuCompra {
                     break;
                 case 2:
                     System.out.println(servidor.solicitarCatalogo(usuario));
-                    int numProd = menu.dameUnNatural(seleccionaOpcion(),1,15);
-                    ProductoConDescuento producto = servidor.solicitarProducto(numProd);
-                    usuario.agregarAlCarrito(producto);
-                    System.out.println(contenidoCarrito() + usuario.mostrarCarrito());
-                    
+                    int numProd = menu.dameUnNatural(seleccionaOpcion(),1,16);
+                    if(numProd != 16){
+                        ProductoConDescuento producto = servidor.solicitarProducto(numProd);
+                        usuario.agregarAlCarrito(producto);
+                        System.out.println(contenidoCarrito() + usuario.mostrarCarrito());
+                    }
                     break;
                 case 3:
                     System.out.println(despedirse(usuario.getNombreCompleto()));

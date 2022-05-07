@@ -170,7 +170,7 @@ public class Servidor implements InterfazServidor{
 
     /**
      * Método para aplicar de forma azarosa descuentos a los productos del catalogo.
-     * @param total - <code>int</code> con el total de descuentos a aplicar
+     * @param total - <code>int</code> con el total de posibles descuentos a aplicar.
      */
     public static void aplicarDescuentos(int tot){
         int rand;
@@ -189,31 +189,32 @@ public class Servidor implements InterfazServidor{
            // Se aplican descuentos preferenciales de forma azaroza.
            // Se tiene un 50% de probabilidad de obtener este descuento.
             rand = (int) (Math.random() * 2);
-            if(rand == 1){
+            if(rand == 0){
               if(prodAct.getDepartamento().equals("Alimentos")){
                 prodAct = new DescuentoMexico(prodAct);
               } else if (prodAct.getDepartamento().equals("Electrodomesticos")){
                 prodAct = new DescuentoEspania(prodAct);
               }
             }
-            // Se aplica de forma azaroza hasta un máximo de 3 descuentos más.
-            int descuentosRest = (int) (Math.random() * 3);
-            for (int j = 0; j < descuentosRest; j++) {
+
+            // Se aplica de forma azaroza hasta un máximo de 2 descuentos más.
+            int descuentosRest = (int) (Math.random() * 2);
+            for (int j = 0; j < descuentosRest + 1; j++) {
                 rand = (int) (Math.random() * 4);
                 switch (rand) {
-                  case 1:
+                  case 0:
                     prodAct = new DescuentoEUA(prodAct);
                     break;
                   
-                  case 2:
+                  case 1:
                     prodAct = new DescuentoEspania(prodAct);
                     break;
                   
-                  case 3:
+                  case 2:
                     prodAct = new DescuentoMexico(prodAct);
                     break;
 
-                  case 4:
+                  case 3:
                     prodAct = new DescuentoGlobal(prodAct);
                     break;
 

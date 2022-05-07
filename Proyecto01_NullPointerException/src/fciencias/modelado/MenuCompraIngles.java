@@ -39,7 +39,7 @@ public class MenuCompraIngles extends MenuCompra{
      * @return Despedida en tipo String.
      */
     public String seleccionaOpcion(){
-        return "Please put the index product: " ;
+        return "16) Exit \nPlease put the index product: " ;
     }
 
     /**

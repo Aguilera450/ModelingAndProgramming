@@ -46,13 +46,7 @@ public class Producto implements ProductoConDescuento {
         return precio;
     }
     
-
     public String getCatalogInfo(Usuario usuario) {
-        return getDescuentos(usuario);
-    }
-
-    
-    public String getDescuentos(Usuario usuario) {
         return codigoBarras + "\n"
             + "Nombre del producto: " + nombreProducto + "\n"
             + "Departamento: " + departamento + "\n";
