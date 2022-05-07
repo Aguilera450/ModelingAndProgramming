@@ -157,11 +157,11 @@ public class Servidor implements InterfazServidor{
             System.out.println("Dpto..." + dpto);
             Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
             while(iterador.hasNext()){
-                cont++;
-                iterador.next();
                 if(cont == n){
                   return iterador.next();
                 }
+                cont++;
+                iterador.next();
             }
         }
       }
