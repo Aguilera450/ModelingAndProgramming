@@ -81,4 +81,28 @@ public class MenuCompraCastellano extends MenuCompra {
     public String opcion4(){
         return "4) Me piro vampiro.";
     }
+
+    /**
+     * Devuelve el mensaje para solicitar la cuenta bancaria.
+     * @return Despedida en tipo String.
+     */
+    public String ingresarCuenta(){
+        return "Ingresad tu cuenta bancaria: " ;
+    }
+
+    /**
+     * Devuelve el mensaje de pago rechazado.
+     * @return Despedida en tipo String.
+     */
+    public String pagoRechazado(){
+        return "Vuestro pago fue rechazado. " ;
+    }
+
+    /**
+     * Devuelve le titulo ticket
+     * @return Despedida en tipo String.
+     */
+    public String ticket(){
+        return "FACTURA " ;
+    }
 }

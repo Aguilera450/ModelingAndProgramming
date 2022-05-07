@@ -37,6 +37,24 @@ public abstract class MenuCompra {
      * @return Despedida en tipo String-
      */
     public abstract String contenidoCarrito();
+    
+    /**
+     * Devuelve el mensaje para informar el pago rechazado.
+     * @return Despedida en tipo String.
+     */
+    public abstract String pagoRechazado();
+
+    /**
+     * Devuelve el mensaje para el titulo ticket.
+     * @return Despedida en tipo String.
+     */
+    public abstract String ticket();
+
+    /**
+     * Devuelve el mensaje para solicitar la cuenta bancaria.
+     * @return Despedida en tipo String.
+     */
+    public abstract String ingresarCuenta();
 
     /**
      * Devuelve la opcion 1 del menu del usuario.

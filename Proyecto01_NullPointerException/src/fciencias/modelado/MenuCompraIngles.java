@@ -81,4 +81,28 @@ public class MenuCompraIngles extends MenuCompra{
     public String opcion4(){
         return "4) I have to go home!";
     }
+
+    /**
+     * Devuelve el mensaje para solicitar la cuenta bancaria.
+     * @return Despedida en tipo String.
+     */
+    public String ingresarCuenta(){
+        return "Put your bank account: " ;
+    }
+
+    /**
+     * Devuelve el mensaje de pago rechazado.
+     * @return Despedida en tipo String.
+     */
+    public String pagoRechazado(){
+        return "Your pay was rejected. " ;
+    }
+
+    /**
+     * Devuelve le titulo ticket
+     * @return Despedida en tipo String.
+     */
+    public String ticket(){
+        return "Voucher" ;
+    }
 }
