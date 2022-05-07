@@ -38,4 +38,12 @@ public interface ProductoConDescuento {
      * @return <code>String</code> -- información del producto.
      */
     public String getCatalogInfo();
+
+    /**
+     * Método que devuelve el departamento de un <code>Producto</code>
+     *  sin restricción de usuario.
+     * @return <code>String</code> -- información del departamento.
+     */
+    public String getDepartamento();
+
 }
