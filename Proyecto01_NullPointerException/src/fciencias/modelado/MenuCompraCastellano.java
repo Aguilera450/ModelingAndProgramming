@@ -71,7 +71,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * @return La opcion 3 en tipo String.
      */
     public String opcion3(){
-        return "3) Me piro vampiro.";
+        return "3) Quiero pagadle mi carrito.";
     }
 
     /**

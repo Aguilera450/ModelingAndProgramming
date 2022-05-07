@@ -70,7 +70,7 @@ public class MenuCompraLatino extends MenuCompra {
      * @return La opcion 3 en tipo String.
      */
     public String opcion3(){
-        return "3) ¡Me tengo que ir, nos vemos!.";
+        return "3) Quiero pagar mi carrito.";
     }
 
     /**
@@ -78,6 +78,6 @@ public class MenuCompraLatino extends MenuCompra {
      * @return La opcion 4 en tipo String.
      */
     public String opcion4(){
-        return "4) asdasdad.";
+        return "4) ¡Me tengo que ir, nos vemos!.";
     }
 }
