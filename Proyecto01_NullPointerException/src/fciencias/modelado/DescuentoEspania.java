@@ -30,7 +30,7 @@ public class DescuentoEspania extends Descuento {
      */
     public float getPrecio(Usuario usuario) {
 	if(usuario.getPais().equals("Espania"))
-	    return producto.getPrecio(usuario) - producto.getPrecio(usuario)*producto.descuentoAAplicar;
+	    return producto.getPrecio(usuario) - producto.getPrecio(usuario)*super.descuentoAAplicar;
 	else
 	    return producto.getPrecio(usuario);
     }
@@ -46,7 +46,7 @@ public class DescuentoEspania extends Descuento {
     public String getCatalogInfo(Usuario usuario) {
 	if(usuario.getPais().equals("Espania"))
 	    return "\nSe anexa un descuento del "
-		+ (producto.descuentoAAplicar * 100) + "%."
+		+ (super.descuentoAAplicar * 100) + "%."
 		+ "\n" + producto.getCatalogInfo(usuario);
 	else
 	    return producto.getCatalogInfo(usuario);

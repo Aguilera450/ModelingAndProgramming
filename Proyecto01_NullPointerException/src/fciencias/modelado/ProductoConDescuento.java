@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * Interfaz <code>ProductoConDescuento</code> a partir de la cual se
  * implementaran los distintos descuentos hechos por regiones (países).
@@ -7,7 +9,7 @@
  * @version 1.0 - 04/05/2022
  */
 
-public interface ProductoConDescuento {
+public interface ProductoConDescuento extends Serializable{
     
     /**
      * Método abstracto que nos devuelve el precio del producto después
