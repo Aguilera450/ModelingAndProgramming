@@ -72,7 +72,7 @@ public abstract class Descuento implements ProductoConDescuento {
      */
     @Override
     public String getCatalogInfo() {
-	return "";
+	    return producto.getCatalogInfo();
     }
     
     /**
