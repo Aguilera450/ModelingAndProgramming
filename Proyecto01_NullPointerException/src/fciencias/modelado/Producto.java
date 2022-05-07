@@ -19,6 +19,20 @@ public class Producto implements ProductoConDescuento {
     private float precio;             
     
     /**
+     * Constructor de uso exclusivo del sistema de un producto.
+     * @param cB - <code>String</code> Codigo de barras.
+     * @param nP - <code>String</code> Nombre del producvto.
+     * @param dep - <code>String</code> Departamento del producto.
+     * @param p - <code>float</code> Precio del producto.
+     */
+    public Producto(String cB, String nP, String dep, float p){
+        codigoBarras = cB;
+        nombreProducto = nP;
+        departamento = dep;
+        precio = p;
+
+    }
+    /**
      * Método que nos regresa el precio del producto después
      * de aplicar el descuento, siempre que el usuario tenga
      * este producto en su carrito.
