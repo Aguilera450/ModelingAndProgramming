@@ -57,8 +57,8 @@ public class Producto implements ProductoConDescuento {
     @Override
     public String getCatalogInfo(Usuario usuario) {
 	return codigoBarras + "\n"
-	    + "Nombre del producto: " + nombreProducto + "/n"
-	    + "Departamento: " + departamento + "/n"
+	    + "Nombre del producto: " + nombreProducto + "\n"
+	    + "Departamento: " + departamento + "\n"
 	    + "Precio final: $" + getPrecio(usuario);
     }
     
@@ -69,8 +69,8 @@ public class Producto implements ProductoConDescuento {
      */
     public String getCatalogInfo() {
 	return codigoBarras + "\n"
-	    + "Nombre del producto: " + nombreProducto + "/n"
-	    + "Departamento: " + departamento + "/n"
+	    + "Nombre del producto: " + nombreProducto + "\n"
+	    + "Departamento: " + departamento + "\n"
 	    + "Precio: $" + precio;
     }
     
