@@ -94,6 +94,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje para solicitar la cuenta bancaria.
      * @return Despedida en tipo String.
      */
+    @Override
     public String ingresarCuenta(){
         return "Ingresa tu cuenta bancaria: " ;
     }
@@ -102,6 +103,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje de pago rechazado.
      * @return Despedida en tipo String.
      */
+    @Override
     public String pagoRechazado(){
         return "Tu pago fue rechazado. " ;
     }
@@ -110,6 +112,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve le titulo ticket
      * @return Despedida en tipo String.
      */
+    @Override
     public String ticket(){
         return "TICKET " ;
     }
@@ -118,6 +121,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje que avusa a donde se va a enviar:
      * @return Despedida en tipo String.
      */
+    @Override
     public String direccion(){
         return "Te mandaremos sus productos a: " ;
     }
@@ -126,6 +130,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje apra avisar el dia.
      * @return Despedida en tipo String.
      */
+    @Override
     public String dia(){
         return "en la fecha: " ;
     }

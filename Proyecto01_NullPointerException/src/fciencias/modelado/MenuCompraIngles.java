@@ -95,6 +95,7 @@ public class MenuCompraIngles extends MenuCompra{
      * Devuelve el mensaje para solicitar la cuenta bancaria.
      * @return Despedida en tipo String.
      */
+    @Override
     public String ingresarCuenta(){
         return "Put your bank account: " ;
     }
@@ -103,6 +104,7 @@ public class MenuCompraIngles extends MenuCompra{
      * Devuelve el mensaje de pago rechazado.
      * @return Despedida en tipo String.
      */
+    @Override
     public String pagoRechazado(){
         return "Your pay was rejected. " ;
     }
@@ -111,6 +113,7 @@ public class MenuCompraIngles extends MenuCompra{
      * Devuelve le titulo ticket
      * @return Despedida en tipo String.
      */
+    @Override
     public String ticket(){
         return "Voucher" ;
     }
@@ -119,6 +122,7 @@ public class MenuCompraIngles extends MenuCompra{
      * Devuelve el mensaje que avusa a donde se va a enviar:
      * @return Despedida en tipo String.
      */
+    @Override
     public String direccion(){
         return "We will send you your products to the address: " ;
     }
@@ -127,6 +131,7 @@ public class MenuCompraIngles extends MenuCompra{
      * Devuelve el mensaje apra avisar el dia.
      * @return Despedida en tipo String.
      */
+    @Override
     public String dia(){
         return "In the day: " ;
     }
