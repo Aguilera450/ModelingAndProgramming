@@ -26,17 +26,33 @@ public class MenuCompraIngles extends MenuCompra{
 
     /**
      * Devuelve el mensaje al despedirse del usuario en el idioma ingles.
-     * @return Despedida en tipo String-
+     * @return Despedida en tipo String.
      */
     public String despedirse(){
         return "Thanks for visiting us!";
     }
 
     /**
-     * Devuelve el mensaje al mostrar el menu del usuario en el idioma Ingles.
-     * @return Despedida en tipo String.
+     * Devuelve la opcióm 1 del menu en el idioma ingles.
+     * @return La opcion 1 en tipo String.
      */
-    public String opcionesMenu(){
-        return "1) I wanna see your products." + "\n2) I wanna buy some things." + "\n3) I have to go home.";
+    public String opcion1(){
+        return "1) I wanna see your products.";
+    }
+
+    /**
+     * Devuelve la opción 2 del menu en el idioma ingles.
+     * @return La opcion 2 en tipo String.
+     */
+    public String opcion2(){
+        return "2) I wanna buy some things." ;
+    }
+
+    /**
+     * Devuelve la opción 3 del menu en el idioma ingles.
+     * @return La opcion 3 en tipo String.
+     */
+    public String opcion3(){
+        return "3) I have to go home!";
     }
 }
