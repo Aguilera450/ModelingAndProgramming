@@ -61,8 +61,9 @@ public abstract class MenuCompra {
     public void menuPrincipal(Usuario usuario, ServidorProxy servidor){
         MenuTerminal menu = new MenuTerminal();
         boolean seguir = true;
-        int opcion = menu.opcionMenu(opcionesMenu(usuario.getNombreCompleto()), 1, 3);
+        int opcion = 0;
         do {
+            opcion = menu.opcionMenu(opcionesMenu(usuario.getNombreCompleto()), 1, 3);
             switch(opcion){
                 case 1:
                     System.out.println(servidor.solicitarCatalogo(usuario));

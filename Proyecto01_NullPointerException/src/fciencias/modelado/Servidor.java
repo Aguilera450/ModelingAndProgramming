@@ -36,9 +36,52 @@ public class Servidor implements InterfazServidor{
      * Se inicializa cargando sus usuarios y catalogo.
     */
     public Servidor(){
-        cargarCatalogo();
-        cargarUsuarios();
-        aplicarDescuentos(10);
+        //cargarCatalogo();
+      Producto a1 = new Producto("182312394","La Costeña Chile Jalapeño Rajas 105 Gr", "Alimentos", 8.10f);
+      Producto a2 = new Producto("645120012","Atun Ancla En Agua Lata", "Alimentos",  12.70f);
+      Producto a3 = new Producto("199283431","Leche Evaporada Alpura", "Alimentos",  16.40f);
+      Producto a4 = new Producto("100230424","Galletas Gamesa Marias Rollo", "Alimentos",  12.70f);
+      Producto a5 = new Producto("834913234","Frijol Isadora Refrito Negro Bolsa", "Alimentos",  15.70f);
+      
+      Producto e1 = new Producto("834913234", "Laptop HP 15-dw1085", "Electronicos", 8999.00f);
+      Producto e2 = new Producto("712731273", "TV Samsung 40 Pulgadas Full HD Smart TV LED UN40N5200AFXZX", "Electronicos", 5999.00f);
+      Producto e3 = new Producto("814729122", "TV JVC 32 Pulgadas HD LED SI32H", "Electronicos", 2999.00f);
+      Producto e4 = new Producto("928381288", "Smartphone Samsung Galaxy A52", "Electronicos", 7848.00f);
+      Producto e5 = new Producto("712361236", "Xiaomi Poco M4 Pro 5G", "Electronicos", 5449.00f);
+      
+      Producto ed1 = new Producto("912931233", "Lavadora Mabe 21 Kg Blanca", "Electrodomesticos", 10490.00f);
+      Producto ed2 = new Producto("992320042", "Refrigerador 11 Pies Winia Cúbicos con Despachador Silver", "Electrodomesticos", 7490.00f);
+      Producto ed3 = new Producto("891231232", "Refrigerador 18 Pies Whirlpool Acero Inox", "Electrodomesticos", 14790.00f);
+      Producto ed4 = new Producto("772938233", "Frigobar Hisense 3.3 Pies Cúbicos Silver", "Electrodomesticos", 5390.00f);
+      Producto ed5 = new Producto("111284837", "Refrigerador Mabe Bottom Freezer 19 pies", "Electrodomesticos", 18490.00f);
+      
+      LinkedList<ProductoConDescuento> electronica = new LinkedList<>();
+      electronica.add(e1);
+      electronica.add(e2);
+      electronica.add(e3);
+      electronica.add(e4);
+      electronica.add(e5);
+      LinkedList<ProductoConDescuento> electrodomesticos = new LinkedList<>();
+      electrodomesticos.add(ed1);
+      electrodomesticos.add(ed2);
+      electrodomesticos.add(ed3);
+      electrodomesticos.add(ed4);
+      electrodomesticos.add(ed5);
+      LinkedList<ProductoConDescuento> alimentos = new LinkedList<>();
+      alimentos.add(a1);
+      alimentos.add(a2);
+      alimentos.add(a3);
+      alimentos.add(a4);
+      alimentos.add(a5);
+      
+      catalogo = new HashMap<>();
+      catalogo.put("Alimentos", alimentos);
+      catalogo.put("Electrodomesticos", electrodomesticos);
+      catalogo.put("Electronica", electronica);
+
+
+      cargarUsuarios();
+      //aplicarDescuentos(10);
     }
 
     /**
@@ -85,10 +128,10 @@ public class Servidor implements InterfazServidor{
         LinkedList<ProductoConDescuento> productos;
         int cont = 1;
         for(String dpto: catalogo.keySet()){
-            catalogoString += "\n\n###### " + dpto+ " #####";
+            catalogoString += "\n\n\n###### " + dpto+ " #####";
             productos = catalogo.get(dpto);
             for(int i = 0; i < productos.size(); i++){
-                catalogoString += "\n" + (cont++) + ") " + productos.get(i).getCatalogInfo(usuario);
+                catalogoString += "\n\n" + (cont++) + ") " + productos.get(i).getCatalogInfo(usuario);
             }
         }
         return catalogoString;
@@ -287,9 +330,9 @@ public class Servidor implements InterfazServidor{
     }
 
 
-    LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Electronica");
-      ProductoConDescuento prodAct = productosDelDep.get(2);
-      System.out.println(prodAct.getCatalogInfo()); // Atun
+    //LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Electronica");
+     // ProductoConDescuento prodAct = productosDelDep.get(2);
+     // System.out.println(prodAct.getCatalogInfo()); // Atun
   }
 
 

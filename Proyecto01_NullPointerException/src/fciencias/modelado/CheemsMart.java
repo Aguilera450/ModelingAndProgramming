@@ -80,12 +80,10 @@ public class CheemsMart {
      * @return - <code>String</code> con el idioma del pais, regresa una cadena vacia en caso de no encontrar algún idioma asociado al país.
      */
     public static String idiomaPais(String pais){
-        System.out.println("País recibido: " + pais);
         String[] paises;
         for(String idioma: idiomasPorPais.keySet()){
             paises = idiomasPorPais.get(idioma);
             for (int i = 0; i < paises.length; i++) {
-                System.out.println("País:" + paises[i] + " idioma: " + idioma);
                 if(paises[i].equals(pais))
                     return idioma;
             }
@@ -98,8 +96,8 @@ public class CheemsMart {
         // Se cargan los paises asociados a su idioma
         inicializarIdiomasPais();
         Servidor servidorReal = new Servidor();
+        servidorReal.aplicarDescuentos(10);
         servidor = new ServidorProxy(servidorReal);
-
 
         boolean ingreso = true;
         int opcion = 0;
