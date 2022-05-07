@@ -65,7 +65,7 @@ public class CheemsMart {
      * Método auxiliar para llenar la lista de paises por idioma.
      */
     private static void inicializarIdiomasPais(){
-        String[] castellano = {"Espana", "Andorra"};
+        String[] castellano = {"Espania", "Andorra"};
         String[] ingles = {"Estados Unidos", "Reino Unido", "Australia","Canada","Irlanda", "Nueva Zelanda"};
         String[] latino = {"Mexico", "Argentina", "Bolivia", "Chile", "Colombia", "Costa Rica", "Cuba", "Ecuador", "El Salvador", "Guatemala", "Guinea Ecuatorial", "Honduras", "Nicaragua", "Panama", "Uruguay", "Peru", "Puerto Rico", "Republica Dominicana", "Uruguay", "Venezuela"};
         idiomasPorPais = new HashMap<>();
@@ -85,6 +85,7 @@ public class CheemsMart {
         for(String idioma: idiomasPorPais.keySet()){
             paises = idiomasPorPais.get(idioma);
             for (int i = 0; i < paises.length; i++) {
+                System.out.println("País:" + paises[i] + " idioma: " + idioma);
                 if(paises[i].equals(pais))
                     return idioma;
             }
