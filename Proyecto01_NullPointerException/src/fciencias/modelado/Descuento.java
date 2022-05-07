@@ -69,7 +69,9 @@ public abstract class Descuento implements ProductoConDescuento {
      *
      */
     @Override
-    public String getCatalogInfo();
+    public String getCatalogInfo() {
+	return "";
+    }
     
     /**
      * Método que devuelve el descuento que se aplica al producto
