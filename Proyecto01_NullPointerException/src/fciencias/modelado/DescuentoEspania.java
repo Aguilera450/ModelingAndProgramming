@@ -44,7 +44,7 @@ public class DescuentoEspania extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getDescuentos(Usuario usuario) {
+    public String getCatalogInfo(Usuario usuario) {
 	if(usuario.getPais().equals("Espania"))
 	    return "\nSe anexa un descuento del "
 		+ (super.descuentoAAplicar * 100) + "%."
