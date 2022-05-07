@@ -95,6 +95,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje para solicitar la cuenta bancaria.
      * @return Despedida en tipo String.
      */
+    @Override
     public String ingresarCuenta(){
         return "Ingresad tu cuenta bancaria: " ;
     }
@@ -103,6 +104,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje de pago rechazado.
      * @return Despedida en tipo String.
      */
+    @Override
     public String pagoRechazado(){
         return "Vuestro pago fue rechazado. " ;
     }
@@ -111,6 +113,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el titulo ticket
      * @return Despedida en tipo String.
      */
+    @Override
     public String ticket(){
         return "FACTURA " ;
     }
@@ -119,15 +122,17 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje que avusa a donde se va a enviar:
      * @return Despedida en tipo String.
      */
+    @Override
     public String direccion(){
         return "Os mandaremos sus productos a: " ;
     }
 
     /**
-     * Devuelve el tiu
+     * Devuelve el mensaje apra avisar el dia.
      * @return Despedida en tipo String.
      */
-    public String direccion(){
-        return "Os mandaremos sus productos a: " ;
+    @Override
+    public String dia(){
+        return "el día: " ;
     }
 }

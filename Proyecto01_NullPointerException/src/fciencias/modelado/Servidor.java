@@ -82,11 +82,11 @@ public class Servidor implements InterfazServidor{
 
 
       // Se cargan los usuarios de la BD
-      Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4510467245L, "Calle Olivos 145, Azulejos, Madrid", 5124317234L, "Espania");
+      Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4575367245L, "Calle Olivos 145, Azulejos, Madrid", 4510467245L, "Espania");
 
       Usuario arturGod = new Usuario("arturGod", "Arturo Lemus Pablo", "Password",5512235681L, "5ta Avenida No 45, Chicago", 1234543210L, "Estados Unidos");
       
-      Usuario fulano = new Usuario("fulano", "Fulano Federico Fernandez Tragedio", "diosEstaAqui123",5578551018L, "Calle Chongus 132, Colonia De las Tragedias", 0224716230L, "Mexico");
+      Usuario fulano = new Usuario("fulano", "Fulano Federico Fernandez Tragedio", "diosEstaAqui123",5891551018L, "Calle Chongus 132, Colonia De las Tragedias", 5578551018L, "Mexico");
 
 
       listaUsuarios.put("Ross",ross);
