@@ -11,6 +11,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje al completar una compra en el idioma latino.
      * @return Mensaje de agradecimiento por su compra en tipo String.
      */
+    @Override
     public String completarCompra(){
         return "¡Muchas gracias por su compra!, Vuelva pronto!";
     }
@@ -20,6 +21,7 @@ public class MenuCompraLatino extends MenuCompra {
      * @param nombre Nombre del usuario.
      * @return Saludo en tipo String.
      */
+    @Override
     public String saludar(String nombre){
         return "Hola "+ nombre +",¡Te damos la bienvenida a nuestra tienda!";
     }
@@ -29,6 +31,7 @@ public class MenuCompraLatino extends MenuCompra {
      * @param nombre Nombre del usuario.
      * @return Despedida en tipo String.
      */
+    @Override
     public String despedirse(String nombre){
         return "¡Vuelve pronto" + nombre + "!";
     }
@@ -37,6 +40,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje para decirle al usuario que seleccione una opcion en el idioma latino.
      * @return Despedida en tipo String.
      */
+    @Override
     public String seleccionaOpcion(){
         return "16) Salir \nIngresa el número asociado al producto que quieres: " ;
     }
@@ -45,6 +49,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve el mensaje para informar el contenido del carrito.
      * @return Despedida en tipo String.
      */
+    @Override
     public String contenidoCarrito(){
         return "Esto es lo que llevas en tu carrito: " ;
     }
@@ -53,6 +58,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve la opcióm 1 del menu en el idioma latino.
      * @return La opcion 1 en tipo String.
      */
+    @Override
     public String opcion1(){
         return "1) Quiero ver tus productos.";
     }
@@ -61,6 +67,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve la opción 2 del menu en el idioma latino.
      * @return La opcion 2 en tipo String.
      */
+    @Override
     public String opcion2(){
         return "2) Quiero comprar algo.";
     }
@@ -69,6 +76,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve la opción 3 del menu en el idioma latino.
      * @return La opcion 3 en tipo String.
      */
+    @Override
     public String opcion3(){
         return "3) Quiero pagar mi carrito.";
     }
@@ -77,6 +85,7 @@ public class MenuCompraLatino extends MenuCompra {
      * Devuelve la opción 4 del menu en el idioma latino.
      * @return La opcion 4 en tipo String.
      */
+    @Override
     public String opcion4(){
         return "4) ¡Me tengo que ir, nos vemos!.";
     }

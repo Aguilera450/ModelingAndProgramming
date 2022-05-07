@@ -23,10 +23,10 @@ public class Servidor implements InterfazServidor{
     private Long id;
     
     /** "BD" de usuarios, en realidad es un HashMap que simula dicha BD, la clave es el nombre de usuario */
-    private static HashMap<String,Usuario> listaUsuarios;
+    private static HashMap<String,Usuario> listaUsuarios = new HashMap<>();
     
     /** "BD" de los productos de la tienda, en realidad es un HashMap que separa por departamento (key) los productos(Lista de procuctos pertenecientes a ese departamento) */
-    private static HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
+    private static HashMap< String, LinkedList<ProductoConDescuento> > catalogo = new HashMap<>();
 
     /** Departamentos actuales en la tienda. */
     private static String[] departamentos = {"Electronica","Electrodomesticos","Alimentos"};
@@ -80,8 +80,18 @@ public class Servidor implements InterfazServidor{
       catalogo.put("Electrodomesticos", electrodomesticos);
       catalogo.put("Electronica", electronica);
 
+
       // Se cargan los usuarios de la BD
-      cargarUsuarios();
+      Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4510467245L, "Calle Olivos 145, Azulejos, Madrid", 5124317234L, "Espania");
+
+      Usuario arturGod = new Usuario("arturGod", "Arturo Lemus Pablo", "Password",5512235681L, "5ta Avenida No 45, Chicago", 1234543210L, "Estados Unidos");
+      
+      Usuario fulano = new Usuario("fulano", "Fulano Federico Fernandez Tragedio", "diosEstaAqui123",5578551018L, "Calle Chongus 132, Colonia De las Tragedias", 0224716230L, "Mexico");
+
+
+      listaUsuarios.put("Ross",ross);
+      listaUsuarios.put("arturGod",arturGod);
+      listaUsuarios.put("fulano",fulano);
     }
 
     /**
@@ -113,6 +123,7 @@ public class Servidor implements InterfazServidor{
             Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
             while(iterador.hasNext()){
                 catalogoString += "\n\n" + (cont++) + ") " + iterador.next().getCatalogInfo();
+                catalogoString += "\n-------------------------------";
             }
         }
         return catalogoString;
@@ -137,6 +148,7 @@ public class Servidor implements InterfazServidor{
             while(iterador.hasNext()){
                 producto = iterador.next();
                 catalogoString += "\n\n" + (cont++) + ") " + producto.getCatalogInfo(usuario) + "Precio: $" + producto.getPrecio(usuario);
+                catalogoString += "\n-------------------------------";
             }
         }
         return catalogoString;
@@ -153,7 +165,6 @@ public class Servidor implements InterfazServidor{
       if(n >= 0){
         for(String dpto: catalogo.keySet()){
             productos = catalogo.get(dpto);
-            System.out.println("Dpto..." + dpto);
             Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
             while(iterador.hasNext()){
                 if(cont == n){
@@ -231,34 +242,7 @@ public class Servidor implements InterfazServidor{
         }
       
     }
-
-    @SuppressWarnings("unchecked")
-    private static void cargarUsuarios(){
-        String ruta = "./BDUsuarios.ser";
-        ObjectInputStream lector = null;
-        try{
-          lector = new ObjectInputStream(new FileInputStream(ruta));
-          Object objeto;
-          HashMap<String,Usuario> map = null;
-          int i = 0;
-            objeto = lector.readObject();
-            if(objeto != null){
-              map = (HashMap<String,Usuario>) objeto;
-              listaUsuarios = map;
-            }
-        } catch(java.lang.ClassNotFoundException e){
-        } catch(java.io.EOFException e){
-        } catch(IOException e){
-          System.out.println("Lectura fallida: "+e);
-        } finally{
-          if(lector != null) {
-            try {
-              lector.close();
-            } catch (IOException e) {}
-          }
-        }
-    }
-
+    
     /**
      * Nos permite consultar el identificador del servidor.
      * @return - Identificador de tipo <code>Long</code>.

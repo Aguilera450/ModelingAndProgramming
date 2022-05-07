@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
  * Clase que simula la tienda CheemsMart.
@@ -24,7 +23,6 @@ public class CheemsMart {
      */
     public static Usuario ingresarAlSistema(){
         MenuTerminal menu = new MenuTerminal();
-        Scanner entrada = new Scanner(System.in);
         String nombreUsuario = "";
         Usuario usuario = null;
         String contrasena = "";
@@ -51,8 +49,6 @@ public class CheemsMart {
      * @param usuario - <code>Usuario</code> al que se adaptará el menu de compra.
      */
     public static void cambiarIdioma(Usuario usuario){
-        System.out.println("Iidoma del usuario" + idiomaPais(usuario.getPais()));
-
         if(idiomaPais(usuario.getPais()).equals("Castellano"))
             menuCompra = new MenuCompraCastellano();
         else if(idiomaPais(usuario.getPais()).equals("Ingles"))

@@ -12,6 +12,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje al completar una compra en el idioma castellano.
      * @return Mensaje de agradecimiento por su compra en tipo String.
      */
+    @Override
     public String completarCompra(){
         return "¡Disfrutad de vuestra compra!";
     }
@@ -21,6 +22,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * @param nombre Nombre del usuario.
      * @return Saludo en tipo String.
      */
+    @Override
     public String saludar(String nombre){
         return "¡Bienveniros a vuestra tienda favorita " + nombre + "!";
     }
@@ -30,6 +32,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * @param nombre Nombre del usuario.
      * @return Despedida en tipo String.
      */
+    @Override
     public String despedirse(String nombre){
         return "¡Gracias por vuestra preferencia! volved pronto " + nombre + "!";
     }
@@ -38,6 +41,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje para decirle al usuario que seleccione una opcion en el idioma castellano.
      * @return Despedida en tipo String.
      */
+    @Override
     public String seleccionaOpcion(){
         return "16) Salir \nIngresad el número asociado al producto: " ;
     }
@@ -46,6 +50,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve el mensaje para informar el contenido del carrito.
      * @return Despedida en tipo String-
      */
+    @Override
     public String contenidoCarrito(){
         return "Esto es lo que llevais en vuestro carrito: " ;
     }
@@ -54,6 +59,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve la opcióm 1 del menu en el idioma castellano.
      * @return La opcion 1 en tipo String.
      */
+    @Override
     public String opcion1(){
         return "1) Quiero ver vuestro catalogo.";
     }
@@ -62,6 +68,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve la opción 2 del menu en el idioma castellano.
      * @return La opcion 2 en tipo String.
      */
+    @Override
     public String opcion2(){
         return "2) Quiero comprar uno de vuestros productos.";
     }
@@ -70,6 +77,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve la opción 3 del menu en el idioma castellano.
      * @return La opcion 3 en tipo String.
      */
+    @Override
     public String opcion3(){
         return "3) Quiero pagadle mi carrito.";
     }
@@ -78,6 +86,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * Devuelve la opción 4 del menu en el idioma castellano.
      * @return La opcion 4 en tipo String.
      */
+    @Override
     public String opcion4(){
         return "4) Me piro vampiro.";
     }

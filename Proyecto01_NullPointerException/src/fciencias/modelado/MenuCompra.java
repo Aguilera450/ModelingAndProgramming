@@ -114,6 +114,16 @@ public abstract class MenuCompra {
                     }
                     break;
                 case 3:
+                    String numCuenta = menu.dameUnaCadena(ingresarCuenta());
+                    
+                    if(Long.toString(usuario.getCuentaBancaria()).equals(numCuenta)){
+                        System.out.println("****"+ticket()+"****");
+                        System.out.println(usuario.mostrarCarrito());
+                        System.out.println("$" + usuario.totalCarrito());
+                        usuario.vaciarCarrito();
+                    } else {
+                        System.out.println(pagoRechazado());
+                    }
                     break;
                 case 4:
                     System.out.println(despedirse(usuario.getNombreCompleto()));
