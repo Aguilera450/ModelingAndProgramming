@@ -7,6 +7,7 @@
 \usepackage{cancel}
 \usepackage{amssymb, latexsym, amsmath}
 \usepackage{import}
+\usepackage[table,xcdraw]{xcolor}
 
 %Algorithms
 \usepackage[ruled,lined,linesnumbered,commentsnumbered]{algorithm2e}
@@ -70,6 +71,29 @@ Se dará por hecho que el usuario sabe moverse en terminal.
 \item[-] Ejecute: “\code{javac CheemsMart.java}”, esto generará los .class del proyecto.
 \item[-] Ejecute: “\code{java CheemsMart}”, esto ejecutará el proyecto mostrándole el menú solicitado para la practica.
 \end{itemize}
+
+\subsubsection*{Ingreso al sistema:}
+A continuación se muestra una tabla de usuarios en la base de datos del sistema.
+\begin{table}[h]
+  \begin{tabular}{|l|l|l|}
+  \hline
+  \rowcolor[HTML]{C0C0C0} 
+  {\color[HTML]{000000} Username}             & {\color[HTML]{000000} Nombre Completo} & {\color[HTML]{000000} Contraseña} \\ \hline
+  Ross                                        & Rosa Victoria Villa Padilla            & Zeldaqwerty                       \\ \hline
+  arturGod                                    & Arturo Lemus Pablo                     & Password                          \\ \hline
+  fulano                                      & Fulano Federico Fernandez Tragedio     & diosEstaAqui123                   \\ \hline
+  \rowcolor[HTML]{C0C0C0} 
+  Direccion                                   & Número de cuenta bancaria              & País                              \\ \hline
+  Calle Olivos 145, Azulejos, Madrid          & 4510467245                             & España                            \\ \hline
+  5ta Avenida No 45, Chicago                  & 1234543210                             & Estados Unidos                    \\ \hline
+  Calle Chongus 132, Colonia De las Tragedias & 5578551018                             & Mexico                            \\ \hline
+  \end{tabular}
+  \end{table}\\
+  \textit{Como se aprecia, las contraseñas son muy "seguras", excelentes para esta prueba}.\\
+  Para poder ingresar al sistema necesitará el Username y la Contraseña.
+  
+
+
 \newpage
 \subsection*{Justificación de uso de patrones:}
 \subsubsection*{Strategy}
@@ -86,8 +110,16 @@ Implementamos el patrón de diseño Decorator en la parte de descuentos, pues lo
 pueden aplicar a uno o más descuentos, incluso del mismo tipo (al menos no hay una restricción
 para esto) de manera conveniente en nuestra implementación, donde el \code{Producto} original
 sin modificaciones en precios es el centro del decorador.
+\subsubsection*{Proxy}
+Decidimos implementar Proxy en la parte del Servidor pues en el PDF del proyecto se dice: \textit{Por cuestiones de seguridad, es imperiosamente necesario que la tienda virtual no cargue directamente el catálogo real, pues si llega a presentar vulnerabilidades de seguridad, cualquiera podría cambiarlo}.\\
+Pensamos que para solucionar esto sería bueno tener un objeto Proxy Servidor que nos sirviera de intermediarios con el Servidor Real, por ahora esto no se aprovechó al máximo para los Requerimientos del proyecto, pero lo pensamos a la larga, pues seguramente se harían varias peticiones al Servidor, y justo para preservar la seguridad de la tienda y sus datos el objeto intermediario es una mejor opción.\\
+
+
 
 \subsection*{Otros patrones que se pudieron usar:}
+\subsubsection*{Iterator}
+Pensamos que en vez de usar Proxy en el Servidor podríamos usar Iterator, y así regresar un iterador de las estructuras que necesitaramos, sin embargo, a la larga esto podría hacer rigido el sistema, en el sentido de que cuando se quiera agregar seguridad al programa, se debería dar una solución especifica o agregar un nuevo patrón. En cambio con Proxy ya ayudamos a que la seguridad sea mantenible.
+
 \subsubsection*{Singleton}
 Nos percatamos que podíamos haber usado Singleton en la clase Servidor, pues de esa forma
 tendríamos un servidor centralizado en el que tendríamos a todos nuestros usarios y el catálogo
@@ -98,6 +130,9 @@ en cada servidor, regional por ejemplo, tener un catálogo distinto a futuro, ya
 solo se tiene un catálogo en el mismo idioma para todas las regiones. Debido a esto es que
 Servidor cuenta con un identificador único, para asi poder diferenciarlo de los demás servidores
 futuros.
+
+\subsubsection*{Template}
+Pensamos en usar template en los idiomas, de hecho al final se quedó esta idea que tuvimos, la cual fue tener un menuPrincipal() en MenuCompra donde se llamarían ciertos métodos con mensajes al usuario en su idioma, y justo los MenuCompra<Idioma> estarían definiendo estos métodos o "pasos". Pero el problema aqui era que menuPrincipal no era secuencial y debido a eso no se podría aplicar el patrón a menos que lo hicieramos de forma secuenciañ.
 
 \newpage
 \subsection*{Diagrama UML:}
