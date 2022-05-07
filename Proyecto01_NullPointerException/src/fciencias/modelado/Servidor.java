@@ -22,7 +22,7 @@ public class Servidor implements InterfazServidor{
     private Long id;
     
     /** "BD" de usuarios, en realidad es un HashMap que simula dicha BD, la clave es el nombre de usuario */
-    private HashMap<String,Usuario> listaUsuarios;
+    private static HashMap<String,Usuario> listaUsuarios;
     
     /** "BD" de los productos de la tienda, en realidad es un HashMap que separa por departamento (key) los productos(Lista de procuctos pertenecientes a ese departamento) */
     private HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
@@ -61,11 +61,12 @@ public class Servidor implements InterfazServidor{
     public String solicitarCatalogo(){
         String catalogoString = "\n";
         LinkedList<ProductoConDescuento> productos;
+        int cont = 1;
         for(String dpto: catalogo.keySet()){
             catalogoString += "\n\n###### " + dpto+ " #####";
             productos = catalogo.get(dpto);
             for(int i = 0; i < productos.size(); i++){
-                catalogoString += "\n   " + productos.get(i).getCatalogInfo();
+                catalogoString += "\n" + (cont++) + ") " + productos.get(i).getCatalogInfo();
             }
         }
         return catalogoString;
@@ -81,14 +82,37 @@ public class Servidor implements InterfazServidor{
     public String solicitarCatalogo(Usuario usuario){
         String catalogoString = "\n";
         LinkedList<ProductoConDescuento> productos;
+        int cont = 1;
         for(String dpto: catalogo.keySet()){
             catalogoString += "\n\n###### " + dpto+ " #####";
             productos = catalogo.get(dpto);
             for(int i = 0; i < productos.size(); i++){
-                catalogoString += "\n   " + productos.get(i).getCatalogInfo(usuario);
+                catalogoString += "\n" + (cont++) + ") " + productos.get(i).getCatalogInfo(usuario);
             }
         }
         return catalogoString;
+    }
+
+    /**
+     *  Método que regresa el n-ésimo producto del catálogo de la tienda.
+     * @return - El <code>ProductoConDescuento</code> en  la n-ésima posición o null si no existe.
+     */
+    public ProductoConDescuento solicitarProducto(int n){
+      ProductoConDescuento producto = null;
+      LinkedList<ProductoConDescuento> productos;
+      int cont = 1;
+      if(n >= 0){
+        for(String dpto: catalogo.keySet()){
+            productos = catalogo.get(dpto);
+            for(int i = 0; i < productos.size(); i++){
+              cont++;
+              if(cont == n){
+                return productos.get(cont);
+              }
+            }
+        }
+      }
+      return producto;
     }
 
     private void cargarUsuarios(){
@@ -103,7 +127,7 @@ public class Servidor implements InterfazServidor{
    * Metodo para guardar articulos.
    * @param art - Arreglo con articulos de un tipo a guardar.
    */
-  public static void guardarUsuarios(HashMap<Long,Usuario> listaUsuarios ){
+  public static void guardarUsuarios(HashMap<String,Usuario> listaUsuarios ){
     String nombreArch = "BDUsuarios.txt";
     ObjectOutputStream escritor = null;
     try {
@@ -159,6 +183,26 @@ public class Servidor implements InterfazServidor{
 
     public String[] getDepartamentos(){
         return departamentos.clone();
+    }
+
+    public static void main(String[] args) {
+      //Usuario shikitimiau = new Usuario("shikitimiau", "Diego Angel Rosas Franco", "ArrayList123",5578551018, );
+      Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4510467245L, "Calle Olivos 145, Azulejos, Madrid", 0124317234L, "Espania");
+
+      Usuario arturGod = new Usuario("arturGod", "Arturo Lemus Pablo", "Password",5512235681L, "5ta Avenida No 45, Chicago", 1234543210L, "Estados Unidos");
+      
+      Usuario fulano = new Usuario("fulano", "Fulano Federico Fernandez Tragedio", "diosEstaAqui123",5578551018L, "Calle Chongus 132, Colonia De las Tragedias", 0224716230L, "Mexico");
+
+
+      listaUsuarios.put("Ross",ross);
+      listaUsuarios.put("arturGod",arturGod);
+      listaUsuarios.put("fulano",fulano);
+
+      guardarUsuarios(listaUsuarios);
+
+
+
+      
     }
 
 }
