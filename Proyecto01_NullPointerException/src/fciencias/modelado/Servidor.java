@@ -233,7 +233,7 @@ public class Servidor implements InterfazServidor{
 
   @SuppressWarnings("unchecked")
   private static void cargarUsuarios(){
-    String ruta = "BDUsuarios.ser";
+    String ruta = "./BDUsuarios.ser";
     ObjectInputStream lector = null;
     try{
       lector = new ObjectInputStream(new FileInputStream(ruta));
@@ -261,7 +261,7 @@ public class Servidor implements InterfazServidor{
 
   @SuppressWarnings("unchecked")
   private static void cargarCatalogo(){
-    String ruta = "BDProductos.ser";
+    String ruta = "BDCatalogo.ser";
     ObjectInputStream lector = null;
     try{
       lector = new ObjectInputStream(new FileInputStream(ruta));
@@ -329,6 +329,7 @@ public class Servidor implements InterfazServidor{
     }
 
     public static void main(String[] args) {
+      /*
       Usuario ross = new Usuario("Ross", "Rosa Victoria Villa Padilla", "Zeldaqwerty",4510467245L, "Calle Olivos 145, Azulejos, Madrid", 0124317234L, "Espania");
       
       Usuario arturGod = new Usuario("arturGod", "Arturo Lemus Pablo", "Password",5512235681L, "5ta Avenida No 45, Chicago", 1234543210L, "Estados Unidos");
@@ -386,16 +387,17 @@ public class Servidor implements InterfazServidor{
       
       guardarCatalogo(catalogo);
 
-      /*
+*/      
+
       cargarUsuarios();
-      System.out.println(listaUsuarios.get("fulano").getNombreCompleto());
+      System.out.println(listaUsuarios.get("Ross").getNombreCompleto());
       
 
       cargarCatalogo();
-      LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Alimentos");
+      LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Electronica");
       ProductoConDescuento prodAct = productosDelDep.get(2);
       System.out.println(prodAct.getCatalogInfo()); // Atun
-      */
+
       
     }
 
