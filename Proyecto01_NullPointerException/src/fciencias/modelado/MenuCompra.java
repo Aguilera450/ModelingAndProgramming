@@ -57,6 +57,18 @@ public abstract class MenuCompra {
     public abstract String ingresarCuenta();
 
     /**
+     * Devuelve el mensaje que avusa a donde se va a enviar:
+     * @return Despedida en tipo String.
+     */
+    public abstract String direccion();
+
+    /**
+     * Devuelve el mensaje apra avisar el dia.
+     * @return Despedida en tipo String.
+     */
+    public abstract String dia();
+
+    /**
      * Devuelve la opcion 1 del menu del usuario.
      * @return La opcion 1 en tipo String.
      */

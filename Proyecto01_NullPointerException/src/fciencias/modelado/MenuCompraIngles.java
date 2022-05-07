@@ -114,4 +114,20 @@ public class MenuCompraIngles extends MenuCompra{
     public String ticket(){
         return "Voucher" ;
     }
+
+    /**
+     * Devuelve el mensaje que avusa a donde se va a enviar:
+     * @return Despedida en tipo String.
+     */
+    public String direccion(){
+        return "We will send you your products to the address: " ;
+    }
+
+    /**
+     * Devuelve el mensaje apra avisar el dia.
+     * @return Despedida en tipo String.
+     */
+    public String dia(){
+        return "In the day: " ;
+    }
 }

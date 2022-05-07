@@ -113,4 +113,20 @@ public class MenuCompraLatino extends MenuCompra {
     public String ticket(){
         return "TICKET " ;
     }
+
+    /**
+     * Devuelve el mensaje que avusa a donde se va a enviar:
+     * @return Despedida en tipo String.
+     */
+    public String direccion(){
+        return "Te mandaremos sus productos a: " ;
+    }
+
+    /**
+     * Devuelve el mensaje apra avisar el dia.
+     * @return Despedida en tipo String.
+     */
+    public String dia(){
+        return "en la fecha: " ;
+    }
 }
