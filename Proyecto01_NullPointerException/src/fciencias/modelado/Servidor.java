@@ -25,7 +25,7 @@ public class Servidor implements InterfazServidor{
     private static HashMap<String,Usuario> listaUsuarios;
     
     /** "BD" de los productos de la tienda, en realidad es un HashMap que separa por departamento (key) los productos(Lista de procuctos pertenecientes a ese departamento) */
-    private HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
+    private static HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
 
     /** Departamentos actuales en la tienda. */
     private String[] departamentos = {"Electronica","Electrodomesticos","Alimentos"};
@@ -38,6 +38,7 @@ public class Servidor implements InterfazServidor{
     public Servidor(){
         cargarUsuarios();
         cargarCatalogo();
+        aplicarDescuentos();
     }
 
     /**
@@ -115,14 +116,67 @@ public class Servidor implements InterfazServidor{
       return producto;
     }
 
-    private void cargarUsuarios(){
+    /**
+     * Método para aplicar de forma azarosa descuentos a los productos del catalogo.
+     * @param total - <code>int</code> con el total de descuentos a aplicar
+     */
+    public void aplicarDescuentos(int tot){
+        int rand;
+        ProductoConDescuento prodAct = null;
+        // Ciclo para aplicar descuentos a 10 productos
+        for (int i = 1; i < tot; i++) {
+          // Seleccionamos un departamento al azar
+           rand = (int) (Math.random() * departamentos.length);
+           String dep = departamentos[rand];
+           LinkedList<ProductoConDescuento> productosDelDep = catalogo.get(dep);
 
+           // Seleccionamos un producto al azar de este departamento
+           int indexProd = (int) (Math.random() * productosDelDep.size());
+           prodAct = productosDelDep.get(indexProd);
+            
+           // Se aplican descuentos preferenciales de forma azaroza.
+           // Se tiene un 50% de probabilidad de obtener este descuento.
+            rand = (int) (Math.random() * 2);
+            if(rand == 1){
+              if(prodAct.getDepartamento().equals("Alimentos")){
+                prodAct = new DescuentoMexico(prodAct);
+              } else if (prodAct.getDepartamento().equals("Electrodomesticos")){
+                prodAct = new DescuentoEspania(prodAct);
+              }
+            }
+            // Se aplica de forma azaroza hasta un máximo de 3 descuentos más.
+            int descuentosRest = (int) (Math.random() * 3);
+            for (int j = 0; j < descuentosRest; j++) {
+                rand = (int) (Math.random() * 4);
+                switch (rand) {
+                  case 1:
+                    prodAct = new DescuentoEUA(prodAct);
+                    break;
+                  
+                  case 2:
+                    prodAct = new DescuentoEspania(prodAct);
+                    break;
+                  
+                  case 3:
+                    prodAct = new DescuentoMexico(prodAct);
+                    break;
+
+                  case 4:
+                    prodAct = new DescuentoGlobal(prodAct);
+                    break;
+
+                  default:
+                    break;
+                }
+            }
+            
+            // Actualizamos los datos en el catalogo
+            productosDelDep.add(indexProd,prodAct);
+            catalogo.put(dep, productosDelDep);
+          
+        }
+      
     }
-
-    private void cargarCatalogo(){
-
-    }
-
     /**
    * Metodo para guardar articulos.
    * @param art - Arreglo con articulos de un tipo a guardar.
@@ -149,6 +203,63 @@ public class Servidor implements InterfazServidor{
       }
     }
   }
+
+  @SuppressWarnings("unchecked")
+  private static void cargarUsuarios(){
+    String ruta = "BDUsuarios.ser";
+    ObjectInputStream lector = null;
+    try{
+      lector = new ObjectInputStream(new FileInputStream(ruta));
+			Object objeto;
+      HashMap<String,Usuario> map = null;
+      int i = 0;
+            objeto = lector.readObject();
+            if(objeto != null){
+              map = (HashMap<String,Usuario>) objeto;
+              listaUsuarios = map;
+            }
+    
+    } catch(java.lang.ClassNotFoundException e){
+    } catch(java.io.EOFException e){
+		} catch(IOException e){
+			System.out.println("Lectura fallida: "+e);
+		} finally{
+      if(lector != null) {
+        try {
+          lector.close();
+        } catch (IOException e) {}
+      }
+    }
+  }
+
+  @SuppressWarnings("unchecked")
+  private static void cargarCatalogo(){
+    String ruta = "BDProductos.ser";
+    ObjectInputStream lector = null;
+    try{
+      lector = new ObjectInputStream(new FileInputStream(ruta));
+			Object objeto;
+      HashMap< String, LinkedList<ProductoConDescuento> > map = null;
+      int i = 0;
+            objeto = lector.readObject();
+            if(objeto != null){
+              map = (HashMap< String, LinkedList<ProductoConDescuento>>) objeto;
+              catalogo = map;
+            }
+    
+    } catch(java.lang.ClassNotFoundException e){
+    } catch(java.io.EOFException e){
+		} catch(IOException e){
+			System.out.println("Lectura fallida: "+e);
+		} finally{
+      if(lector != null) {
+        try {
+          lector.close();
+        } catch (IOException e) {}
+      }
+    }
+  }
+
 
   @SuppressWarnings("unchecked")
   public static void recuperarArticulos(){
@@ -204,7 +315,35 @@ public class Servidor implements InterfazServidor{
       
       guardarUsuarios(listaUsuarios);
 
-      Producto a1 = new Producto("La Costeña Chile Jalapeño Rajas 105 Gr");
+      
+
+
+
+
+      LinkedList<ProductoConDescuento> electronica = new LinkedList<>();
+      electronica.add(e1);
+      electronica.add(e2);
+      electronica.add(e3);
+      electronica.add(e4);
+      electronica.add(e5);
+      LinkedList<ProductoConDescuento> electrodomesticos = new LinkedList<>();
+      electrodomesticos.add(ed1);
+      electrodomesticos.add(ed2);
+      electrodomesticos.add(ed3);
+      electrodomesticos.add(ed4);
+      electrodomesticos.add(ed5);
+      LinkedList<ProductoConDescuento> alimentos = new LinkedList<>();
+      alimentos.add(a1);
+      alimentos.add(a2);
+      alimentos.add(a3);
+      alimentos.add(a4);
+      alimentos.add(a5);
+      
+      catalogo = new HashMap<>();
+      catalogo.put("Alimentos", alimentos);
+      catalogo.put("Electrodomesticos", electrodomesticos);
+      catalogo.put("Electronica", electronica);
+
       /*
       recuperarArticulos();
       System.out.println(listaUsuarios.get("fulano").getNombreCompleto());
