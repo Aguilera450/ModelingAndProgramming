@@ -18,18 +18,20 @@ public class MenuCompraCastellano extends MenuCompra {
 
     /**
      * Devuelve el mensaje para saludar al usuario en el idioma castellano.
+     * @param nombre Nombre del usuario.
      * @return Saludo en tipo String.
      */
-    public String saludar(){
-        return "¡Bienveniros a vuestra tienda favorita!";
+    public String saludar(String nombre){
+        return "¡Bienveniros a vuestra tienda favorita " + nombre + "!";
     }
 
     /**
      * Devuelve el mensaje al despedirse del usuario en el idioma castellano.
+     * @param nombre Nombre del usuario.
      * @return Despedida en tipo String.
      */
-    public String despedirse(){
-        return "¡Gracias por vuestra preferencia! volved pronto!";
+    public String despedirse(String nombre){
+        return "¡Gracias por vuestra preferencia! volved pronto " + nombre + "!";
     }
 
     /**

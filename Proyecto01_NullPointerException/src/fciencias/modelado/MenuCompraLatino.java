@@ -17,18 +17,20 @@ public class MenuCompraLatino extends MenuCompra {
 
     /**
      * Devuelve el mensaje para saludar al usuario en el idioma latino.
+     * @param nombre Nombre del usuario.
      * @return Saludo en tipo String.
      */
-    public String saludar(){
-        return "¡Te damos la bienvenida a nuestra tienda!";
+    public String saludar(String nombre){
+        return "Hola "+ nombre +",¡Te damos la bienvenida a nuestra tienda!";
     }
 
     /**
      * Devuelve el mensaje al despedirse del usuario en el idioma latino.
+     * @param nombre Nombre del usuario.
      * @return Despedida en tipo String.
      */
-    public String despedirse(){
-        return "¡Vuelva pronto!";
+    public String despedirse(String nombre){
+        return "¡Vuelve pronto" + nombre + "!";
     }
 
     /**
