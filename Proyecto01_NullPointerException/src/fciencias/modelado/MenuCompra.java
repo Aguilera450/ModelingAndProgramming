@@ -68,7 +68,7 @@ public abstract class MenuCompra {
      * @return Devuelve las opciones del menu en una sola cadena.
      */
     public String opcionesMenu(String nombre){
-        return saludar(nombre) + "\n" + opcion1() +"\n" + opcion2() + "\n" + opcion3();
+        return saludar(nombre) + "\n" + opcion1() +"\n" + opcion2() + "\n" + opcion3() + "\n" + opcion4();
     }
 
     /**
@@ -81,7 +81,7 @@ public abstract class MenuCompra {
         boolean seguir = true;
         int opcion = 0;
         do {
-            opcion = menu.opcionMenu(opcionesMenu(usuario.getNombreCompleto()), 1, 3);
+            opcion = menu.opcionMenu(opcionesMenu(usuario.getNombreCompleto()), 1, 4);
             switch(opcion){
                 case 1:
                     System.out.println(servidor.solicitarCatalogo(usuario));
@@ -96,6 +96,8 @@ public abstract class MenuCompra {
                     }
                     break;
                 case 3:
+                    break;
+                case 4:
                     System.out.println(despedirse(usuario.getNombreCompleto()));
                     seguir = false;
                     break;

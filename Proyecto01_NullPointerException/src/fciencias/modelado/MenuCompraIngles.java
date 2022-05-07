@@ -79,7 +79,7 @@ public class MenuCompraIngles extends MenuCompra{
      */
     @Override
     public String opcion3(){
-        return "3) I have to go home!";
+        return "3) I wanna pay my shopping cart.";
     }
 
     /**
@@ -88,6 +88,6 @@ public class MenuCompraIngles extends MenuCompra{
      */
     @Override
     public String opcion4(){
-        return "4) asdadsd";
+        return "4) I have to go home!";
     }
 }
