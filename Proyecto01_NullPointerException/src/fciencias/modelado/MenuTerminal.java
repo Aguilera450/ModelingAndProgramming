@@ -102,7 +102,7 @@ public class MenuTerminal {
         int userInput = 0;
         do{
             try{
-                System.out.println("\n[*] "+ mensaje);
+                System.out.println("\n"+ mensaje);
                 userInput = input.nextInt();
                 if(min<=userInput && userInput<=max)
                     exit = true;

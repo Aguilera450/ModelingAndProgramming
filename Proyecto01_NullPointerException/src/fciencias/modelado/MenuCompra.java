@@ -70,11 +70,12 @@ public abstract class MenuCompra {
                     break;
                 case 2:
                     System.out.println(servidor.solicitarCatalogo(usuario));
-                    int numProd = menu.dameUnNatural("Ingrese el número asociado al producto: ",1,15);
-                    ProductoConDescuento producto = servidor.solicitarProducto(numProd);
-                    usuario.agregarAlCarrito(producto);
-                    System.out.println("Su carrito actual es:" + usuario.mostrarCarrito());
-                    
+                    int numProd = menu.dameUnNatural("16) Salir"+"\nIngrese el número asociado al producto: ",1,16);
+                    if(numProd != 16){
+                        ProductoConDescuento producto = servidor.solicitarProducto(numProd);
+                        usuario.agregarAlCarrito(producto);
+                        System.out.println("Su carrito actual es:" + usuario.mostrarCarrito());
+                    }
                     break;
                 case 3:
                     System.out.println(despedirse(usuario.getNombreCompleto()));
