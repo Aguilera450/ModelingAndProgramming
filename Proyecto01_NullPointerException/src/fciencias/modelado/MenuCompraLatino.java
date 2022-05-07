@@ -25,18 +25,33 @@ public class MenuCompraLatino extends MenuCompra {
 
     /**
      * Devuelve el mensaje al despedirse del usuario en el idioma latino.
-     * @return Despedida en tipo String-
+     * @return Despedida en tipo String.
      */
     public String despedirse(){
         return "¡Vuelva pronto!";
     }
 
+    /**
+     * Devuelve la opcióm 1 del menu en el idioma latino.
+     * @return La opcion 1 en tipo String.
+     */
+    public String opcion1(){
+        return "1) Quiero ver tus productos.";
+    }
 
     /**
-     * Devuelve el mensaje al mostrar el menu del usuario en el idioma latino.
-     * @return Despedida en tipo String.
+     * Devuelve la opción 2 del menu en el idioma latino.
+     * @return La opcion 2 en tipo String.
      */
-    public String opcionesMenu(){
-        return "1) Quiero ver tus productos." + "\n2) Quiero comprar algo."+ "\n Me tengo que ir, nos vemos!.";
+    public String opcion2(){
+        return "2) Quiero comprar algo.";
+    }
+
+    /**
+     * Devuelve la opción 3 del menu en el idioma latino.
+     * @return La opcion 3 en tipo String.
+     */
+    public String opcion3(){
+        return "3) ¡Me tengo que ir, nos vemos!.";
     }
 }

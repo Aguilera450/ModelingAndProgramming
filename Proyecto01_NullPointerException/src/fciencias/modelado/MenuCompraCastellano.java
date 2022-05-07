@@ -13,7 +13,7 @@ public class MenuCompraCastellano extends MenuCompra {
      * @return Mensaje de agradecimiento por su compra en tipo String.
      */
     public String completarCompra(){
-        return "Disfrutad de vuestra compra!";
+        return "¡Disfrutad de vuestra compra!";
     }
 
     /**
@@ -21,22 +21,38 @@ public class MenuCompraCastellano extends MenuCompra {
      * @return Saludo en tipo String.
      */
     public String saludar(){
-        return "Bienveniros a vuestra tienda favorita!";
+        return "¡Bienveniros a vuestra tienda favorita!";
     }
 
     /**
      * Devuelve el mensaje al despedirse del usuario en el idioma castellano.
-     * @return Despedida en tipo String-
+     * @return Despedida en tipo String.
      */
     public String despedirse(){
-        return "Gracias por vuestra preferencia! volved pronto.";
+        return "¡Gracias por vuestra preferencia! volved pronto!";
     }
 
     /**
-     * Devuelve el mensaje al mostrar el menu del usuario en el idioma castellano.
-     * @return Despedida en tipo String.
+     * Devuelve la opcióm 1 del menu en el idioma castellano.
+     * @return La opcion 1 en tipo String.
      */
-    public String opcionesMenu(){
-        return "1) Quiero ver vuestro catalogo." + "\n Quiero comprar uno de vuestros productos." + "\n 3) Me piro vampiro.";
+    public String opcion1(){
+        return "1) Quiero ver vuestro catalogo.";
+    }
+
+    /**
+     * Devuelve la opción 2 del menu en el idioma castellano.
+     * @return La opcion 2 en tipo String.
+     */
+    public String opcion2(){
+        return "2) Quiero comprar uno de vuestros productos.";
+    }
+
+    /**
+     * Devuelve la opción 3 del menu en el idioma castellano.
+     * @return La opcion 3 en tipo String.
+     */
+    public String opcion3(){
+        return "3) Me piro vampiro.";
     }
 }
