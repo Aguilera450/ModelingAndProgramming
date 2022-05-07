@@ -37,9 +37,6 @@ public class ServidorProxy implements InterfazServidor{
         return servidorReal.solicitarCatalogo();
     }
 
-    public ProductoConDescuento solicitarProducto(int n){
-        return servidorReal.solicitarProducto(n);
-    }
     /**
      * Método que regresa el catálogo adaptado al usuario que lo solicita.
      * @param usuario - <code>Usuario</code> que está solicitando el catalogo.
@@ -49,7 +46,22 @@ public class ServidorProxy implements InterfazServidor{
     public String solicitarCatalogo(Usuario usuario){
         return servidorReal.solicitarCatalogo(usuario);
     }
+
+    /**
+     * Método que regresa el catálogo adaptado al usuario que lo solicita.
+     * @param usuario - <code>Usuario</code> que está solicitando el catalogo.
+     * @return - Un <code>String</code> con el catálogo adaptado al usuario.
+     */
+    @Override
+    public ProductoConDescuento solicitarProducto(int n){
+        return servidorReal.solicitarProducto(n);
+    }
     
+    /**
+     * Método para aplicar descuentos de forma azarosa al catálogo.
+     * @param tot - Total máximo de productos con descuentos.
+     */
+    @Override
     public void aplicarDescuentos(int tot){
         servidorReal.aplicarDescuentos(tot);
     }

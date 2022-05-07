@@ -76,6 +76,16 @@ public abstract class Descuento implements ProductoConDescuento {
     }
     
     /**
+     * Método que devuelve el departamento de un <code>Producto</code>
+     *  sin restricción de usuario.
+     * @return <code>String</code> -- información del departamento.
+     */
+    @Override
+    public String getDepartamento(){
+        return producto.getDepartamento();
+    }
+    
+    /**
      * Método que devuelve el descuento que se aplica al producto
      * en cuestión.
      * @return <code>float</code> -- descuento en partícular a aplicar.
@@ -92,14 +102,6 @@ public abstract class Descuento implements ProductoConDescuento {
 	    return descuentosDisponibles.clone();
     }
 
-    /**
-     * Método que devuelve el departamento de un <code>Producto</code>
-     *  sin restricción de usuario.
-     * @return <code>String</code> -- información del departamento.
-     */
-    @Override
-    public String getDepartamento(){
-        return producto.getDepartamento();
-    }
+    
 
 }

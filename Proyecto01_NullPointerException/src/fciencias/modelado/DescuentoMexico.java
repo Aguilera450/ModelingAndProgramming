@@ -16,7 +16,7 @@ public class DescuentoMexico extends Descuento {
      * @param <code>producto</code> -- al cual se le aplica el descuento.
      */
     public DescuentoMexico(ProductoConDescuento producto) {
-	super(producto);
+	    super(producto);
     }
     
     /**
@@ -30,10 +30,10 @@ public class DescuentoMexico extends Descuento {
      */
     @Override
     public float getPrecio(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Mexico"))
-	    return producto.getPrecio(usuario)*(1-super.descuentoAAplicar);
-	else
-	    return producto.getPrecio(usuario);
+        if(usuario.getPais().equals("Mexico"))
+            return producto.getPrecio(usuario)*(1-super.descuentoAAplicar);
+        else
+	        return producto.getPrecio(usuario);
     }
     
     /**
@@ -45,11 +45,11 @@ public class DescuentoMexico extends Descuento {
      *                                respectivo descuento.
      */
     public String getCatalogInfo(Usuario usuario) {
-	if(usuario.getPais().equalsIgnoreCase("Mexico"))
-	    return "\nSe anexa un descuento del "
-		+ (super.descuentoAAplicar * 100) + "%."
-		+ "\n" + producto.getCatalogInfo(usuario);
-	else
-	    return producto.getCatalogInfo(usuario);
+        if(usuario.getPais().equals("Mexico"))
+            return "\nSe anexa un descuento del "
+            + (super.descuentoAAplicar * 100) + "%."
+            + "\n" + producto.getCatalogInfo(usuario);
+        else
+            return producto.getCatalogInfo(usuario);
     }
 }

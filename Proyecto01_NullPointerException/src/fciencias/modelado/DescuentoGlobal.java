@@ -16,7 +16,7 @@ public class DescuentoGlobal extends Descuento {
      * @param <code>producto</code> -- al cual se le aplica el descuento.
      */
     public DescuentoGlobal(ProductoConDescuento producto) {
-	super(producto);
+	    super(producto);
     }
     
     /**
@@ -42,8 +42,8 @@ public class DescuentoGlobal extends Descuento {
      *                                respectivo descuento.
      */
     public String getCatalogInfo(Usuario usuario) {
-	return "\nSe anexa un descuento del "
-	    + (super.descuentoAAplicar * 100) + "%."
-	    + "\n" + producto.getCatalogInfo(usuario);
+        return "\nSe anexa un descuento del "
+            + (super.descuentoAAplicar * 100) + "%."
+            + "\n" + producto.getCatalogInfo(usuario);
     }
 }

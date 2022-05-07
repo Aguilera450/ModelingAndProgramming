@@ -46,6 +46,15 @@ public class Producto implements ProductoConDescuento {
         return precio;
     }
     
+    /**
+     * Método abstracto que nos regresa la información del catálogo
+     * con los respectivos descuentos.
+     * @param <code>usuario</code> -- usuario que requiere que le muestren
+     *                                el catálogo.
+     * @return <code>String</code> -- catálogo con las ofertas incluidas,
+     *                                con referente a su nacionalidad.
+     */
+    @Override
     public String getCatalogInfo(Usuario usuario) {
         return codigoBarras + "\n"
             + "Nombre del producto: " + nombreProducto + "\n"
@@ -53,16 +62,27 @@ public class Producto implements ProductoConDescuento {
         }
     
     /**
-     * Método que nos regresa la información del producto que se
-     * encuentra en el catálogo.
-     * @return <code>String</code> -- Información del producto.
+     * Método que devuelve la información de un <code>Producto</code>
+     *  sin restricción de usuario.
+     * @return <code>String</code> -- información del producto.
      */
+    @Override
     public String getCatalogInfo() {
 	return codigoBarras + "\n"
 	    + "Nombre del producto: " + nombreProducto + "\n"
 	    + "Departamento: " + departamento
         + "Precio: $" + precio;
 	    
+    }
+    
+    /** 
+     * Método que nos regresa el departamento del producto. 
+     * @return <code>String</code> -- deparamento al que pertenece
+     *                                el producto.
+     */
+    @Override
+    public String getDepartamento() {
+	    return departamento;
     }
     
     /**
@@ -82,15 +102,6 @@ public class Producto implements ProductoConDescuento {
 	    return nombreProducto;
     }
     
-    /** 
-     * Método que nos regresa el departamento del producto. 
-     * @return <code>String</code> -- deparamento al que pertenece
-     *                                el producto.
-     */
-    @Override
-    public String getDepartamento() {
-	    return departamento;
-    }
     
     /** 
      * Método modificador que asigna un nuevo precio a nuestro producto.

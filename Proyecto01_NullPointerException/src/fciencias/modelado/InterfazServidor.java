@@ -20,12 +20,23 @@ public interface InterfazServidor {
      */
     public String solicitarCatalogo();
 
-    public ProductoConDescuento solicitarProducto(int n);
     /**
      * Método que regresa el catálogo adaptado al usuario que lo solicita.
      * @param usuario - <code>Usuario</code> que está solicitando el catalogo.
      * @return - Un <code>String</code> con el catálogo adaptado al usuario.
      */
     public String solicitarCatalogo(Usuario usuario);
+    
+    /**
+     * Método para obtener el n-ésimo producto listado en el catalogo.
+     * @param n - posición del producto en el listado del catalogo.
+     * @return  - n-ésimo producto o null si no se encuentra.
+     */
+    public ProductoConDescuento solicitarProducto(int n);
 
+    /**
+     * Método para aplicar descuentos de forma azarosa al catálogo.
+     * @param tot - Total máximo de productos con descuentos.
+     */
+    public void aplicarDescuentos(int tot);
 }
