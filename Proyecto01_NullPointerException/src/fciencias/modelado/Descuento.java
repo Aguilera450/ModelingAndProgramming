@@ -64,7 +64,13 @@ public abstract class Descuento implements ProductoConDescuento {
     public String getCatalogInfo(Usuario usuario) {
 	    return producto.getCatalogInfo(usuario);
     }
-
+    
+    /**
+     *
+     */
+    @Override
+    public String getCatalogInfo();
+    
     /**
      * Método que devuelve el descuento que se aplica al producto
      * en cuestión.

@@ -31,4 +31,9 @@ public interface ProductoConDescuento {
      *                                con referente a su nacionalidad.
      */
     public String getCatalogInfo(Usuario usuario);
+    
+    /**
+     *
+     */
+    public String getCatalogInfo();
 }
