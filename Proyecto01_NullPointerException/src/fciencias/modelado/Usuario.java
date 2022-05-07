@@ -90,6 +90,13 @@ public class Usuario implements Serializable{
     }
 
     /**
+     * Método para vaciar el carrito del usuario.
+     */
+    public void vaciarCarrito(){
+        carrito = new Stack<>();
+    }
+    
+    /**
      * Método que permite saber si una contrasena coincide con la del usuario.
      * @param contrasena - <code>String</code> con la contrasena a comprar.
      * @return - <code>True</code> si son iguales.
