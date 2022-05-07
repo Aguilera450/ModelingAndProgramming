@@ -90,6 +90,35 @@ public class MenuTerminal {
     }
     
     /**
+    * Método que le solicita un número int al usuario en un rango.
+    * @param mensaje mensaje de solicitud del int.
+    * @param min Minimo del rango
+    * @param max Máximo del rango
+    * @return <code>int</code> -- El número ingresado por el usuario.
+    */
+    public int dameUnNatural(String mensaje, int min, int max){
+        Scanner input = new Scanner(System.in);
+        boolean exit  = false;
+        int userInput = 0;
+        do{
+            try{
+                System.out.println("\n[*] "+ mensaje);
+                userInput = input.nextInt();
+                if(min<=userInput && userInput<=max)
+                    exit = true;
+                else  
+                    System.out.println("Rango inválido");
+            }catch(Exception e){
+                System.out.println("\nSe ingreso un valor inválido, intentelo nuevamente.");
+            }finally{
+                input.nextLine(); // Limpiamos el buffer.
+            }
+        }while(exit == false);
+
+        return userInput;
+    }
+
+    /**
     * Método que le solicita un número float al usuario.
     * @param mensaje mensaje de solicitud del float.
     * @return <code>float</code> -- El número ingresado por el usuario.

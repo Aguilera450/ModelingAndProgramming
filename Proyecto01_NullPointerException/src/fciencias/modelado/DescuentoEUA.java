@@ -28,9 +28,10 @@ public class DescuentoEUA extends Descuento {
      * @return <code>float</code>  -- nuevo precio del producto, después de
      *                                aplicarse el descuento.
      */
+    @Override
     public float getPrecio(Usuario usuario) {
-	if(usuario.getPais().equals("EUA"))
-	    return producto.getPrecio(usuario) - producto.getPrecio(usuario)*super.descuentoAAplicar;
+	if(usuario.getPais().equals("Estados Unidos"))
+    return producto.getPrecio(usuario)*(1-super.descuentoAAplicar);
 	else
 	    return producto.getPrecio(usuario);
     }
@@ -43,7 +44,7 @@ public class DescuentoEUA extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getCatalogInfo(Usuario usuario) {
+    public String getDescuentos(Usuario usuario) {
 	if(usuario.getPais().equals("EUA"))
 	    return "\nSe anexa un descuento del "
 		+ (super.descuentoAAplicar * 100) + "%."

@@ -41,6 +41,9 @@ public interface ProductoConDescuento extends Serializable{
      */
     public String getCatalogInfo();
 
+
+    public String getDescuentos(Usuario usuario);
+
     /**
      * Método que devuelve el departamento de un <code>Producto</code>
      *  sin restricción de usuario.

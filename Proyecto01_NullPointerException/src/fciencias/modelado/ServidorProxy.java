@@ -37,6 +37,9 @@ public class ServidorProxy implements InterfazServidor{
         return servidorReal.solicitarCatalogo();
     }
 
+    public ProductoConDescuento solicitarProducto(int n){
+        return servidorReal.solicitarProducto(n);
+    }
     /**
      * Método que regresa el catálogo adaptado al usuario que lo solicita.
      * @param usuario - <code>Usuario</code> que está solicitando el catalogo.

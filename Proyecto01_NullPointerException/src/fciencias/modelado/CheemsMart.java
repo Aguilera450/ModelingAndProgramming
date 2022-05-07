@@ -96,7 +96,7 @@ public class CheemsMart {
         // Se cargan los paises asociados a su idioma
         inicializarIdiomasPais();
         Servidor servidorReal = new Servidor();
-        //servidorReal.aplicarDescuentos(10);
+        servidorReal.aplicarDescuentos(10);
         servidor = new ServidorProxy(servidorReal);
 
         boolean ingreso = true;

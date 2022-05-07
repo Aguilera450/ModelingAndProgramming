@@ -46,21 +46,17 @@ public class Producto implements ProductoConDescuento {
         return precio;
     }
     
-    /**
-     * Método que nos regresa la información del producto que se
-     * encuentra en el catálogo, con la anexión de su descuento.
-     * @param <code>usuario</code> -- el usuario que esta realizando
-     *                                la compra.
-     * @return <code>String</code> -- Información del producto con
-     *                                su respectivo descuento.
-     */
-    @Override
+
     public String getCatalogInfo(Usuario usuario) {
-	return codigoBarras + "\n"
-	    + "Nombre del producto: " + nombreProducto + "/n"
-	    + "Departamento: " + departamento + "/n"
-	    + "Precio final: $" + getPrecio(usuario);
+        return getDescuentos(usuario);
     }
+
+    
+    public String getDescuentos(Usuario usuario) {
+        return codigoBarras + "\n"
+            + "Nombre del producto: " + nombreProducto + "\n"
+            + "Departamento: " + departamento + "\n";
+        }
     
     /**
      * Método que nos regresa la información del producto que se
@@ -69,9 +65,10 @@ public class Producto implements ProductoConDescuento {
      */
     public String getCatalogInfo() {
 	return codigoBarras + "\n"
-	    + "Nombre del producto: " + nombreProducto + "/n"
-	    + "Departamento: " + departamento + "/n"
-	    + "Precio: $" + precio;
+	    + "Nombre del producto: " + nombreProducto + "\n"
+	    + "Departamento: " + departamento
+        + "Precio: $" + precio;
+	    
     }
     
     /**

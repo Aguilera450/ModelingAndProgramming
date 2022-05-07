@@ -28,8 +28,9 @@ public class DescuentoGlobal extends Descuento {
      * @return <code>float</code>  -- nuevo precio del producto, después de
      *                                aplicarse el descuento.
      */
+    @Override
     public float getPrecio(Usuario usuario) {
-	return producto.getPrecio(usuario) - producto.getPrecio(usuario)*super.descuentoAAplicar;
+        return producto.getPrecio(usuario)*(1-super.descuentoAAplicar);
     }
     
     /**
@@ -40,7 +41,7 @@ public class DescuentoGlobal extends Descuento {
      * @return <code>String</code> -- información del producto con la anexión de su
      *                                respectivo descuento.
      */
-    public String getCatalogInfo(Usuario usuario) {
+    public String getDescuentos(Usuario usuario) {
 	return "\nSe anexa un descuento del "
 	    + (super.descuentoAAplicar * 100) + "%."
 	    + "\n" + producto.getCatalogInfo(usuario);

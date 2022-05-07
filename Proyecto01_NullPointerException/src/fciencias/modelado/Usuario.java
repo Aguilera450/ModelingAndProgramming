@@ -47,6 +47,7 @@ public class Usuario implements Serializable{
         direccion = dir;
         cuentaBancaria = cB;
         pais = p;
+        carrito = new Stack<>();
     }
     
     /**

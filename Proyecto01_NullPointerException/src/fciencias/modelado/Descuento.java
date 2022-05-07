@@ -13,7 +13,7 @@ public abstract class Descuento implements ProductoConDescuento {
     protected ProductoConDescuento producto;
 
     /** Conjunto de descuentos disponibles */
-    protected float[] descuentosDisponibles = {(float)0.2, (float)0.3, (float)0.4};
+    protected float[] descuentosDisponibles = {0.2f, 0.3f, 0.4f};
 
     /** Descuento partícular a aplicar */
     protected float descuentoAAplicar;
@@ -52,6 +52,11 @@ public abstract class Descuento implements ProductoConDescuento {
 	    return producto.getPrecio(usuario);
     }
     
+    
+    public String getCatalogInfo(Usuario usuario) {
+        return  getDescuentos(usuario) ;
+    }
+
     /**
      * Método que nos regresa la información del producto que se
      * encuentra en el catálogo, con la anexión de su descuento.
@@ -61,8 +66,8 @@ public abstract class Descuento implements ProductoConDescuento {
      *                                su respectivo descuento.
      */
     @Override
-    public String getCatalogInfo(Usuario usuario) {
-	    return producto.getCatalogInfo(usuario);
+    public String getDescuentos(Usuario usuario) {
+	    return producto.getDescuentos(usuario);
     }
     
     /**

@@ -20,6 +20,7 @@ public interface InterfazServidor {
      */
     public String solicitarCatalogo();
 
+    public ProductoConDescuento solicitarProducto(int n);
     /**
      * Método que regresa el catálogo adaptado al usuario que lo solicita.
      * @param usuario - <code>Usuario</code> que está solicitando el catalogo.

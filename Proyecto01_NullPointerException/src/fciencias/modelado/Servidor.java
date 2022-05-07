@@ -129,13 +129,15 @@ public class Servidor implements InterfazServidor{
     public String solicitarCatalogo(Usuario usuario){
         String catalogoString = "\n";
         LinkedList<ProductoConDescuento> productos;
+        ProductoConDescuento producto;
         int cont = 1;
         for(String dpto: catalogo.keySet()){
             catalogoString += "\n\n\n###### " + dpto+ " #####";
             productos = catalogo.get(dpto);
             Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
             while(iterador.hasNext()){
-                catalogoString += "\n\n" + (cont++) + ") " + iterador.next().getCatalogInfo(usuario);
+                producto = iterador.next();
+                catalogoString += "\n\n" + (cont++) + ") " + producto.getCatalogInfo(usuario) + "Precio: $" + producto.getPrecio(usuario);
             }
         }
         return catalogoString;
@@ -152,11 +154,13 @@ public class Servidor implements InterfazServidor{
       if(n >= 0){
         for(String dpto: catalogo.keySet()){
             productos = catalogo.get(dpto);
+            System.out.println("Dpto..." + dpto);
             Iterator<ProductoConDescuento> iterador = productos.listIterator(0);
             while(iterador.hasNext()){
                 cont++;
+                iterador.next();
                 if(cont == n){
-                  return productos.get(cont);
+                  return iterador.next();
                 }
             }
         }
@@ -219,6 +223,7 @@ public class Servidor implements InterfazServidor{
             }
 
             // Actualizamos los datos en el catalogo
+            productosDelDep.remove(indexProd);
             productosDelDep.add(indexProd,prodAct);
             catalogo.put(dep, productosDelDep);
           
@@ -368,7 +373,7 @@ public class Servidor implements InterfazServidor{
       listaUsuarios.put("arturGod",arturGod);
       listaUsuarios.put("fulano",fulano);
       
-      //guardarUsuarios(listaUsuarios);
+      guardarUsuarios(listaUsuarios);
       Producto a1 = new Producto("182312394","La Costeña Chile Jalapeño Rajas 105 Gr", "Alimentos", 8.10f);
       Producto a2 = new Producto("645120012","Atun Ancla En Agua Lata", "Alimentos",  12.70f);
       Producto a3 = new Producto("199283431","Leche Evaporada Alpura", "Alimentos",  16.40f);
