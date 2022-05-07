@@ -28,7 +28,7 @@ public class Servidor implements InterfazServidor{
     private static HashMap< String, LinkedList<ProductoConDescuento> > catalogo;
 
     /** Departamentos actuales en la tienda. */
-    private String[] departamentos = {"Electronica","Electrodomesticos","Alimentos"};
+    private static String[] departamentos = {"Electronica","Electrodomesticos","Alimentos"};
 
     
     /** 
@@ -38,7 +38,7 @@ public class Servidor implements InterfazServidor{
     public Servidor(){
         cargarUsuarios();
         cargarCatalogo();
-        aplicarDescuentos();
+        aplicarDescuentos(10);
     }
 
     /**
@@ -120,7 +120,7 @@ public class Servidor implements InterfazServidor{
      * Método para aplicar de forma azarosa descuentos a los productos del catalogo.
      * @param total - <code>int</code> con el total de descuentos a aplicar
      */
-    public void aplicarDescuentos(int tot){
+    public static void aplicarDescuentos(int tot){
         int rand;
         ProductoConDescuento prodAct = null;
         // Ciclo para aplicar descuentos a 10 productos
@@ -169,7 +169,7 @@ public class Servidor implements InterfazServidor{
                     break;
                 }
             }
-            
+
             // Actualizamos los datos en el catalogo
             productosDelDep.add(indexProd,prodAct);
             catalogo.put(dep, productosDelDep);
@@ -187,6 +187,33 @@ public class Servidor implements InterfazServidor{
     try {
         escritor = new ObjectOutputStream(new FileOutputStream(nombreArch)); 
         escritor.writeObject(listaUsuarios);
+        System.out.println("Se guardo el listado");
+    } catch(NotSerializableException e){
+      System.out.println("El objeto a guardar no es serializable");
+    } catch(FileNotFoundException e){
+      System.out.println("El archivo para guardar no existe");
+    } catch(IOException e){
+      System.out.println("Surgió un error al guardar");
+    } finally{
+      if (escritor != null) {
+        try {
+          escritor.close();
+        } catch (IOException e) {
+        }
+      }
+    }
+  }
+
+    /**
+   * Metodo para guardar articulos.
+   * @param art - Arreglo con articulos de un tipo a guardar.
+   */
+  public static void guardarCatalogo(HashMap<String,LinkedList<ProductoConDescuento>> catalogo ){
+    String nombreArch = "./BDCatalogo.ser";
+    ObjectOutputStream escritor = null;
+    try {
+        escritor = new ObjectOutputStream(new FileOutputStream(nombreArch)); 
+        escritor.writeObject(catalogo);
         System.out.println("Se guardo el listado");
     } catch(NotSerializableException e){
       System.out.println("El objeto a guardar no es serializable");
@@ -315,10 +342,23 @@ public class Servidor implements InterfazServidor{
       
       guardarUsuarios(listaUsuarios);
 
+      Producto a1 = new Producto("182312394","La Costeña Chile Jalapeño Rajas 105 Gr", "Alimentos", 8.10f);
+      Producto a2 = new Producto("645120012","Atun Ancla En Agua Lata", "Alimentos",  12.70f);
+      Producto a3 = new Producto("199283431","Leche Evaporada Alpura", "Alimentos",  16.40f);
+      Producto a4 = new Producto("100230424","Galletas Gamesa Marias Rollo", "Alimentos",  12.70f);
+      Producto a5 = new Producto("834913234","Frijol Isadora Refrito Negro Bolsa", "Alimentos",  15.70f);
       
+      Producto e1 = new Producto("834913234", "Laptop HP 15-dw1085", "Electronicos", 8999.00f);
+      Producto e2 = new Producto("712731273", "TV Samsung 40 Pulgadas Full HD Smart TV LED UN40N5200AFXZX", "Electronicos", 5999.00f);
+      Producto e3 = new Producto("814729122", "TV JVC 32 Pulgadas HD LED SI32H", "Electronicos", 2999.00f);
+      Producto e4 = new Producto("928381288", "Smartphone Samsung Galaxy A52", "Electronicos", 7848.00f);
+      Producto e5 = new Producto("712361236", "Xiaomi Poco M4 Pro 5G", "Electronicos", 5449.00f);
 
-
-
+      Producto ed1 = new Producto("912931233", "Lavadora Mabe 21 Kg Blanca", "Electrodomesticos", 10490.00f);
+      Producto ed2 = new Producto("992320042", "Refrigerador 11 Pies Winia Cúbicos con Despachador Silver", "Electrodomesticos", 7490.00f);
+      Producto ed3 = new Producto("891231232", "Refrigerador 18 Pies Whirlpool Acero Inox", "Electrodomesticos", 14790.00f);
+      Producto ed4 = new Producto("772938233", "Frigobar Hisense 3.3 Pies Cúbicos Silver", "Electrodomesticos", 5390.00f);
+      Producto ed5 = new Producto("111284837", "Refrigerador Mabe Bottom Freezer 19 pies", "Electrodomesticos", 18490.00f);
 
       LinkedList<ProductoConDescuento> electronica = new LinkedList<>();
       electronica.add(e1);
@@ -343,13 +383,19 @@ public class Servidor implements InterfazServidor{
       catalogo.put("Alimentos", alimentos);
       catalogo.put("Electrodomesticos", electrodomesticos);
       catalogo.put("Electronica", electronica);
+      
+      guardarCatalogo(catalogo);
 
       /*
-      recuperarArticulos();
+      cargarUsuarios();
       System.out.println(listaUsuarios.get("fulano").getNombreCompleto());
+      
+
+      cargarCatalogo();
+      LinkedList<ProductoConDescuento> productosDelDep = catalogo.get("Alimentos");
+      ProductoConDescuento prodAct = productosDelDep.get(2);
+      System.out.println(prodAct.getCatalogInfo()); // Atun
       */
-
-
       
     }
 
